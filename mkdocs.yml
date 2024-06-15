@@ -1,0 +1,4 @@
+site_name: My Docs
+theme: readthedocs
+repo_url: https://github.com/liangxiongsl/test1
+repo_name: Github
