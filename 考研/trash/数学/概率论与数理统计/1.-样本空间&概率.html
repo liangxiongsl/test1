@@ -1,0 +1,951 @@
+<!DOCTYPE html> <html><head>
+		<title>1. 样本空间&amp;概率</title>
+		<base href="..\..\..\../">
+		<meta id="root-path" root-path="..\..\..\../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="obsidian-vault - 1. 样本空间&amp;概率">
+		<meta property="og:title" content="1. 样本空间&amp;概率">
+		<meta property="og:description" content="obsidian-vault - 1. 样本空间&amp;概率">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="考研/trash/数学/概率论与数理统计/1.-样本空间&amp;概率.html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="obsidian-vault">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles">mjx-c.mjx-c222B.TEX-S2::before { padding: 1.36em 0.944em 0.862em 0px; content: "∫"; }
+mjx-c.mjx-c7B.TEX-S2::before { padding: 1.15em 0.667em 0.649em 0px; content: "{"; }
+mjx-c.mjx-c7D.TEX-S2::before { padding: 1.15em 0.667em 0.649em 0px; content: "}"; }
+mjx-c.mjx-c20D7.TEX-V::before { padding: 0.714em 0.5em 0px 0px; content: "→"; }
+mjx-c.mjx-c1D6FE.TEX-I::before { padding: 0.441em 0.543em 0.216em 0px; content: "γ"; }
+mjx-c.mjx-c1D417.TEX-B::before { padding: 0.686em 0.869em 0px 0px; content: "X"; }
+mjx-c.mjx-c2D9.TEX-B::before { padding: 0.695em 0.575em 0px 0px; content: "˙"; }
+mjx-c.mjx-c1D420.TEX-B::before { padding: 0.455em 0.575em 0.201em 0px; content: "g"; }
+mjx-c.mjx-c1D41D.TEX-B::before { padding: 0.694em 0.639em 0.006em 0px; content: "d"; }
+mjx-c.mjx-c211A.TEX-A::before { padding: 0.701em 0.778em 0.181em 0px; content: "Q"; }
+mjx-c.mjx-c1D402.TEX-B::before { padding: 0.697em 0.831em 0.011em 0px; content: "C"; }
+mjx-c.mjx-c1D410.TEX-B::before { padding: 0.696em 0.864em 0.193em 0px; content: "Q"; }
+mjx-c.mjx-c2119.TEX-A::before { padding: 0.683em 0.611em 0px 0px; content: "P"; }
+mjx-c.mjx-c2223::before { padding: 0.75em 0.278em 0.249em 0px; content: "∣"; }
+mjx-c.mjx-cA8::before { padding: 0.669em 0.5em 0px 0px; content: "¨"; }
+mjx-c.mjx-c1D713.TEX-I::before { padding: 0.694em 0.651em 0.205em 0px; content: "ψ"; }
+mjx-c.mjx-c2B.TEX-B::before { padding: 0.633em 0.894em 0.131em 0px; content: "+"; }
+mjx-c.mjx-c1D7D0.TEX-B::before { padding: 0.654em 0.575em 0px 0px; content: "2"; }
+mjx-c.mjx-c2034::before { padding: 0.56em 0.825em 0px 0px; content: "′′′"; }
+mjx-c.mjx-c221A.TEX-S4::before { padding: 1.75em 1.02em 1.25em 0px; content: "√"; }
+mjx-mroot { display: inline-block; text-align: left; }
+mjx-root { display: inline-block; white-space: nowrap; }
+mjx-surd { display: inline-block; vertical-align: top; }
+mjx-sqrt { display: inline-block; padding-top: 0.07em; }
+mjx-sqrt > mjx-box { border-top: 0.07em solid; }
+mjx-sqrt.mjx-tall > mjx-box { padding-left: 0.3em; margin-left: -0.3em; }
+mjx-c.mjx-c2DA::before { padding: 0.715em 0.5em 0px 0px; content: "˚"; }
+mjx-c.mjx-c1D43E.TEX-I::before { padding: 0.683em 0.889em 0px 0px; content: "K"; }
+mjx-c.mjx-c7B.TEX-S1::before { padding: 0.85em 0.583em 0.349em 0px; content: "{"; }
+mjx-c.mjx-c7D.TEX-S1::before { padding: 0.85em 0.583em 0.349em 0px; content: "}"; }
+mjx-c.mjx-c2D9::before { padding: 0.669em 0.5em 0px 0px; content: "˙"; }
+mjx-c.mjx-cB0::before { padding: 0.715em 0.5em 0px 0px; content: "°"; }
+mjx-c.mjx-c1D41F.TEX-B::before { padding: 0.7em 0.452em 0px 0px; content: "f"; }
+mjx-c.mjx-c28.TEX-B::before { padding: 0.75em 0.447em 0.249em 0px; content: "("; }
+mjx-c.mjx-c2212.TEX-B::before { padding: 0.281em 0.894em 0px 0px; content: "−"; }
+mjx-c.mjx-c50.TEX-C::before { padding: 0.683em 0.733em 0.057em 0px; content: "P"; }
+mjx-c.mjx-c3A3::before { padding: 0.683em 0.722em 0px 0px; content: "Σ"; }
+mjx-c.mjx-c1D42A.TEX-B::before { padding: 0.45em 0.607em 0.194em 0px; content: "q"; }
+mjx-c.mjx-c1D411.TEX-B::before { padding: 0.686em 0.862em 0.011em 0px; content: "R"; }
+mjx-c.mjx-c29.TEX-B::before { padding: 0.75em 0.447em 0.249em 0px; content: ")"; }
+mjx-c.mjx-cAC::before { padding: 0.356em 0.667em 0px 0px; content: "¬"; }
+mjx-c.mjx-c21CC.TEX-A::before { padding: 0.514em 1em 0.014em 0px; content: "⇌"; }
+mjx-c.mjx-c27F6::before { padding: 0.511em 1.638em 0.011em 0px; content: "⟶"; }
+mjx-c.mjx-c45.TEX-C::before { padding: 0.705em 0.564em 0.022em 0px; content: "E"; }
+mjx-c.mjx-c1D432.TEX-B::before { padding: 0.444em 0.607em 0.2em 0px; content: "y"; }
+mjx-c.mjx-c4E::before { padding: 0.683em 0.75em 0px 0px; content: "N"; }
+mjx-c.mjx-c75::before { padding: 0.442em 0.556em 0.011em 0px; content: "u"; }
+mjx-c.mjx-c1D42D.TEX-B::before { padding: 0.635em 0.447em 0.005em 0px; content: "t"; }
+mjx-c.mjx-c43::before { padding: 0.705em 0.722em 0.021em 0px; content: "C"; }
+mjx-c.mjx-c42.TEX-C::before { padding: 0.705em 0.657em 0.022em 0px; content: "B"; }
+mjx-c.mjx-c2C.TEX-B::before { padding: 0.171em 0.319em 0.194em 0px; content: ","; }
+mjx-c.mjx-c6B::before { padding: 0.694em 0.528em 0px 0px; content: "k"; }
+mjx-c.mjx-c22A5::before { padding: 0.668em 0.778em 0px 0px; content: "⊥"; }
+mjx-c.mjx-c2212::before { padding: 0.583em 0.778em 0.082em 0px; content: "−"; }
+mjx-c.mjx-c5D.TEX-B::before { padding: 0.75em 0.319em 0.25em 0px; content: "]"; }
+mjx-c.mjx-c43.TEX-C::before { padding: 0.705em 0.527em 0.025em 0px; content: "C"; }
+mjx-c.mjx-c2C.TEX-MI::before { padding: 0.121em 0.307em 0.194em 0px; content: ","; }
+mjx-c.mjx-c5B.TEX-S1::before { padding: 0.85em 0.417em 0.349em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S1::before { padding: 0.85em 0.417em 0.349em 0px; content: "]"; }
+mjx-c.mjx-c1D41E.TEX-B::before { padding: 0.452em 0.527em 0.006em 0px; content: "e"; }
+mjx-c.mjx-c22F1::before { padding: 1.52em 1.282em 0px 0px; content: "⋱"; }
+mjx-c.mjx-c7D.TEX-S3::before { padding: 1.45em 0.75em 0.949em 0px; content: "}"; }
+mjx-c.mjx-c1D43C.TEX-I::before { padding: 0.683em 0.504em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D408.TEX-B::before { padding: 0.686em 0.436em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D448.TEX-I::before { padding: 0.683em 0.767em 0.022em 0px; content: "U"; }
+mjx-c.mjx-c1D400.TEX-B::before { padding: 0.698em 0.869em 0px 0px; content: "A"; }
+mjx-c.mjx-c1D431.TEX-B::before { padding: 0.444em 0.607em 0px 0px; content: "x"; }
+mjx-c.mjx-c1D429.TEX-B::before { padding: 0.45em 0.639em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c1D7CE.TEX-B::before { padding: 0.654em 0.575em 0.01em 0px; content: "0"; }
+mjx-c.mjx-c1D405.TEX-B::before { padding: 0.68em 0.724em 0px 0px; content: "F"; }
+mjx-c.mjx-c1D403.TEX-B::before { padding: 0.686em 0.882em 0px 0px; content: "D"; }
+mjx-c.mjx-c5B.TEX-S2::before { padding: 1.15em 0.472em 0.649em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S2::before { padding: 1.15em 0.472em 0.649em 0px; content: "]"; }
+mjx-c.mjx-c1D427.TEX-B::before { padding: 0.45em 0.639em 0px 0px; content: "n"; }
+mjx-c.mjx-c1D412.TEX-B::before { padding: 0.697em 0.639em 0.011em 0px; content: "S"; }
+mjx-c.mjx-c1D41C.TEX-B::before { padding: 0.453em 0.511em 0.006em 0px; content: "c"; }
+mjx-c.mjx-c1D425.TEX-B::before { padding: 0.694em 0.319em 0px 0px; content: "l"; }
+mjx-c.mjx-c222C.TEX-S1::before { padding: 0.805em 0.957em 0.306em 0px; content: "∬"; }
+mjx-c.mjx-c1D41A.TEX-B::before { padding: 0.453em 0.559em 0.006em 0px; content: "a"; }
+mjx-c.mjx-c1D41B.TEX-B::before { padding: 0.694em 0.639em 0.006em 0px; content: "b"; }
+mjx-c.mjx-c1D422.TEX-B::before { padding: 0.695em 0.319em 0px 0px; content: "i"; }
+mjx-c.mjx-c1D423.TEX-B::before { padding: 0.695em 0.351em 0.2em 0px; content: "j"; }
+mjx-c.mjx-c1D424.TEX-B::before { padding: 0.694em 0.607em 0px 0px; content: "k"; }
+mjx-c.mjx-c1D70C.TEX-I::before { padding: 0.442em 0.517em 0.216em 0px; content: "ρ"; }
+mjx-c.mjx-c1D719.TEX-I::before { padding: 0.694em 0.596em 0.205em 0px; content: "ϕ"; }
+mjx-c.mjx-c2DC.TEX-S1::before { padding: 0.722em 0.556em 0px 0px; content: "˜"; }
+mjx-c.mjx-c222D.TEX-S1::before { padding: 0.805em 1.304em 0.306em 0px; content: "∭"; }
+mjx-c.mjx-c2DC::before { padding: 0.668em 0.5em 0px 0px; content: "˜"; }
+mjx-c.mjx-c7B.TEX-S4::before { padding: 1.75em 0.806em 1.249em 0px; content: "{"; }
+mjx-c.mjx-c1D42E.TEX-B::before { padding: 0.45em 0.639em 0.006em 0px; content: "u"; }
+mjx-c.mjx-c2207::before { padding: 0.683em 0.833em 0.033em 0px; content: "∇"; }
+mjx-stretchy-v.mjx-c2016 mjx-ext mjx-c::before { content: "∥"; width: 0.556em; }
+mjx-c.mjx-c27E8::before { padding: 0.75em 0.389em 0.25em 0px; content: "⟨"; }
+mjx-c.mjx-c27E9::before { padding: 0.75em 0.389em 0.25em 0px; content: "⟩"; }
+mjx-c.mjx-c1D705.TEX-I::before { padding: 0.442em 0.576em 0.011em 0px; content: "κ"; }
+mjx-c.mjx-c1D42C.TEX-B::before { padding: 0.453em 0.454em 0.006em 0px; content: "s"; }
+mjx-c.mjx-c1D401.TEX-B::before { padding: 0.686em 0.818em 0px 0px; content: "B"; }
+mjx-c.mjx-c1D40D.TEX-B::before { padding: 0.686em 0.9em 0px 0px; content: "N"; }
+mjx-stretchy-h.mjx-c2192 mjx-ext mjx-c::before { content: "−"; padding: 0.583em 0px 0.082em; }
+mjx-stretchy-h.mjx-c2192 mjx-end mjx-c::before { content: "→"; padding: 0.583em 0px 0.082em; }
+mjx-c.mjx-c1D43D.TEX-I::before { padding: 0.683em 0.633em 0.022em 0px; content: "J"; }
+mjx-c.mjx-c2211.TEX-S2::before { padding: 0.95em 1.444em 0.45em 0px; content: "∑"; }
+mjx-c.mjx-c2033::before { padding: 0.56em 0.55em 0px 0px; content: "′′"; }
+mjx-c.mjx-c22EE::before { padding: 1.3em 0.278em 0.03em 0px; content: "⋮"; }
+mjx-c.mjx-c2033::before { padding: 0.56em 0.55em 0px 0px; content: "′′"; }
+mjx-c.mjx-c2225::before { padding: 0.75em 0.5em 0.25em 0px; content: "∥"; }
+mjx-c.mjx-c221A.TEX-S3::before { padding: 1.45em 1.02em 0.95em 0px; content: "√"; }
+mjx-c.mjx-c1D42B.TEX-B::before { padding: 0.45em 0.474em 0px 0px; content: "r"; }
+mjx-c.mjx-c1D42F.TEX-B::before { padding: 0.444em 0.607em 0px 0px; content: "v"; }
+mjx-c.mjx-cB1::before { padding: 0.666em 0.778em 0px 0px; content: "±"; }
+mjx-c.mjx-c1D45E.TEX-I::before { padding: 0.442em 0.46em 0.194em 0px; content: "q"; }
+mjx-c.mjx-c221A.TEX-S2::before { padding: 1.15em 1.02em 0.65em 0px; content: "√"; }
+mjx-c.mjx-c27F9::before { padding: 0.525em 1.638em 0.024em 0px; content: "⟹"; }
+mjx-c.mjx-c2224.TEX-A::before { padding: 0.75em 0.297em 0.252em 0px; content: "∤"; }
+.mjx-stretched mjx-c.mjx-c2013::before { content: "–"; }
+mjx-stretchy-h.mjx-c2013 mjx-ext mjx-c::before { content: "–"; padding: 0.285em 0px 0px; }
+mjx-c.mjx-c2217::before { padding: 0.465em 0.5em 0px 0px; content: "∗"; }
+mjx-c.mjx-c1D70B.TEX-I::before { padding: 0.431em 0.57em 0.011em 0px; content: "π"; }
+mjx-c.mjx-c2013::before { padding: 0.285em 0.5em 0px 0px; content: "–"; }
+mjx-stretchy-v.mjx-c7C mjx-ext mjx-c::before { content: "∣"; width: 0.333em; }
+mjx-c.mjx-c394::before { padding: 0.716em 0.833em 0px 0px; content: "Δ"; }
+mjx-c.mjx-c1D444.TEX-I::before { padding: 0.704em 0.791em 0.194em 0px; content: "Q"; }
+mjx-c.mjx-c2218::before { padding: 0.444em 0.5em 0px 0px; content: "∘"; }
+mjx-stretchy-v.mjx-c5B mjx-beg mjx-c::before { content: "⎡"; padding: 1.154em 0.667em 0.645em 0px; }
+mjx-stretchy-v.mjx-c5B mjx-ext mjx-c::before { content: "⎢"; width: 0.667em; }
+mjx-stretchy-v.mjx-c5B mjx-end mjx-c::before { content: "⎣"; padding: 1.155em 0.667em 0.644em 0px; }
+mjx-stretchy-v.mjx-c5B > mjx-end { margin-top: -1.799em; }
+mjx-stretchy-v.mjx-c5B > mjx-ext { border-top-width: 1.769em; border-bottom-width: 1.769em; }
+mjx-stretchy-v.mjx-c5D mjx-beg mjx-c::before { content: "⎤"; padding: 1.154em 0.667em 0.645em 0px; }
+mjx-stretchy-v.mjx-c5D mjx-ext mjx-c::before { content: "⎥"; width: 0.667em; }
+mjx-stretchy-v.mjx-c5D mjx-end mjx-c::before { content: "⎦"; padding: 1.155em 0.667em 0.644em 0px; }
+mjx-stretchy-v.mjx-c5D > mjx-end { margin-top: -1.799em; }
+mjx-stretchy-v.mjx-c5D > mjx-ext { border-top-width: 1.769em; border-bottom-width: 1.769em; }
+mjx-c.mjx-c1D703.TEX-I::before { padding: 0.705em 0.469em 0.01em 0px; content: "θ"; }
+mjx-c.mjx-c5E::before { padding: 0.694em 0.5em 0px 0px; content: "^"; }
+mjx-c.mjx-c1D708.TEX-I::before { padding: 0.442em 0.53em 0px 0px; content: "ν"; }
+mjx-c.mjx-c1D715::before { padding: 0.715em 0.566em 0.022em 0px; content: "∂"; }
+mjx-c.mjx-c5B.TEX-S3::before { padding: 1.45em 0.528em 0.949em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S3::before { padding: 1.45em 0.528em 0.949em 0px; content: "]"; }
+mjx-c.mjx-cAF::before { padding: 0.59em 0.5em 0px 0px; content: "¯"; }
+mjx-c.mjx-c223C::before { padding: 0.367em 0.778em 0px 0px; content: "∼"; }
+mjx-c.mjx-c5B.TEX-S4::before { padding: 1.75em 0.583em 1.249em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S4::before { padding: 1.75em 0.583em 1.249em 0px; content: "]"; }
+mjx-c.mjx-c3B::before { padding: 0.43em 0.278em 0.194em 0px; content: ";"; }
+mjx-c.mjx-c1D6FC.TEX-I::before { padding: 0.442em 0.64em 0.011em 0px; content: "α"; }
+mjx-c.mjx-c1D6FD.TEX-I::before { padding: 0.705em 0.566em 0.194em 0px; content: "β"; }
+mjx-c.mjx-c28.TEX-S1::before { padding: 0.85em 0.458em 0.349em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S1::before { padding: 0.85em 0.458em 0.349em 0px; content: ")"; }
+mjx-c.mjx-c220F.TEX-S1::before { padding: 0.75em 0.944em 0.25em 0px; content: "∏"; }
+mjx-c.mjx-c1D70F.TEX-I::before { padding: 0.431em 0.517em 0.013em 0px; content: "τ"; }
+mjx-c.mjx-c1D6FF.TEX-I::before { padding: 0.717em 0.444em 0.01em 0px; content: "δ"; }
+mjx-c.mjx-c1D439.TEX-I::before { padding: 0.68em 0.749em 0px 0px; content: "F"; }
+mjx-msqrt { display: inline-block; text-align: left; }
+mjx-root { display: inline-block; white-space: nowrap; }
+mjx-surd { display: inline-block; vertical-align: top; }
+mjx-sqrt { display: inline-block; padding-top: 0.07em; }
+mjx-sqrt > mjx-box { border-top: 0.07em solid; }
+mjx-sqrt.mjx-tall > mjx-box { padding-left: 0.3em; margin-left: -0.3em; }
+mjx-mspace { display: inline-block; text-align: left; }
+mjx-c.mjx-c1D707.TEX-I::before { padding: 0.442em 0.603em 0.216em 0px; content: "μ"; }
+mjx-c.mjx-c1D70E.TEX-I::before { padding: 0.431em 0.571em 0.011em 0px; content: "σ"; }
+mjx-c.mjx-c221A::before { padding: 0.8em 0.853em 0.2em 0px; content: "√"; }
+mjx-c.mjx-c221A.TEX-S1::before { padding: 0.85em 1.02em 0.35em 0px; content: "√"; }
+mjx-c.mjx-c1D716.TEX-I::before { padding: 0.431em 0.406em 0.011em 0px; content: "ϵ"; }
+mjx-c.mjx-c27FA::before { padding: 0.525em 1.858em 0.024em 0px; content: "⟺"; }
+mjx-c.mjx-c28.TEX-S2::before { padding: 1.15em 0.597em 0.649em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S2::before { padding: 1.15em 0.597em 0.649em 0px; content: ")"; }
+mjx-c.mjx-c2248::before { padding: 0.483em 0.778em 0px 0px; content: "≈"; }
+mjx-c.mjx-c3A6::before { padding: 0.683em 0.722em 0px 0px; content: "Φ"; }
+mjx-c.mjx-c1D440.TEX-I::before { padding: 0.683em 1.051em 0px 0px; content: "M"; }
+mjx-c.mjx-c222B.TEX-S1::before { padding: 0.805em 0.61em 0.306em 0px; content: "∫"; }
+mjx-c.mjx-c2026::before { padding: 0.12em 1.172em 0px 0px; content: "…"; }
+mjx-mover { display: inline-block; text-align: left; }
+mjx-mover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-mover:not([limits="false"]) > * { display: block; text-align: left; }
+mjx-c.mjx-c1D44B.TEX-I::before { padding: 0.683em 0.852em 0px 0px; content: "X"; }
+mjx-c.mjx-c1D44C.TEX-I::before { padding: 0.683em 0.763em 0px 0px; content: "Y"; }
+mjx-c.mjx-c1D466.TEX-I::before { padding: 0.442em 0.49em 0.205em 0px; content: "y"; }
+mjx-c.mjx-c76::before { padding: 0.431em 0.528em 0.011em 0px; content: "v"; }
+mjx-c.mjx-c1D706.TEX-I::before { padding: 0.694em 0.583em 0.012em 0px; content: "λ"; }
+mjx-c.mjx-c1D44D.TEX-I::before { padding: 0.683em 0.723em 0px 0px; content: "Z"; }
+mjx-c.mjx-c1D467.TEX-I::before { padding: 0.442em 0.465em 0.011em 0px; content: "z"; }
+mjx-c.mjx-c7E::before { padding: 0.318em 0.5em 0px 0px; content: "~"; }
+mjx-c.mjx-c22C3.TEX-S1::before { padding: 0.75em 0.833em 0.249em 0px; content: "⋃"; }
+mjx-c.mjx-c3A9::before { padding: 0.704em 0.722em 0px 0px; content: "Ω"; }
+mjx-c.mjx-c22C2.TEX-S1::before { padding: 0.75em 0.833em 0.249em 0px; content: "⋂"; }
+mjx-c.mjx-c25FC.TEX-A::before { padding: 0.689em 0.778em 0px 0px; content: "■"; }
+mjx-c.mjx-c1D435.TEX-I::before { padding: 0.683em 0.759em 0px 0px; content: "B"; }
+mjx-c.mjx-c222A::before { padding: 0.598em 0.667em 0.022em 0px; content: "∪"; }
+mjx-c.mjx-c28.TEX-S3::before { padding: 1.45em 0.736em 0.949em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S3::before { padding: 1.45em 0.736em 0.949em 0px; content: ")"; }
+mjx-c.mjx-c28.TEX-S4::before { padding: 1.75em 0.792em 1.249em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S4::before { padding: 1.75em 0.792em 1.249em 0px; content: ")"; }
+mjx-mfrac { display: inline-block; text-align: left; }
+mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
+mjx-frac[type="d"] { vertical-align: 0.04em; }
+mjx-frac[delims] { padding: 0px 0.1em; }
+mjx-frac[atop] { padding: 0px 0.12em; }
+mjx-frac[atop][delims] { padding: 0px; }
+mjx-dtable { display: inline-table; width: 100%; }
+mjx-dtable > * { font-size: 2000%; }
+mjx-dbox { display: block; font-size: 5%; }
+mjx-num { display: block; text-align: center; }
+mjx-den { display: block; text-align: center; }
+mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
+mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
+mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
+mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
+mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
+mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
+mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
+mjx-dstrut[type="d"] { height: 0.726em; }
+mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.06em solid; margin: 0.06em -0.1em; overflow: hidden; }
+mjx-line[type="d"] { margin: 0.18em -0.1em; }
+mjx-c.mjx-c21::before { padding: 0.716em 0.278em 0px 0px; content: "!"; }
+mjx-c.mjx-cA0::before { padding: 0px 0.25em 0px 0px; content: " "; }
+mjx-c.mjx-c2115.TEX-A::before { padding: 0.683em 0.722em 0.02em 0px; content: "N"; }
+mjx-c.mjx-c1D454.TEX-I::before { padding: 0.442em 0.477em 0.205em 0px; content: "g"; }
+mjx-c.mjx-c398::before { padding: 0.705em 0.778em 0.022em 0px; content: "Θ"; }
+mjx-mtext { display: inline-block; text-align: left; }
+mjx-msub { display: inline-block; text-align: left; }
+mjx-mrow { display: inline-block; text-align: left; }
+mjx-mtable { display: inline-block; text-align: center; vertical-align: 0.25em; position: relative; box-sizing: border-box; border-spacing: 0px; border-collapse: collapse; }
+mjx-mstyle[size="s"] mjx-mtable { vertical-align: 0.354em; }
+mjx-labels { position: absolute; left: 0px; top: 0px; }
+mjx-table { display: inline-block; vertical-align: -0.5ex; box-sizing: border-box; }
+mjx-table > mjx-itable { vertical-align: middle; text-align: left; box-sizing: border-box; }
+mjx-labels > mjx-itable { position: absolute; top: 0px; }
+mjx-mtable[justify="left"] { text-align: left; }
+mjx-mtable[justify="right"] { text-align: right; }
+mjx-mtable[justify="left"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="left"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[justify="right"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="right"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[align] { vertical-align: baseline; }
+mjx-mtable[align="top"] > mjx-table { vertical-align: top; }
+mjx-mtable[align="bottom"] > mjx-table { vertical-align: bottom; }
+mjx-mtable[side="right"] mjx-labels { min-width: 100%; }
+mjx-mtr { display: table-row; text-align: left; }
+mjx-mtr[rowalign="top"] > mjx-mtd { vertical-align: top; }
+mjx-mtr[rowalign="center"] > mjx-mtd { vertical-align: middle; }
+mjx-mtr[rowalign="bottom"] > mjx-mtd { vertical-align: bottom; }
+mjx-mtr[rowalign="baseline"] > mjx-mtd { vertical-align: baseline; }
+mjx-mtr[rowalign="axis"] > mjx-mtd { vertical-align: 0.25em; }
+mjx-mtd { display: table-cell; text-align: center; padding: 0.215em 0.4em; }
+mjx-mtd:first-child { padding-left: 0px; }
+mjx-mtd:last-child { padding-right: 0px; }
+mjx-mtable > * > mjx-itable > :first-child > mjx-mtd { padding-top: 0px; }
+mjx-mtable > * > mjx-itable > :last-child > mjx-mtd { padding-bottom: 0px; }
+mjx-tstrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
+mjx-labels[align="left"] > mjx-mtr > mjx-mtd { text-align: left; }
+mjx-labels[align="right"] > mjx-mtr > mjx-mtd { text-align: right; }
+mjx-mtd[extra] { padding: 0px; }
+mjx-mtd[rowalign="top"] { vertical-align: top; }
+mjx-mtd[rowalign="center"] { vertical-align: middle; }
+mjx-mtd[rowalign="bottom"] { vertical-align: bottom; }
+mjx-mtd[rowalign="baseline"] { vertical-align: baseline; }
+mjx-mtd[rowalign="axis"] { vertical-align: 0.25em; }
+mjx-munder { display: inline-block; text-align: left; }
+mjx-over { text-align: left; }
+mjx-munder:not([limits="false"]) { display: inline-table; }
+mjx-munder > mjx-row { text-align: left; }
+mjx-under { padding-bottom: 0.1em; }
+mjx-munderover { display: inline-block; text-align: left; }
+mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-munderover:not([limits="false"]) > * { display: block; }
+mjx-msubsup { display: inline-block; text-align: left; }
+mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
+mjx-script > mjx-spacer { display: block; }
+mjx-stretchy-v.mjx-c7B mjx-beg mjx-c::before { content: "⎧"; padding: 0.899em 0.889em 0.01em 0px; }
+mjx-stretchy-v.mjx-c7B mjx-ext mjx-c::before { content: "⎪"; width: 0.889em; }
+mjx-stretchy-v.mjx-c7B mjx-end mjx-c::before { content: "⎩"; padding: 0.01em 0.889em 0.899em 0px; }
+mjx-stretchy-v.mjx-c7B mjx-mid mjx-c::before { content: "⎨"; padding: 1.16em 0.889em 0.66em 0px; }
+mjx-stretchy-v.mjx-c7B > mjx-mid { margin-top: -0.91em; margin-bottom: -0.91em; }
+mjx-stretchy-v.mjx-c7B > mjx-end { margin-top: -0.909em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext { height: 50%; border-top-width: 0.879em; border-bottom-width: 0.879em; }
+mjx-c.mjx-c44::before { padding: 0.683em 0.764em 0px 0px; content: "D"; }
+mjx-c.mjx-c52::before { padding: 0.683em 0.736em 0.022em 0px; content: "R"; }
+mjx-c.mjx-c3D::before { padding: 0.583em 0.778em 0.082em 0px; content: "="; }
+mjx-c.mjx-c50::before { padding: 0.683em 0.681em 0px 0px; content: "P"; }
+mjx-c.mjx-c53::before { padding: 0.705em 0.556em 0.022em 0px; content: "S"; }
+mjx-c.mjx-c2200::before { padding: 0.694em 0.556em 0.022em 0px; content: "∀"; }
+mjx-c.mjx-c1D465.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "x"; }
+mjx-c.mjx-c2208::before { padding: 0.54em 0.667em 0.04em 0px; content: "∈"; }
+mjx-c.mjx-c2C::before { padding: 0.121em 0.278em 0.194em 0px; content: ","; }
+mjx-c.mjx-c2203::before { padding: 0.694em 0.556em 0px 0px; content: "∃"; }
+mjx-c.mjx-c1D451.TEX-I::before { padding: 0.694em 0.52em 0.01em 0px; content: "d"; }
+mjx-c.mjx-c2282::before { padding: 0.54em 0.778em 0.04em 0px; content: "⊂"; }
+mjx-c.mjx-c1D45F.TEX-I::before { padding: 0.442em 0.451em 0.011em 0px; content: "r"; }
+mjx-c.mjx-c1D45D.TEX-I::before { padding: 0.442em 0.503em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c7B::before { padding: 0.75em 0.5em 0.25em 0px; content: "{"; }
+mjx-c.mjx-c7D::before { padding: 0.75em 0.5em 0.25em 0px; content: "}"; }
+mjx-c.mjx-c1D437.TEX-I::before { padding: 0.683em 0.828em 0px 0px; content: "D"; }
+mjx-c.mjx-c1D446.TEX-I::before { padding: 0.705em 0.645em 0.022em 0px; content: "S"; }
+mjx-c.mjx-c1D445.TEX-I::before { padding: 0.683em 0.759em 0.021em 0px; content: "R"; }
+mjx-c.mjx-c70::before { padding: 0.442em 0.556em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c72::before { padding: 0.442em 0.392em 0px 0px; content: "r"; }
+mjx-c.mjx-c69::before { padding: 0.669em 0.278em 0px 0px; content: "i"; }
+mjx-c.mjx-c6F::before { padding: 0.448em 0.5em 0.01em 0px; content: "o"; }
+mjx-c.mjx-c1D462.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "u"; }
+mjx-c.mjx-c6E::before { padding: 0.442em 0.556em 0px 0px; content: "n"; }
+mjx-c.mjx-c65::before { padding: 0.448em 0.444em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c78::before { padding: 0.431em 0.528em 0px 0px; content: "x"; }
+mjx-c.mjx-c74::before { padding: 0.615em 0.389em 0.01em 0px; content: "t"; }
+mjx-c.mjx-c1D456.TEX-I::before { padding: 0.661em 0.345em 0.011em 0px; content: "i"; }
+mjx-c.mjx-c2E::before { padding: 0.12em 0.278em 0px 0px; content: "."; }
+mjx-c.mjx-c1D45B.TEX-I::before { padding: 0.442em 0.6em 0.011em 0px; content: "n"; }
+mjx-c.mjx-c1D43F.TEX-I::before { padding: 0.683em 0.681em 0px 0px; content: "L"; }
+mjx-c.mjx-c1D436.TEX-I::before { padding: 0.705em 0.76em 0.022em 0px; content: "C"; }
+mjx-c.mjx-c1D44E.TEX-I::before { padding: 0.441em 0.529em 0.01em 0px; content: "a"; }
+mjx-c.mjx-c2B::before { padding: 0.583em 0.778em 0.082em 0px; content: "+"; }
+mjx-c.mjx-c1D450.TEX-I::before { padding: 0.442em 0.433em 0.011em 0px; content: "c"; }
+mjx-c.mjx-c1D453.TEX-I::before { padding: 0.705em 0.55em 0.205em 0px; content: "f"; }
+mjx-c.mjx-c1D45C.TEX-I::before { padding: 0.441em 0.485em 0.011em 0px; content: "o"; }
+mjx-c.mjx-c1D441.TEX-I::before { padding: 0.683em 0.888em 0px 0px; content: "N"; }
+mjx-c.mjx-c25::before { padding: 0.75em 0.833em 0.056em 0px; content: "%"; }
+mjx-c.mjx-c7B.TEX-S3::before { padding: 1.45em 0.75em 0.949em 0px; content: "{"; }
+mjx-c.mjx-c221E::before { padding: 0.442em 1em 0.011em 0px; content: "∞"; }
+mjx-c.mjx-c1D44F.TEX-I::before { padding: 0.694em 0.429em 0.011em 0px; content: "b"; }
+mjx-c.mjx-c1D458.TEX-I::before { padding: 0.694em 0.521em 0.011em 0px; content: "k"; }
+mjx-c.mjx-c6D::before { padding: 0.442em 0.833em 0px 0px; content: "m"; }
+mjx-c.mjx-c61::before { padding: 0.448em 0.5em 0.011em 0px; content: "a"; }
+mjx-c.mjx-c1D45A.TEX-I::before { padding: 0.442em 0.878em 0.011em 0px; content: "m"; }
+mjx-c.mjx-c3C::before { padding: 0.54em 0.778em 0.04em 0px; content: "<"; }
+mjx-c.mjx-c1D457.TEX-I::before { padding: 0.661em 0.412em 0.204em 0px; content: "j"; }
+mjx-c.mjx-c1D459.TEX-I::before { padding: 0.694em 0.298em 0.011em 0px; content: "l"; }
+mjx-c.mjx-c5B::before { padding: 0.75em 0.278em 0.25em 0px; content: "["; }
+mjx-c.mjx-c210E.TEX-I::before { padding: 0.694em 0.576em 0.011em 0px; content: "h"; }
+mjx-c.mjx-c5D::before { padding: 0.75em 0.278em 0.25em 0px; content: "]"; }
+mjx-c.mjx-cD7::before { padding: 0.491em 0.778em 0px 0px; content: "×"; }
+mjx-c.mjx-c2265::before { padding: 0.636em 0.778em 0.138em 0px; content: "≥"; }
+mjx-c.mjx-c1D447.TEX-I::before { padding: 0.677em 0.704em 0px 0px; content: "T"; }
+mjx-c.mjx-c22EF::before { padding: 0.31em 1.172em 0px 0px; content: "⋯"; }
+mjx-c.mjx-c64::before { padding: 0.694em 0.556em 0.011em 0px; content: "d"; }
+mjx-c.mjx-c67::before { padding: 0.453em 0.5em 0.206em 0px; content: "g"; }
+mjx-c.mjx-c2061::before { padding: 0px; content: ""; }
+mjx-c.mjx-c1D463.TEX-I::before { padding: 0.443em 0.485em 0.011em 0px; content: "v"; }
+mjx-c.mjx-c77::before { padding: 0.431em 0.722em 0.011em 0px; content: "w"; }
+mjx-c.mjx-c6C::before { padding: 0.694em 0.278em 0px 0px; content: "l"; }
+mjx-c.mjx-c66::before { padding: 0.705em 0.372em 0px 0px; content: "f"; }
+mjx-c.mjx-c2209::before { padding: 0.716em 0.667em 0.215em 0px; content: "∉"; }
+mjx-c.mjx-c2260::before { padding: 0.716em 0.778em 0.215em 0px; content: "≠"; }
+mjx-c.mjx-c73::before { padding: 0.448em 0.394em 0.011em 0px; content: "s"; }
+mjx-c.mjx-c62::before { padding: 0.694em 0.556em 0.011em 0px; content: "b"; }
+mjx-c.mjx-c63::before { padding: 0.448em 0.444em 0.011em 0px; content: "c"; }
+mjx-c.mjx-c68::before { padding: 0.694em 0.556em 0px 0px; content: "h"; }
+mjx-c.mjx-c2205::before { padding: 0.772em 0.5em 0.078em 0px; content: "∅"; }
+mjx-c.mjx-c7C::before { padding: 0.75em 0.278em 0.249em 0px; content: "|"; }
+mjx-c.mjx-c1D43A.TEX-I::before { padding: 0.705em 0.786em 0.022em 0px; content: "G"; }
+mjx-c.mjx-c1D449.TEX-I::before { padding: 0.683em 0.769em 0.022em 0px; content: "V"; }
+mjx-c.mjx-c1D438.TEX-I::before { padding: 0.68em 0.764em 0px 0px; content: "E"; }
+mjx-c.mjx-c1D44A.TEX-I::before { padding: 0.683em 1.048em 0.022em 0px; content: "W"; }
+mjx-c.mjx-c1D443.TEX-I::before { padding: 0.683em 0.751em 0px 0px; content: "P"; }
+mjx-c.mjx-c2211.TEX-S1::before { padding: 0.75em 1.056em 0.25em 0px; content: "∑"; }
+mjx-c.mjx-c2264::before { padding: 0.636em 0.778em 0.138em 0px; content: "≤"; }
+mjx-c.mjx-c2204::before { padding: 0.716em 0.556em 0.215em 0px; content: "∄"; }
+mjx-c.mjx-c4C::before { padding: 0.683em 0.625em 0px 0px; content: "L"; }
+mjx-c.mjx-c2308::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌈"; }
+mjx-c.mjx-c2309::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌉"; }
+mjx-c.mjx-c230A::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌊"; }
+mjx-c.mjx-c230B::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌋"; }
+mjx-c.mjx-c1D430.TEX-B::before { padding: 0.444em 0.831em 0px 0px; content: "w"; }
+mjx-c.mjx-c1D464.TEX-I::before { padding: 0.443em 0.716em 0.011em 0px; content: "w"; }
+mjx-c.mjx-c1D413.TEX-B::before { padding: 0.675em 0.8em 0px 0px; content: "T"; }
+mjx-c.mjx-c3D.TEX-B::before { padding: 0.393em 0.894em 0px 0px; content: "="; }
+mjx-c.mjx-c1D7CF.TEX-B::before { padding: 0.655em 0.575em 0px 0px; content: "1"; }
+mjx-c.mjx-c2190::before { padding: 0.511em 1em 0.011em 0px; content: "←"; }
+mjx-c.mjx-c56::before { padding: 0.683em 0.75em 0.022em 0px; content: "V"; }
+mjx-c.mjx-c45::before { padding: 0.68em 0.681em 0px 0px; content: "E"; }
+mjx-c.mjx-c6A::before { padding: 0.669em 0.306em 0.205em 0px; content: "j"; }
+mjx-c.mjx-c1D460.TEX-I::before { padding: 0.442em 0.469em 0.01em 0px; content: "s"; }
+mjx-c.mjx-c2192::before { padding: 0.511em 1em 0.011em 0px; content: "→"; }
+mjx-c.mjx-c2032::before { padding: 0.56em 0.275em 0px 0px; content: "′"; }
+mjx-c.mjx-c2229::before { padding: 0.598em 0.667em 0.022em 0px; content: "∩"; }
+mjx-c.mjx-c49::before { padding: 0.683em 0.361em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D434.TEX-I::before { padding: 0.716em 0.75em 0px 0px; content: "A"; }
+mjx-c.mjx-c3A::before { padding: 0.43em 0.278em 0px 0px; content: ":"; }
+mjx-c.mjx-c211D.TEX-A::before { padding: 0.683em 0.722em 0px 0px; content: "R"; }
+mjx-c.mjx-c1D43B.TEX-I::before { padding: 0.683em 0.888em 0px 0px; content: "H"; }
+mjx-c.mjx-c1D53D.TEX-A::before { padding: 0.683em 0.611em 0px 0px; content: "F"; }
+mjx-c.mjx-c2124.TEX-A::before { padding: 0.683em 0.667em 0px 0px; content: "Z"; }
+mjx-c.mjx-c21A6::before { padding: 0.511em 1em 0.011em 0px; content: "↦"; }
+mjx-c.mjx-c71::before { padding: 0.442em 0.528em 0.194em 0px; content: "q"; }
+mjx-c.mjx-c30::before { padding: 0.666em 0.5em 0.022em 0px; content: "0"; }
+mjx-c.mjx-c36::before { padding: 0.666em 0.5em 0.022em 0px; content: "6"; }
+mjx-container[jax="CHTML"] { line-height: 0; }
+mjx-container [space="1"] { margin-left: 0.111em; }
+mjx-container [space="2"] { margin-left: 0.167em; }
+mjx-container [space="3"] { margin-left: 0.222em; }
+mjx-container [space="4"] { margin-left: 0.278em; }
+mjx-container [space="5"] { margin-left: 0.333em; }
+mjx-container [rspace="1"] { margin-right: 0.111em; }
+mjx-container [rspace="2"] { margin-right: 0.167em; }
+mjx-container [rspace="3"] { margin-right: 0.222em; }
+mjx-container [rspace="4"] { margin-right: 0.278em; }
+mjx-container [rspace="5"] { margin-right: 0.333em; }
+mjx-container [size="s"] { font-size: 70.7%; }
+mjx-container [size="ss"] { font-size: 50%; }
+mjx-container [size="Tn"] { font-size: 60%; }
+mjx-container [size="sm"] { font-size: 85%; }
+mjx-container [size="lg"] { font-size: 120%; }
+mjx-container [size="Lg"] { font-size: 144%; }
+mjx-container [size="LG"] { font-size: 173%; }
+mjx-container [size="hg"] { font-size: 207%; }
+mjx-container [size="HG"] { font-size: 249%; }
+mjx-container [width="full"] { width: 100%; }
+mjx-box { display: inline-block; }
+mjx-block { display: block; }
+mjx-itable { display: inline-table; }
+mjx-row { display: table-row; }
+mjx-row > * { display: table-cell; }
+mjx-mtext { display: inline-block; }
+mjx-mstyle { display: inline-block; }
+mjx-merror { display: inline-block; color: red; background-color: yellow; }
+mjx-mphantom { visibility: hidden; }
+mjx-assistive-mml { top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); user-select: none; position: absolute !important; padding: 1px 0px 0px !important; border: 0px !important; display: block !important; width: auto !important; overflow: hidden !important; }
+mjx-assistive-mml[display="block"] { width: 100% !important; }
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
+mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
+mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h { display: inline-table; width: 100%; }
+mjx-stretchy-h > * { display: table-cell; width: 0px; }
+mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
+mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
+mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
+mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
+mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
+mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
+mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
+mjx-stretchy-v { display: inline-block; }
+mjx-stretchy-v > * { display: block; }
+mjx-stretchy-v > mjx-beg { height: 0px; }
+mjx-stretchy-v > mjx-end > mjx-c { display: block; }
+mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
+mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
+mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
+mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
+mjx-mark { display: inline-block; height: 0px; }
+mjx-c { display: inline-block; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-texatom { display: inline-block; text-align: left; }
+mjx-mi { display: inline-block; text-align: left; }
+mjx-msup { display: inline-block; text-align: left; }
+mjx-c::before { display: block; width: 0px; }
+.MJX-TEX { font-family: MJXZERO, MJXTEX; }
+.TEX-B { font-family: MJXZERO, MJXTEX-B; }
+.TEX-I { font-family: MJXZERO, MJXTEX-I; }
+.TEX-MI { font-family: MJXZERO, MJXTEX-MI; }
+.TEX-BI { font-family: MJXZERO, MJXTEX-BI; }
+.TEX-S1 { font-family: MJXZERO, MJXTEX-S1; }
+.TEX-S2 { font-family: MJXZERO, MJXTEX-S2; }
+.TEX-S3 { font-family: MJXZERO, MJXTEX-S3; }
+.TEX-S4 { font-family: MJXZERO, MJXTEX-S4; }
+.TEX-A { font-family: MJXZERO, MJXTEX-A; }
+.TEX-C { font-family: MJXZERO, MJXTEX-C; }
+.TEX-CB { font-family: MJXZERO, MJXTEX-CB; }
+.TEX-FR { font-family: MJXZERO, MJXTEX-FR; }
+.TEX-FRB { font-family: MJXZERO, MJXTEX-FRB; }
+.TEX-SS { font-family: MJXZERO, MJXTEX-SS; }
+.TEX-SSB { font-family: MJXZERO, MJXTEX-SSB; }
+.TEX-SSI { font-family: MJXZERO, MJXTEX-SSI; }
+.TEX-SC { font-family: MJXZERO, MJXTEX-SC; }
+.TEX-T { font-family: MJXZERO, MJXTEX-T; }
+.TEX-V { font-family: MJXZERO, MJXTEX-V; }
+.TEX-VB { font-family: MJXZERO, MJXTEX-VB; }
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important; }
+@font-face { font-family: MJXZERO; src: url("lib/fonts/mathjax_zero.woff") format("woff"); }
+@font-face { font-family: MJXTEX; src: url("lib/fonts/mathjax_main-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-B; src: url("lib/fonts/mathjax_main-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-I; src: url("lib/fonts/mathjax_math-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-MI; src: url("lib/fonts/mathjax_main-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-BI; src: url("lib/fonts/mathjax_math-bolditalic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S1; src: url("lib/fonts/mathjax_size1-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S2; src: url("lib/fonts/mathjax_size2-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S3; src: url("lib/fonts/mathjax_size3-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S4; src: url("lib/fonts/mathjax_size4-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-A; src: url("lib/fonts/mathjax_ams-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-C; src: url("lib/fonts/mathjax_calligraphic-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-CB; src: url("lib/fonts/mathjax_calligraphic-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FR; src: url("lib/fonts/mathjax_fraktur-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FRB; src: url("lib/fonts/mathjax_fraktur-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SS; src: url("lib/fonts/mathjax_sansserif-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSB; src: url("lib/fonts/mathjax_sansserif-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSI; src: url("lib/fonts/mathjax_sansserif-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SC; src: url("lib/fonts/mathjax_script-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-T; src: url("lib/fonts/mathjax_typewriter-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-V; src: url("lib/fonts/mathjax_vector-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-VB; src: url("lib/fonts/mathjax_vector-bold.woff") format("woff"); }
+mjx-c.mjx-c28::before { padding: 0.75em 0.389em 0.25em 0px; content: "("; }
+mjx-c.mjx-c34::before { padding: 0.677em 0.5em 0px 0px; content: "4"; }
+mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
+mjx-c.mjx-c39::before { padding: 0.666em 0.5em 0.022em 0px; content: "9"; }
+mjx-c.mjx-c35::before { padding: 0.666em 0.5em 0.022em 0px; content: "5"; }
+mjx-c.mjx-c38::before { padding: 0.666em 0.5em 0.022em 0px; content: "8"; }
+mjx-c.mjx-c33::before { padding: 0.665em 0.5em 0.022em 0px; content: "3"; }
+mjx-c.mjx-c2F::before { padding: 0.75em 0.5em 0.25em 0px; content: "/"; }
+mjx-c.mjx-c37::before { padding: 0.676em 0.5em 0.022em 0px; content: "7"; }
+mjx-c.mjx-c32::before { padding: 0.666em 0.5em 0px 0px; content: "2"; }
+mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }
+mjx-c.mjx-c22C5::before { padding: 0.31em 0.278em 0px 0px; content: "⋅"; }
+mjx-c.mjx-c2212::before { padding: 0.583em 0.778em 0.082em 0px; content: "−"; }
+mjx-c.mjx-c3E::before { padding: 0.54em 0.778em 0.04em 0px; content: ">"; }
+mjx-c.mjx-c1D442.TEX-I::before { padding: 0.704em 0.763em 0.022em 0px; content: "O"; }
+mjx-c.mjx-c1D452.TEX-I::before { padding: 0.442em 0.466em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c1D461.TEX-I::before { padding: 0.626em 0.361em 0.011em 0px; content: "t"; }
+</style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="1. 样本空间&amp;概率"><ol dir="auto">
+<li dir="auto">样本空间&amp;概率</li>
+</ol></h1><div class="heading-wrapper"><h3 data-heading="1. 样本空间&amp;概率" dir="auto" class="heading" id="1._样本空间&amp;概率"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>1. 样本空间&amp;概率</h3><div class="heading-children"><div><pre dir="auto"><span>title: 约定
+1. 表示事件的花括号 $\{\}$ 在表示为概率的原像的时候可以省略，即 $P(事件)=P(\{事件\})$
+2. $A\cap B$ 简记为 $AB$，并且结合性比 $\cup$ 高</span><button class="copy-code-button">复制</button></pre></div><div class="heading-wrapper"><h4 data-heading="1. 集合" dir="auto" class="heading" id="1._集合"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>1. 集合</h4><div class="heading-children"><div><pre dir="auto"><span>title: 集合
+&gt; 集合：将一些研究对象放在一起形成**集合**，这些对象的称为集合的**元素**
+&gt; 
+&gt; 若 x 是集合 S 的元素，那么 $x\in S$，反之 $x\notin S$
+&gt; 
+&gt; 空集：记作 $\emptyset$
+&gt; 
+&gt; 集合的表示：(1) $S=\{x\in\Omega~|~x 满足性质 P\}$，(2) $S=\{x_1,x_2,\dots\}$
+&gt; 
+&gt; 可数无限集：由无限多个元素构成的集合
+&gt; 
+&gt; 子集，超集：S 是 T 的**子集**（记为 $S\subset T$），当且仅当 T 是 S 的**超集**（记为 $T\supset S$）
+&gt; 
+&gt; 集合相等：集合 S 与集合 T 相等（即 $S=T$），当且仅当 $S\subset T$ 并且 $T\subset S$
+&gt; 
+&gt; 空间：将我们感兴趣的所有元素放在一起，形成的集合称为**空间**，记作 $\Omega$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 集合运算
+&gt; 补集：S 相对于 $\Omega$ 的补集，记作 $S^c=\{x\in\Omega~|~x\notin S\}$；特别地 $\Omega^c=\emptyset$
+&gt; 
+&gt; 并集：$S\cup T = \{x~|~x\in S\vee x\in T\}$；$\bigcup\limits_{i=1}^nS_i=\{x~|~存在 i, 有x\in S_i\}$
+&gt; 
+&gt; 交集：$S\cap T = \{x~|~x\in S\wedge x\in T\}$；$\bigcap\limits_{i=1}^nS_i=\{x~|~对于所有 i, 有x\in S_i\}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 集合代数
+&gt; 交换律 $S\cup T=T\cup S$，结合律 $S\cup(T\cup U)=(S\cup T)\cup U$
+&gt; 
+&gt; 分配率：$S\cap(T\cup U)=(S\cap T)\cup(S\cap U)$，$S\cup(T\cap U)=(S\cup T)\cap(S\cup U)$
+&gt; 
+&gt; $(S^c)^c=S$，$S\cap S^c=\emptyset$，$S\cup\Omega=\Omega$，$S\cap\Omega=S$
+&gt; 
+&gt; 德摩根定律：$(\bigcup\limits_{i=1}^nS_i)^c=\bigcap\limits_{i=1}^nS_i^c$，$(\bigcap\limits_{i=1}^nS_i)^c=\bigcup\limits_{i=1}^nS_i^c$</span><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">证明德摩根定律：</p></div><div><ol dir="auto">
+<li data-line="0" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c3A9"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c2203"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c2E"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c3A9"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c2200"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c2E"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2209"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c3A9"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c2200"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c2E"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-msubsup space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.292em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s" style="margin-left: 0.118em;"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-spacer style="margin-top: 0.18em;"></mjx-spacer><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C2 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msubsup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.292em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s" style="margin-left: 0.118em;"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-spacer style="margin-top: 0.18em;"></mjx-spacer><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msubsup></mjx-math></mjx-container></span></li>
+<li data-line="1" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C2 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c3A9"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c2200"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c2E"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c3A9"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c2203"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c2E"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2209"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c3A9"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c2203"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c2E"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-msubsup space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.292em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s" style="margin-left: 0.118em;"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-spacer style="margin-top: 0.18em;"></mjx-spacer><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msubsup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.292em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s" style="margin-left: 0.118em;"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-spacer style="margin-top: 0.18em;"></mjx-spacer><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msubsup></mjx-math></mjx-container></span>（或者 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C2 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msubsup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.292em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s" style="margin-left: 0.118em;"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-spacer style="margin-top: 0.18em;"></mjx-spacer><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msubsup></mjx-math></mjx-container></span> 蕴涵 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msubsup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.292em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s" style="margin-left: 0.118em;"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-spacer style="margin-top: 0.18em;"></mjx-spacer><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C2 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msubsup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.292em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s" style="margin-left: 0.118em;"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-spacer style="margin-top: 0.18em;"></mjx-spacer><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C2 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span>，蕴涵 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msubsup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.292em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s" style="margin-left: 0.118em;"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-spacer style="margin-top: 0.18em;"></mjx-spacer><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C2 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span>，于是 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msubsup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.292em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s" style="margin-left: 0.118em;"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-spacer style="margin-top: 0.18em;"></mjx-spacer><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C2 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span>）</li>
+</ol></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c25FC TEX-A"></mjx-c></mjx-mi></mjx-math></mjx-container></span></p></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 集合，元素：将一些研究对象放在一起形成**集合**，这些对象的称为集合的**元素**
+&gt; 2. 集合的表示：(1) $S=\{x\in\Omega~|~x 满足性质 P\}$，(2) $S=\{x_1,x_2,\dots\}$
+&gt; 3. 元素与集合的关系：若 x 是集合 S 的元素，那么 $x\in S$，否则 $x\not\in S$
+&gt; 4. 集合间的关系：S 是 T 的**子集**，记为 $S\subset T$；T 是 S 的**超集**，记为 $T\supset S$；集合 S 和集合 T 相等，记作 $S=T$
+&gt; 5. 定理：(1) $S\subset T\iff T\supset S$，(2) $S=T\iff S\subset T,T\subset S$
+&gt; 6. 特殊的集合：(1) 空集，记为 $\emptyset$，(2) 空间，是我们所要研究的对象，记为 $\Omega$
+&gt; 7. 集合运算：(1) 集合 S 相对于 $\Omega$ 的补集，记为 $S^c=\{x\in\Omega~|~x\notin S\}$，(2) 集合 S 与集合 T 的并集，记为 $S\cup T = \{x\in\Omega~|~x\in S\vee x\in T\}$，(3) 集合 S 与集合 T 的交集，记为 $S\cap T = \{x\in\Omega~|~x\in S\wedge x\in T\}$
+&gt; 8. 集合运算推广：$\bigcup\limits_{i=1}^nS_i=\{x\in\Omega~|~\exists i=1..n,x\in S_i\}$，$\bigcap\limits_{i=1}^nS_i=\{x\in\Omega~|~\forall i=1..n,x\in S_i\}$
+&gt; 9. 集合公理：假设有集合 $S,T,U$，那么：
+&gt;     1. 交换律 $S\cup T=T\cup S$，$S\cap T=T\cap S$
+&gt;     2. 结合律 $S\cup(T\cup U)=(S\cup T)\cup U$，$S\cap(T\cap U)=(S\cap T)\cap U$
+&gt;     3. 交与并的分配律 $S\cap(T\cup U)=(S\cap T)\cup(S\cap U)$，$S\cup(T\cap U)=(S\cup T)\cap(S\cup U)$
+&gt;     4. $(S^c)^c=S$，$S\cap S^c=\emptyset$，$S\cup\Omega=\Omega$，$S\cap\Omega=S$
+&gt;     5. 德摩根定律：$(\bigcap\limits_{i=1}^nS_i)^c=\bigcup\limits_{i=1}^nS_i^c$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 一级结论
+&gt; 1. 完备分解：$A=AB\cup AB^c$
+&gt; 2. $AB=(A\cup B^c)(A^c\cup B)(A\cup B)$
+&gt; 3. 子集性质：若 $A\subset B$，那么 $AB=A,A\cup B=B$
+&gt; 4. 并集的不相交分解：(1) $A\cup B=A\cup A^cB$，(2) $\bigcup\limits_{i=1}^n A_i=\bigcup\limits_{i=1}^n\left(A_i\bigcap\limits_{j=1}^{i-1}A_j^c\right)$
+&gt; 5. 定义 $A-B=AB^c$，那么 $AB=B-A^cB$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 练习
+1. 假设 $\Omega=\{1,2,3,4,5,6\}$，验证：$(A\cup B)^c=A^c\cap B^c$，$(A\cap B)^c=A^c\cup B^c$
+2. 证明：假设 A 和 B 是两个集合，那么 (1) $A=(A\cap B)\cup(A\cap B^c)$，(2) $(A\cap B)^c=(A^c\cap B)\cup(A\cap B^c)\cup(A^c\cap B^c)$
+3. *证明：$A\cup\bigcap\limits_{i=1}^∞B_i=\bigcap\limits_{i=1}^∞(A\cup B_i)$
+4. *康托尔的三角论证方法：指出单位区间 $[0,1]$ 是不可数集合，即 $[0,1]$ 中的数不能排成一个数列
+5. 证明：$A\cup B=A\cup A^cB$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 提示
+&gt; (1) 假设 $A=\{2,4,6\},B=\{4,5,6\}$，于是 $A^c=\{1,3,5\},B^c=\{1,2,3\}$
+&gt; 
+&gt; 1. $A\cup B=\{2,4,5,6\}$，$(A\cup B)^c=\{1,3\}$，而 $A^c\cap B^c=\{1,3\}$，于是 $(A\cup B)^c=A^c\cap B^c$
+&gt; 2. $A\cap B=\{4,6\}$，$(A\cap B)^c=\{1,2,3,5\}$，而 $A^c\cup B^c=\{1,2,3,5\}$，于是 $(A\cap B)^c=A^c\cup B^c$
+&gt; 
+&gt; (2)
+&gt; 
+&gt; 1. 根据[集合概率]有 $(A\cap B)\cup(A\cap B^c)=A\cap(B\cup B^c)=A\cap\Omega=A$
+&gt; 2. 根据[集合公理]和 (1) 的结论有 $(A^c\cap B)\cup(A\cap B^c)\cup(A^c\cap B^c)=(A^c\cap B)\cup B^c=(A^c\cup B^c)\cap(B\cup B^c)=(A^c\cup B^c)\cap\Omega=A^c\cup B^c=(A\cap B)^c$
+&gt; 
+&gt; (5) $A\cup B=(AA\cup AB)\cup(A^cA\cup A^cB)=(A\cup AB)\cup A^cB=A\cup A^cB$</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="2. 概率模型" dir="auto" class="heading" id="2._概率模型"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>2. 概率模型</h4><div class="heading-children"><div><p dir="auto">概率模型 是对不确定现象的数学描述</p></div><div><pre dir="auto"><span>title: 概率模型的基本构成
+&gt; **样本空间**：一个**试验**的所有可能结果的集合，记为 $\Omega$
+&gt; 
+&gt; 概率律：概率律为试验结果的集合 A (称为**事件**)确定一个**非负数** $P(A)$(称为事件 A 的**概率**)；而这个非负数刻画了我们对事件 A 的认识或所产生的信念的程度（参见 p21 图 1.2）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 样本空间，事件
+&gt; 每一个概率模型都关联着一个**试验**，这个试验将产生试验**结果**（样本点？），这些所有可能的结果形成**样本空间**（记作 $\Omega$）
+&gt; 
+&gt; 样本空间可由若干个试验结果组成，也可由无限多个试验结果组成
+&gt; 
+&gt; 注：不同实验结果（样本点）之间相互排斥</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 
+- 样本空间：$\Omega$
+- 样本点：$a\in\Omega$
+- 事件：$A\in2^\Omega$ （$2^\Omega$ 为 $\Omega$ 的幂集）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 序贯模型
+&gt; 序贯树形图 用以表示所有试验结果的组成（每条从根到叶子的路径确定每个试验结果的“广义向量”）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 概率律
+&gt; 概率律：在直观上，它确定了任何结果或任何结果的集合（称为事件）的似然程度；更精确的说，它给每一个事件 A，确定一个数 $P(A)$，称为事件 A 的概率，它满足概率公理
+&gt; 
+&gt; 概率公理：
+&gt; 
+&gt; 1. 非负性：对于所有事件 A，都有 $P(A)\ge0$
+&gt; 2. 可加性：对于任意两个互不相交的集合 A 和 B（称 A 和 B 互不相容），都有 $P(A\cup B)=P(A)+P(B)$；更一般地，$A_1,A_2,\dots$ 互不相容，则有 $P(\bigcup A_i)=P(A_1\cup A_2\cup\dots)=P(A_1)+P(A_2)+\dots=\sum P(A_i)$
+&gt; 3. 归一化：整个样本空间 $\Omega$（称为 必然事件）的概率为 1，即 $P(\Omega)=1$
+&gt; 
+&gt; 概率对频率的解释：$P=P(A)$ 意味着在大量重复试验中事件 A 出现的频率约为 $P$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 离散模型
+&gt; 离散概论律：设样本空间由有限个可能的结果组成，则事件的概率可由组成这个事件的试验结果决定；事件 $\{s_1,s_2,\dots,s_n\}$ 的概率是 $P(s_i)$ 之和，即 $P(\{s_1,s_2,\dots,s_n\})=\sum\limits_{i=1}^nP(s_i)$
+&gt; 
+&gt; （注：$P(\{s_i\})$ 表示事件 $\{s_i\}$ 的概率，简记为 $P(s_i)$）
+&gt; 
+&gt; 离散均匀概论律（古典概型）：设样本空间为 $\Omega=\{s_1,s_2,\dots,s_n\}$，并且每个试验结果（样本点）都是等概率的，由归一化公理有 $P(s_i)=\frac1n$（$i=1..n$）；事件 $A=\{s_{a_1},s_{a_2},\dots,s_{a_k}\}$ 的概率为 $P(A)=\frac kn$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. 抛掷一枚硬币（双面均匀），有两种(试验)结果：正面向上 $\{H\}$，反面向上 $\{T\}$，于是样本空间为 $\Omega=\{H,T\}$，事件集为 $\{\{H\},\{T\},\{H,T\},\emptyset\}$；根据[古典概型]，每个试验结果都是等概率的，又由[可加性]和[归一性]有 $P(\{H\})=1/2,P(\{T\})=1/2,P(\{H,T\})=P(\{H\}+P\{T\})=1/2+1/2=1,P(\emptyset)=0$
+2. 抛掷 3 枚硬币（双面均匀），有 $2^3=8$ 种试验结果并且样本空间为：$\Omega=\{HHH,HHT,HTH,HTT,THH,THT,TTH,TTT\}$，事件集是大小为 $2^8=256$ 集合；根据[古典概型]有 $\forall x\in\Omega,P(x)=\frac1{|\Omega|}=1/8$，根据[可加性]有 $P(\{两个正面向上,一个反面向上\})=P(\{HHT,HTH,THH\})=P(\{HHT\})+P(\{HTH\})+P(\{THH\})=3/8$
+3. 抛掷两次有 4 个面的骰子（4面均匀），并且满足[古典概型]，那么 $P(\{两次点数总和为偶数\})=8/16,P(\{两次点数总和为奇数\})=8/16,P(\{第一次点数与第二次相同\})=4/16$，$P(\{第一次点数比第二次点数大\})=6/16,P(\{至少有一次点数等于4\})=7/16$（用序贯模型能很好计算）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 连续模型
+&gt; 例子：
+&gt; 
+&gt; 1. 试验的样本空间是区间 $\Omega=[0,1]$，那么其子区间(事件) $[a,b]$ 的概率是 $b-a$
+&gt; 2. “会面-等待”的例子，两人成功见面的概率是 $两人都在等待时间之内构成的面积/样本空间的面积$
+&gt; 
+&gt; 注：其他满足概率公理的连续模型都是合理的模型</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. 若试验的样本空间是 $\Omega=[0,1]$，并且满足[连续均匀概率律]，那么 $\forall0\le a\le b\le1,P([a,b])=(b-a)/1=b-a$
+2. 罗密欧和朱丽叶约会，并且延迟误差为 1h（两个人都不会在约定时间误差范围之外出现，如：只会在 $9:00~10:00$ 之间出现，而不会在如 $8:55$ 或 $10:03$ 出现），那么样本空间可以简单地表示为 $\Omega=[0,1]\times[0,1]$（一个二维平面区域）；若约会成功的条件是两人的到达时间差值不大于 15min，那么 $P(\{约会成功\})=\{|x-y|\le1/4与[0,1]\times[0,1]交集面积\}/\{[0,1]\times[0,1]的面积\}=7/16$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 概率律的性质
+&gt; 1. 不等式1：(1) $P(AB)\le P(A)$，(2) $P(A\cup B)\ge P(A)$
+&gt; 2. [子集性质]的推论：若 $A\subset B$，则 $P(A)\le P(B)$
+&gt; 3. [并集不相交分解]的推论：(1) $P(A\cup B)=P(A)+P(A^c\cap B)$，(2) $P\left(\bigcup\limits_{i=1}^n A_i\right)=\sum\limits_{i=1}^nP\left(A_i\bigcap\limits_{j=1}^{i-1}A_j^c\right)$
+&gt; 4. 不等式2：(1) $\forall k=1..n,P(\bigcap\limits_{i=1}^nA_i)\le P(A_k)$，(2) $\forall k=1..n,P(A_k)\le P(\bigcup\limits_{i=1}^nA_i)\le\sum\limits_{i=1}^nP(A_i)$</span><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">(1)</p></div><div><ol dir="auto">
+<li data-line="0" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c222A"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c222A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span></li>
+<li data-line="1" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c222A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c222A"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2265"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span></li>
+</ol></div><div><p dir="auto">(2) <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2282"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 蕴涵 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>，蕴涵 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，根据(1)的结论，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span></p></div><div><p dir="auto">(3)</p></div><div><ol dir="auto">
+<li data-line="0" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c222A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c222A"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span></li>
+<li data-line="1" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mrow space="2"><mjx-mo class="mjx-s3"><mjx-c class="mjx-c28 TEX-S3"></mjx-c></mjx-mo><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-s3"><mjx-c class="mjx-c29 TEX-S3"></mjx-c></mjx-mo></mjx-mrow><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mrow space="2"><mjx-mo class="mjx-s4"><mjx-c class="mjx-c28 TEX-S4"></mjx-c></mjx-mo><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mrow space="2"><mjx-mo class="mjx-s4"><mjx-c class="mjx-c28 TEX-S4"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-munderover space="2"><mjx-over style="padding-bottom: 0.142em; padding-left: 0.024em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.181em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C2 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msubsup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.292em; margin-left: 0px;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-spacer style="margin-top: 0.18em;"></mjx-spacer><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo class="mjx-s4"><mjx-c class="mjx-c29 TEX-S4"></mjx-c></mjx-mo></mjx-mrow><mjx-mo class="mjx-s4"><mjx-c class="mjx-c29 TEX-S4"></mjx-c></mjx-mo></mjx-mrow><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.046em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mrow space="2"><mjx-mo class="mjx-s4"><mjx-c class="mjx-c28 TEX-S4"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-munderover space="2"><mjx-over style="padding-bottom: 0.142em; padding-left: 0.024em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.181em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C2 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msubsup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.292em; margin-left: 0px;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-spacer style="margin-top: 0.18em;"></mjx-spacer><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msubsup><mjx-mo class="mjx-s4"><mjx-c class="mjx-c29 TEX-S4"></mjx-c></mjx-mo></mjx-mrow></mjx-math></mjx-container></span></li>
+</ol></div><div><p dir="auto">(4)</p></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c25FC TEX-A"></mjx-c></mjx-mi></mjx-math></mjx-container></span></p></div><div><pre dir="auto"><span>title: 模型与现实
+&gt; 概率理论可以同来分析显示世界的许多不确定现象，这个过程通常分为两个阶段
+&gt; 
+&gt; 1. 在一个适当的样本空间给出概论律，从而建立概率模型（建立现实世界与数学的练习）
+&gt; 2. 在完全严格的概率模型之下进行推导，精算某些时间的概率或推导出一些十分有趣的性质（严格限制概率公理之下的逻辑推理）
+&gt; 
+&gt; 其他：内特朗悖论（参见 p 30）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 概率论发展简史
+&gt; 1. 公元前.在古希腊和古罗马时期,机会游戏十分盛行.但是这个时期关于游戏的理论还没有发展起来
+&gt; 2. 16世纪.卡尔达诺,一个光彩夺目同时富有争议的意大利数学家出版了第一本关于机会游戏的书,书中给出了掷骰子和扑克游戏中随机事件的概率的正确计算方法
+&gt; 3. 17世纪.费马和帕斯卡之间的通信中提及几个十分有趣的概率问题,推动了这个领域的研究热潮
+&gt; 4. 18世纪.雅各布·伯努利研究了重复投币试验序列并引入了第一条大数定律.这条大数定律为联系理论概率与经验事实打下了基础.后面的数学家,诸如丹尼尔·伯努利、莱布尼茨、贝叶斯、拉格朗日等人对理论概率论的发展和实际应用也作出了巨大贡献.棣莫弗引入了正态分布并证明了第一个中心极限定理
+&gt; 5. 19世纪.拉普拉斯在他的一本很有影响的书中确立了概率论在定量研究领域中的重要地位.同时他本人对概率论作出了许多原创性的贡献,包括推导了更一般形式的中心极限定理.勒让德和高斯将概率论应用到天文预测,并且应用了最小二乘法,他们的工作大大地拓展了概率论的应用领域.泊松出版了一本很有影响的书,其中包括了很多原创性的成果,以他的姓名命名的泊松分布也在其中.切比雪夫和他的学生马尔可夫、李雅普诺夫等研究了极限定理,在这个领域内提高了数学的严格性的标准.在此时期,概率论被认为是自然科学的一部分,它的主要任务是解释物理现象.在这种思想的主导之下,概率被解释为重复试验中相对频率的极限
+&gt; 6. 20世纪.现在已经不再以相对频率作为概率论的基础概念.代之以由科尔莫戈罗夫引入的普遍适用的概率论公理系统.与数学的其他分支一样,在公理系统的基础上发展起来的概率论只依赖于逻辑的正确性,而与实际物理现象的联系无关.然而,由于概率论能够描述和解释现实世界中绝大部分的不确定性现象,因而在科学和工程中,概率论得到广泛应用</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 概率模型，样本空间，概率律，概率：概率模型关联着一个**试验**，该试验的所有可能结果的集合称为**样本空间**，记为 $\Omega$；而**概率律**为试验结果的子集 A 确定一个非负数 $P(A)$（$P:2^\Omega\to\mathbb R$），该数称为**概率**（刻画了我们对事件 A 的认识或所产生的信念的程度）
+&gt; 2. 事件：试验结果集的子集（即样本空间的子集）
+&gt; 3. 序贯模型：(1) **序贯树形图**：一颗多叉树，每条边表示一个当前情况的可能选择，每条从根到叶子的路径是一种试验结果，(2) 分为两个阶段的试验可以用二维表格表示
+&gt; 4. 概论律/概率公理：
+&gt;     1. 非负性：$\forall A\in2^\Omega,P(A)\ge0$
+&gt;     2. 可加性：$\forall A\cap B=\emptyset,P(A\cup B)=P(A)+P(B)$（更一般地，$\forall i\ne j,A_i\cap A_j=\emptyset,P(\bigcup\limits_{i=1}^∞A_i)=\sum\limits_{i=1}^∞P(A_i)$）
+&gt;     3. 归一化：样本空间 $\Omega$ 的概率为 1，即 $P(\Omega)=1$（蕴涵 $P(\emptyset)=0$）
+&gt; 5. 离散模型，离散概率律，离散均匀概率律(古典概型)：假设样本空间由有限个可能的结果组成，则事件的概率由组成这个事件的试验结果决定，称为**离散概论律**（事件 $\{s_1,\cdots,s_n\}$ 的概率为 $P(s_i)$ 之和，即 $P(\{s_1,\cdots,s_n\})=\sum\limits_{i=1}^nP(s_i)$）；若一个离散概率模型对每个试验结果(样本点)都有相同的概率，即 $\forall x\ne y\in\Omega,P(x)=P(y)$，那么该模型称为**离散均匀概率律**或**古典概型**（于是 $\forall x\in\Omega,P(x)=\frac1{|\Omega|}$）
+&gt; 6. 连续模型，连续概率律，连续均匀概率律
+&gt; 7. 概率律的性质：假设 $A,B,A_1,\cdots,A_n\subset2^\Omega$，那么：
+&gt;     1. 不等式1：(1) $P(AB)\le P(A)$，(2) $P(A\cup B)\ge P(A)$
+&gt;     2. [子集性质]的推论：若 $A\subset B$，则 $P(A)\le P(B)$
+&gt;     3. [并集不相交分解]的推论：(1) $P(A\cup B)=P(A)+P(A^c\cap B)$，(2) $P\left(\bigcup\limits_{i=1}^n A_i\right)=\sum\limits_{i=1}^nP\left(A_i\bigcap\limits_{j=1}^{i-1}A_j^c\right)$
+&gt;     4. 不等式2：(1) $\forall k=1..n,P(\bigcap\limits_{i=1}^nA_i)\le P(A_k)$，(2) $\forall k=1..n,P(A_k)\le P(\bigcup\limits_{i=1}^nA_i)\le\sum\limits_{i=1}^nP(A_i)$
+&gt;     5. [完备分解]的推论：假设 $\{s_1,\cdots,s_n\}$ 是 $\Omega$ 的一个分割，(1) $P(A)=P(AB)+P(AB^c)$，(2) $P(A)=\sum\limits_{i=1}^nP(A\cap S_i)$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 一级结论
+&gt; 1. 交集不等式：(1) $P(AB)\ge P(A)+P(B)-1$，(2) $P\left(\bigcap\limits_{i=1}^nA_i\right)\ge\sum\limits_{i=1}^nP(A_i)-(n-1)$
+&gt; 2. 容斥原理：(1) $P(A\cup B)=P(A)+P(B)-P(AB)$，(2) $P(A\cup B\cup C)=P(A)+[P(B)-P(AB)]+[P(C)-P(AC)-P(BC)]+P(ABC)$，(3) $P\left(\bigcup\limits_{i=1}^nA_i\right)=\sum\limits_{i=0}^n(-1)^{i-1}\sum\limits_{S\subset\{1..n\},|S|=i}P\left(\bigcap\limits_{j\in S}A_j\right)$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 练习
+1. $P(A)=0.6,P(B)=0.7,P(AB)=0.4$，计算 $P(A^cB^c)$
+2. 6 面骰子偶数面出现概率为奇数面大一倍，不同的奇数面或偶数面出现概率相同；建立概论律，并求点数小于 4 的概率
+3. 4 面骰子持续抛掷若干次，直到出现偶数面为止；该试验的样本空间是什么？
+4. 证明：你参与下棋比赛，并且要与 3 人分别下一场，连续两场才算获胜，因此你成为胜者的概率与比赛次序有关，若与你比赛的选手中，最弱者与你进行第二场比赛，那么你的胜率最大（提示：第 2 场比赛必须胜利）
+5. 样本空间 $\Omega$ 的**分割**是一个互不相容的事件组 $\{s_1,\cdots,s_n\}$，并且 $\Omega=\bigcup\limits_{i=1}^nS_i$，$\forall i\ne j,S_i\cap S_j=\emptyset$
+    1. 证明：$\forall A\subset\Omega,P(A)=\sum\limits_{i=1}^nP(A\cap S_i)$
+    2. 证明：$P(A)=P(AB)+P(AC)+P(AB^cC^c)-P(ABC)$
+6. 证明：$P(AB^c\cup A^cB)=P(A)+P(B)-2P(AB)$
+7. 证明：(1) $P(AB)\ge P(A)+P(B)-1$，(2) $P(\bigcap\limits_{i=1}^nA_i)\ge\sum\limits_{i=1}^nP(A_i)-(n-1)$
+8. 证明容斥原理：(1) $P(A\cup B\cup C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)$，(2) $P(\bigcup\limits_{i=1}^nA_i)=\sum\limits_{i=0}^n(-1)^{i-1}\sum\limits_{S\subset\{1..n\},|S|=i}P(\bigcap\limits_{j\in S}A_j)$
+9. *证明概率的连续性：
+    1. $A_1,A_2,\dots$ 是单调递增的事件序列（$A_i\subset A_{i+1}$），令 $A=\bigcup\limits_{i=1}^∞A_i$，证明 $P(A)=\lim\limits_{n\to∞}P(A_i)$
+    2. $A_1,A_2,\dots$ 是单调减增的事件序列（$A_i\supset A_{i+1}$），令 $A=\bigcap\limits_{i=1}^∞A_i$，证明 $P(A)=\lim\limits_{n\to∞}P(A_i)$
+    3. 证明：(1) $P([0,∞))=\lim\limits_{n\to∞}P([0,n])$，(2) $\lim\limits_{n\to∞}P([n,∞))=0$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 提示
+&gt; (1) 以下给出通用解法：$P(A)=0.6,P(B)=0.7$，蕴涵 $P(AB)+P(AB^c)=0.6,P(AB)+P(A^cB)=0.7$
+&gt; 
+&gt; 又由 $P(AB)+P(AB^c)+P(A^cB)+P(A^cB^c)=1$
+&gt; 
+&gt; 得到线性方程组 $\begin{bmatrix}1&amp;1&amp;0&amp;0\\1&amp;0&amp;1&amp;0\\1&amp;0&amp;0&amp;0\\1&amp;1&amp;1&amp;1\end{bmatrix}\begin{bmatrix}P(AB)\\P(AB^c)\\P(A^cB)\\P(A^cB^c)\end{bmatrix}=\begin{bmatrix}0.6\\0.7\\0.4\\1\end{bmatrix}$，解得 $\begin{bmatrix}P(AB)\\P(AB^c)\\P(A^cB)\\P(A^cB^c)\end{bmatrix}=\begin{bmatrix}0.4\\0.2\\0.3\\0.1\end{bmatrix}$
+&gt; 
+&gt; 于是 $P(A^cB^c)=0.1$
+&gt; 
+&gt; (2) 该模型为离散非均匀模型，$\forall a\in\{1,3,5\},b\in\{2,4,6\},P(\{b\})=2P(\{a\})$
+&gt; 
+&gt; 由[归一化]有 $9P(\{b\})=3P(\{a\})+3P(\{b\})=1$，于是 $P(\{b\})=1/9$，于是 $P(\{a\})=2/9$
+&gt; 
+&gt; 于是 $P(\{1,2,3\})=P(\{1\})+P(\{2\})+P(\{3\})=1/9+2/9+1/9=4/9$
+&gt; 
+&gt; (3) $\Omega=\{n\in\mathbb N^+,\{a_1,\cdots,a_n\}:\forall i=1..n-1,a_i\in\{1,3\},a_n\in\{2,4\}\}$
+&gt; 
+&gt; (4) 设 $p_i$ 为你与第 i 场比赛的胜率，那么你成为胜者的概率为 $p_2(p_1+(1-p_1)p_3)=p_2(p_1+p_3-p_1p_3)$（$p_1$ 和 $p_3$ 的次序与胜率无关）
+&gt; 
+&gt; 1. 交换 $p_2,p_1$，那么胜率变为 $p_1(p_2+p_3-p_2p_3)$（此时 $p_2$ 和 $p_3$ 的次序与胜率无关）
+&gt; 2. 交换 $p_2,p_3$，那么胜率变为 $p_3(p_1+p_1-p_1p_2)$（此时 $p_1$ 和 $p_2$ 的次序与胜率无关）
+&gt; 
+&gt; 若 $p_2(p_1+p_3-p_1p_3)\le p_1(p_2+p_3-p_2p_3)$ 并且 $p_2(p_1+p_3-p_1p_3)\le p_3(p_1+p_1-p_1p_2)$，解得 $p_2\ge p_1,p_2\ge p_3$，反之亦然
+&gt; 
+&gt; 于是，要想胜率最大，$p_2$ 一定是最弱者
+&gt; 
+&gt; (5.1) $\forall i\ne j,S_i\cap S_j=\emptyset$，蕴涵 $A(S_i\cap S_j)=A\emptyset$，蕴涵 $AS_i\cap AS_j=\emptyset$
+&gt; 
+&gt; 而 $A=A\Omega=A\bigcup\limits_{i=1}^nS_i=\bigcup\limits_{i=1}^nAS_i$
+&gt; 
+&gt; 于是 $P(A)=P(\bigcup\limits_{i=1}^nAS_i)=\sum\limits_{i=1}^nP(AS_i)$
+&gt; 
+&gt; (5.2) $P(AB)+P(AC)+P(AB^cC^c)-P(ABC)=P(ABC)+P(ABC^c)+P(ABC)+(AB^cC)+P(AB^cC^c)-P(ABC)$
+&gt; 
+&gt; $=P(ABC)+P(ABC^c)+(AB^cC)+P(AB^cC^c)=P(A)$
+&gt; 
+&gt; (6) $P(AB^c\cup A^cB)=P(AB^c)+P(A^cB)=[P(A)-P(AB)]+[P(B)-P(AB)]=P(A)+P(B)-2P(AB)$
+&gt; 
+&gt; (7.1) $P(AB)=P(A)-P(AB^c)=P(A)-[P(B^c)-P(A^cB^c)]=P(A)-P(B^c)+P(A^cB^c)$
+&gt; 
+&gt; $=P(A)+P(B)-1+P(A^cB^c)\ge P(A)+P(B)-1$
+&gt; 
+&gt; (7.2) $P(\bigcap\limits_{i=1}^nA_i)=P(A_n\bigcap\limits_{i=1}^{n-1}A_i)\ge P(A_n)+P(\bigcap\limits_{i=1}^{n-1}A_i)-1\ge \dots\ge\sum\limits_{i=1}^nP(A_i)-(n-1)$
+&gt; 
+&gt; (8.1) $P(A\cup B\cup C)=P(A)+P(A^cB)+P(A^cB^cC)$
+&gt; 
+&gt; 其中 
+&gt; 
+&gt; 1. $P(A^cB)=P(B)-P(AB)$
+&gt; 2. $P(A^cB^cC)=P(C)-P(AB^cC)-P(A^cBC)-P(ABC)=P(C)-[P(AC)-P(ABC)]-[P(BC)-P(ABC)]-P(ABC)$ $=P(A^cB^cC)=P(C)-P(AC)-P(BC)+P(ABC)$
+&gt; 
+&gt; 于是 $P(A\cup B\cup C)=P(A)+[P(B)-P(AB)]+[P(C)-P(AC)-P(BC)]+P(ABC)$
+&gt; 
+&gt; $=[P(A)+P(B)+P(C)]-[P(AB)+P(AC)+P(BC)]+P(ABC)$</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="3. 条件概率" dir="auto" class="heading" id="3._条件概率"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>3. 条件概率</h4><div class="heading-children"><div><pre dir="auto"><span>title: 例子
+1. 抛掷两次骰子，假设总点数为 9，那么第一次抛掷的点数为 6 的可能性为多少？
+2. 在猜字游戏中，假设第一个字母为 t，那么第二个字母为 h 的可能性多大？
+3. 假设某人的某些健康指标为阴性，那么这个人得病的概率是多少？
+4. 假设雷达上出现一个点，最高点代表原书有一架飞机的可能性多大？</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 条件概率
+&gt; 条件概率是给定**部分信息**的基础上对试验结果的一种推断
+&gt; 
+&gt; 假设我们已经知道给定的事件 B 发生了，而希望知道另一个给定的事件 A 发生的可能性；因此，我们构造一个新的概论律，它顾及了事件 B 硬件发生的信息，求出任何事件 A 发生的概率
+&gt; 
+&gt; 条件概率：给定事件 B 发生之下事件 A 发生的条件概率，记作 $P(A|B)$
+&gt; 
+&gt; 对于等概率模型，条件概率如此定义是合适的：$P(A|B)=\frac{事件 A\cap B 的试验结果数}{事件 B 的试验结果数}$
+&gt; 
+&gt; 对上述形式进行推广，得到**条件概率**的定义：$P(A|B)=\frac{P(A\cap B)}{P(B)}$（仅当 $P(B)&gt;0$）</span><button class="copy-code-button">复制</button></pre></div><div><ol dir="auto">
+<li data-line="0" dir="auto">非负性：<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2265"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3E"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math></mjx-container></span>，蕴涵 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2265"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math></mjx-container></span></li>
+<li data-line="1" dir="auto">归一化：<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-n"><mjx-c class="mjx-c3A9"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-n"><mjx-c class="mjx-c3A9"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2229"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math></mjx-container></span></li>
+<li data-line="2" dir="auto">可加性：假设 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span> 与 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span> 是任意不相容的事件，有 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c222A"></mjx-c></mjx-mo><mjx-msub space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c222A"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2229"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2229"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c222A"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2229"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2229"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2229"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2229"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2229"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span></li>
+</ol></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c25FC TEX-A"></mjx-c></mjx-mi></mjx-math></mjx-container></span></p></div><div><pre dir="auto"><span>title: 例子
+1. (离散均匀模型)抛掷 3 次硬币，设 $A=\{正面次数多于反面\},B=\{第一次是正面\}$，计算 $P(A|B)$：$P(B)=4/8,P(AB)=(C_2^2+C_2^1)/8=3/8$，于是 $P(A|B)=P(AB)/P(B)=3/4$
+2. (离散均匀模型)抛掷 2 次四面骰子，试验结果等可能，假设 $X_i$ 是第 i 次抛掷结果的点数，设 $A=\{\max(X_1,X_2)=m\},B=\{\min(X_1,X_2)=2\}$，计算 $P(A|B)$：借助二维序贯图可以清晰得出 $P(AB)=\begin{cases}2/16&amp;m=3,4\\1/16&amp;m=2\\0/16&amp;m=1\end{cases}$，而 $P(B)=5/16$，于是 $P(A|B)=\begin{cases}2/5&amp;m=3,4\\1/5&amp;m=2\\0/5&amp;m=1\end{cases}$
+3. 有两个设计团队，要求分别在一个月内做一个新设计，第一个团队成功，第二个团队成功，至少有一个团队成功的事件分别记为 $A,B,C$，并且 $P(A)=2/3,P(B)=1/2,P(C)=3/4$，假设只有一个团队完成任务，计算第二个团队成功的概率：$2/3=P(A)=P(AB)+P(AB^c),1/2=P(B)=P(AB)+P(A^cB),3/4=P(C)=P(AB)+P(A^cB)+P(AB^c)$，结合[归一化] $P(AB)+P(A^cB)+P(AB^c)+P(A^cB^c)=1$，解得 $P(AB)=5/12,P(AB^c)=1/4,P(A^cB)=1/12,P(A^cB^c)=1/4$，于是 $P(A^cB|A^cB\cup AB^c)=\frac{P(A^cB(A^cB\cup AB^c))}{P(A^cB\cup AB^c)}=\frac{P(A^cB)}{P(A^cB)+P(AB^c)}=\frac{1/12}{1/12+1/4}=\frac14$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 条件概率的性质
+&gt; 1. $P(A|B)=\frac{P(A\cap B)}{P(B)}$（仅当 $P(B)&gt;0$）
+&gt; 2. 满足概论律：$P(A|B)\ge0$，$P(A_1\cup A_2|B)=P(A_1|B)+P(A_2|B)$，$P(\Omega|B)=1$
+&gt; 3. $P(A|B)=\frac{事件 A\cap B 的试验结果数}{事件 B 的试验结果数}$
+&gt; 4. $P(A|\Omega)=\frac{P(A\cap\Omega)}{P(\Omega)}=P(A)$
+&gt; 5. $P(\bigcap\limits_{i=1}^nA_i)=\prod\limits_{i=1}^nP(A_i|\bigcap\limits_{i=1}^{j-1}A_j)$
+&gt; 
+&gt; 注1：某个概率模型满足 概论律，意味着该模型拥有所有关于概论律的性质
+&gt; 
+&gt; 注2：条件概率可以看成是样本空间 B 上的概论律，即 B 是全空间或必然事件（因而 条件概率是 $\Omega$ 的子集上的概论律）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 利用条件概率定义概率模型
+&gt; 1. 注意我们所关注的问题的样本空间是 $\Omega$ 还是某些假设（$\Omega$ 的子集）上；样本空间一般比较隐晦而不易发现
+&gt; 2. 序贯树形图：从树上每条边赋予一个概率，其值为父节点的事件发生的条件下子节点代表的事件发生的概率；从根结点到某个结点上边权的连乘积为路径上经过结点的事件同时发生的概率，即 $P(\bigcap\limits_{i=1}^nA_i)=\prod\limits_{i=1}^nP(A_i|\bigcap\limits_{i=1}^{j-1}A_j)$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. (雷达探测器)雷达探测器工作过程中，若某区域出现飞机，雷达以 $99\%$ 的概率探测并报警；若该区域没有飞机，雷达以 $10\%$ 的概率虚假报警；假定废弃以 $5\%$ 的概率出现在该区域，分别设事件 $A,B$ 为飞机出现，雷达报警，于是 $P(B|A)=0.99,P(B|A^c)=0.1,P(A)=0.05$
+    1. 飞机没出现而雷达虚假报警的概率为 $P(A^cB)=P(A^c)P(B|A^c)=(1-0.05)0.1=0.095$
+    2. 飞机出现了而雷达没报警的概率为 $P(AB^c)=P(A)P(B^c|A)=0.05(1-0.99)=0.0005$
+2. 52 张扑克中选择 3 张牌，设 $\forall i=1..3,A_i=\{前i张不是红桃\}$，那么 3 张牌都不是红桃的概率为 $P(A_3)=P(A_1A_2A_3)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)=\frac{39}{52}\cdot\frac{38}{51}\cdot\frac{37}{50}$
+3. 有 4 个研究生，12 个本科生，将这 16 人随机分为 4 组，每组 4 人；设 $\forall i=1..3,A_i=\{前i+1个研究生分在不同的组\}$，那么这 4 个研究生都不在同一组的概率为 $P(A_3)=P(A_1A_2A_3)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)=\frac{12}{15}\cdot\frac{8}{14}\cdot\frac{4}{13}$
+4. (蒙提·霍尔问题)有三个封闭的门，其中之一有奖品(随机)，你选定一扇门后，你朋友会打开一扇(无奖品的)空门，并且你有“坚持原来的选择”，“改选另一扇没打开的门”两种选择，以下有三种策略
+    1. 坚持原来的门：概率是 $1/3$
+    2. 改选另一扇没打开的门：$P(\{奖品在指定的门\cap选另一扇没打开的门\}\cup\{奖品不在指定的门\cap选另一扇没打开的门\})=(1/3)\cdot0+(2/3)\cdot1$
+    3. 首选 1 号门，若 2 号是空门，则坚持选择；若 3 号是空门，则选择 2 号门：信息不充分，概率无法计算</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 条件概率：假设事件 B 发生，那么事件 A 发生的概率称为**条件概率**，定义为 $P(A|B)=\frac{P(AB)}{P(B)}$（$P(B)&gt;0$）；在此概率模型下，事件 B 是**全空间**或**必然事件**
+&gt; 2. 条件概率的性质(乘法规则)：(1) $P(AB|\Omega)=P(A|\Omega)P(B|A)$，(2) $P(ABC|\Omega)=P(A|\Omega)P(B|A)P(C|AB)$，(3) $P\left(\bigcap\limits_{i=1}^nA_i\right)=\prod\limits_{i=1}^nP\left(A_i\Bigg|\bigcap\limits_{j=1}^{i-1}A_j\right)$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 一级结论
+&gt; 1. $P(A|B)=\frac{\{同时为A和B 的试验结果的总数\}}{\{B的试验结果的总数\}}$
+&gt; 2. $P(A\cap B|B)=P(A|B)$
+&gt; 3. $P(A|B)$ 可以读作“若 B 发生，那么 A 发生的概率” 或者“B 发生的原因是 A 的概率”</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 练习
+1. 抛掷两次 6 面骰子，36 种结果等概率
+    1. 计算抛出的点数“成对”的概率 $P(A)$
+    2. 若点数之和不大于 4，计算抛出的点数“成对”的概率 $P(A|E)$
+    3. 计算至少一个骰子点数为 6 的概率 $P(B)$
+    4. 若抛掷的两个点数不同，计算至少一个骰子点数为 6 的概率 $P(B|F)$
+2. 抛掷两次**不均匀**骰子，证明：在第一次正面朝上的条件下两次都是正面的概率，不小于在两次中至少有一次正面朝上的条件下两次都是正面的概率（如何推广这个推理？）
+3. 有 3 枚硬币，第一枚两面都是正面，第二枚两面都是反面，第三枚是普通的硬币；抛掷其中一枚硬币，若正面朝上，计算这枚硬币有反面的概率
+4. 一批产品有 100 件，从中随机抽取 4 件产品进行检查，其中若有 1 件不合格，则拒绝这批产品；若产品中有 5 件不合格品，这批产品被拒绝的概率是多少？
+5. 证明：假设 $A,B$ 是两个事件，$P(B)&gt;0$，那么 $P(A\cap B|B)=P(A|B)$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 提示
+&gt; (1)
+&gt; 
+&gt; 1. $P(A)=P(\{(i,i)|i=1..6\})=6/36$
+&gt; 2. $P(A|E)=P(AE)/P(E)=\frac{|\{(1,1),(2,2)\}|}{|\{(1,1..3),(2,1..2),(3,1)\}|}=2/6$
+&gt; 3. $P(B)=P(\{(1..5,6),(6,1..6)\})=11/36$
+&gt; 4. $P(B|F)=P(BF)/P(F)=\frac{|\{(1..5,6),(6,1..5)\}|}{2!\binom62}=1/3$
+&gt; 
+&gt; (2) 记第 $i=1..2$ 次正面朝上的事件为 $A_1,A_2$
+&gt; 
+&gt; $P(A_1A_2|A_1)=\frac{P((A_1A_2)\cap A_1)}{P(A_1)}=\frac{P(A_1A_2)}{P(A_1)}$
+&gt; 
+&gt; $P(A_1A_2|A_1\cup A_2)=\frac{P((A_1A_2)\cap(A_1\cup A_2))}{P(A_1\cup A_2)}=\frac{P(A_1A_2)}{P(A_1\cup A_2)}$
+&gt; 
+&gt; $A_1\subset A_1\cup A_2$，蕴涵 $P(A_1)\le P(A_1\cup A_2)$
+&gt; 
+&gt; 于是 $P(A_1A_2|A_1)\ge P(A_1A_2|A_1\cup A_2)$
+&gt; 
+&gt; (3) 设第 $\forall i=1..3$ 枚硬币被选择的事件为 $A_i$，硬币朝上的事件为 E
+&gt; 
+&gt; $P(A_3|E)=\frac{|A_3E|}{|E|}=1/3$
+&gt; 
+&gt; (4) 设第 $\forall i=1..4$ 次检查，不合格品未被查出的事件
+&gt; 
+&gt; $P(A_1A_2A_3A_4)=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)P(A_4|A_1A_2A_3)=\frac{95}{100}\cdot\frac{94}{99}\cdot\frac{93}{98}\cdot\frac{92}{97}=0.812$
+&gt; 
+&gt; (5) $P(A\cap B|B)=P(AB\cap BB)/P(B)=P(AB)/P(B)=P(A|B)$</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="4. 全概率定理，贝叶斯公式" dir="auto" class="heading" id="4._全概率定理，贝叶斯公式"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>4. 全概率定理，贝叶斯公式</h4><div class="heading-children"><div><pre dir="auto"><span>title: 全概率定理
+&gt; 设 $S_1,S_2,\dots,S_n$ 是一组互不相容的事件，形成样本空间的一个分割（有 $\forall i\ne j,S_i\cap S_j=\emptyset$，$\Omega=\bigcup\limits_{i=1}^nS_i$），那么：
+&gt; 
+&gt; $\forall A\subset\Omega,P(A)=\sum\limits_{i=1}^nP(S_i)P(A|S_i)$（$P(S_i)&gt;0$）
+&gt; 
+&gt; 注：全概率定理可以建立在一棵以事件 B 为根（样本空间）的序贯树形图
+&gt; 
+&gt; 注2：全概率定理也具有一 PMF 或 PDF 表示的形式
+&gt; 
+&gt; 应用（令 $B=\Omega$）：通过联合 PMF 得到边缘 PMF；或 通过联合 PDF 得到边缘 PDF（无论是否具有条件；详见第 2/3 章）</span><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-n"><mjx-c class="mjx-c2200"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2260"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2229"></mjx-c></mjx-mo><mjx-msub space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c2205"></mjx-c></mjx-mi></mjx-math></mjx-container></span>，蕴涵 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2229"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="4"><mjx-c class="mjx-c2205"></mjx-c></mjx-mi></mjx-math></mjx-container></span></p></div><div><p dir="auto">又由 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-n"><mjx-c class="mjx-c3A9"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span>，于是：</p></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mrow space="2"><mjx-mo class="mjx-s3"><mjx-c class="mjx-c28 TEX-S3"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-munderover space="2"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-s3"><mjx-c class="mjx-c29 TEX-S3"></mjx-c></mjx-mo></mjx-mrow><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mrow space="2"><mjx-mo class="mjx-s3"><mjx-c class="mjx-c28 TEX-S3"></mjx-c></mjx-mo><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.157em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-s3"><mjx-c class="mjx-c29 TEX-S3"></mjx-c></mjx-mo></mjx-mrow><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.046em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.046em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span></p></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c25FC TEX-A"></mjx-c></mjx-mi></mjx-math></mjx-container></span></p></div><div><pre dir="auto"><span>title: 例子
+1. (棋类比赛)你参加棋类比赛，第一/二/三类棋手的比例分别是 $50\%,25\%,25\%$，你赢它们的概率分别是 $0.3,0.4,0.5$，$\forall i=1..3$ 设你与第 i 类选手比赛的事件分别为 $A_i$，你胜出的事件为 B，那么你一场随机比赛的胜率是 $P(B)\sum\limits_{i=1}^3P(A_i)P(B|A_i)=0.5\cdot0.3+0.25\cdot0.4+0.25\cdot0.5=0.375$
+2. 抛掷一次均匀 4 面骰子，若出现点数 1 或 2，可以再抛掷一次，计算抛掷点数总和不小于 4 的概率：
+    1. 记 $\forall i=1..4,A_i$ 为第一次抛掷点数为 i 的事件，B 为所有抛掷结束后点数不小于 4 的事件；那么 $P(B)=\sum\limits_{i=1}^4P(A_i)P(B|A_i)=(1/4)\cdot(2/4)+(1/4)\cdot(3/4)+(1/4)\cdot0+(1/4)\cdot1=9/16$
+    2. [陷阱]：试验结果是不均匀的，也就是说，这里不能靠样本点的个数来计算概率
+3. (动态规划)爱丽丝每周能跟得上课程的概率依赖于上一次是否跟得上的情况，若上一周跟得上，那么这周以 $0.8$ 的概率跟得上课程，否则跟得上课程的概率为 $0.4$；假设第 0 周跟得上课程，计算第 3 周跟得上课程的概率
+    1. 令 $A_i$ 为爱丽丝跟得上课程的事件，那么 $\begin{cases}P(A_3)=P(A_2)P(A_3|A_2)+P(A_2^c)P(A_3|A_2^c)=0.8P(A_2)+0.4P(A_2^c)\\P(A_2)=P(A_1)P(A_2|A_1)+P(A_1^c)P(A_2|A_1^c)=0.8P(A_1)+0.4P(A_1^c)\\P(A_1)=0.8\end{cases}$
+    2. 解得 $P(A_3)=0.688$</span><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">造成一个结果可能源于多方面的原因（事件），这些原因互不相交，并且除了这些原因之外没有任何事件能导致这种结果</p></div><div><p dir="auto">如果我们知道这些原因的发生概率，以及这些原因驱使下结果发生的概率，那么我们可以间接得到一个结果的发生源自于任意一个原因的概率，这就是贝叶斯推理</p></div><div><p dir="auto">另外，利用贝叶斯推理，可以找到某个结果或事件发生的最可能原因</p></div><div><pre dir="auto"><span>title: 推理和贝叶斯准则
+&gt; 设 $S_1,S_2,\dots,S_n$ 是一组互不相容的事件，形成样本空间的一个分割，那么：
+&gt; 
+&gt; 那么 $\forall i=1..n,A\subset\Omega,P(S_i|A)=\frac{P(AS_i)}{P(A)}=\frac{P(S_i)P(A|S_i)}{\sum\limits_{j=1}^nP(S_j)P(A|S_j)}$
+&gt; 
+&gt; 应用：贝叶斯准则可以用来进行**因果推理**，计算造成结果 A 的可能原因 $S_i$ 的概率
+&gt; 
+&gt; 注：$P(S_i|A)$ 称为后验概率，$P(S_i)$ 称为先验概率</span><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-n"><mjx-c class="mjx-c2200"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c2E"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span></p></div><div><p dir="auto">于是 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.385em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.07em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math></mjx-container></span>，得证</p></div><div><p dir="auto">另外，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mrow space="2"><mjx-mo class="mjx-s4"><mjx-c class="mjx-c28 TEX-S4"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-munderover space="2"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.385em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.181em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c22C3 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-s4"><mjx-c class="mjx-c29 TEX-S4"></mjx-c></mjx-mo></mjx-mrow><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.385em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.07em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，于是 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.385em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.07em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.032em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math></mjx-container></span></p></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c25FC TEX-A"></mjx-c></mjx-mi></mjx-math></mjx-container></span></p></div><div><pre dir="auto"><span>title: 例子
+1. [1.3例子“雷达探测器”]中，$P(飞机出现|雷达报警)=P(A|B)=\frac{P(AB)}{P(B)}=\frac{P(A)P(B|A)}{P(A)P(B|A)+P(A^c)P(B|A^c)}=\frac{0.05\cdot0.99}{0.05\cdot0.99+0.95\cdot0.1}\approx0.3426$（即雷达报警的原因是飞机出现的概率为 0.3426）
+2. [1.4例子“棋类比赛”]中，$P(你的对手是第一类棋手|你已获胜)=P(A_1|B)=\sum\limits_{i=1}^n\frac{P(A_1)P(B|A_1)}{P(A_i)P(B|A_i)}=0.4$
+3. (假阳性之谜)某疾病的检出率为 $0.95$（即：若某人有这种病，那么检验结果为阳性的概率是 $0.95$，否则检验结果为阴性的概率是 $0.95$），假设某一人群中患病的概率为 $0.001$，从这群人随机抽取一人进行检测，若结果为阳性，计算该人患病的概率
+    1. 设事件 S 为该人患病，事件 A 为该人检验为阳性，那么 $P(A|S)=\frac{P(S)P(A|S)}{P(S)P(A|S)+P(S^c)P(A|S^c)}\approx0.0187$
+    2. 可以发现，尽管检验方法非常精确，但是被检测阳性的人依然不大可能患这种病</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 全概率定理：假设 $S_1,\cdots,S_n$ 是一组互不相容的事件，形成样本空间的一个分割（$\forall i\ne j,S_i\cap S_j=\emptyset$，$\Omega=\bigcup\limits_{i=1}^nS_i$），那么 $\forall A\subset\Omega,P(A)=\sum\limits_{i=1}^nP(S_i)P(A|S_i)$（$\forall i=1..n,P(S_i)&gt;0$）
+&gt; 2. 贝叶斯准则：假设 $S_1,\cdots,S_n$ 是一组互不相容的事件，形成样本空间的一个分割，那么 $\forall i=1..n,A\subset\Omega,P(S_i|A)=\frac{P(AS_i)}{P(A)}=\frac{P(S_i)P(A|S_i)}{\sum\limits_{j=1}^nP(S_j)P(A|S_j)}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 练习
+1. 爱丽丝在文件柜的若干个抽屉中寻找她的学期报告，学期报告在第 i 个抽屉的概率为 $p_i&gt;0$，即便报告真的在第 i 个抽屉内，她找到报告的概率是 $d_i$；假设爱丽丝在第 k 个抽屉内找却没找到，证明学期报告在第 i 个抽屉的概率为：$\begin{cases}\frac{p_k(1-p_k)}{1-p_kd_k}&amp;i=k\\\frac{p_k}{1-p_ip_i}&amp;i\ne k\end{cases}$
+2.</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 提示</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="5. 独立性" dir="auto" class="heading" id="5._独立性"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>5. 独立性</h4><div class="heading-children"><div><pre dir="auto"><span>title: 独立性
+&gt; 事件 A 独立于事件 B，当且仅当 $P(A|B)=P(A)$ （$P(B)=0$ 时 $P(A|B)$ 无定义）
+&gt; 
+&gt; 我们称 A 和 B 是相互独立的事件（A 独立于 B 蕴含着 B 独立于 A）；换句话说，B 的发生，不会对 A 的发生与否提供任何信息，反之亦然
+&gt; 
+&gt; 等价条件：$P(A\cap B)=P(A)P(B)$（$P(A),P(B)&gt;0$）
+&gt; 
+&gt; 注：$P(A),P(B)&gt;0$，A 和 B 互不相容（$A\cap B=\emptyset$），蕴含着 A 和 B 非独立（除非 $P(A)=0$ 或 $P(A)=1$）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例题
+1. 参见 p49</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 条件独立
+&gt; 条件独立：A 和 B 在给定 C 之下条件独立，当且仅当 $P(A\cap B)=P(A|C)P(B|C)$ （由于条件概率满足概论律）
+&gt; 
+&gt; 又由 $P(A\cap B|C)=\frac{P(A\cap B\cap C)}{P(C)}=\frac{P(C)P(B|C)P(A|B\cap C)}{P(C)}=P(B|C)P(A|B\cap C)$，
+&gt; 
+&gt; 有 $P(A|C)=P(A|B\cap C)$（仅当 $P(B|C)\ne0$），该式为条件独立的等价式
+&gt; 
+&gt; 注：A 和 B 两个事件相互独立并不包含条件独立，反过来也是如此？
+&gt; 
+&gt; 补充：A 和 B 相互独立而且 C 满足 $P(C),P(A|C),P(B|C)&gt;0,A\cap B\cap C=\emptyset$，从而 $P(A\cap B|C)=0,P(A|C)P(B|C)&gt;0$，那么 A 和 B 不是条件独立的（给定 C）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 独立性（总结）
+&gt; 1. 两个事件 A 和 B 称为相互独立的，如果它们满足 $P(A\cap B)=P(A)P(B)$
+&gt;     1. 若 B 还满足 $P(B)&gt;0$，则独立性等价于 $P(A|B)=P(A)$
+&gt; 2. 若 A 与 B 相互独立，则 A 与 $B^c$ 也相互独立
+&gt; 3. 两个事件 A 和 B 称为给定事件 C 的条件下条件独立，如果 $P(A\cap B|C)=P(A|C)P(B|C)$（仅当 $P(C)&gt;0$）
+&gt;     1. 若还满足 $P(B\cap C)&gt;0$，则 A 和 B 在给定 C 的条件下的条件独立性与该条件等价：$P(A|B\cap C)=P(A|C)$
+&gt; 4. 独立性 不蕴涵 条件独立性，反之亦然</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 一组事件的独立性
+&gt; $A_1,\dots,A_n$ 是相互独立的事件，当且仅当 对于所有 I 的子集 $S\subset2^I$（$I=\{1,\dots,n\}$），都有 $P(\bigcap\limits_{i\in S}A_i)=\prod\limits_{i\in S}P(A_i)$
+&gt; 
+&gt; 注：n 个事件**相互独立**，蕴涵 它们**两两独立**；反之不总是成立
+&gt; 
+&gt; 推论：若 $S,T\in2^I,S\cap T=\emptyset$，那么 $P(\bigcup\limits_{i\in S}A_i|\bigcap\limits_{i\in T}A_i)=P(\bigcup\limits_{i\in S}A_i)$ ？</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 可靠性
+&gt; 在由多个元件组合成的一个复杂系统中,通常假定各个元件的表现是相互独立的；做了这样的假定以后,计算和分析将变得十分简单
+&gt; 
+&gt; ？</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 独立试验，二项概率
+&gt; 独立试验序列：由一系列**独立**并且相同的小试验组成的试验
+&gt; 
+&gt; 伯努利试验序列：每个阶段的小试验只有两种可能结果的试验（如：抛硬币）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 伯努利试验序列，二项概率
+&gt; 以抛硬币为例，在长度为 n 的独立伯努利试验序列中，设 $P(i)=P(n 次抛掷中有 i 次出现正面)$，
+&gt; 
+&gt; 若硬币朝上的概率为 p，那么 $P(i)=\binom nip^i(1-p)^{n-i}$ （$i=0..n$）
+&gt; 
+&gt; 满足 $\sum\limits_{i=0}^nP(i)=\sum\limits_{i=0}^n\binom nip^i(1-p)^{n-i}=1$
+&gt; 
+&gt; 例子：参见 p58</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 独立性：</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="6. 计数法" dir="auto" class="heading" id="6._计数法"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>6. 计数法</h4><div class="heading-children"><div><pre dir="auto"><span>title: 计数法
+&gt; 计算在计算概率的时候,通常需要数清楚有关事件中的试验结果数(或基本事件数)；我们已经遇到两种情况，需要这样的计数法
+&gt; 
+&gt; 1. 若样本空间 $\Omega$ 只有有限个等可能的试验结果（等概率模型），那么事件 A 的概率为 $P(A)=\frac{A 中元素的数目}{\Omega 中元素的数目}$
+&gt; 2. 若 A 中每一个试验结果具有相同的概率 p 时，那么 $P(A)=p\cdot (A 中元素的数目)$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 计数准则（俗称“乘法准则”）
+&gt; 有 r 个阶段组成的试验，如果满足如下两个条件：
+&gt; 
+&gt; 1. 第一个阶段有 $n_1$ 种可能的结果
+&gt; 2. 第 $i-1$ 个阶段的任何一个结果，在第 i 阶段有 $n_i$ 个结果
+&gt; 
+&gt; 那么 r 个阶段的试验中一个有 $\prod\limits_{i=1}^rn_i$ 个试验结果</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: n 选 k 排列
+&gt; n 选 k 排列：从 n 个不同对象所组成的集合中，**按顺序**选取 k 个对象的方法数为 $(n)_k=\prod\limits_{i=n-k+1}^ni=n(n-1)\dots(n-k+1)=\frac{n!}{(n-k)!}$ （$(n)_k=0$，仅当 $k&gt;n$）
+&gt; 
+&gt; 特别地：$(n)_k=n!$，称之为 **排列**
+&gt; 
+&gt; 注：符号 $(n)_k$ 似乎并不通用</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 组合
+&gt; n 选 k 的排列集合中将每个排列归并到对应的组合中，其中每个组合对应 $k!$ 种不同的排列
+&gt; 
+&gt; 因此，从 n 个元素的集合中选 k 个元素的组合数为 $\frac{(n)_r}{k!}=\frac {n!/(n-k)!}{k!}$，记为 $\binom nk$
+&gt; 
+&gt; 例1：由于 $\sum\limits_{i=0}^n\binom nip^i(1-p)^{n-i}=1$；若 $p=\frac12$，则 $\sum\limits_{i=0}^n\binom ni=2^n$
+&gt; 
+&gt; 例2：有 n 个人，从中选取 k 个人组成俱乐部，其中 1 人为主任，其余 $k-1$ 个成员互不区分，计算组合数；有两种方式：(1)先选主任，再选成员，方案数为 $n\sum\limits_{i=0}^{n-1}\binom ni=n2^{n-1}$；(2) 先把所有 k 个人选上，再挑选主任，方案数为 $\sum\limits_{i=1}^n\binom nii$；因此 $n2^{n-1}=\sum\limits_{i=1}^n\binom nii$
+&gt; 
+&gt; 推论：$\sum\limits_{i=0}^ni^2\binom ni=n(n+1)2^{n-2}$；猜想：$\sum\limits_{i=0}^ni^k\binom ni\ge n^k2^{n-k}$
+&gt; 
+&gt; 注：组合等价于 从 n 元素集合中选出元素个数为 k 的子集</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 分割
+&gt; 组合可看做 从 n 元素集合中选出元素个数为 k 的子集；每个组合可以看成将集合分为两个子集的一个分划，其中一个子集元素个数为 k，另一个子集的为其补集，其元素个数为 $n-k$
+&gt; 
+&gt; 推广组合的定义：给定元素个数为 n 的集合，将其分解为 r 个互不相交的子集（第 i 个子集个数为 $n_i$ ($n_i\ge0$)；满足 $\sum\limits_{i=1}^rn_i=n$），此方案数定义为分割数，或 **多项式系数**
+&gt; 
+&gt; 分解过程分为 $r-1$ 个阶段（分为 r 个阶段亦可），每个阶段都有一个“主集合”，当前阶段需要从“主集合”中选出 $n_i$ 个元素，并将它们从“主集合”中排除，因而每个阶段的方案数为 $\binom{n-s_{i-1}}{n_i}$（其中 $s_i=\sum\limits_{j=1}^{i}n_j$）；因而总方案数为 $\prod\limits_{i=1}^{r-1}\binom{n-s_{i-1}}{n_i}=\prod\limits_{i=1}^{r-1}\frac{(n-s_{i-1})!/(n-s_i)!}{n_i!}=\frac{(n-s_0)!/(n-s_{r-1}!)}{\prod\limits_{i=1}^{r-1}n_i!}=\frac{n!}{\prod\limits_{i=1}^rn_i!}$
+&gt; 
+&gt; 所以，记多项式系数为 $\binom n{n_1,\dots,n_r}=\frac{n!}{\prod\limits_{i=1}^rn_i!}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例题
+1. 详见 p65</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 计数法汇总
+&gt; 1. n 个对象的**排列数**：$n!$
+&gt; 2. n 个对象中取 k 个对象的**排列数**：$(n)_k=\frac {n!}{(n-k)!}$
+&gt; 3. n 个对象中取 k 个对象的**组合数**：$\binom nk=\frac{n!/(n-k)!}{k!}$
+&gt; 4. 将 n 个对象分成 r 个组的**分割数**：$\binom n{n_1,\dots,n_r}=\frac{n!}{\prod\limits_{i=1}^rn_i!}$ （其中第 i 组有 $n_i$ 个对象）</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="7. 小节和讨论" dir="auto" class="heading" id="7._小节和讨论"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>7. 小节和讨论</h4><div class="heading-children"><div class="mod-footer"></div></div></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="考研\trash\数学\概率论与数理统计\1.-样本空间&amp;概率.html#1. 样本空间&amp;概率"><div class="tree-item-contents heading-link" heading-name="
+样本空间&amp;概率
+"><span class="tree-item-title">样本空间&amp;概率</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="考研\trash\数学\概率论与数理统计\1.-样本空间&amp;概率.html#1._样本空间&amp;概率"><div class="tree-item-contents heading-link" heading-name="1. 样本空间&amp;概率"><span class="tree-item-title">1. 
+样本空间&amp;概率
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\概率论与数理统计\1.-样本空间&amp;概率.html#1._集合"><div class="tree-item-contents heading-link" heading-name="1. 集合"><span class="tree-item-title">1. 
+集合
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\概率论与数理统计\1.-样本空间&amp;概率.html#2._概率模型"><div class="tree-item-contents heading-link" heading-name="2. 概率模型"><span class="tree-item-title">2. 
+概率模型
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\概率论与数理统计\1.-样本空间&amp;概率.html#3._条件概率"><div class="tree-item-contents heading-link" heading-name="3. 条件概率"><span class="tree-item-title">3. 
+条件概率
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\概率论与数理统计\1.-样本空间&amp;概率.html#4._全概率定理，贝叶斯公式"><div class="tree-item-contents heading-link" heading-name="4. 全概率定理，贝叶斯公式"><span class="tree-item-title">4. 
+全概率定理，贝叶斯公式
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\概率论与数理统计\1.-样本空间&amp;概率.html#5._独立性"><div class="tree-item-contents heading-link" heading-name="5. 独立性"><span class="tree-item-title">5. 
+独立性
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\概率论与数理统计\1.-样本空间&amp;概率.html#6._计数法"><div class="tree-item-contents heading-link" heading-name="6. 计数法"><span class="tree-item-title">6. 
+计数法
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\概率论与数理统计\1.-样本空间&amp;概率.html#7._小节和讨论"><div class="tree-item-contents heading-link" heading-name="7. 小节和讨论"><span class="tree-item-title">7. 
+小节和讨论
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

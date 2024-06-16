@@ -1,0 +1,580 @@
+<!DOCTYPE html> <html><head>
+		<title>chrome-plugin</title>
+		<base href="..\../">
+		<meta id="root-path" root-path="..\../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="obsidian-vault - chrome-plugin">
+		<meta property="og:title" content="chrome-plugin">
+		<meta property="og:description" content="obsidian-vault - chrome-plugin">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="docs/浏览器/chrome-plugin.html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="obsidian-vault">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles">mjx-c.mjx-c222B.TEX-S2::before{padding:1.36em .944em .862em 0;content:"∫"}mjx-c.mjx-c7B.TEX-S2::before{padding:1.15em .667em .649em 0;content:"{"}mjx-c.mjx-c7D.TEX-S2::before{padding:1.15em .667em .649em 0;content:"}"}mjx-c.mjx-c20D7.TEX-V::before{padding:.714em .5em 0 0;content:"→"}mjx-c.mjx-c1D6FE.TEX-I::before{padding:.441em .543em .216em 0;content:"γ"}mjx-c.mjx-c1D417.TEX-B::before{padding:.686em .869em 0 0;content:"X"}mjx-c.mjx-c2D9.TEX-B::before{padding:.695em .575em 0 0;content:"˙"}mjx-c.mjx-c1D420.TEX-B::before{padding:.455em .575em .201em 0;content:"g"}mjx-c.mjx-c1D41D.TEX-B::before{padding:.694em .639em .006em 0;content:"d"}mjx-c.mjx-c211A.TEX-A::before{padding:.701em .778em .181em 0;content:"Q"}mjx-c.mjx-c1D402.TEX-B::before{padding:.697em .831em .011em 0;content:"C"}mjx-c.mjx-c1D410.TEX-B::before{padding:.696em .864em .193em 0;content:"Q"}mjx-c.mjx-c2119.TEX-A::before{padding:.683em .611em 0 0;content:"P"}mjx-c.mjx-c2223::before{padding:.75em .278em .249em 0;content:"∣"}mjx-c.mjx-cA8::before{padding:.669em .5em 0 0;content:"¨"}mjx-c.mjx-c1D713.TEX-I::before{padding:.694em .651em .205em 0;content:"ψ"}mjx-c.mjx-c2B.TEX-B::before{padding:.633em .894em .131em 0;content:"+"}mjx-c.mjx-c1D7D0.TEX-B::before{padding:.654em .575em 0 0;content:"2"}mjx-c.mjx-c2034::before{padding:.56em .825em 0 0;content:"′′′"}mjx-c.mjx-c221A.TEX-S4::before{padding:1.75em 1.02em 1.25em 0;content:"√"}mjx-mroot{display:inline-block;text-align:left}mjx-root{display:inline-block;white-space:nowrap}mjx-surd{display:inline-block;vertical-align:top}mjx-sqrt{display:inline-block;padding-top:.07em}mjx-sqrt>mjx-box{border-top:.07em solid}mjx-sqrt.mjx-tall>mjx-box{padding-left:.3em;margin-left:-.3em}mjx-c.mjx-c2DA::before{padding:.715em .5em 0 0;content:"˚"}mjx-c.mjx-c1D43E.TEX-I::before{padding:.683em .889em 0 0;content:"K"}mjx-c.mjx-c7B.TEX-S1::before{padding:.85em .583em .349em 0;content:"{"}mjx-c.mjx-c7D.TEX-S1::before{padding:.85em .583em .349em 0;content:"}"}mjx-c.mjx-c2D9::before{padding:.669em .5em 0 0;content:"˙"}mjx-c.mjx-cB0::before{padding:.715em .5em 0 0;content:"°"}mjx-c.mjx-c1D41F.TEX-B::before{padding:.7em .452em 0 0;content:"f"}mjx-c.mjx-c28.TEX-B::before{padding:.75em .447em .249em 0;content:"("}mjx-c.mjx-c2212.TEX-B::before{padding:.281em .894em 0 0;content:"−"}mjx-c.mjx-c50.TEX-C::before{padding:.683em .733em .057em 0;content:"P"}mjx-c.mjx-c3A3::before{padding:.683em .722em 0 0;content:"Σ"}mjx-c.mjx-c1D42A.TEX-B::before{padding:.45em .607em .194em 0;content:"q"}mjx-c.mjx-c1D411.TEX-B::before{padding:.686em .862em .011em 0;content:"R"}mjx-c.mjx-c29.TEX-B::before{padding:.75em .447em .249em 0;content:")"}mjx-c.mjx-cAC::before{padding:.356em .667em 0 0;content:"¬"}mjx-c.mjx-c21CC.TEX-A::before{padding:.514em 1em .014em 0;content:"⇌"}mjx-c.mjx-c27F6::before{padding:.511em 1.638em .011em 0;content:"⟶"}mjx-c.mjx-c45.TEX-C::before{padding:.705em .564em .022em 0;content:"E"}mjx-c.mjx-c1D432.TEX-B::before{padding:.444em .607em .2em 0;content:"y"}mjx-c.mjx-c4E::before{padding:.683em .75em 0 0;content:"N"}mjx-c.mjx-c75::before{padding:.442em .556em .011em 0;content:"u"}mjx-c.mjx-c1D42D.TEX-B::before{padding:.635em .447em .005em 0;content:"t"}mjx-c.mjx-c43::before{padding:.705em .722em .021em 0;content:"C"}mjx-c.mjx-c42.TEX-C::before{padding:.705em .657em .022em 0;content:"B"}mjx-c.mjx-c2C.TEX-B::before{padding:.171em .319em .194em 0;content:","}mjx-c.mjx-c6B::before{padding:.694em .528em 0 0;content:"k"}mjx-c.mjx-c22A5::before{padding:.668em .778em 0 0;content:"⊥"}mjx-c.mjx-c2212::before{padding:.583em .778em .082em 0;content:"−"}mjx-c.mjx-c5D.TEX-B::before{padding:.75em .319em .25em 0;content:"]"}mjx-c.mjx-c43.TEX-C::before{padding:.705em .527em .025em 0;content:"C"}mjx-c.mjx-c2C.TEX-MI::before{padding:.121em .307em .194em 0;content:","}mjx-c.mjx-c5B.TEX-S1::before{padding:.85em .417em .349em 0;content:"["}mjx-c.mjx-c5D.TEX-S1::before{padding:.85em .417em .349em 0;content:"]"}mjx-c.mjx-c1D41E.TEX-B::before{padding:.452em .527em .006em 0;content:"e"}mjx-c.mjx-c22F1::before{padding:1.52em 1.282em 0 0;content:"⋱"}mjx-c.mjx-c7D.TEX-S3::before{padding:1.45em .75em .949em 0;content:"}"}mjx-c.mjx-c1D43C.TEX-I::before{padding:.683em .504em 0 0;content:"I"}mjx-c.mjx-c1D408.TEX-B::before{padding:.686em .436em 0 0;content:"I"}mjx-c.mjx-c1D448.TEX-I::before{padding:.683em .767em .022em 0;content:"U"}mjx-c.mjx-c1D400.TEX-B::before{padding:.698em .869em 0 0;content:"A"}mjx-c.mjx-c1D431.TEX-B::before{padding:.444em .607em 0 0;content:"x"}mjx-c.mjx-c1D429.TEX-B::before{padding:.45em .639em .194em 0;content:"p"}mjx-c.mjx-c1D7CE.TEX-B::before{padding:.654em .575em .01em 0;content:"0"}mjx-c.mjx-c1D405.TEX-B::before{padding:.68em .724em 0 0;content:"F"}mjx-c.mjx-c1D403.TEX-B::before{padding:.686em .882em 0 0;content:"D"}mjx-c.mjx-c5B.TEX-S2::before{padding:1.15em .472em .649em 0;content:"["}mjx-c.mjx-c5D.TEX-S2::before{padding:1.15em .472em .649em 0;content:"]"}mjx-c.mjx-c1D427.TEX-B::before{padding:.45em .639em 0 0;content:"n"}mjx-c.mjx-c1D412.TEX-B::before{padding:.697em .639em .011em 0;content:"S"}mjx-c.mjx-c1D41C.TEX-B::before{padding:.453em .511em .006em 0;content:"c"}mjx-c.mjx-c1D425.TEX-B::before{padding:.694em .319em 0 0;content:"l"}mjx-c.mjx-c222C.TEX-S1::before{padding:.805em .957em .306em 0;content:"∬"}mjx-c.mjx-c1D41A.TEX-B::before{padding:.453em .559em .006em 0;content:"a"}mjx-c.mjx-c1D41B.TEX-B::before{padding:.694em .639em .006em 0;content:"b"}mjx-c.mjx-c1D422.TEX-B::before{padding:.695em .319em 0 0;content:"i"}mjx-c.mjx-c1D423.TEX-B::before{padding:.695em .351em .2em 0;content:"j"}mjx-c.mjx-c1D424.TEX-B::before{padding:.694em .607em 0 0;content:"k"}mjx-c.mjx-c1D70C.TEX-I::before{padding:.442em .517em .216em 0;content:"ρ"}mjx-c.mjx-c1D719.TEX-I::before{padding:.694em .596em .205em 0;content:"ϕ"}mjx-c.mjx-c2DC.TEX-S1::before{padding:.722em .556em 0 0;content:"˜"}mjx-c.mjx-c222D.TEX-S1::before{padding:.805em 1.304em .306em 0;content:"∭"}mjx-c.mjx-c2DC::before{padding:.668em .5em 0 0;content:"˜"}mjx-c.mjx-c7B.TEX-S4::before{padding:1.75em .806em 1.249em 0;content:"{"}mjx-c.mjx-c1D42E.TEX-B::before{padding:.45em .639em .006em 0;content:"u"}mjx-c.mjx-c2207::before{padding:.683em .833em .033em 0;content:"∇"}mjx-stretchy-v.mjx-c2016 mjx-ext mjx-c::before{content:"∥";width:.556em}mjx-c.mjx-c27E8::before{padding:.75em .389em .25em 0;content:"⟨"}mjx-c.mjx-c27E9::before{padding:.75em .389em .25em 0;content:"⟩"}mjx-c.mjx-c1D705.TEX-I::before{padding:.442em .576em .011em 0;content:"κ"}mjx-c.mjx-c1D42C.TEX-B::before{padding:.453em .454em .006em 0;content:"s"}mjx-c.mjx-c1D401.TEX-B::before{padding:.686em .818em 0 0;content:"B"}mjx-c.mjx-c1D40D.TEX-B::before{padding:.686em .9em 0 0;content:"N"}mjx-stretchy-h.mjx-c2192 mjx-ext mjx-c::before{content:"−";padding:.583em 0 .082em}mjx-stretchy-h.mjx-c2192 mjx-end mjx-c::before{content:"→";padding:.583em 0 .082em}mjx-c.mjx-c1D43D.TEX-I::before{padding:.683em .633em .022em 0;content:"J"}mjx-c.mjx-c2211.TEX-S2::before{padding:.95em 1.444em .45em 0;content:"∑"}mjx-c.mjx-c2033::before{padding:.56em .55em 0 0;content:"′′"}mjx-c.mjx-c22EE::before{padding:1.3em .278em .03em 0;content:"⋮"}mjx-c.mjx-c2033::before{padding:.56em .55em 0 0;content:"′′"}mjx-c.mjx-c2225::before{padding:.75em .5em .25em 0;content:"∥"}mjx-c.mjx-c221A.TEX-S3::before{padding:1.45em 1.02em .95em 0;content:"√"}mjx-c.mjx-c1D42B.TEX-B::before{padding:.45em .474em 0 0;content:"r"}mjx-c.mjx-c1D42F.TEX-B::before{padding:.444em .607em 0 0;content:"v"}mjx-c.mjx-cB1::before{padding:.666em .778em 0 0;content:"±"}mjx-c.mjx-c1D45E.TEX-I::before{padding:.442em .46em .194em 0;content:"q"}mjx-c.mjx-c221A.TEX-S2::before{padding:1.15em 1.02em .65em 0;content:"√"}mjx-c.mjx-c27F9::before{padding:.525em 1.638em .024em 0;content:"⟹"}mjx-c.mjx-c2224.TEX-A::before{padding:.75em .297em .252em 0;content:"∤"}.mjx-stretched mjx-c.mjx-c2013::before{content:"–"}mjx-stretchy-h.mjx-c2013 mjx-ext mjx-c::before{content:"–";padding:.285em 0 0}mjx-c.mjx-c2217::before{padding:.465em .5em 0 0;content:"∗"}mjx-c.mjx-c1D70B.TEX-I::before{padding:.431em .57em .011em 0;content:"π"}mjx-c.mjx-c2013::before{padding:.285em .5em 0 0;content:"–"}mjx-stretchy-v.mjx-c7C mjx-ext mjx-c::before{content:"∣";width:.333em}mjx-c.mjx-c394::before{padding:.716em .833em 0 0;content:"Δ"}mjx-c.mjx-c1D444.TEX-I::before{padding:.704em .791em .194em 0;content:"Q"}mjx-c.mjx-c2218::before{padding:.444em .5em 0 0;content:"∘"}mjx-stretchy-v.mjx-c5B mjx-beg mjx-c::before{content:"⎡";padding:1.154em .667em .645em 0}mjx-stretchy-v.mjx-c5B mjx-ext mjx-c::before{content:"⎢";width:.667em}mjx-stretchy-v.mjx-c5B mjx-end mjx-c::before{content:"⎣";padding:1.155em .667em .644em 0}mjx-stretchy-v.mjx-c5B>mjx-end{margin-top:-1.799em}mjx-stretchy-v.mjx-c5B>mjx-ext{border-top-width:1.769em;border-bottom-width:1.769em}mjx-stretchy-v.mjx-c5D mjx-beg mjx-c::before{content:"⎤";padding:1.154em .667em .645em 0}mjx-stretchy-v.mjx-c5D mjx-ext mjx-c::before{content:"⎥";width:.667em}mjx-stretchy-v.mjx-c5D mjx-end mjx-c::before{content:"⎦";padding:1.155em .667em .644em 0}mjx-stretchy-v.mjx-c5D>mjx-end{margin-top:-1.799em}mjx-stretchy-v.mjx-c5D>mjx-ext{border-top-width:1.769em;border-bottom-width:1.769em}mjx-c.mjx-c1D703.TEX-I::before{padding:.705em .469em .01em 0;content:"θ"}mjx-c.mjx-c5E::before{padding:.694em .5em 0 0;content:"^"}mjx-c.mjx-c1D708.TEX-I::before{padding:.442em .53em 0 0;content:"ν"}mjx-c.mjx-c1D715::before{padding:.715em .566em .022em 0;content:"∂"}mjx-c.mjx-c5B.TEX-S3::before{padding:1.45em .528em .949em 0;content:"["}mjx-c.mjx-c5D.TEX-S3::before{padding:1.45em .528em .949em 0;content:"]"}mjx-c.mjx-cAF::before{padding:.59em .5em 0 0;content:"¯"}mjx-c.mjx-c223C::before{padding:.367em .778em 0 0;content:"∼"}mjx-c.mjx-c5B.TEX-S4::before{padding:1.75em .583em 1.249em 0;content:"["}mjx-c.mjx-c5D.TEX-S4::before{padding:1.75em .583em 1.249em 0;content:"]"}mjx-c.mjx-c3B::before{padding:.43em .278em .194em 0;content:";"}mjx-c.mjx-c1D6FC.TEX-I::before{padding:.442em .64em .011em 0;content:"α"}mjx-c.mjx-c1D6FD.TEX-I::before{padding:.705em .566em .194em 0;content:"β"}mjx-c.mjx-c28.TEX-S1::before{padding:.85em .458em .349em 0;content:"("}mjx-c.mjx-c29.TEX-S1::before{padding:.85em .458em .349em 0;content:")"}mjx-c.mjx-c220F.TEX-S1::before{padding:.75em .944em .25em 0;content:"∏"}mjx-c.mjx-c1D70F.TEX-I::before{padding:.431em .517em .013em 0;content:"τ"}mjx-c.mjx-c1D6FF.TEX-I::before{padding:.717em .444em .01em 0;content:"δ"}mjx-c.mjx-c1D439.TEX-I::before{padding:.68em .749em 0 0;content:"F"}mjx-msqrt{display:inline-block;text-align:left}mjx-root{display:inline-block;white-space:nowrap}mjx-surd{display:inline-block;vertical-align:top}mjx-sqrt{display:inline-block;padding-top:.07em}mjx-sqrt>mjx-box{border-top:.07em solid}mjx-sqrt.mjx-tall>mjx-box{padding-left:.3em;margin-left:-.3em}mjx-mspace{display:inline-block;text-align:left}mjx-c.mjx-c1D707.TEX-I::before{padding:.442em .603em .216em 0;content:"μ"}mjx-c.mjx-c1D70E.TEX-I::before{padding:.431em .571em .011em 0;content:"σ"}mjx-c.mjx-c221A::before{padding:.8em .853em .2em 0;content:"√"}mjx-c.mjx-c221A.TEX-S1::before{padding:.85em 1.02em .35em 0;content:"√"}mjx-c.mjx-c1D716.TEX-I::before{padding:.431em .406em .011em 0;content:"ϵ"}mjx-c.mjx-c27FA::before{padding:.525em 1.858em .024em 0;content:"⟺"}mjx-c.mjx-c28.TEX-S2::before{padding:1.15em .597em .649em 0;content:"("}mjx-c.mjx-c29.TEX-S2::before{padding:1.15em .597em .649em 0;content:")"}mjx-c.mjx-c2248::before{padding:.483em .778em 0 0;content:"≈"}mjx-c.mjx-c3A6::before{padding:.683em .722em 0 0;content:"Φ"}mjx-c.mjx-c1D440.TEX-I::before{padding:.683em 1.051em 0 0;content:"M"}mjx-c.mjx-c222B.TEX-S1::before{padding:.805em .61em .306em 0;content:"∫"}mjx-c.mjx-c2026::before{padding:.12em 1.172em 0 0;content:"…"}mjx-mover{display:inline-block;text-align:left}mjx-mover:not([limits=false]){padding-top:.1em}mjx-mover:not([limits=false])>*{display:block;text-align:left}mjx-c.mjx-c1D44B.TEX-I::before{padding:.683em .852em 0 0;content:"X"}mjx-c.mjx-c1D44C.TEX-I::before{padding:.683em .763em 0 0;content:"Y"}mjx-c.mjx-c1D466.TEX-I::before{padding:.442em .49em .205em 0;content:"y"}mjx-c.mjx-c76::before{padding:.431em .528em .011em 0;content:"v"}mjx-c.mjx-c1D706.TEX-I::before{padding:.694em .583em .012em 0;content:"λ"}mjx-c.mjx-c1D44D.TEX-I::before{padding:.683em .723em 0 0;content:"Z"}mjx-c.mjx-c1D467.TEX-I::before{padding:.442em .465em .011em 0;content:"z"}mjx-c.mjx-c7E::before{padding:.318em .5em 0 0;content:"~"}mjx-c.mjx-c22C3.TEX-S1::before{padding:.75em .833em .249em 0;content:"⋃"}mjx-c.mjx-c3A9::before{padding:.704em .722em 0 0;content:"Ω"}mjx-c.mjx-c22C2.TEX-S1::before{padding:.75em .833em .249em 0;content:"⋂"}mjx-c.mjx-c25FC.TEX-A::before{padding:.689em .778em 0 0;content:"■"}mjx-c.mjx-c1D435.TEX-I::before{padding:.683em .759em 0 0;content:"B"}mjx-c.mjx-c222A::before{padding:.598em .667em .022em 0;content:"∪"}mjx-c.mjx-c28.TEX-S3::before{padding:1.45em .736em .949em 0;content:"("}mjx-c.mjx-c29.TEX-S3::before{padding:1.45em .736em .949em 0;content:")"}mjx-c.mjx-c28.TEX-S4::before{padding:1.75em .792em 1.249em 0;content:"("}mjx-c.mjx-c29.TEX-S4::before{padding:1.75em .792em 1.249em 0;content:")"}mjx-mfrac{display:inline-block;text-align:left}mjx-frac{display:inline-block;vertical-align:.17em;padding:0 .22em}mjx-frac[type="d"]{vertical-align:.04em}mjx-frac[delims]{padding:0 .1em}mjx-frac[atop]{padding:0 .12em}mjx-frac[atop][delims]{padding:0}mjx-dtable{display:inline-table;width:100%}mjx-dtable>*{font-size:2000%}mjx-dbox{display:block;font-size:5%}mjx-num{display:block;text-align:center}mjx-den{display:block;text-align:center}mjx-mfrac[bevelled]>mjx-num{display:inline-block}mjx-mfrac[bevelled]>mjx-den{display:inline-block}mjx-den[align=right],mjx-num[align=right]{text-align:right}mjx-den[align=left],mjx-num[align=left]{text-align:left}mjx-nstrut{display:inline-block;height:.054em;width:0;vertical-align:-.054em}mjx-nstrut[type="d"]{height:.217em;vertical-align:-.217em}mjx-dstrut{display:inline-block;height:.505em;width:0}mjx-dstrut[type="d"]{height:.726em}mjx-line{display:block;box-sizing:border-box;min-height:1px;height:.06em;border-top:.06em solid;margin:.06em -.1em;overflow:hidden}mjx-line[type="d"]{margin:.18em -.1em}mjx-c.mjx-c21::before{padding:.716em .278em 0 0;content:"!"}mjx-c.mjx-cA0::before{padding:0 .25em 0 0;content:" "}mjx-c.mjx-c2115.TEX-A::before{padding:.683em .722em .02em 0;content:"N"}mjx-c.mjx-c1D454.TEX-I::before{padding:.442em .477em .205em 0;content:"g"}mjx-c.mjx-c398::before{padding:.705em .778em .022em 0;content:"Θ"}mjx-mtext{display:inline-block;text-align:left}mjx-msub{display:inline-block;text-align:left}mjx-mrow{display:inline-block;text-align:left}mjx-mtable{display:inline-block;text-align:center;vertical-align:.25em;position:relative;box-sizing:border-box;border-spacing:0px;border-collapse:collapse}mjx-mstyle[size="s"] mjx-mtable{vertical-align:.354em}mjx-labels{position:absolute;left:0;top:0}mjx-table{display:inline-block;vertical-align:-.5ex;box-sizing:border-box}mjx-table>mjx-itable{vertical-align:middle;text-align:left;box-sizing:border-box}mjx-labels>mjx-itable{position:absolute;top:0}mjx-mtable[justify=left]{text-align:left}mjx-mtable[justify=right]{text-align:right}mjx-mtable[justify=left][side=left]{padding-right:0!important}mjx-mtable[justify=left][side=right]{padding-left:0!important}mjx-mtable[justify=right][side=left]{padding-right:0!important}mjx-mtable[justify=right][side=right]{padding-left:0!important}mjx-mtable[align]{vertical-align:baseline}mjx-mtable[align=top]>mjx-table{vertical-align:top}mjx-mtable[align=bottom]>mjx-table{vertical-align:bottom}mjx-mtable[side=right] mjx-labels{min-width:100%}mjx-mtr{display:table-row;text-align:left}mjx-mtr[rowalign=top]>mjx-mtd{vertical-align:top}mjx-mtr[rowalign=center]>mjx-mtd{vertical-align:middle}mjx-mtr[rowalign=bottom]>mjx-mtd{vertical-align:bottom}mjx-mtr[rowalign=baseline]>mjx-mtd{vertical-align:baseline}mjx-mtr[rowalign=axis]>mjx-mtd{vertical-align:.25em}mjx-mtd{display:table-cell;text-align:center;padding:.215em .4em}mjx-mtd:first-child{padding-left:0}mjx-mtd:last-child{padding-right:0}mjx-mtable>*>mjx-itable>:first-child>mjx-mtd{padding-top:0}mjx-mtable>*>mjx-itable>:last-child>mjx-mtd{padding-bottom:0}mjx-tstrut{display:inline-block;height:1em;vertical-align:-.25em}mjx-labels[align=left]>mjx-mtr>mjx-mtd{text-align:left}mjx-labels[align=right]>mjx-mtr>mjx-mtd{text-align:right}mjx-mtd[extra]{padding:0}mjx-mtd[rowalign=top]{vertical-align:top}mjx-mtd[rowalign=center]{vertical-align:middle}mjx-mtd[rowalign=bottom]{vertical-align:bottom}mjx-mtd[rowalign=baseline]{vertical-align:baseline}mjx-mtd[rowalign=axis]{vertical-align:.25em}mjx-munder{display:inline-block;text-align:left}mjx-over{text-align:left}mjx-munder:not([limits=false]){display:inline-table}mjx-munder>mjx-row{text-align:left}mjx-under{padding-bottom:.1em}mjx-munderover{display:inline-block;text-align:left}mjx-munderover:not([limits=false]){padding-top:.1em}mjx-munderover:not([limits=false])>*{display:block}mjx-msubsup{display:inline-block;text-align:left}mjx-script{display:inline-block;padding-right:.05em;padding-left:.033em}mjx-script>mjx-spacer{display:block}mjx-stretchy-v.mjx-c7B mjx-beg mjx-c::before{content:"⎧";padding:.899em .889em .01em 0}mjx-stretchy-v.mjx-c7B mjx-ext mjx-c::before{content:"⎪";width:.889em}mjx-stretchy-v.mjx-c7B mjx-end mjx-c::before{content:"⎩";padding:.01em .889em .899em 0}mjx-stretchy-v.mjx-c7B mjx-mid mjx-c::before{content:"⎨";padding:1.16em .889em .66em 0}mjx-stretchy-v.mjx-c7B>mjx-mid{margin-top:-.91em;margin-bottom:-.91em}mjx-stretchy-v.mjx-c7B>mjx-end{margin-top:-.909em}mjx-stretchy-v.mjx-c7B>mjx-ext{height:50%;border-top-width:.879em;border-bottom-width:.879em}mjx-c.mjx-c44::before{padding:.683em .764em 0 0;content:"D"}mjx-c.mjx-c52::before{padding:.683em .736em .022em 0;content:"R"}mjx-c.mjx-c3D::before{padding:.583em .778em .082em 0;content:"="}mjx-c.mjx-c50::before{padding:.683em .681em 0 0;content:"P"}mjx-c.mjx-c53::before{padding:.705em .556em .022em 0;content:"S"}mjx-c.mjx-c2200::before{padding:.694em .556em .022em 0;content:"∀"}mjx-c.mjx-c1D465.TEX-I::before{padding:.442em .572em .011em 0;content:"x"}mjx-c.mjx-c2208::before{padding:.54em .667em .04em 0;content:"∈"}mjx-c.mjx-c2C::before{padding:.121em .278em .194em 0;content:","}mjx-c.mjx-c2203::before{padding:.694em .556em 0 0;content:"∃"}mjx-c.mjx-c1D451.TEX-I::before{padding:.694em .52em .01em 0;content:"d"}mjx-c.mjx-c2282::before{padding:.54em .778em .04em 0;content:"⊂"}mjx-c.mjx-c1D45F.TEX-I::before{padding:.442em .451em .011em 0;content:"r"}mjx-c.mjx-c1D45D.TEX-I::before{padding:.442em .503em .194em 0;content:"p"}mjx-c.mjx-c7B::before{padding:.75em .5em .25em 0;content:"{"}mjx-c.mjx-c7D::before{padding:.75em .5em .25em 0;content:"}"}mjx-c.mjx-c1D437.TEX-I::before{padding:.683em .828em 0 0;content:"D"}mjx-c.mjx-c1D446.TEX-I::before{padding:.705em .645em .022em 0;content:"S"}mjx-c.mjx-c1D445.TEX-I::before{padding:.683em .759em .021em 0;content:"R"}mjx-c.mjx-c70::before{padding:.442em .556em .194em 0;content:"p"}mjx-c.mjx-c72::before{padding:.442em .392em 0 0;content:"r"}mjx-c.mjx-c69::before{padding:.669em .278em 0 0;content:"i"}mjx-c.mjx-c6F::before{padding:.448em .5em .01em 0;content:"o"}mjx-c.mjx-c1D462.TEX-I::before{padding:.442em .572em .011em 0;content:"u"}mjx-c.mjx-c6E::before{padding:.442em .556em 0 0;content:"n"}mjx-c.mjx-c65::before{padding:.448em .444em .011em 0;content:"e"}mjx-c.mjx-c78::before{padding:.431em .528em 0 0;content:"x"}mjx-c.mjx-c74::before{padding:.615em .389em .01em 0;content:"t"}mjx-c.mjx-c1D456.TEX-I::before{padding:.661em .345em .011em 0;content:"i"}mjx-c.mjx-c2E::before{padding:.12em .278em 0 0;content:"."}mjx-c.mjx-c1D45B.TEX-I::before{padding:.442em .6em .011em 0;content:"n"}mjx-c.mjx-c1D43F.TEX-I::before{padding:.683em .681em 0 0;content:"L"}mjx-c.mjx-c1D436.TEX-I::before{padding:.705em .76em .022em 0;content:"C"}mjx-c.mjx-c1D44E.TEX-I::before{padding:.441em .529em .01em 0;content:"a"}mjx-c.mjx-c2B::before{padding:.583em .778em .082em 0;content:"+"}mjx-c.mjx-c1D450.TEX-I::before{padding:.442em .433em .011em 0;content:"c"}mjx-c.mjx-c1D453.TEX-I::before{padding:.705em .55em .205em 0;content:"f"}mjx-c.mjx-c1D45C.TEX-I::before{padding:.441em .485em .011em 0;content:"o"}mjx-c.mjx-c1D441.TEX-I::before{padding:.683em .888em 0 0;content:"N"}mjx-c.mjx-c25::before{padding:.75em .833em .056em 0;content:"%"}mjx-c.mjx-c7B.TEX-S3::before{padding:1.45em .75em .949em 0;content:"{"}mjx-c.mjx-c221E::before{padding:.442em 1em .011em 0;content:"∞"}mjx-c.mjx-c1D44F.TEX-I::before{padding:.694em .429em .011em 0;content:"b"}mjx-c.mjx-c1D458.TEX-I::before{padding:.694em .521em .011em 0;content:"k"}mjx-c.mjx-c6D::before{padding:.442em .833em 0 0;content:"m"}mjx-c.mjx-c61::before{padding:.448em .5em .011em 0;content:"a"}mjx-c.mjx-c1D45A.TEX-I::before{padding:.442em .878em .011em 0;content:"m"}mjx-c.mjx-c3C::before{padding:.54em .778em .04em 0;content:"<"}mjx-c.mjx-c1D457.TEX-I::before{padding:.661em .412em .204em 0;content:"j"}mjx-c.mjx-c1D459.TEX-I::before{padding:.694em .298em .011em 0;content:"l"}mjx-c.mjx-c5B::before{padding:.75em .278em .25em 0;content:"["}mjx-c.mjx-c210E.TEX-I::before{padding:.694em .576em .011em 0;content:"h"}mjx-c.mjx-c5D::before{padding:.75em .278em .25em 0;content:"]"}mjx-c.mjx-cD7::before{padding:.491em .778em 0 0;content:"×"}mjx-c.mjx-c2265::before{padding:.636em .778em .138em 0;content:"≥"}mjx-c.mjx-c1D447.TEX-I::before{padding:.677em .704em 0 0;content:"T"}mjx-c.mjx-c22EF::before{padding:.31em 1.172em 0 0;content:"⋯"}mjx-c.mjx-c64::before{padding:.694em .556em .011em 0;content:"d"}mjx-c.mjx-c67::before{padding:.453em .5em .206em 0;content:"g"}mjx-c.mjx-c2061::before{padding:0;content:""}mjx-c.mjx-c1D463.TEX-I::before{padding:.443em .485em .011em 0;content:"v"}mjx-c.mjx-c77::before{padding:.431em .722em .011em 0;content:"w"}mjx-c.mjx-c6C::before{padding:.694em .278em 0 0;content:"l"}mjx-c.mjx-c66::before{padding:.705em .372em 0 0;content:"f"}mjx-c.mjx-c2209::before{padding:.716em .667em .215em 0;content:"∉"}mjx-c.mjx-c2260::before{padding:.716em .778em .215em 0;content:"≠"}mjx-c.mjx-c73::before{padding:.448em .394em .011em 0;content:"s"}mjx-c.mjx-c62::before{padding:.694em .556em .011em 0;content:"b"}mjx-c.mjx-c63::before{padding:.448em .444em .011em 0;content:"c"}mjx-c.mjx-c68::before{padding:.694em .556em 0 0;content:"h"}mjx-c.mjx-c2205::before{padding:.772em .5em .078em 0;content:"∅"}mjx-c.mjx-c7C::before{padding:.75em .278em .249em 0;content:"|"}mjx-c.mjx-c1D43A.TEX-I::before{padding:.705em .786em .022em 0;content:"G"}mjx-c.mjx-c1D449.TEX-I::before{padding:.683em .769em .022em 0;content:"V"}mjx-c.mjx-c1D438.TEX-I::before{padding:.68em .764em 0 0;content:"E"}mjx-c.mjx-c1D44A.TEX-I::before{padding:.683em 1.048em .022em 0;content:"W"}mjx-c.mjx-c1D443.TEX-I::before{padding:.683em .751em 0 0;content:"P"}mjx-c.mjx-c2211.TEX-S1::before{padding:.75em 1.056em .25em 0;content:"∑"}mjx-c.mjx-c2264::before{padding:.636em .778em .138em 0;content:"≤"}mjx-c.mjx-c2204::before{padding:.716em .556em .215em 0;content:"∄"}mjx-c.mjx-c4C::before{padding:.683em .625em 0 0;content:"L"}mjx-c.mjx-c2308::before{padding:.75em .444em .25em 0;content:"⌈"}mjx-c.mjx-c2309::before{padding:.75em .444em .25em 0;content:"⌉"}mjx-c.mjx-c230A::before{padding:.75em .444em .25em 0;content:"⌊"}mjx-c.mjx-c230B::before{padding:.75em .444em .25em 0;content:"⌋"}mjx-c.mjx-c1D430.TEX-B::before{padding:.444em .831em 0 0;content:"w"}mjx-c.mjx-c1D464.TEX-I::before{padding:.443em .716em .011em 0;content:"w"}mjx-c.mjx-c1D413.TEX-B::before{padding:.675em .8em 0 0;content:"T"}mjx-c.mjx-c3D.TEX-B::before{padding:.393em .894em 0 0;content:"="}mjx-c.mjx-c1D7CF.TEX-B::before{padding:.655em .575em 0 0;content:"1"}mjx-c.mjx-c2190::before{padding:.511em 1em .011em 0;content:"←"}mjx-c.mjx-c56::before{padding:.683em .75em .022em 0;content:"V"}mjx-c.mjx-c45::before{padding:.68em .681em 0 0;content:"E"}mjx-c.mjx-c6A::before{padding:.669em .306em .205em 0;content:"j"}mjx-c.mjx-c1D460.TEX-I::before{padding:.442em .469em .01em 0;content:"s"}mjx-c.mjx-c2192::before{padding:.511em 1em .011em 0;content:"→"}mjx-c.mjx-c2032::before{padding:.56em .275em 0 0;content:"′"}mjx-c.mjx-c2229::before{padding:.598em .667em .022em 0;content:"∩"}mjx-c.mjx-c49::before{padding:.683em .361em 0 0;content:"I"}mjx-c.mjx-c1D434.TEX-I::before{padding:.716em .75em 0 0;content:"A"}mjx-c.mjx-c3A::before{padding:.43em .278em 0 0;content:":"}mjx-c.mjx-c211D.TEX-A::before{padding:.683em .722em 0 0;content:"R"}mjx-c.mjx-c1D43B.TEX-I::before{padding:.683em .888em 0 0;content:"H"}mjx-c.mjx-c1D53D.TEX-A::before{padding:.683em .611em 0 0;content:"F"}mjx-c.mjx-c2124.TEX-A::before{padding:.683em .667em 0 0;content:"Z"}mjx-c.mjx-c21A6::before{padding:.511em 1em .011em 0;content:"↦"}mjx-c.mjx-c71::before{padding:.442em .528em .194em 0;content:"q"}mjx-c.mjx-c30::before{padding:.666em .5em .022em 0;content:"0"}mjx-c.mjx-c36::before{padding:.666em .5em .022em 0;content:"6"}mjx-container[jax=CHTML]{line-height:0}mjx-container [space="1"]{margin-left:.111em}mjx-container [space="2"]{margin-left:.167em}mjx-container [space="3"]{margin-left:.222em}mjx-container [space="4"]{margin-left:.278em}mjx-container [space="5"]{margin-left:.333em}mjx-container [rspace="1"]{margin-right:.111em}mjx-container [rspace="2"]{margin-right:.167em}mjx-container [rspace="3"]{margin-right:.222em}mjx-container [rspace="4"]{margin-right:.278em}mjx-container [rspace="5"]{margin-right:.333em}mjx-container [size="s"]{font-size:70.7%}mjx-container [size=ss]{font-size:50%}mjx-container [size=Tn]{font-size:60%}mjx-container [size=sm]{font-size:85%}mjx-container [size=lg]{font-size:120%}mjx-container [size=Lg]{font-size:144%}mjx-container [size=LG]{font-size:173%}mjx-container [size=hg]{font-size:207%}mjx-container [size=HG]{font-size:249%}mjx-container [width=full]{width:100%}mjx-box{display:inline-block}mjx-block{display:block}mjx-itable{display:inline-table}mjx-row{display:table-row}mjx-row>*{display:table-cell}mjx-mtext{display:inline-block}mjx-mstyle{display:inline-block}mjx-merror{display:inline-block;color:red;background-color:#ff0}mjx-mphantom{visibility:hidden}mjx-assistive-mml{top:0;left:0;clip:rect(1px,1px,1px,1px);user-select:none;position:absolute!important;padding:1px 0 0!important;border:0!important;display:block!important;width:auto!important;overflow:hidden!important}mjx-assistive-mml[display=block]{width:100%!important}mjx-math{display:inline-block;text-align:left;line-height:0;text-indent:0;font-style:normal;font-weight:400;font-size:100%;letter-spacing:normal;border-collapse:collapse;overflow-wrap:normal;word-spacing:normal;white-space:nowrap;direction:ltr;padding:1px 0}mjx-container[jax=CHTML][display=true]{display:block;text-align:center;margin:1em 0}mjx-container[jax=CHTML][display=true][width=full]{display:flex}mjx-container[jax=CHTML][display=true] mjx-math{padding:0}mjx-container[jax=CHTML][justify=left]{text-align:left}mjx-container[jax=CHTML][justify=right]{text-align:right}mjx-mo{display:inline-block;text-align:left}mjx-stretchy-h{display:inline-table;width:100%}mjx-stretchy-h>*{display:table-cell;width:0}mjx-stretchy-h>*>mjx-c{display:inline-block;transform:scaleX(1)}mjx-stretchy-h>*>mjx-c::before{display:inline-block;width:initial}mjx-stretchy-h>mjx-ext{overflow:clip visible;width:100%}mjx-stretchy-h>mjx-ext>mjx-c::before{transform:scaleX(500)}mjx-stretchy-h>mjx-ext>mjx-c{width:0}mjx-stretchy-h>mjx-beg>mjx-c{margin-right:-.1em}mjx-stretchy-h>mjx-end>mjx-c{margin-left:-.1em}mjx-stretchy-v{display:inline-block}mjx-stretchy-v>*{display:block}mjx-stretchy-v>mjx-beg{height:0}mjx-stretchy-v>mjx-end>mjx-c{display:block}mjx-stretchy-v>*>mjx-c{transform:scaleY(1);transform-origin:left center;overflow:hidden}mjx-stretchy-v>mjx-ext{display:block;height:100%;box-sizing:border-box;border:0 solid transparent;overflow:visible clip}mjx-stretchy-v>mjx-ext>mjx-c::before{width:initial;box-sizing:border-box}mjx-stretchy-v>mjx-ext>mjx-c{transform:scaleY(500) translateY(.075em);overflow:visible}mjx-mark{display:inline-block;height:0}mjx-c{display:inline-block}mjx-utext{display:inline-block;padding:.75em 0 .2em}mjx-mn{display:inline-block;text-align:left}mjx-texatom{display:inline-block;text-align:left}mjx-mi{display:inline-block;text-align:left}mjx-msup{display:inline-block;text-align:left}mjx-c::before{display:block;width:0}.MJX-TEX{font-family:MJXZERO,MJXTEX}.TEX-B{font-family:MJXZERO,MJXTEX-B}.TEX-I{font-family:MJXZERO,MJXTEX-I}.TEX-MI{font-family:MJXZERO,MJXTEX-MI}.TEX-BI{font-family:MJXZERO,MJXTEX-BI}.TEX-S1{font-family:MJXZERO,MJXTEX-S1}.TEX-S2{font-family:MJXZERO,MJXTEX-S2}.TEX-S3{font-family:MJXZERO,MJXTEX-S3}.TEX-S4{font-family:MJXZERO,MJXTEX-S4}.TEX-A{font-family:MJXZERO,MJXTEX-A}.TEX-C{font-family:MJXZERO,MJXTEX-C}.TEX-CB{font-family:MJXZERO,MJXTEX-CB}.TEX-FR{font-family:MJXZERO,MJXTEX-FR}.TEX-FRB{font-family:MJXZERO,MJXTEX-FRB}.TEX-SS{font-family:MJXZERO,MJXTEX-SS}.TEX-SSB{font-family:MJXZERO,MJXTEX-SSB}.TEX-SSI{font-family:MJXZERO,MJXTEX-SSI}.TEX-SC{font-family:MJXZERO,MJXTEX-SC}.TEX-T{font-family:MJXZERO,MJXTEX-T}.TEX-V{font-family:MJXZERO,MJXTEX-V}.TEX-VB{font-family:MJXZERO,MJXTEX-VB}mjx-stretchy-h mjx-c,mjx-stretchy-v mjx-c{font-family:MJXZERO,MJXTEX-S1,MJXTEX-S4,MJXTEX,MJXTEX-A!important}@font-face{font-family:MJXZERO;src:url("lib/fonts/mathjax_zero.woff") format("woff")}@font-face{font-family:MJXTEX;src:url("lib/fonts/mathjax_main-regular.woff") format("woff")}@font-face{font-family:MJXTEX-B;src:url("lib/fonts/mathjax_main-bold.woff") format("woff")}@font-face{font-family:MJXTEX-I;src:url("lib/fonts/mathjax_math-italic.woff") format("woff")}@font-face{font-family:MJXTEX-MI;src:url("lib/fonts/mathjax_main-italic.woff") format("woff")}@font-face{font-family:MJXTEX-BI;src:url("lib/fonts/mathjax_math-bolditalic.woff") format("woff")}@font-face{font-family:MJXTEX-S1;src:url("lib/fonts/mathjax_size1-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S2;src:url("lib/fonts/mathjax_size2-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S3;src:url("lib/fonts/mathjax_size3-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S4;src:url("lib/fonts/mathjax_size4-regular.woff") format("woff")}@font-face{font-family:MJXTEX-A;src:url("lib/fonts/mathjax_ams-regular.woff") format("woff")}@font-face{font-family:MJXTEX-C;src:url("lib/fonts/mathjax_calligraphic-regular.woff") format("woff")}@font-face{font-family:MJXTEX-CB;src:url("lib/fonts/mathjax_calligraphic-bold.woff") format("woff")}@font-face{font-family:MJXTEX-FR;src:url("lib/fonts/mathjax_fraktur-regular.woff") format("woff")}@font-face{font-family:MJXTEX-FRB;src:url("lib/fonts/mathjax_fraktur-bold.woff") format("woff")}@font-face{font-family:MJXTEX-SS;src:url("lib/fonts/mathjax_sansserif-regular.woff") format("woff")}@font-face{font-family:MJXTEX-SSB;src:url("lib/fonts/mathjax_sansserif-bold.woff") format("woff")}@font-face{font-family:MJXTEX-SSI;src:url("lib/fonts/mathjax_sansserif-italic.woff") format("woff")}@font-face{font-family:MJXTEX-SC;src:url("lib/fonts/mathjax_script-regular.woff") format("woff")}@font-face{font-family:MJXTEX-T;src:url("lib/fonts/mathjax_typewriter-regular.woff") format("woff")}@font-face{font-family:MJXTEX-V;src:url("lib/fonts/mathjax_vector-regular.woff") format("woff")}@font-face{font-family:MJXTEX-VB;src:url("lib/fonts/mathjax_vector-bold.woff") format("woff")}mjx-c.mjx-c28::before{padding:.75em .389em .25em 0;content:"("}mjx-c.mjx-c34::before{padding:.677em .5em 0 0;content:"4"}mjx-c.mjx-c31::before{padding:.666em .5em 0 0;content:"1"}mjx-c.mjx-c39::before{padding:.666em .5em .022em 0;content:"9"}mjx-c.mjx-c35::before{padding:.666em .5em .022em 0;content:"5"}mjx-c.mjx-c38::before{padding:.666em .5em .022em 0;content:"8"}mjx-c.mjx-c33::before{padding:.665em .5em .022em 0;content:"3"}mjx-c.mjx-c2F::before{padding:.75em .5em .25em 0;content:"/"}mjx-c.mjx-c37::before{padding:.676em .5em .022em 0;content:"7"}mjx-c.mjx-c32::before{padding:.666em .5em 0 0;content:"2"}mjx-c.mjx-c29::before{padding:.75em .389em .25em 0;content:")"}mjx-c.mjx-c22C5::before{padding:.31em .278em 0 0;content:"⋅"}mjx-c.mjx-c2212::before{padding:.583em .778em .082em 0;content:"−"}mjx-c.mjx-c3E::before{padding:.54em .778em .04em 0;content:">"}mjx-c.mjx-c1D442.TEX-I::before{padding:.704em .763em .022em 0;content:"O"}mjx-c.mjx-c1D452.TEX-I::before{padding:.442em .466em .011em 0;content:"e"}mjx-c.mjx-c1D461.TEX-I::before{padding:.626em .361em .011em 0;content:"t"}</style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="chrome-plugin"><p dir="auto">chrome-plugin</p></h1><div><p dir="auto">npm <span>chrome-types</span> =&gt; <a data-tooltip-position="top" aria-label="https://developer.chrome.com/docs/extensions/reference?hl=zh-cn" rel="noopener" class="external-link" href="https://developer.chrome.com/docs/extensions/reference?hl=zh-cn" target="_blank">chrome api</a> 的自动填充功能</p></div><div class="heading-wrapper"><h3 data-heading="参考" dir="auto" class="heading" id="参考"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>参考</h3><div class="heading-children"><div><p dir="auto">edge =&gt; <a data-tooltip-position="top" aria-label="https://learn.microsoft.com/zh-cn/microsoft-edge/extensions-chromium/" rel="noopener" class="external-link" href="https://learn.microsoft.com/zh-cn/microsoft-edge/extensions-chromium/" target="_blank">Microsoft Edge 扩展概述 - Microsoft Edge Developer documentation | Microsoft Learn</a><br>
+chrome =&gt; <a data-tooltip-position="top" aria-label="https://developer.chrome.com/docs/extensions/get-started?hl=zh-cn#next-steps" rel="noopener" class="external-link" href="https://developer.chrome.com/docs/extensions/get-started?hl=zh-cn#next-steps" target="_blank">扩展程序 / 使用入门 &nbsp;|&nbsp; Get started &nbsp;|&nbsp; Chrome for Developers</a></p></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://developer.chrome.com/docs/workbox?hl=zh-cn" rel="noopener" class="external-link" href="https://developer.chrome.com/docs/workbox?hl=zh-cn" target="_blank">Workbox &nbsp;|&nbsp; Chrome for Developers</a></p></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://blog.csdn.net/guoqiankunmiss/article/details/112007833" rel="noopener" class="external-link" href="https://blog.csdn.net/guoqiankunmiss/article/details/112007833" target="_blank">15000字大章带你一步一步使用Vue3开发chrome浏览器插件_vue开发谷歌插件直接打开一个页面如何实现-CSDN博客</a></p></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://blog.csdn.net/qq_35606400/article/details/123263753" rel="noopener" class="external-link" href="https://blog.csdn.net/qq_35606400/article/details/123263753" target="_blank">vue-cli3开发Chrome Extension实践 | vue开发浏览器插件 | vue开发chrome插件_vue-cli-plugin-chrome-ext-CSDN博客</a></p></div><div><p dir="auto"><span>npm install -g @vue/cli</span><br>
+<span>vue create &lt;vue-extension&gt;</span><br>
+<span>vue add chrome-ext</span>=&gt; 安装 <span>vue-cli-plugin-chrome-ext</span></p></div><div><p dir="auto">类型提示 =&gt; <span>npm i -D @types/chrome</span></p></div><div class="heading-wrapper"><h4 data-heading="插件推荐" dir="auto" class="heading" id="插件推荐"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>插件推荐</h4><div class="heading-children"><div><p dir="auto">翻译插件（解决了翻译排版错乱问题） =&gt; <a data-tooltip-position="top" aria-label="https://kkgithub.com/FilipePS/Traduzir-paginas-web" rel="noopener" class="external-link" href="https://kkgithub.com/FilipePS/Traduzir-paginas-web" target="_blank">FilipePS/Traduzir-paginas-web</a></p></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://chromewebstore.google.com/detail/infinity-%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/dbfmnekepjoapopniengjbcpnbljalfg" rel="noopener" class="external-link" href="https://chromewebstore.google.com/detail/infinity-%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/dbfmnekepjoapopniengjbcpnbljalfg" target="_blank">Infinity New Tab</a></p></div></div></div><div class="heading-wrapper"><h4 data-heading="脚手架" dir="auto" class="heading" id="脚手架"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>脚手架</h4><div class="heading-children"><div><pre dir="auto"><span>{
+  "manifest_version": 3,
+  "name": "example-plugin",
+  "description": "example plugin",
+  "version": "1.0",
+
+  "options_page": "example/options.html",
+  "action": {
+    "default_icon": "example/icon.ext",
+    "default_title": "example title",
+    "default_popup": "example/popup.html"
+  },
+  "side_panel": {
+    "default_path": "example/side-panel.html"
+  },
+  "chrome_url_overrides": {},
+  "commands": {
+    "example-cmd": {
+      "suggested_key": { "default": "Ctrl+Shift+X" },
+      "description": "example description"
+    }
+  },
+  "permissions": ["sidePanel"]
+}</span><button class="copy-code-button">复制</button></pre></div></div></div></div></div><div class="heading-wrapper"><h3 data-heading="manifest.json" dir="auto" class="heading" id="manifest.json"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>manifest.json</h3><div class="heading-children"><div><p dir="auto">2.0 版本 =&gt; <a data-tooltip-position="top" aria-label="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json" rel="noopener" class="external-link" href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json" target="_blank">manifest.json - Mozilla | MDN</a><br>
+3.0 版本 =&gt; <a data-tooltip-position="top" aria-label="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json" rel="noopener" class="external-link" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json" target="_blank">manifest.json - Mozilla | MDN</a><br>
+<a data-tooltip-position="top" aria-label="https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts?hl=zh-cn" rel="noopener" class="external-link" href="https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts?hl=zh-cn" target="_blank">清单 - 内容脚本 &nbsp;|&nbsp; Extensions &nbsp;|&nbsp; Chrome for Developers</a></p></div><div><p dir="auto"><span>manifest.json</span> 的结构</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	manifest_version: 3,
+	name: str,
+	author?: str,
+	description?: str,
+	version: str,
+	icons?: { "16": path, "32": path, "48": path, "128": path },
+
+	// (1) 网站注入代码
+	content_scripts?: {
+		// 注入 css 的代码
+		css?: css_path[],
+		// 注入 js 的脚本（注：不能是 es6 语法，如 `export default` 的模块语法）
+		js?: js_path[],
+		// 需要注入的 js 或 css 代码的 origin 的模式串
+		// 注：支持 * 通配符，如 '*://*.mozilla.org/*'
+		matches: url[],
+		// 排除的网站 origin 的模式串
+		exclude_matches?: url[],
+		// 注：支持 * 和 ? 通配符
+		include_globs?: url[],
+		exclude_globs?: url[],
+		// 注入代码的时机
+		run_at?:
+			'document_start'	// DOM 正在加载
+			| 'document_end'	// DOM 已完成 loading, 但还在加载资源
+			| 'document_idle'	// (默认)DOM 及其资源加载完毕 
+	}[],
+	// (2) 弹出窗口配置
+	action?: {
+		default_icon?: path | { "16": path, "24": path, "32": path },
+		default_title?: str,
+		default_popup?: html_path
+	},
+	// (3) service worker =&gt; 事件处理程序
+	background?: {
+		service_worker: js_path,
+	},
+	// (4) 侧板，
+	// 注：需要提供 'sidePanel' 权限
+	side_panel?: {
+		default_path: html_path
+	},
+	// (5) 选项页 =&gt; 用于管理扩展自定义选项
+	// 注：建议使用 'storage' 权限
+	options_page?: html_path,
+	
+	permissions?: enum[],	// 如：'storage', 'scripting', 'activeTab', 'sidePanel'
+	host_permissions?: url[],
+	optional_permissions?: enum[]
+	optional_host_permissions?: url[],
+
+	chrome_settings_overrides?: {
+		homepage?: url,
+		search_provider?: dict,
+		startup_pages?: url[]
+	},
+	// 重写 chrome 的某些页面，注：一个插件只能提供以下某一个键值对
+	chrome_url_overrides?: {
+		// 重写 新标签页 chrome://newtab
+		newtab?: path,
+		// 重写 收藏夹 chrome://bookmarks
+		bookmarks?: path,
+		// 重写 edge://history
+		history?: path
+	},
+	// 插件的主页
+	homepage_url?: url
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">注：指定的 html 文件只能通过 <span>&lt;script&gt;</span> 导入 es5 脚本？<br>
+注2：</p></div></div></div><div class="heading-wrapper"><h3 data-heading="核心" dir="auto" class="heading" id="核心"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>核心</h3><div class="heading-children"><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts" rel="noopener" class="external-link" href="https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts" target="_blank">Content scripts &nbsp;|&nbsp; Chrome Extensions &nbsp;|&nbsp; Chrome for Developers</a></p></div><div class="heading-wrapper"><h4 data-heading="conten script(内容脚本)" dir="auto" class="heading" id="conten_script(内容脚本)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>conten script(内容脚本)</h4><div class="heading-children"><div><p dir="auto">注：不同扩展的 内容脚本 在自己的<strong>隔离世界</strong>中运行<br>
+注2：运行在页面中的 内容脚本 不与该页面冲突？</p></div><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	content_scripts?: {
+		// 注入 css 的代码
+		css?: css_path[],
+		// 注入 js 的脚本（注：不能是 es6 语法，如 `export default` 的模块语法）
+		js?: js_path[],
+		// 需要注入的 js 或 css 代码的 origin 的模式串，形如 &lt;scheme&gt;://&lt;host&gt;/&lt;path&gt; 或 file:///
+		// scheme =&gt; http | https | * （* 只匹配 http 或 https）
+		matches: url[],
+		// 排除的网站 origin 的模式串
+		exclude_matches?: url[],
+		// 注：支持 * 和 ? 通配符
+		include_globs?: url[],
+		exclude_globs?: url[],
+		// 注入代码的时机
+		run_at?:
+			'document_start'	// DOM 正在加载
+			| 'document_end'	// DOM 已完成 loading, 但还在加载资源
+			| 'document_idle',	// (默认)DOM 及其资源加载完毕 
+		// 执行世界
+		world?: 'ISOLATED' | 'MAIN',
+		match_about_blank?: bool,
+		match_origin_as_fallback?: bool,
+		// 若为 false，则只有顶层 frame 会被注入代码；否则所有 frame 都会注入代码
+		all_frames?: bool
+	}[]
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">默认支持的api =&gt; <span>chrome.dom</span>, <span>chrome.i18n</span>, <span>chrome.storage</span>, <span>chrome.runtime</span></p></div><div><p dir="auto"><span>chrome.scripting</span> 的函数：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>registerContentScripts(scripts: RegisteredContentScript[]): Promise&lt;void&gt;</span></li>
+<li data-line="1" dir="auto"><span>updateContentScripts(scripts: RegisteredContentScript[]): Promise&lt;void&gt;</span></li>
+<li data-line="2" dir="auto"><span>unregisterContentScripts(filter?: ContentScriptFilter): Promise&lt;void&gt;</span></li>
+<li data-line="3" dir="auto"><span>getRegisteredContentScripts(filter?: ContentScriptFilter): Promise&lt;RegisteredContentScript[]&gt;</span></li>
+<li data-line="4" dir="auto"><span>insertCSS(injection: CSSInjection): Promise&lt;void&gt;</span></li>
+<li data-line="5" dir="auto"><span>removeCSS(injection: CSSInjection): Promise&lt;void&gt;</span></li>
+<li data-line="6" dir="auto"><span>executeScript(injection: ScriptInjection): Promise&lt;Array&lt;InjectionResult&lt;Awaited&lt;Result&gt;&gt;&gt;&gt;</span></li>
+</ul></div><div><p dir="auto"><span>RegisteredContentScript</span> 接口：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	id: str,
+	js?: str[], css?: str[],
+	matches?: str[], excludeMatches?: str[],
+	runAt?: 'document_start' | 'document_end' | 'document_idle',
+	world?: 'ISOLATED' | 'MAIN',
+	allFrames?: bool, matchOriginAsFallback?: bool, persistAcrossSessions?: bool
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><span>ContentScriptFilter</span> 接口：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	ids?: str[],
+	...CSSInjection
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><span>CSSInjection</span> 接口：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	css?: str,
+	files?: str[],
+	origin?: 'AUTHOR' | 'USER',
+	target: {
+		allFrames?: bool,
+		documentIds?: str[],
+		frameIds?: num[],
+		tabId?: num
+	}
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><span>ScriptInjection&lt;Args extends any[], Result&gt;</span> 接口：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	target: { allFrames?: bool, documentIds?: str[], frameIds?: num[], tabId?: num },
+	world?: 'ISOLATED' | 'MAIN',
+	injectImmediately?: bool,
+} &amp; (
+	{ files: str }
+	| { func: () =&gt; result }
+	| { func: (...args: Args) =&gt; Result, args: Args }
+)</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">例子 =&gt; 动态嵌入脚本：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>manifest.json</span></li>
+</ul></div><div><pre dir="auto"><span>{
+  "commands": {
+    "lx-cmd": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+X",
+        "mac": "Command+Shift+X"
+      },
+      "description": "lx cmd"
+    }
+  },
+  "host_permissions": [
+    "*://*/*"
+  ]
+}</span><button class="copy-code-button">复制</button></pre></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>background.js</span></li>
+</ul></div><div class="has-run-code-button"><pre dir="auto"><span>chrome.runtime.onInstalled.addListener(() =&gt; {
+    chrome.commands.onCommand.addListener((command, tab)=&gt;{
+        switch (command){
+            case 'lx-cmd':
+                chrome.scripting.executeScript({
+                    target: { tabId: tab.id },
+                    func: ()=&gt;{
+                        let el = document.getElementsByTagName('body')[0]
+                        console.log(el.style.backgroundColor='#ffaaff')
+                        // let n=()=&gt;[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)]
+                        // console.log(el.style.backgroundColor=`#${n()}${n()}${n()}${n()}${n()}${n()}`)
+                    }
+                })
+        }
+    })
+})</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">注：类似于 <a data-href="js-web-api#postMessage()" href="docs/草稿/前端/core/js-web-api.html#postMessage()" class="internal-link" target="_self" rel="noopener">js-web-api &gt; postMessage()</a></p></div><div><p dir="auto"><span>chrome.runtime</span> 的函数：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>connect(info?: ConnectInfo): Port</span> =&gt; 与内容脚本通信</li>
+<li data-line="1" dir="auto"><span>getURL(path: str): str</span> =&gt; 将扩展的本地文件转换为绝对 url</li>
+</ul></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts#host-page-communication" rel="noopener" class="external-link" href="https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts#host-page-communication" target="_blank">内容脚本| Chrome 扩展 | Chrome 开发者版</a></p></div><div><p dir="auto">例子2：</p></div><div class="has-run-code-button"><pre dir="auto"><span>// manifest.json
+{
+	...,
+	"content_scripts": {
+		...,
+		"run_at": "document_start"
+	}
+}
+
+// content_script.js
+addEventListener('DOMContentLoaded', ()=&gt;{
+	// 仅有 run_at 为 "document_start" 时可访问
+})</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="service worker" dir="auto" class="heading" id="service_worker"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>service worker</h4><div class="heading-children"><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	background?: {
+		service_worker: js_path,
+	},
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>chrome.runtime</span> =&gt; <span>onMessage</span>, <span>onMessageExternal</span>, <span>onUserScriptMessage</span>, <span>onConnect</span>, <span>onConnectExternal</span>, <span>onUserScriptConnect</span></li>
+<li data-line="1" dir="auto"><span>chrome.runtime</span> =&gt; <span>onStartup</span>, <span>onInstalled</span>, <span>onSuspend</span>, <span>onSuspendCanceled</span>, <span>onRestartRequired</span>, <span>onUpdateAvailable</span>, <span>onBrowserUpdateAvailable</span></li>
+</ul></div><div><p dir="auto">生命周期：</p></div></div></div><div class="heading-wrapper"><h4 data-heading="message(消息)" dir="auto" class="heading" id="message(消息)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>message(消息)</h4><div class="heading-children"><div><p dir="auto">涉及的内容：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>chrome.runtime</span> =&gt; <span>sendMessage()</span>, <span>sendNativeMessage()</span>; <span>onMessage</span>, <span>onMessageExternal</span>, <span>onUserScriptMessage</span></li>
+<li data-line="1" dir="auto"><span>chrome.runtime</span> =&gt; <span>connect()</span>, <span>connectNative()</span>; <span>onConnect</span>, <span>onConnectExternal</span>, <span>onUserScriptConnect</span></li>
+<li data-line="2" dir="auto"><span>chrome.tabs</span> =&gt; <span>query()</span>, <span>connect()</span></li>
+</ul></div><div><p dir="auto">相关定义：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>sendMessage(message: any): Promise&lt;any&gt;</span> =&gt; <span>content script</span> 发送消息给 <span>service worker</span>（短连接）</li>
+<li data-line="1" dir="auto"><span>onMessage: Event&lt;(message: any, sender: MessageSender, sendResponse: (response?: any) =&gt; void) =&gt; void&gt;</span> =&gt; <span>service worker</span> 接受 <span>content script</span> 的消息，并返回响应</li>
+<li data-line="2" dir="auto"><span>runtime.connect(info?: ConnectInfo): Port</span> =&gt; <span>content script</span> 发送消息给 <span>service worker</span>（长连接）</li>
+<li data-line="3" dir="auto"><span>runtime.connect(extensionId: str, info?: ConnectInfo): Port</span></li>
+<li data-line="4" dir="auto"><span>onConnect: Event&lt;(port: Port) =&gt; void&gt;</span> =&gt; <span>service worker</span> 侦听 <span>content script</span> 的连接</li>
+<li data-line="5" dir="auto"><span>connectNative(app: str): Port</span></li>
+</ul></div><div><p dir="auto"><span>Port</span> 接口</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	name: str,
+	postMessage: (message: any)=&gt;void,
+	onMessage: PortMessageEvent,
+	disconnect: ()=&gt;void,
+	onDisconnect: PortDisconnectEvent,
+	sender?: MessageSender
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">例子 =&gt; 单次连接：</p></div><div class="has-run-code-button"><pre dir="auto"><span>// (1) content_script.js
+chrome.runtime.sendMessage({hello: 'world'})
+    .then(res =&gt; console.log(res))
+
+// 会报错？
+chrome.tabs.query({active: true, lastFocusedWindow: true})
+    .then(tabs =&gt; {
+        chrome.tabs.sendMessage(tabs[0].id, {hello: 'world'})
+            .then(res =&gt; console.log(res))
+    })
+
+// (2) service_worker.js
+chrome.runtime.onMessage.addListener((message, sender, sendResponse)=&gt;{
+    console.log(sender.tab ? `from a content scripts: ${sender.tab.url}` : "from the extension")
+    if(message.hello ===  'world'){
+        sendResponse({hello: 'response'})
+    }
+})</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">例子2  =&gt; 长连接：</p></div><div class="has-run-code-button"><pre dir="auto"><span>// (1) content_script.js
+let port = chrome.runtime.connect({name: 'test'})
+port.postMessage({hello: 'world'})
+port.onMessage.addListener((msg)=&gt;{
+    console.log(msg)
+})
+
+// (2) service_worker.js
+chrome.runtime.onConnect.addListener((port)=&gt;{
+    port.onMessage.addListener((msg)=&gt;{
+        console.log(msg)
+        port.postMessage({res: 'hello too'})
+    })
+})</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">注：需要权限 <span>webNavigation</span></p></div><div><p dir="auto">例子3 =&gt; 跨域消息（短连接）</p></div><div class="has-run-code-button"><pre dir="auto"><span>// plugin1/.../content_script.js
+chrome.runtime.sendMessage('mloongdaemikinikkdjmmckggkhoockp', {test: 'ext send'})
+    .then(res =&gt; console.log(res))
+
+
+// plugin2/.../service_worker.js
+chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse)=&gt;{
+    sendResponse({test: 'ext response'})
+})</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">例子4 =&gt; 跨域消息（长连接）</p></div><div class="has-run-code-button"><pre dir="auto"><span>// plugin1/.../content_script.js
+let port = chrome.runtime.connect('mloongdaemikinikkdjmmckggkhoockp',{name: 'test'})
+port.postMessage({hello: 'world'})
+port.onMessage.addListener((message)=&gt;{
+    console.log(message)
+})
+
+// plugin2/.../service_worker.js
+chrome.runtime.onConnectExternal.addListener((port)=&gt;{
+    port.onMessage.addListener(message =&gt; {
+        console.log(message)
+        port.postMessage({res: 'hello too'})
+    })
+})</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">例子5 =&gt; 从网页发送消息</p></div><div><p dir="auto">例子6 =&gt; 本机消息传递</p></div><div><p dir="auto"> 注：需要 <span>nativeMessaging</span> 权限<br>
+<a data-href="js-web-api" href="docs/草稿/前端/core/js-web-api.html" class="internal-link" target="_self" rel="noopener">js-web-api</a></p></div><div class="heading-wrapper"><h5 data-heading="port 生命周期" dir="auto" class="heading" id="port_生命周期"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>port 生命周期</h5><div class="heading-children"><div><p dir="auto"><span>runtime.connect()</span> 为扩展进程中的每个 <span>frame</span> 触发一个 <span>onConnect</span> 事件<br>
+<span>tabs.connect()</span> 为 <span>tab</span> 的每个 <span>frame</span> 触发一个 <span>onConnect</span> 事件</p></div><div><p dir="auto"><span>onDisconnect</span> 触发的时机</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto">没有侦听器 <span>runtime.onConnect</span></li>
+<li data-line="1" dir="auto">对应的选项卡被卸载</li>
+<li data-line="2" dir="auto">调用过的 <span>connect()</span> 的 <span>frame</span> 被卸载</li>
+<li data-line="3" dir="auto">接收端口的所有 <span>frame</span> 被卸载</li>
+<li data-line="4" dir="auto">另一端调用了 <span>disconnect()</span></li>
+</ul></div></div></div></div></div><div class="heading-wrapper"><h4 data-heading="storage(存储)" dir="auto" class="heading" id="storage(存储)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>storage(存储)</h4><div class="heading-children"><div><pre dir="auto"><span>// manifest.json
+{
+	"permissions": ["storage", "cookies"]
+}</span><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">涉及的内容</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>chrome.storage</span> =&gt; <span>sync</span>, <span>session</span>, <span>local</span>, <span>managed</span></li>
+<li data-line="1" dir="auto"><span>chrome.cookies</span> =&gt; <span>getAllCookieStores()</span>, <span>getAll()</span>, <span>set()</span>, <span>get()</span>, <span>remove()</span>, <span>onChanged</span></li>
+</ul></div><div><p dir="auto"><span>chrome.storage</span> 的属性和函数</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>sync: SyncStorageArea</span></li>
+<li data-line="1" dir="auto"><span>session: SessionStorageArea</span></li>
+<li data-line="2" dir="auto"><span>local: LocalStorageArea</span></li>
+<li data-line="3" dir="auto"><span>managed: StorageArea</span></li>
+<li data-line="4" dir="auto"><span>Event&lt;(changes: { [key: str]: StorageChange }, name: AreaName) =&gt; void&gt;</span></li>
+</ul></div><div><p dir="auto"><span>StorageArea</span> 接口：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	set: (items: dict&lt;str,any&gt;) =&gt; Promise&lt;void&gt;,
+	get: (keys?: str | str[] | dict&lt;str, any&gt;) =&gt; Promise&lt;dict&lt;str, any&gt;&gt;,
+	getBytesInUse: (keys?: str | str[]) =&gt; Promise&lt;number&gt;,
+	remove(keys: str | str[]): Promise&lt;void&gt;,
+	clear: () =&gt; Promise&lt;void&gt;,
+	setAccessLevel: (opts: { lv: AccessLevel }) =&gt; Promise&lt;void&gt;,
+	onChanged: Event&lt;(changes: dict&lt;str, {newValue?: any, oldValue?: any}&gt;) =&gt; void&gt;
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><span>chrome.cookies</span> 的属性和函数</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>set(details: SetDetails): Promise&lt;Cookie | null&gt;</span></li>
+<li data-line="1" dir="auto"><span>get(details: Details): Promise&lt;Cookie | null&gt;</span></li>
+<li data-line="2" dir="auto"><span>getAllCookieStores(): Promise&lt;CookieStore[]&gt;</span></li>
+<li data-line="3" dir="auto"><span>getAll(details: GetAllDetails): Promise&lt;Cookie[]&gt;</span></li>
+<li data-line="4" dir="auto"><span>remove(details: Details): Promise&lt;Details&gt;</span></li>
+<li data-line="5" dir="auto"><span>onChanged: Event&lt;(info: {cookie: Cookie, removed: bool, cause: str}) =&gt; void&gt;</span></li>
+</ul></div><div><p dir="auto"><span>SetDetails</span> 接口：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	url: str,
+	domain?: str,
+	name?: str,
+	storeId?: str,
+	value?: str,
+	expirationDate?: num,
+	path?: str,
+	httpOnly?: bool,
+	secure?: bool,
+	sameSite?: 'unspecified' | 'no_restriction' | 'lax' | 'strict'
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://developers.google.cn/privacy-sandbox/3pcd/storage-partitioning?hl=zh-cn" rel="noopener" class="external-link" href="https://developers.google.cn/privacy-sandbox/3pcd/storage-partitioning?hl=zh-cn" target="_blank">存储分区 &nbsp;|&nbsp; Privacy Sandbox &nbsp;|&nbsp; Google for Developers</a><br>
+<a data-tooltip-position="top" aria-label="https://github.com/privacycg/storage-partitioning" rel="noopener" class="external-link" href="https://github.com/privacycg/storage-partitioning" target="_blank">privacycg/storage-partitioning：客户端存储分区 (github.com)</a></p></div></div></div><div class="heading-wrapper"><h4 data-heading="permission(权限)" dir="auto" class="heading" id="permission(权限)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>permission(权限)</h4><div class="heading-children"><div class="has-run-code-button"><pre dir="auto"><span>{
+	permissions: enum[]
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="实时更新" dir="auto" class="heading" id="实时更新"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>实时更新</h4><div class="heading-children"></div></div><div class="heading-wrapper"><h4 data-heading="跨域" dir="auto" class="heading" id="跨域"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>跨域</h4><div class="heading-children"><div><p dir="auto">可以通过以下方式注册需要请求跨域的其他源</p></div><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	// 指定需要跨域的源，如：["https://github.com/", "https://www.google.com/"]
+	host_permissions?: url[]
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">例子 =&gt; 跨域脚本攻击：</p></div><div class="has-run-code-button"><pre dir="auto"><span>const response = await fetch("https://api.example.com/data.json");
+const jsonData = await response.json();
+// WARNING! Might be injecting a malicious script!
+document.getElementById("resp").innerHTML = jsonData;</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">例子2：</p></div><div class="has-run-code-button"><pre dir="auto"><span>chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    if (request.contentScriptQuery == 'fetchUrl') {
+      // WARNING: SECURITY PROBLEM - a malicious web page may abuse
+      // the message handler to get access to arbitrary cross-origin
+      // resources.
+      fetch(request.url)
+        .then(response =&gt; response.text())
+        .then(text =&gt; sendResponse(text))
+        .catch(error =&gt; ...)
+      return true;  // Will respond asynchronously.
+    }
+  }
+);</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div></div></div></div></div><div class="heading-wrapper"><h3 data-heading="拓展性 ui" dir="auto" class="heading" id="拓展性_ui"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>拓展性 ui</h3><div class="heading-children"><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://developer.chrome.com/docs/extensions/develop/ui" rel="noopener" class="external-link" href="https://developer.chrome.com/docs/extensions/develop/ui" target="_blank">User interface components &nbsp;|&nbsp; Chrome Extensions &nbsp;|&nbsp; Chrome for Developers</a></p></div><div><p dir="auto">ui分类：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto">拓展性 ui =&gt; <a data-href="#options page(选项页)" href="#options_page(选项页)" class="internal-link" target="_self" rel="noopener">options page(选项页)</a>, <a data-href="#action" href="#action" class="internal-link" target="_self" rel="noopener">action</a>, <a data-href="#side panel(侧板)" href="#side_panel(侧板)" class="internal-link" target="_self" rel="noopener">side panel(侧板)</a>, <a data-href="#overide pages(重写页)" href="#overide_pages(重写页)" class="internal-link" target="_self" rel="noopener">overide pages(重写页)</a> =&gt; 可用 vue3 进行开发</li>
+<li data-line="1" dir="auto">内置 ui =&gt; <a data-href="#commands(命令)" href="#commands(命令)" class="internal-link" target="_self" rel="noopener">commands(命令)</a>, <a data-href="#content menu(上下文菜单)" href="#content_menu(上下文菜单)" class="internal-link" target="_self" rel="noopener">content menu(上下文菜单)</a>, <a data-href="#themes(主题)" href="#themes(主题)" class="internal-link" target="_self" rel="noopener">themes(主题)</a>, <a data-href="#notifications(通知)" href="#notifications(通知)" class="internal-link" target="_self" rel="noopener">notifications(通知)</a>, <a data-href="#omnibox(多功能搜索框)" href="#omnibox(多功能搜索框)" class="internal-link" target="_self" rel="noopener">omnibox(多功能搜索框)</a></li>
+<li data-line="2" dir="auto"><a data-href="#icons(图标)" href="#icons(图标)" class="internal-link" target="_self" rel="noopener">icons(图标)</a></li>
+</ul></div><div class="heading-wrapper"><h4 data-heading="options page(选项页)" dir="auto" class="heading" id="options_page(选项页)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>options page(选项页)</h4><div class="heading-children"><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	// 单页选项页
+	options_page?: html_path,
+	options_ui?: {
+		// 嵌入式选项页（类似于 dialog）
+		page?: html_path,
+		// true -&gt; 单页选项页, false -&gt; 嵌入式选项页
+		open_in_tab?: bool
+	}
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><span>chrome.runtime.openOptionsPage()</span> =&gt; 打开选项页<br>
+<span>window.open(chrome.runtime.getURL('path/to/option.html'))</span> =&gt; 打开<strong>单页</strong>选项页<br>
+<span>chrome.runtime</span> =&gt; <span>connect()</span>, <span>sendMessage()</span></p></div><div><p dir="auto">注：<span>chrome.tabs</span> api 不能在 <strong>嵌入式</strong>选选项页中使用</p></div></div></div><div class="heading-wrapper"><h4 data-heading="action" dir="auto" class="heading" id="action"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>action</h4><div class="heading-children"><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	action?: {
+		default_icon?: path | { "16": path, "24": path, "32": path },
+		default_title?: str,
+		default_popup?: html_path
+	}
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">涉及的 ui =&gt; <span>icon</span>, <span>title</span>, <span>tooltip</span>, <span>popup</span>, <span>badge</span>（<span>text</span>, <span>text_color</span>, <span>bg_color</span>）</p></div><div><p dir="auto">涉及的接口</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>chrome.action</span> =&gt; <span>onClicked</span>, <span>setIcon()</span>, <span>setTitle()</span>, <span>setPopup()</span>, <span>setBadgeText()</span>, <span>setBadgeTextColor()</span>, <span>setBadgeBackgroundColor()</span></li>
+<li data-line="1" dir="auto"><span>chrome.tabs</span> =&gt; <span>Tab</span></li>
+<li data-line="2" dir="auto"><span>chrome.events</span> =&gt; <span>Event</span></li>
+<li data-line="3" dir="auto"><span>chrome.declarativeContent</span> =&gt; </li>
+</ul></div><div><p dir="auto">相关的配置 =&gt; <span>action</span></p></div><div><p dir="auto"><span>chrome.action</span> 的函数：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>onClicked: Event&lt;(tab: Tab)=&gt;void&gt;</span> =&gt; 点击 action 图标的事件（注：若定义了 <span>action.default_popup</span> 选项，则不会触发该事件）</li>
+<li data-line="1" dir="auto"><span>setIcon(details: {path?: str | {[i: num]: str}, imageData?: ImageData | {[i: num]: ImageData}, tabId?: num}): Promise&lt;void&gt;</span></li>
+<li data-line="2" dir="auto"><span>setTitle(details: {title: str, tabId?: num}): Promise&lt;void&gt;</span></li>
+<li data-line="3" dir="auto"><span>setPopup(details: {popup: str, tabId?: num}): Promise&lt;void&gt;</span> =&gt; 设置 <span>popup.html</span></li>
+<li data-line="4" dir="auto"><span>setBadgeText(details: {text: str, tabId?: num}): Promise&lt;void&gt;</span></li>
+<li data-line="5" dir="auto"><span>setBadgeTextColor(details: {color?: str | ColorArray, tabId?: num}): Promise&lt;void&gt;</span></li>
+<li data-line="6" dir="auto"><span>setBadgeBackgroundColor(details: {color?: str | ColorArray, tabId?: num}): Promise&lt;void&gt;</span></li>
+</ul></div></div></div><div class="heading-wrapper"><h4 data-heading="side panel(侧板)" dir="auto" class="heading" id="side_panel(侧板)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>side panel(侧板)</h4><div class="heading-children"><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	// 需要 sidePanel 权限
+	side_panel?: {
+		default_path: html_path
+	}
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="overide pages(重写页)" dir="auto" class="heading" id="overide_pages(重写页)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>overide pages(重写页)</h4><div class="heading-children"><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	chrome_url_overrides?: {
+		// 重写 新标签页 chrome://newtab
+		newtab?: path,
+		// 重写 收藏夹 chrome://bookmarks
+		bookmarks?: path,
+		// 重写 edge://history
+		history?: path
+	}
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div></div></div></div></div><div class="heading-wrapper"><h3 data-heading="内置 ui" dir="auto" class="heading" id="内置_ui"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>内置 ui</h3><div class="heading-children"><div class="heading-wrapper"><h4 data-heading="commands(命令)" dir="auto" class="heading" id="commands(命令)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>commands(命令)</h4><div class="heading-children"><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://developer.chrome.com/docs/extensions/reference/api/commands" rel="noopener" class="external-link" href="https://developer.chrome.com/docs/extensions/reference/api/commands" target="_blank">chrome.commands &nbsp;|&nbsp; API &nbsp;|&nbsp; Chrome for Developers</a></p></div><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	commands?: {
+		[cmd: str]: {
+			suggested_key?: {
+				default?: str,
+				chromeos?: str,
+				windows?: str,
+				linux?: str,
+				mac?: str
+			},
+			description?: str
+		}
+	}
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><span>chrome.commands</span> 的属性和函数：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>onCommand: Event&lt;(cmd: str, tab: Tab) =&gt; void&gt;</span></li>
+<li data-line="1" dir="auto"><span>getAll(): Promise&lt;Command[]&gt;</span></li>
+<li data-line="2" dir="auto"><span>getAll(cb: (commands: Command[]) =&gt; void)</span></li>
+</ul></div><div><p dir="auto"><span>Command</span> 接口：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	name?: str,
+	description?: str,
+	shortcut?: str
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="content menu(上下文菜单)" dir="auto" class="heading" id="content_menu(上下文菜单)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>content menu(上下文菜单)</h4><div class="heading-children"><div><p dir="auto">注：上下文菜单使用 <span>chrome.contextMenus</span> 管理</p></div><div><p dir="auto"><span>chrome.contextMenus</span> 的函数和属性：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>create(props: CreateProperties, cb?: () =&gt; void): num</span></li>
+<li data-line="1" dir="auto"><span>update(id: str | num, props: UpdateProperties, cb?: () =&gt; void)</span></li>
+<li data-line="2" dir="auto"><span>remove(id: str | num, cb?: () =&gt; void)</span></li>
+<li data-line="3" dir="auto"><span>removeAll(cb?: () =&gt; void)</span></li>
+<li data-line="4" dir="auto"><span>onClicked: Event&lt;(info: OnClickData, tab?: Tab) =&gt; void&gt;</span></li>
+</ul></div><div><p dir="auto"><span>UpdateProperties</span> 接口</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	parentId?: num | str,
+	title?: str,
+	type?: 'normal' | 'checkbox' | 'radio' | 'separator',
+	contexts?: ContextType | ContextType[]
+		| 'all'
+		| 'page'
+		| 'frame'
+		| 'selection'
+		| 'link'
+		| 'editable'
+		| 'image' | 'video' | 'audio'
+		| 'launcher'
+		| 'browser_action' | 'page_action' | 'action'
+	documentUrlPatterns?: str[],
+	targetUrlPatterns?: str[],
+	onclick?: (info: OnClickData, tab: Tab) =&gt; void,
+	enabled?: bool,
+	checked?: bool,
+	visible?: bool
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><span>CreateProperties</span> 接口</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	id?: str,
+	...UpdateProperties,
+	...
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><span>OnClickData</span> 接口</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	// 元素（如：input, textarea）是否可用
+	editable: bool,
+	selectionText?: str,
+	mediaType?: 'image' | 'video' | 'audio',
+	// a 标签的 href
+	linkUrl?: str,
+	// 元素的 src 属性
+	srcUrl?: str,
+	// 当前页的 url
+	pageUrl?: str
+	
+	// menu item 的 id
+	menuItemId: num | str,
+	// checkbox / radio item 被点击前的选中状态
+	wasChecked?: bool,
+	// checkbox / radio item 被点击后的选中状态
+	checked?: bool,
+	
+	parentMenuItemId?: num | str,
+	
+	frameId?: num,
+	frameUrl?: str,
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="omnibox(多功能搜索框)" dir="auto" class="heading" id="omnibox(多功能搜索框)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>omnibox(多功能搜索框)</h4><div class="heading-children"><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	omnibox?: {
+		keyword: str,
+	},
+	icons: { "16": path }
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">涉及的属性和函数：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>chrome.omnibox</span> =&gt; <span>onInputStarted</span>, <span>onInputEntered</span>, <span>onInputChanged</span>, <span>onInputCancelled</span>, <span>onDeleteSuggestion</span>, <span>setDefaultSuggestion()</span></li>
+<li data-line="1" dir="auto"><span>chrome.tabs</span> =&gt; <span>create()</span></li>
+</ul></div></div></div><div class="heading-wrapper"><h4 data-heading="notifications(通知)" dir="auto" class="heading" id="notifications(通知)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>notifications(通知)</h4><div class="heading-children"><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	"permissions": ["notifications"]
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div><div><p dir="auto"><span>chrome.notifications</span> 的函数和属性：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>create(id: str, opts: NotificationOptions&lt;true&gt;, cb?: (id: str) =&gt; void)</span></li>
+<li data-line="1" dir="auto"><span>create(opts: NotificationOptions&lt;true&gt;, cb?: (id: str) =&gt; void): void</span></li>
+<li data-line="2" dir="auto"><span>update(id: str, opts: NotificationOptions, cb?: (wasUpdated: bool) =&gt; void)</span></li>
+<li data-line="3" dir="auto"><span>clear(id: str, cb?: (wasCleared: bool) =&gt; void)</span></li>
+<li data-line="4" dir="auto"><span>getAll(cb: (notifications: Object) =&gt; void)</span></li>
+<li data-line="5" dir="auto"><span>getPermissionLevel(cb: (level: string) =&gt; void)</span></li>
+<li data-line="6" dir="auto"><span>onClicked: Event&lt;(id: str) =&gt; void&gt;</span></li>
+<li data-line="7" dir="auto"><span>onClosed: Event&lt;(id: string, byUser: boolean) =&gt; void&gt;</span></li>
+<li data-line="8" dir="auto"><span>onButtonClicked: Event&lt;(id: str, buttonIndex: num) =&gt; void&gt;</span></li>
+<li data-line="9" dir="auto"><span>onPermissionLevelChanged: Event&lt;(level: str) =&gt; void&gt;</span></li>
+<li data-line="10" dir="auto"><span>onShowSettings: Event&lt;() =&gt; void&gt;</span></li>
+</ul></div><div><p dir="auto"><span>NotificationOptions&lt;T extends boolean=false&gt;</span> 接口</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	buttons?: { title: str, iconUrl?: url | path }[],
+	priority?: num,
+	...
+}
+&amp; (T extends true ? {
+	type: 'basic' | 'image' | 'list' | 'progress'
+	title: str,
+	message: str,
+	iconUrl: path | url
+} : {
+	type?: 'basic' | 'image' | 'list' | 'progress'
+	title?: str,
+	message?: str,
+	iconUrl?: path | url
+})</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="themes(主题)" dir="auto" class="heading" id="themes(主题)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>themes(主题)</h4><div class="heading-children"><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	theme?: {
+		theme_frame?: img_path,
+		theme_frame_overlay?: img_path,
+		theme_toolbar?: img_path,
+		theme_ntp_background?: img_path,
+		theme_ntp_attribution?: img_path
+	},
+	colors?: {
+		frame?: num[],
+		toolbar?: num[],
+		ntp_text?: num[],
+		ntp_link?: num[],
+		ntp_section?: num[],
+		button_background?: num[]
+	},
+	tints?: {
+		buttons?: num[]
+	},
+	// 背景相关配置
+	properties?: {
+		ntp_background_alignment?: str
+	}
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="icons(图标)" dir="auto" class="heading" id="icons(图标)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>icons(图标)</h4><div class="heading-children"><div><p dir="auto"><span>manifest.json</span> 相关定义：</p></div><div class="has-run-code-button"><pre dir="auto"><span>{
+	icons?: {
+		// 16x16 图标，用于 网站图标 / content menu
+		"16": img_path,
+		// 32x32 图标
+		"32": img_path,
+		// 48x48 图标，显示在分机管理页面上
+		"48": img_path,
+		// 128x128 图标，在安装时和 Chrome 网上应用店中显示
+		"128": img_path
+	}
+}</span><button class="run-code-button">Run</button><button class="copy-code-button">复制</button></pre></div></div></div></div></div><div class="heading-wrapper"><h3 data-heading="深入" dir="auto" class="heading" id="深入"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>深入</h3><div class="heading-children"><div class="heading-wrapper"><h4 data-heading="ui" dir="auto" class="heading" id="ui"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>ui</h4><div class="heading-children"></div></div><div class="heading-wrapper"><h4 data-heading="整合" dir="auto" class="heading" id="整合"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>整合</h4><div class="heading-children"></div></div><div class="heading-wrapper"><h4 data-heading="使用网络平台" dir="auto" class="heading" id="使用网络平台"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>使用网络平台</h4><div class="heading-children"><div><p dir="auto">主题</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>service worker</span> 中使用 <span>WebSocket</span></li>
+<li data-line="1" dir="auto">文件处理</li>
+<li data-line="2" dir="auto">录音、截图</li>
+<li data-line="3" dir="auto">使用地理位置</li>
+<li data-line="4" dir="auto"><span>WebHid</span></li>
+<li data-line="5" dir="auto"><span>WebUSB</span></li>
+</ul></div></div></div><div class="heading-wrapper"><h4 data-heading="测试和调试" dir="auto" class="heading" id="测试和调试"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>测试和调试</h4><div class="heading-children"></div></div><div class="heading-wrapper"><h4 data-heading="发布" dir="auto" class="heading" id="发布"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>发布</h4><div class="heading-children"><div><p dir="auto">安装扩展</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>windows</span> =&gt; 注册表 <span>HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions\&lt;extension&gt;</span></li>
+</ul></div></div></div><div class="heading-wrapper"><h4 data-heading="安全" dir="auto" class="heading" id="安全"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>安全</h4><div class="heading-children"></div></div></div></div><div class="heading-wrapper"><h3 data-heading="api" dir="auto" class="heading" id="api"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>api</h3><div class="heading-children"><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://developer.chrome.com/docs/extensions/reference/api" rel="noopener" class="external-link" href="https://developer.chrome.com/docs/extensions/reference/api" target="_blank">API reference &nbsp;|&nbsp; Chrome for Developers</a></p></div><div class="heading-wrapper"><h4 data-heading="storage" dir="auto" class="heading" id="storage"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>storage</h4><div class="heading-children"><div><p dir="auto"><span>chrome.storage</span> =&gt; <span>StorageArea</span>, <span>local</span>, <span>session</span>, <span>sync</span>, <span>managed</span></p></div><div><p dir="auto"><span>StorageArea</span> 的方法：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto"><span>set(items: dict, cb: ()=&gt;void)</span></li>
+<li data-line="1" dir="auto"><span>set(items: dict): Promise&lt;void&gt;</span></li>
+<li data-line="2" dir="auto"><span>remove(keys: str | str[], cb: () =&gt; void)</span></li>
+<li data-line="3" dir="auto"><span>remove(keys: str | str[]): Promise&lt;void&gt;</span></li>
+<li data-line="4" dir="auto"><span>get(cb: (items: dict) =&gt; void)</span></li>
+<li data-line="5" dir="auto"><span>get(keys: str | str[] | dict, cb: (items: dict)=&gt;void)</span></li>
+<li data-line="6" dir="auto"><span>get(keys?: str | str[] | dict): Promise&lt;dict&gt;</span></li>
+</ul></div></div></div><div class="heading-wrapper"><h4 data-heading="permissions" dir="auto" class="heading" id="permissions"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>permissions</h4><div class="heading-children"><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://developer.chrome.com/docs/extensions/reference/permissions-list" rel="noopener" class="external-link" href="https://developer.chrome.com/docs/extensions/reference/permissions-list" target="_blank">Permissions &nbsp;|&nbsp; Chrome for Developers</a></p></div><div class="mod-footer"></div></div></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#chrome-plugin"><div class="tree-item-contents heading-link" heading-name="chrome-plugin"><span class="tree-item-title">chrome-plugin</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#参考"><div class="tree-item-contents heading-link" heading-name="参考"><span class="tree-item-title">参考</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#插件推荐"><div class="tree-item-contents heading-link" heading-name="插件推荐"><span class="tree-item-title">插件推荐</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#脚手架"><div class="tree-item-contents heading-link" heading-name="脚手架"><span class="tree-item-title">脚手架</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#manifest.json"><div class="tree-item-contents heading-link" heading-name="manifest.json"><span class="tree-item-title">manifest.json</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#核心"><div class="tree-item-contents heading-link" heading-name="核心"><span class="tree-item-title">核心</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#conten_script(内容脚本)"><div class="tree-item-contents heading-link" heading-name="conten script(内容脚本)"><span class="tree-item-title">conten script(内容脚本)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#service_worker"><div class="tree-item-contents heading-link" heading-name="service worker"><span class="tree-item-title">service worker</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#message(消息)"><div class="tree-item-contents heading-link" heading-name="message(消息)"><span class="tree-item-title">message(消息)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#port_生命周期"><div class="tree-item-contents heading-link" heading-name="port 生命周期"><span class="tree-item-title">port 生命周期</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#storage(存储)"><div class="tree-item-contents heading-link" heading-name="storage(存储)"><span class="tree-item-title">storage(存储)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#permission(权限)"><div class="tree-item-contents heading-link" heading-name="permission(权限)"><span class="tree-item-title">permission(权限)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#实时更新"><div class="tree-item-contents heading-link" heading-name="实时更新"><span class="tree-item-title">实时更新</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#跨域"><div class="tree-item-contents heading-link" heading-name="跨域"><span class="tree-item-title">跨域</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#拓展性_ui"><div class="tree-item-contents heading-link" heading-name="拓展性 ui"><span class="tree-item-title">拓展性 ui</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#options_page(选项页)"><div class="tree-item-contents heading-link" heading-name="options page(选项页)"><span class="tree-item-title">options page(选项页)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#action"><div class="tree-item-contents heading-link" heading-name="action"><span class="tree-item-title">action</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#side_panel(侧板)"><div class="tree-item-contents heading-link" heading-name="side panel(侧板)"><span class="tree-item-title">side panel(侧板)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#overide_pages(重写页)"><div class="tree-item-contents heading-link" heading-name="overide pages(重写页)"><span class="tree-item-title">overide pages(重写页)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#内置_ui"><div class="tree-item-contents heading-link" heading-name="内置 ui"><span class="tree-item-title">内置 ui</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#commands(命令)"><div class="tree-item-contents heading-link" heading-name="commands(命令)"><span class="tree-item-title">commands(命令)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#content_menu(上下文菜单)"><div class="tree-item-contents heading-link" heading-name="content menu(上下文菜单)"><span class="tree-item-title">content menu(上下文菜单)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#omnibox(多功能搜索框)"><div class="tree-item-contents heading-link" heading-name="omnibox(多功能搜索框)"><span class="tree-item-title">omnibox(多功能搜索框)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#notifications(通知)"><div class="tree-item-contents heading-link" heading-name="notifications(通知)"><span class="tree-item-title">notifications(通知)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#themes(主题)"><div class="tree-item-contents heading-link" heading-name="themes(主题)"><span class="tree-item-title">themes(主题)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#icons(图标)"><div class="tree-item-contents heading-link" heading-name="icons(图标)"><span class="tree-item-title">icons(图标)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#深入"><div class="tree-item-contents heading-link" heading-name="深入"><span class="tree-item-title">深入</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#ui"><div class="tree-item-contents heading-link" heading-name="ui"><span class="tree-item-title">ui</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#整合"><div class="tree-item-contents heading-link" heading-name="整合"><span class="tree-item-title">整合</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#使用网络平台"><div class="tree-item-contents heading-link" heading-name="使用网络平台"><span class="tree-item-title">使用网络平台</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#测试和调试"><div class="tree-item-contents heading-link" heading-name="测试和调试"><span class="tree-item-title">测试和调试</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#发布"><div class="tree-item-contents heading-link" heading-name="发布"><span class="tree-item-title">发布</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#安全"><div class="tree-item-contents heading-link" heading-name="安全"><span class="tree-item-title">安全</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#api"><div class="tree-item-contents heading-link" heading-name="api"><span class="tree-item-title">api</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#storage"><div class="tree-item-contents heading-link" heading-name="storage"><span class="tree-item-title">storage</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="docs\浏览器\chrome-plugin.html#permissions"><div class="tree-item-contents heading-link" heading-name="permissions"><span class="tree-item-title">permissions</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

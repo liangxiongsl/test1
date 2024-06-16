@@ -1,0 +1,4438 @@
+{
+  "vaultName": "obsidian-vault",
+  "lastExport": 1718529047410,
+  "pluginVersion": "1.8.01",
+  "validBodyClasses": "publish css-settings-manager theme-light show-inline-title show-ribbon",
+  "useCustomHeadContent": false,
+  "useCustomFavicon": false,
+  "files": [
+    "待办项目/“芯享班”/课程报告.md",
+    "待办项目/“芯享班”/sd.md",
+    "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器/库.md",
+    "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器/需求说明.md",
+    "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器/Django简单例子.md",
+    "待办项目/毕业论文/毕设(音乐播放器)/毕设-main.md",
+    "待办项目/毕业论文/毕设(音乐播放器)/动漫.md",
+    "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器.md",
+    "待办项目/毕业论文/毕业论文-20软件2梁雄.doc",
+    "待办项目/毕业论文/毕业设计-main.md",
+    "待办项目/毕业论文/答辩.md",
+    "待办项目/毕业论文/搞.md",
+    "待办项目/毕业论文/未命名.md",
+    "待办项目/毕业论文/音乐管理系统down-to-up.md",
+    "待办项目/毕业论文/音乐管理系统up-to-down.md",
+    "待办项目/archieved/软件测试/软件测试-main.md",
+    "待办项目/archieved/软件测试/软件测试复习.md",
+    "待办项目/archieved/软件测试/自测.md",
+    "待办项目/archieved/实训/报告.md",
+    "待办项目/archieved/学年论文/archived/学年论文-20软件2梁雄.doc",
+    "待办项目/archieved/学年论文/未命名.md",
+    "待办项目/archieved/学年论文/学年论文-main.md",
+    "待办项目/archieved/学年论文/out.md",
+    "待办项目/archieved/javaee/J2EE架构与开发课程A卷.doc - 快捷方式.lnk",
+    "待办项目/archieved/javaee/J2EE架构与开发课程A卷答案及评分标准.doc - 快捷方式.lnk",
+    "待办项目/毕业.md",
+    "待办项目/未命名.md",
+    "考研/408/操作系统/操作系统.md",
+    "考研/408/操作系统/操作系统.main.md",
+    "考研/408/计算机网络/计算机网络.md",
+    "考研/408/计算机网络/计算机网络.main.md",
+    "考研/408/计算机组成原理/计算机组成原理.md",
+    "考研/408/计算机组成原理/计算机组成原理.main.md",
+    "考研/408/数据结构/数据结构.md",
+    "考研/408/数据结构/数据结构.main.md",
+    "考研/trash/1.计算机组成原理/重构树/未命名.md",
+    "考研/trash/1.计算机组成原理/1. 计算机概要与技术.md",
+    "考研/trash/1.计算机组成原理/2. 指令：计算机的语言.md",
+    "考研/trash/1.计算机组成原理/3. 计算机的算术运算.md",
+    "考研/trash/1.计算机组成原理/4. 处理器.md",
+    "考研/trash/1.计算机组成原理/5. 大容量和高速度：开发存储器层次结构.md",
+    "考研/trash/1.计算机组成原理/6. 从客户端到云的并行处理器.md",
+    "考研/trash/1.计算机组成原理/计算机组成与设计-硬件_软件接口.pdf - 快捷方式.lnk",
+    "考研/trash/1.计算机组成原理/计组-main.md",
+    "考研/trash/1.计算机组成原理/计组答案(5版,英文).lnk",
+    "考研/trash/2.计算机网络/参考/第 1 章   概述.md",
+    "考研/trash/2.计算机网络/参考/第 2 章  物理层.md",
+    "考研/trash/2.计算机网络/参考/第 3 章  数据链路层.md",
+    "考研/trash/2.计算机网络/参考/第 4 章  网络层.md",
+    "考研/trash/2.计算机网络/参考/第 5 章  运输层.md",
+    "考研/trash/2.计算机网络/参考/第 6 章  应用层.md",
+    "考研/trash/2.计算机网络/draw/未命名.canvas",
+    "考研/trash/2.计算机网络/draw/Drawing 2023-12-29 16.04.44.excalidraw.md",
+    "考研/trash/2.计算机网络/img/1-1.png",
+    "考研/trash/2.计算机网络/1. 计算机网络和因特网.md",
+    "考研/trash/2.计算机网络/2. 应用层.md",
+    "考研/trash/2.计算机网络/3. 运输层.md",
+    "考研/trash/2.计算机网络/4. 网络层：数据平面.md",
+    "考研/trash/2.计算机网络/5. 网络层：控制平面.md",
+    "考研/trash/2.计算机网络/6. 链路层和局域网.md",
+    "考研/trash/2.计算机网络/7. 无线网络和移动网络.md",
+    "考研/trash/2.计算机网络/8. 计算机网络中的安全.md",
+    "考研/trash/2.计算机网络/9. 多媒体网络.md",
+    "考研/trash/2.计算机网络/计网-main.md",
+    "考研/trash/3.操作系统/参考/第二章 进程的描述与控制.md",
+    "考研/trash/3.操作系统/参考/第六章 输入输出系统.md",
+    "考研/trash/3.操作系统/参考/第七章 文件管理.md",
+    "考研/trash/3.操作系统/参考/第三章 处理机调度与死锁.md",
+    "考研/trash/3.操作系统/参考/第四章 存储器管理.md",
+    "考研/trash/3.操作系统/参考/第五章 虚拟存储器.md",
+    "考研/trash/3.操作系统/参考/第一章 操作系统引论.md",
+    "考研/trash/3.操作系统/参考/计算机操作系统.md",
+    "考研/trash/3.操作系统/操作系统-main.md",
+    "考研/trash/3.操作系统/操作系统概念.pdf - 快捷方式.lnk",
+    "考研/trash/3.操作系统/二、进程管理.md",
+    "考研/trash/3.操作系统/六、案例研究.md",
+    "考研/trash/3.操作系统/三、内存管理.md",
+    "考研/trash/3.操作系统/四、存储管理.md",
+    "考研/trash/3.操作系统/五、保护与安全.md",
+    "考研/trash/3.操作系统/一、概论.md",
+    "考研/trash/4.数据结构/参考/数据结构复习.md",
+    "考研/trash/4.数据结构/算法导论/八、附录：数学基础知识.md",
+    "考研/trash/4.数据结构/算法导论/二、排序和顺序统计量.md",
+    "考研/trash/4.数据结构/算法导论/六、图算法.md",
+    "考研/trash/4.数据结构/算法导论/七、算法问题选编.md",
+    "考研/trash/4.数据结构/算法导论/三、数据结构.md",
+    "考研/trash/4.数据结构/算法导论/四、高级设计和分析技术.md",
+    "考研/trash/4.数据结构/算法导论/算法导论-main.md",
+    "考研/trash/4.数据结构/算法导论/算法导论（原书第3版） by Thomas H.Cormen Charles E.Leiserson Ronald L.Rivest Clifford Stein (z-lib.org).pdf - 快捷方式.lnk",
+    "考研/trash/4.数据结构/算法导论/五、高级数据结构.md",
+    "考研/trash/4.数据结构/算法导论/一、基础知识.md",
+    "考研/trash/4.数据结构/数据结构_.md",
+    "考研/trash/4.数据结构/数据结构-main.md",
+    "考研/trash/4.数据结构/做题(10套).md",
+    "考研/trash/4.数据结构/assets.md",
+    "考研/trash/分析/前瞻.md",
+    "考研/trash/数学/概率论与数理统计/1. 样本空间&概率.md",
+    "考研/trash/数学/概率论与数理统计/2. 离散随机变量.md",
+    "考研/trash/数学/概率论与数理统计/3. 一般随机变量.md",
+    "考研/trash/数学/概率论与数理统计/4. 随机变量的深入内容.md",
+    "考研/trash/数学/概率论与数理统计/5. 极限定理.md",
+    "考研/trash/数学/概率论与数理统计/6. 伯努利过程&泊松过程.md",
+    "考研/trash/数学/概率论与数理统计/7. 马尔科夫链.md",
+    "考研/trash/数学/概率论与数理统计/8. 贝叶斯统计推断.md",
+    "考研/trash/数学/概率论与数理统计/9. 经典统计推断.md",
+    "考研/trash/数学/概率论与数理统计/概率论与数理统计.md",
+    "考研/trash/数学/微积分/1. 函数&模型.md",
+    "考研/trash/数学/微积分/2. 极限&导数.md",
+    "考研/trash/数学/微积分/3. 求导法则.md",
+    "考研/trash/数学/微积分/4. 导数的应用.md",
+    "考研/trash/数学/微积分/5. 积分.md",
+    "考研/trash/数学/微积分/6. 定积分的应用.md",
+    "考研/trash/数学/微积分/7. 积分方法.md",
+    "考研/trash/数学/微积分/8. 定积分的进一步应用.md",
+    "考研/trash/数学/微积分/9. 微分方程.md",
+    "考研/trash/数学/微积分/10. 参数方程&极坐标.md",
+    "考研/trash/数学/微积分/11. 无穷序列&级数.md",
+    "考研/trash/数学/微积分/12. 向量&空间解析几何.md",
+    "考研/trash/数学/微积分/13. 向量函数.md",
+    "考研/trash/数学/微积分/14. 多元函数的偏导数.md",
+    "考研/trash/数学/微积分/15. 多重积分.md",
+    "考研/trash/数学/微积分/16. 向量积分.md",
+    "考研/trash/数学/微积分/17. 二阶微分方程.md",
+    "考研/trash/数学/微积分/微积分.md",
+    "考研/trash/数学/线性代数/1. 线性方程组.md",
+    "考研/trash/数学/线性代数/2. 矩阵代数.md",
+    "考研/trash/数学/线性代数/3. 行列式.md",
+    "考研/trash/数学/线性代数/4. 向量空间.md",
+    "考研/trash/数学/线性代数/5. 特征值&特征向量.md",
+    "考研/trash/数学/线性代数/6. 最小性&最小二乘法.md",
+    "考研/trash/数学/线性代数/7. 对称矩阵&二次型.md",
+    "考研/trash/数学/线性代数/8. 向量空间的几何学.md",
+    "考研/trash/数学/线性代数/线性代数.md",
+    "考研/trash/数学/例子.md",
+    "考研/trash/数学/练习.md",
+    "考研/trash/数学/数学-main.md",
+    "考研/trash/数学/数学复习.md",
+    "考研/trash/数学/图像.md",
+    "考研/trash/数学/做题.md",
+    "考研/trash/英语/10~18真题.lnk",
+    "考研/trash/英语/英语-main.md",
+    "考研/trash/英语/作文.md",
+    "考研/trash/英语/做题.md",
+    "考研/trash/英语/assets.md",
+    "考研/trash/英语/words.md",
+    "考研/trash/政治/1. 马原.md",
+    "考研/trash/政治/2. 毛中特.md",
+    "考研/trash/政治/3. 史纲.md",
+    "考研/trash/政治/4. 思修.md",
+    "考研/trash/政治/24肖八.lnk",
+    "考研/trash/政治/24肖四.lnk",
+    "考研/trash/政治/经验.md",
+    "考研/trash/政治/思维导图.pdf.lnk",
+    "考研/trash/政治/肖四.md",
+    "考研/trash/政治/政治-main.md",
+    "考研/trash/政治/做题.md",
+    "考研/trash/政治/assets.md",
+    "考研/trash/考研-main.md",
+    "考研/考研.main.md",
+    "algo/algo-main.md",
+    "assets/exca/大脑知识流图.md",
+    "assets/img/123.jpg",
+    "assets/img/109951163557993210 - 副本.jpg",
+    "assets/img/大脑知识流图.png",
+    "assets/img/Pasted image 20240501113443.png",
+    "assets/img/Pasted image 20240512223722.png",
+    "assets/js/mathjax.js",
+    "assets/script/compresser.py",
+    "assets/script/test.css",
+    "assets/script/test.html",
+    "assets/script/tinyimageprocessor.exe",
+    "assets/voice/Recording 20240523111003.webm",
+    "assets/滨江教发〔2018〕36号南京信息工程大学滨江学院本科生毕业论文（设计）工作实施细则.pdf",
+    "assets/assets-main.md",
+    "assets/backup.bat",
+    "assets-local/Excalidraw/Drawing 2023-12-05 17.27.26.excalidraw.md",
+    "assets-local/Excalidraw/Drawing 2024-01-03 21.00.39.excalidraw.md",
+    "assets-local/Excalidraw/ExcalidrawStartup.md",
+    "assets-local/Excalidraw/test.excalidraw.md",
+    "assets-local/Excalidraw/test1.md",
+    "docs/草稿/后端/c/c.md",
+    "docs/草稿/后端/c/c sharp.md",
+    "docs/草稿/后端/c/cpp.md",
+    "docs/草稿/后端/go/go-main.md",
+    "docs/草稿/后端/java/Groovy.md",
+    "docs/草稿/后端/java/java-main.md",
+    "docs/草稿/后端/java/maven.md",
+    "docs/草稿/后端/java/spring.md",
+    "docs/草稿/后端/java/ssm.md",
+    "docs/草稿/后端/java/ssm2.md",
+    "docs/草稿/后端/lang/java.md",
+    "docs/草稿/后端/lang/python.md",
+    "docs/草稿/后端/lang/python 1.md",
+    "docs/草稿/后端/lang/ruby.md",
+    "docs/草稿/后端/lang/ruby 1.md",
+    "docs/草稿/后端/python/django/Django.md",
+    "docs/草稿/后端/python/django/Django--ex.md",
+    "docs/草稿/后端/python/django/django-实战.md",
+    "docs/草稿/后端/python/django/django-index.md",
+    "docs/草稿/后端/python/django/Django1.md",
+    "docs/草稿/后端/python/django/django2.md",
+    "docs/草稿/后端/python/django/django用例图.md",
+    "docs/草稿/后端/python/DRF.md",
+    "docs/草稿/后端/python/fastapi.md",
+    "docs/草稿/后端/python/flask.md",
+    "docs/草稿/后端/python/graphene.md",
+    "docs/草稿/后端/python/libs.md",
+    "docs/草稿/后端/python/opencv.md",
+    "docs/草稿/后端/python/pyqt5.md",
+    "docs/草稿/后端/python/python-main.md",
+    "docs/草稿/后端/python/scrapy.md",
+    "docs/草稿/后端/ruby/ruby on rails.md",
+    "docs/草稿/后端/ruby/ruby on rails 1.md",
+    "docs/草稿/后端/rust/rust.md",
+    "docs/草稿/后端/后端——ref.md",
+    "docs/草稿/后端/web后端-main.md",
+    "docs/草稿/前端/代码审计/ESLint.md",
+    "docs/草稿/前端/移动/react native.md",
+    "docs/草稿/前端/build tool/esbuild.md",
+    "docs/草稿/前端/build tool/parcel.md",
+    "docs/草稿/前端/build tool/rollup.md",
+    "docs/草稿/前端/build tool/vite.md",
+    "docs/草稿/前端/build tool/vite-x.md",
+    "docs/草稿/前端/build tool/webpack.md",
+    "docs/草稿/前端/core/css.md",
+    "docs/草稿/前端/core/html.md",
+    "docs/草稿/前端/core/http.md",
+    "docs/草稿/前端/core/javascript.md",
+    "docs/草稿/前端/core/js-web-api.md",
+    "docs/草稿/前端/core/localforage.md",
+    "docs/草稿/前端/core/node.js.md",
+    "docs/草稿/前端/core/npm.md",
+    "docs/草稿/前端/core/php.md",
+    "docs/草稿/前端/core/typescript.md",
+    "docs/草稿/前端/core/web-main.md",
+    "docs/草稿/前端/core/web安全.md",
+    "docs/草稿/前端/CSR/react/jsx.md",
+    "docs/草稿/前端/CSR/react/react.md",
+    "docs/草稿/前端/CSR/vue/pinia.md",
+    "docs/草稿/前端/CSR/vue/vue.md",
+    "docs/草稿/前端/CSR/vue/vue router.md",
+    "docs/草稿/前端/CSR/vue/vue-plugins.md",
+    "docs/草稿/前端/CSR/vue/vue3.api.md",
+    "docs/草稿/前端/CSR/vue/vue3.x.md",
+    "docs/草稿/前端/CSR/vue/vue3.xx.md",
+    "docs/草稿/前端/CSR/vue/vuex.md",
+    "docs/草稿/前端/css/css-api.md",
+    "docs/草稿/前端/css/PostCSS.md",
+    "docs/草稿/前端/css/Sass.md",
+    "docs/草稿/前端/css/Tailwind-css.md",
+    "docs/草稿/前端/effect/animate.style.md",
+    "docs/草稿/前端/js-tools/axios.md",
+    "docs/草稿/前端/js-tools/jQuery.md",
+    "docs/草稿/前端/js-tools/js-tools-main.md",
+    "docs/草稿/前端/js-tools/mermaid.md",
+    "docs/草稿/前端/js-tools/moment.md",
+    "docs/草稿/前端/js-tools/sql.js.md",
+    "docs/草稿/前端/SSG/gridsome.md",
+    "docs/草稿/前端/SSG/jinja.md",
+    "docs/草稿/前端/SSG/markdown.md",
+    "docs/草稿/前端/SSG/mkdocs.md",
+    "docs/草稿/前端/SSG/vuepress.md",
+    "docs/草稿/前端/SSR/nitro.md",
+    "docs/草稿/前端/SSR/nuxt.md",
+    "docs/草稿/前端/SSR/nuxt-content.md",
+    "docs/草稿/前端/SSR/nuxt-devtools.md",
+    "docs/草稿/前端/SSR/nuxt-image.md",
+    "docs/草稿/前端/SSR/nuxt-ui.md",
+    "docs/草稿/前端/test/vitest.md",
+    "docs/草稿/前端/ui/daisyUI.md",
+    "docs/草稿/前端/ui/easyui.md",
+    "docs/草稿/前端/ui/element.md",
+    "docs/草稿/前端/ui/FormKit.md",
+    "docs/草稿/前端/ui/ikun-ui.md",
+    "docs/草稿/前端/ui/naive.md",
+    "docs/草稿/前端/ui/vuetify.md",
+    "docs/草稿/前端/browser.md",
+    "docs/草稿/前端/js-cdn.md",
+    "docs/草稿/前端/web——ref.md",
+    "docs/草稿/前端/web前端.md",
+    "docs/草稿/前端/web前端-main.md",
+    "docs/草稿/设计/设计系统.md",
+    "docs/草稿/设计/ux.md",
+    "docs/草稿/数据库/数据库-main.md",
+    "docs/草稿/数据库/CodeQL.md",
+    "docs/草稿/数据库/mysql.md",
+    "docs/草稿/数据库/redis.md",
+    "docs/草稿/数据库/SQLite.md",
+    "docs/草稿/移动/android.md",
+    "docs/草稿/移动/dart.md",
+    "docs/草稿/移动/flutter.md",
+    "docs/草稿/移动/mobile-main.md",
+    "docs/草稿/移动/react native.md",
+    "docs/草稿/游戏技术/game-main.md",
+    "docs/草稿/游戏技术/godot4.md",
+    "docs/草稿/游戏技术/godot4.x.md",
+    "docs/草稿/游戏技术/rpg maker.md",
+    "docs/草稿/游戏技术/unity.md",
+    "docs/草稿/游戏技术/unreal.md",
+    "docs/草稿/桌面/electron.md",
+    "docs/草稿/api/GraphQL.md",
+    "docs/草稿/api/RESTful.md",
+    "docs/草稿/api/web-api-main.md",
+    "docs/草稿/DevOps/linux/debian.md",
+    "docs/草稿/DevOps/linux/linux.md",
+    "docs/草稿/DevOps/linux/ubuntu.md",
+    "docs/草稿/DevOps/DevOps-main.md",
+    "docs/草稿/DevOps/git.md",
+    "docs/草稿/DevOps/github.md",
+    "docs/草稿/DevOps/github.api.md",
+    "docs/草稿/DevOps/octokit.js.md",
+    "docs/草稿/general/json.md",
+    "docs/草稿/general/xml.md",
+    "docs/草稿/general/xslt.md",
+    "docs/草稿/general/yaml.md",
+    "docs/草稿/only-hand/wordpress.md",
+    "docs/草稿/编程哲学.md",
+    "docs/草稿/开发者-main.md",
+    "docs/草稿/模板网站.md",
+    "docs/草稿/排行榜.md",
+    "docs/草稿/软件架构.md",
+    "docs/草稿/项目思想.md",
+    "docs/草稿/api.md",
+    "docs/草稿/heap.md",
+    "docs/草稿/ssm_img.md",
+    "docs/草稿/vercel.md",
+    "docs/浏览器/机场.md",
+    "docs/浏览器/chrome-plugin.md",
+    "docs/浏览器/tampermonkey.md",
+    "docs/锐化思维/plugin-connector/obsidian--anki.md",
+    "docs/锐化思维/quick-tools/PicGo.md",
+    "docs/锐化思维/quick-tools/shareX.md",
+    "docs/锐化思维/tools/anki.md",
+    "docs/锐化思维/tools/learn-main.md",
+    "docs/锐化思维/tools/obsidian.md",
+    "docs/锐化思维/tools/obsidian.api.md",
+    "docs/锐化思维/tools/obsidian.prac.md",
+    "docs/锐化思维/tools/obsidian2.md",
+    "docs/锐化思维/tools/SuperMemo.md",
+    "docs/锐化思维/tools/vim.md",
+    "docs/锐化思维/trash/notion.md",
+    "docs/锐化思维/trash/onedrive.md",
+    "docs/锐化思维/trash/theBrain.md",
+    "docs/锐化思维/模式匹配.md",
+    "docs/锐化思维/锐化思维-main.md",
+    "docs/项目/思考.md",
+    "docs/项目/未命名.md",
+    "docs/ai/ai--main.md",
+    "docs/ai/chatgpt.md",
+    "docs/general/after effect.md",
+    "docs/general/live2d.md",
+    "docs/general/photoshop.md",
+    "docs/正则表达式.md",
+    "docs/hacker.md",
+    "docs/idm cracker.md",
+    "docs/readme.md",
+    "docs/refs.md",
+    "docs-hard/数学/草稿/集合论.md",
+    "docs-hard/数学/math/alge-ana/Algebraic Number Theory.md",
+    "docs-hard/数学/math/alge-ana/Discrete Mathematics.md",
+    "docs-hard/数学/math/alge-ana/Game Theory.md",
+    "docs-hard/数学/math/alge-ana/Number Theory.md",
+    "docs-hard/数学/math/alge-ana-geo/ana/Advanced Probability Theory.md",
+    "docs-hard/数学/math/alge-ana-geo/ana/calculus.md",
+    "docs-hard/数学/math/alge-ana-geo/ana/precalculus.md",
+    "docs-hard/数学/math/alge-ana-geo/ana/Probability Theory.md",
+    "docs-hard/数学/math/alge-ana-geo/ana-alge/Advanced Mathematical Analysis.md",
+    "docs-hard/数学/math/alge-ana-geo/ana-alge/Advanced Mathematical Statistics.md",
+    "docs-hard/数学/math/alge-ana-geo/ana-alge/Mathematical Analysis.md",
+    "docs-hard/数学/math/alge-ana-geo/ana-alge/Mathematical Statistics.md",
+    "docs-hard/数学/math/alge-ana-geo/ana-alge/Numercial Analysis.md",
+    "docs-hard/数学/math/alge-ana-geo/Algebraic Topology.md",
+    "docs-hard/数学/math/alge-ana-geo/Algebraic Topology Motivation.md",
+    "docs-hard/数学/math/alge-ana-geo/General Topology.md",
+    "docs-hard/数学/math/alge-geo/Advanced Linear Algebra.md",
+    "docs-hard/数学/math/alge-geo/Algebraic Geometry.md",
+    "docs-hard/数学/math/alge-geo/Algebraic Geometry Motivation.md",
+    "docs-hard/数学/math/alge-geo/Category Theory.md",
+    "docs-hard/数学/math/alge-geo/Combinatorics.md",
+    "docs-hard/数学/math/alge-geo/Lattice Theory.md",
+    "docs-hard/数学/math/alge-geo/Linear Algebra.md",
+    "docs-hard/数学/math/alge-geo/Motivation for Category Theory.md",
+    "docs-hard/数学/math/algebra/Abstract Algebra.md",
+    "docs-hard/数学/math/algebra/Advanced Abstract Algebra.md",
+    "docs-hard/数学/math/algebra/Universal Algebra.md",
+    "docs-hard/数学/math/ana-geo/Advanced Differential Geometry.md",
+    "docs-hard/数学/math/ana-geo/Complex Analysis.md",
+    "docs-hard/数学/math/ana-geo/Convex Optimization.md",
+    "docs-hard/数学/math/ana-geo/Differential Equations.md",
+    "docs-hard/数学/math/ana-geo/Differential Geometry.md",
+    "docs-hard/数学/math/ana-geo/Optimization Theory.md",
+    "docs-hard/数学/math/ana-geo/Partial Differential Equations.md",
+    "docs-hard/数学/math/analysis/Functional Analysis.md",
+    "docs-hard/数学/math/analysis/Real Analysis.md",
+    "docs-hard/数学/math/analysis/the Theory of Computation.md",
+    "docs-hard/数学/math/basis/Axiomatic Set Theory.md",
+    "docs-hard/数学/math/basis/Mathematical Logic and Model Theory.md",
+    "docs-hard/数学/math/basis/Naive Set Theory, Mathematical Reasoning, Proofs, and Discrete Mathematics.md",
+    "docs-hard/数学/math/geo/Euclidean and Non-Euclidean Geometry.md",
+    "docs-hard/数学/optional/Physics.md",
+    "docs-hard/数学/optional/Python.md",
+    "docs-hard/数学/philosophy/Logic.md",
+    "docs-hard/数学/philosophy/Philosophy.md",
+    "docs-hard/数学/philosophy/Philosophy of Probability and Statistics.md",
+    "docs-hard/数学/philosophy/Problem Solving.md",
+    "docs-hard/数学/philosophy/Statistics.md",
+    "docs-hard/数学/philosophy/the Philosophy of Language.md",
+    "docs-hard/数学/philosophy/the Philosophy of Mathematics and Logic.md",
+    "docs-hard/数学/数学-main.md",
+    "docs-hard/数学/数学编程语言-main.md",
+    "docs-hard/数学/main-main.md",
+    "docs-hard/anki/题目.md",
+    "docs-hard/anki/define.md",
+    "docs-hard/anki/fuck math.md",
+    "docs-hwo/草稿/厨艺.md",
+    "docs-hwo/搞钱/搞钱.md",
+    "docs-hwo/实习/词汇表.md",
+    "docs-hwo/实习/实习.md",
+    "docs-hwo/实习/芯享科技.md",
+    "docs-hwo/杂/代理.md",
+    "docs-hwo/杂/健康管理.md",
+    "docs-hwo/杂/万华镜.md",
+    "docs-hwo/杂/无锡学院.md",
+    "docs-hwo/杂/友链.md",
+    "docs-hwo/杂/mc.md",
+    "docs-hwo/杂/offer.md",
+    "docs-hwo/杂/ref.md",
+    "docs-hwo/computer/电脑.md",
+    "docs-hwo/computer/装机.md",
+    "docs-hwo/computer/windows.md",
+    "docs-hwo/me/家.md",
+    "docs-hwo/pwd/账号.md",
+    "docs-hwo/pwd/api-keys.md",
+    "docs-hwo/pwd/keys.md",
+    "docs-hwo/templater/github-img.md",
+    "docs-hwo/templater/readme.md",
+    "docs-hwo/templater/test.md",
+    "docs-hwo/templater-func/hello.js",
+    "docs-hwo/程序员常识.md",
+    "docs-hwo/法律.md",
+    "docs-hwo/话题.md",
+    "docs-hwo/坤.md",
+    "docs-hwo/通用工具.md",
+    "docs-hwo/杂记.md",
+    "docs-hwo/url-collection.md",
+    "docs-me/info/area.md",
+    "docs-me/info/saying.md",
+    "docs-me/info/school.md",
+    "docs-me/intrest/鬼畜.md",
+    "docs-me/intrest/hehe.md",
+    "docs-me/school/memory.md",
+    "docs-me/backup.bat",
+    "docs-me/issue.md",
+    "docs-me/literal.md",
+    "docs-me/readme.md",
+    "docs-tmp/厨艺.md",
+    "docs-tmp/地理.md",
+    "docs-tmp/生物.md",
+    "docs-tmp/思考.md",
+    "docs-tmp/需求调查.md",
+    "docs-tmp/backup.bat",
+    "docs-tmp/pull.bat",
+    "docs-tmp/push.bat",
+    "docs-tmp/readme.md",
+    "project/web/智慧校园管理系统.md",
+    "project/readme.md",
+    "quick/exe/analysis/readme.md",
+    "quick/exe/analysis/word.rb",
+    "quick/exe/analysis/word2.rb",
+    "quick/exe/chomp/chomp.rb",
+    "quick/exe/chomp/readme.md",
+    "quick/exe/chomp/run.bat",
+    "quick/exe/gsub/gsub.rb",
+    "quick/exe/gsub/in.txt",
+    "quick/exe/gsub/run.bat",
+    "quick/exe/link to dict/dict.md",
+    "quick/exe/link to dict/dict_.md",
+    "quick/exe/link to dict/link to dict.rb",
+    "quick/exe/link to dict/link to dict - 副本.rb",
+    "quick/exe/link to dict/readme.md",
+    "quick/exe/link to dict/run.bat",
+    "quick/exe/link to dict/txt.md",
+    "quick/exe/link to dict/txt_.md",
+    "quick/exe/list to headers/list to headers.rb",
+    "quick/exe/list to headers/list to headers2.rb",
+    "quick/exe/list to headers/list to headers2_plus.rb",
+    "quick/exe/list to headers/run.bat",
+    "quick/exe/list to headers/sds.rb",
+    "quick/exe/readme.md",
+    "quick/plugins - 快捷方式.lnk",
+    "quick/plugins-backup.lnk",
+    "quick/run-plugins.lnk",
+    "quick/run-snippets.lnk",
+    "trash/default_vault/待办/挑战.md",
+    "trash/default_vault/待办/重要.md",
+    "trash/default_vault/周记/template.md",
+    "trash/default_vault/canvas/未命名.canvas",
+    "trash/default_vault/core/草稿.md",
+    "trash/default_vault/core/短期重要待办.md",
+    "trash/default_vault/core/复盘.md",
+    "trash/default_vault/core/灵感.md",
+    "trash/default_vault/core/前瞻.md",
+    "trash/default_vault/core/任务看板.md",
+    "trash/default_vault/core/信息和资源.md",
+    "trash/default_vault/core/interest.md",
+    "trash/default_vault/dict/test.md",
+    "trash/default_vault/templates/admonition/ad-note.md",
+    "trash/default_vault/templates/标题.md",
+    "trash/default_vault/templates/audio.md",
+    "trash/default_vault/templates/daily.md",
+    "trash/default_vault/templates/iframe.md",
+    "trash/default_vault/templates/img.md",
+    "trash/default_vault/chatgpt.md",
+    "trash/default_vault/q群.md",
+    "trash/record/2023/2023-11/11.22.md",
+    "trash/record/2023/2023-11/2023-11-22.md",
+    "trash/record/2023/2023-11/2023-11-23.md",
+    "trash/record/2023/2023-11/2023-11-26.md",
+    "trash/record/2023/2023-11/2023-11-26!.md",
+    "trash/record/2023/2023-11/2023-11-29.md",
+    "trash/record/2023/2023-11/2023-11-30.md",
+    "trash/record/2023/2023-11/反省框架.md",
+    "trash/record/2023/2023-12/2023-12-01.md",
+    "trash/record/2023/2023-12/2023-12-02.md",
+    "trash/record/2023/2023-12/2023-12-03.md",
+    "trash/record/2023/2023-12/2023-12-09.md",
+    "trash/record/2023/2023-12/2023-12-15.md",
+    "trash/record/2023/2023-12/2023-12-16.md",
+    "trash/record/2023/2023-12/2023-12-17.md",
+    "trash/record/2023/2023-12/2023-12-18.md",
+    "trash/record/2023/2023-12/2023-12-20.md",
+    "trash/record/2023/2023-12/2023-12-21.md",
+    "trash/record/2023/2023-12/2023-12-27.md",
+    "trash/record/2023/2023-12/2023-12-28.md",
+    "trash/record/2023/2023-12/2023-12-30.md",
+    "trash/record/2023/2023-12/2023-12-31.md",
+    "trash/record/2023/quarterly.md",
+    "trash/record/2024/2024-1/2024-01-01.md",
+    "trash/record/2024/2024-1/2024-01-02.md",
+    "trash/record/2024/2024-1/2024-01-03.md",
+    "trash/record/2024/2024-2/2024-02-04.md",
+    "trash/record/database/software.md",
+    "trash/record/templates/daily.md",
+    "trash/record/templates/daily-main.md",
+    "trash/record/tmp/2024-02-10.md",
+    "trash/record/tmp/2024-02-11.md",
+    "trash/record/tmp/2024-02-13.md",
+    "trash/record/tmp/2024-W06.md",
+    "trash/record/死则.md",
+    "trash/record/readme.md",
+    "trash/草稿.md",
+    "trash/短期重要待办.md",
+    "trash/复盘.md",
+    "trash/寒假计划.md",
+    "trash/灵感.md",
+    "trash/前瞻.md",
+    "trash/信息和资源.md",
+    "trash/周期性待办.md",
+    "trash/interest.md",
+    "trash/scripts.md",
+    "冥想.md",
+    "未命名.md",
+    "music.md",
+    "readme.md",
+    "tasks-index.md",
+    "tasks-workspace.md",
+    "todo.md",
+    "vault-main.md",
+    "word.md",
+    "lib/media/pasted-image-20240512223722.png",
+    "lib/scripts/graph-wasm.wasm",
+    "lib/fonts/94f2f163d4b698242fef.otf",
+    "lib/fonts/72505e6a122c6acd5471.woff2",
+    "lib/fonts/2d5198822ab091ce4305.woff2",
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+    "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/b5f0f109bc88052d4000.woff2",
+    "lib/fonts/cbe0ae49c52c920fd563.woff2",
+    "lib/fonts/535a6cf662596b3bd6a6.woff2",
+    "lib/fonts/70cc7ff27245e82ad414.ttf",
+    "lib/fonts/454577c22304619db035.ttf",
+    "lib/fonts/52ac8f3034507f1d9e53.ttf",
+    "lib/fonts/05b618077343fbbd92b7.ttf",
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/media/874d8b8e340f75575caa.svg",
+    "lib/media/3d6c1bdc4d87cde4de67.svg",
+    "lib/fonts/mathjax_zero.woff",
+    "lib/fonts/mathjax_main-regular.woff",
+    "lib/fonts/mathjax_main-bold.woff",
+    "lib/fonts/mathjax_math-italic.woff",
+    "lib/fonts/mathjax_main-italic.woff",
+    "lib/fonts/mathjax_math-bolditalic.woff",
+    "lib/fonts/mathjax_size1-regular.woff",
+    "lib/fonts/mathjax_size2-regular.woff",
+    "lib/fonts/mathjax_size3-regular.woff",
+    "lib/fonts/mathjax_size4-regular.woff",
+    "lib/fonts/mathjax_ams-regular.woff",
+    "lib/fonts/mathjax_calligraphic-regular.woff",
+    "lib/fonts/mathjax_calligraphic-bold.woff",
+    "lib/fonts/mathjax_fraktur-regular.woff",
+    "lib/fonts/mathjax_fraktur-bold.woff",
+    "lib/fonts/mathjax_sansserif-regular.woff",
+    "lib/fonts/mathjax_sansserif-bold.woff",
+    "lib/fonts/mathjax_sansserif-italic.woff",
+    "lib/fonts/mathjax_script-regular.woff",
+    "lib/fonts/mathjax_typewriter-regular.woff",
+    "lib/fonts/mathjax_vector-regular.woff",
+    "lib/fonts/mathjax_vector-bold.woff",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/scripts/graph-view.js",
+    "lib/scripts/graph-wasm.js",
+    "lib/scripts/graph-render-worker.js",
+    "lib/scripts/tinycolor.js",
+    "lib/scripts/pixi.js",
+    "lib/scripts/minisearch.js",
+    "lib/media/favicon.png",
+    "lib/scripts/graph-data.js",
+    "lib/styles/obsidian.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/supported-plugins.css",
+    "lib/styles/main-styles.css",
+    "lib/styles/snippets.css"
+  ],
+  "mainDependencies": [
+    "lib/scripts/graph-wasm.wasm",
+    "lib/fonts/94f2f163d4b698242fef.otf",
+    "lib/fonts/72505e6a122c6acd5471.woff2",
+    "lib/fonts/2d5198822ab091ce4305.woff2",
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+    "lib/fonts/cb10ffd7684cd9836a05.woff2",
+    "lib/fonts/b5f0f109bc88052d4000.woff2",
+    "lib/fonts/cbe0ae49c52c920fd563.woff2",
+    "lib/fonts/535a6cf662596b3bd6a6.woff2",
+    "lib/fonts/70cc7ff27245e82ad414.ttf",
+    "lib/fonts/454577c22304619db035.ttf",
+    "lib/fonts/52ac8f3034507f1d9e53.ttf",
+    "lib/fonts/05b618077343fbbd92b7.ttf",
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+    "lib/media/874d8b8e340f75575caa.svg",
+    "lib/media/3d6c1bdc4d87cde4de67.svg",
+    "lib/fonts/mathjax_zero.woff",
+    "lib/fonts/mathjax_main-regular.woff",
+    "lib/fonts/mathjax_main-bold.woff",
+    "lib/fonts/mathjax_math-italic.woff",
+    "lib/fonts/mathjax_main-italic.woff",
+    "lib/fonts/mathjax_math-bolditalic.woff",
+    "lib/fonts/mathjax_size1-regular.woff",
+    "lib/fonts/mathjax_size2-regular.woff",
+    "lib/fonts/mathjax_size3-regular.woff",
+    "lib/fonts/mathjax_size4-regular.woff",
+    "lib/fonts/mathjax_ams-regular.woff",
+    "lib/fonts/mathjax_calligraphic-regular.woff",
+    "lib/fonts/mathjax_calligraphic-bold.woff",
+    "lib/fonts/mathjax_fraktur-regular.woff",
+    "lib/fonts/mathjax_fraktur-bold.woff",
+    "lib/fonts/mathjax_sansserif-regular.woff",
+    "lib/fonts/mathjax_sansserif-bold.woff",
+    "lib/fonts/mathjax_sansserif-italic.woff",
+    "lib/fonts/mathjax_script-regular.woff",
+    "lib/fonts/mathjax_typewriter-regular.woff",
+    "lib/fonts/mathjax_vector-regular.woff",
+    "lib/fonts/mathjax_vector-bold.woff",
+    "lib/html/file-tree.html",
+    "lib/scripts/webpage.js",
+    "lib/scripts/graph-view.js",
+    "lib/scripts/graph-wasm.js",
+    "lib/scripts/graph-render-worker.js",
+    "lib/scripts/tinycolor.js",
+    "lib/scripts/pixi.js",
+    "lib/scripts/minisearch.js",
+    "lib/media/favicon.png",
+    "lib/scripts/graph-data.js",
+    "lib/styles/obsidian.css",
+    "lib/styles/global-variable-styles.css",
+    "lib/styles/supported-plugins.css",
+    "lib/styles/main-styles.css",
+    "lib/styles/snippets.css"
+  ],
+  "fileInfo": {
+    "待办项目/“芯享班”/课程报告.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 907,
+      "exportedPath": "待办项目/“芯享班”/课程报告.html",
+      "dependencies": []
+    },
+    "待办项目/“芯享班”/sd.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 224,
+      "exportedPath": "待办项目/“芯享班”/sd.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器/库.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 397,
+      "exportedPath": "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器/库.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器/需求说明.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 23,
+      "exportedPath": "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器/需求说明.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器/Django简单例子.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 991,
+      "exportedPath": "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器/django简单例子.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/毕设(音乐播放器)/毕设-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "待办项目/毕业论文/毕设(音乐播放器)/毕设-main.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/毕设(音乐播放器)/动漫.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 9283,
+      "exportedPath": "待办项目/毕业论文/毕设(音乐播放器)/动漫.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 393,
+      "exportedPath": "待办项目/毕业论文/毕设(音乐播放器)/音乐播放器.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/毕业论文-20软件2梁雄.doc": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1970395,
+      "exportedPath": "待办项目/毕业论文/毕业论文-20软件2梁雄.doc",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/毕业设计-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 29121,
+      "exportedPath": "待办项目/毕业论文/毕业设计-main.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/答辩.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 131,
+      "exportedPath": "待办项目/毕业论文/答辩.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/搞.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 52128,
+      "exportedPath": "待办项目/毕业论文/搞.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/未命名.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 234,
+      "exportedPath": "待办项目/毕业论文/未命名.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/音乐管理系统down-to-up.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2420,
+      "exportedPath": "待办项目/毕业论文/音乐管理系统down-to-up.html",
+      "dependencies": []
+    },
+    "待办项目/毕业论文/音乐管理系统up-to-down.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1196,
+      "exportedPath": "待办项目/毕业论文/音乐管理系统up-to-down.html",
+      "dependencies": []
+    },
+    "待办项目/archieved/软件测试/软件测试-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 53615,
+      "exportedPath": "待办项目/archieved/软件测试/软件测试-main.html",
+      "dependencies": []
+    },
+    "待办项目/archieved/软件测试/软件测试复习.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 11221,
+      "exportedPath": "待办项目/archieved/软件测试/软件测试复习.html",
+      "dependencies": []
+    },
+    "待办项目/archieved/软件测试/自测.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4829,
+      "exportedPath": "待办项目/archieved/软件测试/自测.html",
+      "dependencies": []
+    },
+    "待办项目/archieved/实训/报告.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5926,
+      "exportedPath": "待办项目/archieved/实训/报告.html",
+      "dependencies": []
+    },
+    "待办项目/archieved/学年论文/archived/学年论文-20软件2梁雄.doc": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1402880,
+      "exportedPath": "待办项目/archieved/学年论文/archived/学年论文-20软件2梁雄.doc",
+      "dependencies": []
+    },
+    "待办项目/archieved/学年论文/未命名.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 548,
+      "exportedPath": "待办项目/archieved/学年论文/未命名.html",
+      "dependencies": []
+    },
+    "待办项目/archieved/学年论文/学年论文-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 8774,
+      "exportedPath": "待办项目/archieved/学年论文/学年论文-main.html",
+      "dependencies": []
+    },
+    "待办项目/archieved/学年论文/out.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 16403,
+      "exportedPath": "待办项目/archieved/学年论文/out.html",
+      "dependencies": []
+    },
+    "待办项目/archieved/javaee/J2EE架构与开发课程A卷.doc - 快捷方式.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1268,
+      "exportedPath": "待办项目/archieved/javaee/j2ee架构与开发课程a卷.doc-快捷方式.lnk",
+      "dependencies": []
+    },
+    "待办项目/archieved/javaee/J2EE架构与开发课程A卷答案及评分标准.doc - 快捷方式.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 785,
+      "exportedPath": "待办项目/archieved/javaee/j2ee架构与开发课程a卷答案及评分标准.doc-快捷方式.lnk",
+      "dependencies": []
+    },
+    "待办项目/毕业.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 150,
+      "exportedPath": "待办项目/毕业.html",
+      "dependencies": []
+    },
+    "待办项目/未命名.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 997,
+      "exportedPath": "待办项目/未命名.html",
+      "dependencies": []
+    },
+    "考研/408/操作系统/操作系统.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "考研/408/操作系统/操作系统.html",
+      "dependencies": []
+    },
+    "考研/408/操作系统/操作系统.main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1804,
+      "exportedPath": "考研/408/操作系统/操作系统.main.html",
+      "dependencies": []
+    },
+    "考研/408/计算机网络/计算机网络.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 122,
+      "exportedPath": "考研/408/计算机网络/计算机网络.html",
+      "dependencies": []
+    },
+    "考研/408/计算机网络/计算机网络.main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2685,
+      "exportedPath": "考研/408/计算机网络/计算机网络.main.html",
+      "dependencies": []
+    },
+    "考研/408/计算机组成原理/计算机组成原理.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "考研/408/计算机组成原理/计算机组成原理.html",
+      "dependencies": []
+    },
+    "考研/408/计算机组成原理/计算机组成原理.main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3137,
+      "exportedPath": "考研/408/计算机组成原理/计算机组成原理.main.html",
+      "dependencies": []
+    },
+    "考研/408/数据结构/数据结构.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 40,
+      "exportedPath": "考研/408/数据结构/数据结构.html",
+      "dependencies": []
+    },
+    "考研/408/数据结构/数据结构.main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3049,
+      "exportedPath": "考研/408/数据结构/数据结构.main.html",
+      "dependencies": []
+    },
+    "考研/trash/1.计算机组成原理/重构树/未命名.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 576,
+      "exportedPath": "考研/trash/1.计算机组成原理/重构树/未命名.html",
+      "dependencies": []
+    },
+    "考研/trash/1.计算机组成原理/1. 计算机概要与技术.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 13348,
+      "exportedPath": "考研/trash/1.计算机组成原理/1.-计算机概要与技术.html",
+      "dependencies": []
+    },
+    "考研/trash/1.计算机组成原理/2. 指令：计算机的语言.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3450,
+      "exportedPath": "考研/trash/1.计算机组成原理/2.-指令：计算机的语言.html",
+      "dependencies": []
+    },
+    "考研/trash/1.计算机组成原理/3. 计算机的算术运算.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1696,
+      "exportedPath": "考研/trash/1.计算机组成原理/3.-计算机的算术运算.html",
+      "dependencies": []
+    },
+    "考研/trash/1.计算机组成原理/4. 处理器.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2788,
+      "exportedPath": "考研/trash/1.计算机组成原理/4.-处理器.html",
+      "dependencies": []
+    },
+    "考研/trash/1.计算机组成原理/5. 大容量和高速度：开发存储器层次结构.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4427,
+      "exportedPath": "考研/trash/1.计算机组成原理/5.-大容量和高速度：开发存储器层次结构.html",
+      "dependencies": []
+    },
+    "考研/trash/1.计算机组成原理/6. 从客户端到云的并行处理器.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2054,
+      "exportedPath": "考研/trash/1.计算机组成原理/6.-从客户端到云的并行处理器.html",
+      "dependencies": []
+    },
+    "考研/trash/1.计算机组成原理/计算机组成与设计-硬件_软件接口.pdf - 快捷方式.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1136,
+      "exportedPath": "考研/trash/1.计算机组成原理/计算机组成与设计-硬件_软件接口.pdf-快捷方式.lnk",
+      "dependencies": []
+    },
+    "考研/trash/1.计算机组成原理/计组-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 20173,
+      "exportedPath": "考研/trash/1.计算机组成原理/计组-main.html",
+      "dependencies": []
+    },
+    "考研/trash/1.计算机组成原理/计组答案(5版,英文).lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1140,
+      "exportedPath": "考研/trash/1.计算机组成原理/计组答案(5版,英文).lnk",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/参考/第 1 章   概述.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 17317,
+      "exportedPath": "考研/trash/2.计算机网络/参考/第-1-章-概述.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/参考/第 2 章  物理层.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 6518,
+      "exportedPath": "考研/trash/2.计算机网络/参考/第-2-章-物理层.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/参考/第 3 章  数据链路层.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 11348,
+      "exportedPath": "考研/trash/2.计算机网络/参考/第-3-章-数据链路层.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/参考/第 4 章  网络层.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 16027,
+      "exportedPath": "考研/trash/2.计算机网络/参考/第-4-章-网络层.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/参考/第 5 章  运输层.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 11331,
+      "exportedPath": "考研/trash/2.计算机网络/参考/第-5-章-运输层.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/参考/第 6 章  应用层.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 13139,
+      "exportedPath": "考研/trash/2.计算机网络/参考/第-6-章-应用层.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/draw/未命名.canvas": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 126,
+      "exportedPath": "考研/trash/2.计算机网络/draw/未命名.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/draw/Drawing 2023-12-29 16.04.44.excalidraw.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1973,
+      "exportedPath": "考研/trash/2.计算机网络/draw/drawing-2023-12-29-16.04.44.excalidraw.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/img/1-1.png": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 300564,
+      "exportedPath": "考研/trash/2.计算机网络/img/1-1.png",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/1. 计算机网络和因特网.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 7359,
+      "exportedPath": "考研/trash/2.计算机网络/1.-计算机网络和因特网.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/2. 应用层.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5720,
+      "exportedPath": "考研/trash/2.计算机网络/2.-应用层.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/3. 运输层.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3249,
+      "exportedPath": "考研/trash/2.计算机网络/3.-运输层.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/4. 网络层：数据平面.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1527,
+      "exportedPath": "考研/trash/2.计算机网络/4.-网络层：数据平面.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/5. 网络层：控制平面.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1991,
+      "exportedPath": "考研/trash/2.计算机网络/5.-网络层：控制平面.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/6. 链路层和局域网.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2051,
+      "exportedPath": "考研/trash/2.计算机网络/6.-链路层和局域网.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/7. 无线网络和移动网络.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1826,
+      "exportedPath": "考研/trash/2.计算机网络/7.-无线网络和移动网络.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/8. 计算机网络中的安全.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2299,
+      "exportedPath": "考研/trash/2.计算机网络/8.-计算机网络中的安全.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/9. 多媒体网络.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1612,
+      "exportedPath": "考研/trash/2.计算机网络/9.-多媒体网络.html",
+      "dependencies": []
+    },
+    "考研/trash/2.计算机网络/计网-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 18408,
+      "exportedPath": "考研/trash/2.计算机网络/计网-main.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/参考/第二章 进程的描述与控制.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 8332,
+      "exportedPath": "考研/trash/3.操作系统/参考/第二章-进程的描述与控制.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/参考/第六章 输入输出系统.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 12228,
+      "exportedPath": "考研/trash/3.操作系统/参考/第六章-输入输出系统.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/参考/第七章 文件管理.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1094,
+      "exportedPath": "考研/trash/3.操作系统/参考/第七章-文件管理.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/参考/第三章 处理机调度与死锁.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 14055,
+      "exportedPath": "考研/trash/3.操作系统/参考/第三章-处理机调度与死锁.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/参考/第四章 存储器管理.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 10718,
+      "exportedPath": "考研/trash/3.操作系统/参考/第四章-存储器管理.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/参考/第五章 虚拟存储器.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3781,
+      "exportedPath": "考研/trash/3.操作系统/参考/第五章-虚拟存储器.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/参考/第一章 操作系统引论.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2784,
+      "exportedPath": "考研/trash/3.操作系统/参考/第一章-操作系统引论.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/参考/计算机操作系统.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 56164,
+      "exportedPath": "考研/trash/3.操作系统/参考/计算机操作系统.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/操作系统-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 34266,
+      "exportedPath": "考研/trash/3.操作系统/操作系统-main.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/操作系统概念.pdf - 快捷方式.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1038,
+      "exportedPath": "考研/trash/3.操作系统/操作系统概念.pdf-快捷方式.lnk",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/二、进程管理.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 9103,
+      "exportedPath": "考研/trash/3.操作系统/二、进程管理.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/六、案例研究.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5256,
+      "exportedPath": "考研/trash/3.操作系统/六、案例研究.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/三、内存管理.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4330,
+      "exportedPath": "考研/trash/3.操作系统/三、内存管理.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/四、存储管理.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 6953,
+      "exportedPath": "考研/trash/3.操作系统/四、存储管理.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/五、保护与安全.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3179,
+      "exportedPath": "考研/trash/3.操作系统/五、保护与安全.html",
+      "dependencies": []
+    },
+    "考研/trash/3.操作系统/一、概论.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 6221,
+      "exportedPath": "考研/trash/3.操作系统/一、概论.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/参考/数据结构复习.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 18304,
+      "exportedPath": "考研/trash/4.数据结构/参考/数据结构复习.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/算法导论/八、附录：数学基础知识.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1590,
+      "exportedPath": "考研/trash/4.数据结构/算法导论/八、附录：数学基础知识.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/算法导论/二、排序和顺序统计量.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5517,
+      "exportedPath": "考研/trash/4.数据结构/算法导论/二、排序和顺序统计量.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/算法导论/六、图算法.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1971,
+      "exportedPath": "考研/trash/4.数据结构/算法导论/六、图算法.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/算法导论/七、算法问题选编.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4069,
+      "exportedPath": "考研/trash/4.数据结构/算法导论/七、算法问题选编.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/算法导论/三、数据结构.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1835,
+      "exportedPath": "考研/trash/4.数据结构/算法导论/三、数据结构.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/算法导论/四、高级设计和分析技术.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1295,
+      "exportedPath": "考研/trash/4.数据结构/算法导论/四、高级设计和分析技术.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/算法导论/算法导论-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 16291,
+      "exportedPath": "考研/trash/4.数据结构/算法导论/算法导论-main.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/算法导论/算法导论（原书第3版） by Thomas H.Cormen Charles E.Leiserson Ronald L.Rivest Clifford Stein (z-lib.org).pdf - 快捷方式.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2104,
+      "exportedPath": "考研/trash/4.数据结构/算法导论/算法导论（原书第3版）-by-thomas-h.cormen-charles-e.leiserson-ronald-l.rivest-clifford-stein-(z-lib.org).pdf-快捷方式.lnk",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/算法导论/五、高级数据结构.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1818,
+      "exportedPath": "考研/trash/4.数据结构/算法导论/五、高级数据结构.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/算法导论/一、基础知识.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2212,
+      "exportedPath": "考研/trash/4.数据结构/算法导论/一、基础知识.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/数据结构_.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 57436,
+      "exportedPath": "考研/trash/4.数据结构/数据结构_.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/数据结构-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 14495,
+      "exportedPath": "考研/trash/4.数据结构/数据结构-main.html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/做题(10套).md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 820,
+      "exportedPath": "考研/trash/4.数据结构/做题(10套).html",
+      "dependencies": []
+    },
+    "考研/trash/4.数据结构/assets.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 184,
+      "exportedPath": "考研/trash/4.数据结构/assets.html",
+      "dependencies": []
+    },
+    "考研/trash/分析/前瞻.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4422,
+      "exportedPath": "考研/trash/分析/前瞻.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/概率论与数理统计/1. 样本空间&概率.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 43401,
+      "exportedPath": "考研/trash/数学/概率论与数理统计/1.-样本空间&概率.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/概率论与数理统计/2. 离散随机变量.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 24589,
+      "exportedPath": "考研/trash/数学/概率论与数理统计/2.-离散随机变量.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/概率论与数理统计/3. 一般随机变量.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 24640,
+      "exportedPath": "考研/trash/数学/概率论与数理统计/3.-一般随机变量.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/概率论与数理统计/4. 随机变量的深入内容.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 26863,
+      "exportedPath": "考研/trash/数学/概率论与数理统计/4.-随机变量的深入内容.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/概率论与数理统计/5. 极限定理.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 19454,
+      "exportedPath": "考研/trash/数学/概率论与数理统计/5.-极限定理.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/概率论与数理统计/6. 伯努利过程&泊松过程.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 22900,
+      "exportedPath": "考研/trash/数学/概率论与数理统计/6.-伯努利过程&泊松过程.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/概率论与数理统计/7. 马尔科夫链.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 22,
+      "exportedPath": "考研/trash/数学/概率论与数理统计/7.-马尔科夫链.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/概率论与数理统计/8. 贝叶斯统计推断.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 6879,
+      "exportedPath": "考研/trash/数学/概率论与数理统计/8.-贝叶斯统计推断.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/概率论与数理统计/9. 经典统计推断.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 33090,
+      "exportedPath": "考研/trash/数学/概率论与数理统计/9.-经典统计推断.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/概率论与数理统计/概率论与数理统计.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2973,
+      "exportedPath": "考研/trash/数学/概率论与数理统计/概率论与数理统计.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/1. 函数&模型.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 21225,
+      "exportedPath": "考研/trash/数学/微积分/1.-函数&模型.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/2. 极限&导数.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 39219,
+      "exportedPath": "考研/trash/数学/微积分/2.-极限&导数.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/3. 求导法则.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 26296,
+      "exportedPath": "考研/trash/数学/微积分/3.-求导法则.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/4. 导数的应用.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 23741,
+      "exportedPath": "考研/trash/数学/微积分/4.-导数的应用.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/5. 积分.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 31291,
+      "exportedPath": "考研/trash/数学/微积分/5.-积分.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/6. 定积分的应用.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 23347,
+      "exportedPath": "考研/trash/数学/微积分/6.-定积分的应用.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/7. 积分方法.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 51417,
+      "exportedPath": "考研/trash/数学/微积分/7.-积分方法.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/8. 定积分的进一步应用.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 12237,
+      "exportedPath": "考研/trash/数学/微积分/8.-定积分的进一步应用.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/9. 微分方程.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 19516,
+      "exportedPath": "考研/trash/数学/微积分/9.-微分方程.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/10. 参数方程&极坐标.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 49680,
+      "exportedPath": "考研/trash/数学/微积分/10.-参数方程&极坐标.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/11. 无穷序列&级数.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 28980,
+      "exportedPath": "考研/trash/数学/微积分/11.-无穷序列&级数.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/12. 向量&空间解析几何.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 62377,
+      "exportedPath": "考研/trash/数学/微积分/12.-向量&空间解析几何.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/13. 向量函数.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 38114,
+      "exportedPath": "考研/trash/数学/微积分/13.-向量函数.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/14. 多元函数的偏导数.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 70844,
+      "exportedPath": "考研/trash/数学/微积分/14.-多元函数的偏导数.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/15. 多重积分.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 43053,
+      "exportedPath": "考研/trash/数学/微积分/15.-多重积分.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/16. 向量积分.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 44972,
+      "exportedPath": "考研/trash/数学/微积分/16.-向量积分.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/17. 二阶微分方程.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 14474,
+      "exportedPath": "考研/trash/数学/微积分/17.-二阶微分方程.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/微积分/微积分.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 10912,
+      "exportedPath": "考研/trash/数学/微积分/微积分.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/线性代数/1. 线性方程组.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 59569,
+      "exportedPath": "考研/trash/数学/线性代数/1.-线性方程组.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/线性代数/2. 矩阵代数.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 52224,
+      "exportedPath": "考研/trash/数学/线性代数/2.-矩阵代数.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/线性代数/3. 行列式.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 27339,
+      "exportedPath": "考研/trash/数学/线性代数/3.-行列式.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/线性代数/4. 向量空间.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 99806,
+      "exportedPath": "考研/trash/数学/线性代数/4.-向量空间.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/线性代数/5. 特征值&特征向量.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 50587,
+      "exportedPath": "考研/trash/数学/线性代数/5.-特征值&特征向量.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/线性代数/6. 最小性&最小二乘法.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 76704,
+      "exportedPath": "考研/trash/数学/线性代数/6.-最小性&最小二乘法.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/线性代数/7. 对称矩阵&二次型.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 48165,
+      "exportedPath": "考研/trash/数学/线性代数/7.-对称矩阵&二次型.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/线性代数/8. 向量空间的几何学.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 31,
+      "exportedPath": "考研/trash/数学/线性代数/8.-向量空间的几何学.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/线性代数/线性代数.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4446,
+      "exportedPath": "考研/trash/数学/线性代数/线性代数.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/例子.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 47191,
+      "exportedPath": "考研/trash/数学/例子.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/练习.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 41937,
+      "exportedPath": "考研/trash/数学/练习.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/数学-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 8808,
+      "exportedPath": "考研/trash/数学/数学-main.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/数学复习.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 86095,
+      "exportedPath": "考研/trash/数学/数学复习.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/图像.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 296,
+      "exportedPath": "考研/trash/数学/图像.html",
+      "dependencies": []
+    },
+    "考研/trash/数学/做题.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2,
+      "exportedPath": "考研/trash/数学/做题.html",
+      "dependencies": []
+    },
+    "考研/trash/英语/10~18真题.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1491,
+      "exportedPath": "考研/trash/英语/10~18真题.lnk",
+      "dependencies": []
+    },
+    "考研/trash/英语/英语-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 393,
+      "exportedPath": "考研/trash/英语/英语-main.html",
+      "dependencies": []
+    },
+    "考研/trash/英语/作文.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2944,
+      "exportedPath": "考研/trash/英语/作文.html",
+      "dependencies": []
+    },
+    "考研/trash/英语/做题.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "考研/trash/英语/做题.html",
+      "dependencies": []
+    },
+    "考研/trash/英语/assets.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 171,
+      "exportedPath": "考研/trash/英语/assets.html",
+      "dependencies": []
+    },
+    "考研/trash/英语/words.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "考研/trash/英语/words.html",
+      "dependencies": []
+    },
+    "考研/trash/政治/1. 马原.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 12117,
+      "exportedPath": "考研/trash/政治/1.-马原.html",
+      "dependencies": []
+    },
+    "考研/trash/政治/2. 毛中特.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 11657,
+      "exportedPath": "考研/trash/政治/2.-毛中特.html",
+      "dependencies": []
+    },
+    "考研/trash/政治/3. 史纲.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 52343,
+      "exportedPath": "考研/trash/政治/3.-史纲.html",
+      "dependencies": []
+    },
+    "考研/trash/政治/4. 思修.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4927,
+      "exportedPath": "考研/trash/政治/4.-思修.html",
+      "dependencies": []
+    },
+    "考研/trash/政治/24肖八.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1136,
+      "exportedPath": "考研/trash/政治/24肖八.lnk",
+      "dependencies": []
+    },
+    "考研/trash/政治/24肖四.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 974,
+      "exportedPath": "考研/trash/政治/24肖四.lnk",
+      "dependencies": []
+    },
+    "考研/trash/政治/经验.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1617,
+      "exportedPath": "考研/trash/政治/经验.html",
+      "dependencies": []
+    },
+    "考研/trash/政治/思维导图.pdf.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 666,
+      "exportedPath": "考研/trash/政治/思维导图.pdf.lnk",
+      "dependencies": []
+    },
+    "考研/trash/政治/肖四.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1,
+      "exportedPath": "考研/trash/政治/肖四.html",
+      "dependencies": []
+    },
+    "考研/trash/政治/政治-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 23615,
+      "exportedPath": "考研/trash/政治/政治-main.html",
+      "dependencies": []
+    },
+    "考研/trash/政治/做题.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 250,
+      "exportedPath": "考研/trash/政治/做题.html",
+      "dependencies": []
+    },
+    "考研/trash/政治/assets.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 512,
+      "exportedPath": "考研/trash/政治/assets.html",
+      "dependencies": []
+    },
+    "考研/trash/考研-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3223,
+      "exportedPath": "考研/trash/考研-main.html",
+      "dependencies": []
+    },
+    "考研/考研.main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 403,
+      "exportedPath": "考研/考研.main.html",
+      "dependencies": []
+    },
+    "algo/algo-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 58,
+      "exportedPath": "algo/algo-main.html",
+      "dependencies": []
+    },
+    "assets/exca/大脑知识流图.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 10858,
+      "exportedPath": "assets/exca/大脑知识流图.html",
+      "dependencies": []
+    },
+    "assets/img/123.jpg": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 45682,
+      "exportedPath": "assets/img/123.jpg",
+      "dependencies": []
+    },
+    "assets/img/109951163557993210 - 副本.jpg": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 45682,
+      "exportedPath": "assets/img/109951163557993210-副本.jpg",
+      "dependencies": []
+    },
+    "assets/img/大脑知识流图.png": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 18545,
+      "exportedPath": "assets/img/大脑知识流图.png",
+      "dependencies": []
+    },
+    "assets/img/Pasted image 20240501113443.png": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 153264,
+      "exportedPath": "assets/img/pasted-image-20240501113443.png",
+      "dependencies": []
+    },
+    "assets/img/Pasted image 20240512223722.png": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 593615,
+      "exportedPath": "assets/img/pasted-image-20240512223722.png",
+      "dependencies": []
+    },
+    "assets/js/mathjax.js": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3137,
+      "exportedPath": "assets/js/mathjax.js",
+      "dependencies": []
+    },
+    "assets/script/compresser.py": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1409,
+      "exportedPath": "assets/script/compresser.py",
+      "dependencies": []
+    },
+    "assets/script/test.css": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 35,
+      "exportedPath": "assets/script/test.css",
+      "dependencies": []
+    },
+    "assets/script/test.html": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 812,
+      "exportedPath": "assets/script/test.html",
+      "dependencies": []
+    },
+    "assets/script/tinyimageprocessor.exe": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 850432,
+      "exportedPath": "assets/script/tinyimageprocessor.exe",
+      "dependencies": []
+    },
+    "assets/voice/Recording 20240523111003.webm": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 33626,
+      "exportedPath": "assets/voice/recording-20240523111003.webm",
+      "dependencies": []
+    },
+    "assets/滨江教发〔2018〕36号南京信息工程大学滨江学院本科生毕业论文（设计）工作实施细则.pdf": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1126664,
+      "exportedPath": "assets/滨江教发〔2018〕36号南京信息工程大学滨江学院本科生毕业论文（设计）工作实施细则.pdf",
+      "dependencies": []
+    },
+    "assets/assets-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 391,
+      "exportedPath": "assets/assets-main.html",
+      "dependencies": []
+    },
+    "assets/backup.bat": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 57,
+      "exportedPath": "assets/backup.bat",
+      "dependencies": []
+    },
+    "assets-local/Excalidraw/Drawing 2023-12-05 17.27.26.excalidraw.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2342,
+      "exportedPath": "assets-local/excalidraw/drawing-2023-12-05-17.27.26.excalidraw.html",
+      "dependencies": []
+    },
+    "assets-local/Excalidraw/Drawing 2024-01-03 21.00.39.excalidraw.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1092,
+      "exportedPath": "assets-local/excalidraw/drawing-2024-01-03-21.00.39.excalidraw.html",
+      "dependencies": []
+    },
+    "assets-local/Excalidraw/ExcalidrawStartup.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4847,
+      "exportedPath": "assets-local/excalidraw/excalidrawstartup.html",
+      "dependencies": []
+    },
+    "assets-local/Excalidraw/test.excalidraw.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 30028,
+      "exportedPath": "assets-local/excalidraw/test.excalidraw.html",
+      "dependencies": []
+    },
+    "assets-local/Excalidraw/test1.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 20239,
+      "exportedPath": "assets-local/excalidraw/test1.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/c/c.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "docs/草稿/后端/c/c.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/c/c sharp.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 111,
+      "exportedPath": "docs/草稿/后端/c/c-sharp.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/c/cpp.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 131,
+      "exportedPath": "docs/草稿/后端/c/cpp.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/go/go-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 974,
+      "exportedPath": "docs/草稿/后端/go/go-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/java/Groovy.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "docs/草稿/后端/java/groovy.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/java/java-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2144,
+      "exportedPath": "docs/草稿/后端/java/java-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/java/maven.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 429,
+      "exportedPath": "docs/草稿/后端/java/maven.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/java/spring.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 8388,
+      "exportedPath": "docs/草稿/后端/java/spring.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/java/ssm.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 28697,
+      "exportedPath": "docs/草稿/后端/java/ssm.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/java/ssm2.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 983,
+      "exportedPath": "docs/草稿/后端/java/ssm2.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/lang/java.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1590,
+      "exportedPath": "docs/草稿/后端/lang/java.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/lang/python.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 16105,
+      "exportedPath": "docs/草稿/后端/lang/python.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/lang/python 1.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 22867,
+      "exportedPath": "docs/草稿/后端/lang/python-1.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/lang/ruby.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 138,
+      "exportedPath": "docs/草稿/后端/lang/ruby.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/lang/ruby 1.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 6583,
+      "exportedPath": "docs/草稿/后端/lang/ruby-1.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/django/Django.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 34297,
+      "exportedPath": "docs/草稿/后端/python/django/django.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/django/Django--ex.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 100201,
+      "exportedPath": "docs/草稿/后端/python/django/django-ex.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/django/django-实战.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 377,
+      "exportedPath": "docs/草稿/后端/python/django/django-实战.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/django/django-index.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 11417,
+      "exportedPath": "docs/草稿/后端/python/django/django-index.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/django/Django1.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 20291,
+      "exportedPath": "docs/草稿/后端/python/django/django1.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/django/django2.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 10705,
+      "exportedPath": "docs/草稿/后端/python/django/django2.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/django/django用例图.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 57167,
+      "exportedPath": "docs/草稿/后端/python/django/django用例图.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/DRF.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 24824,
+      "exportedPath": "docs/草稿/后端/python/drf.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/fastapi.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 17838,
+      "exportedPath": "docs/草稿/后端/python/fastapi.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/flask.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 68,
+      "exportedPath": "docs/草稿/后端/python/flask.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/graphene.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 8461,
+      "exportedPath": "docs/草稿/后端/python/graphene.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/libs.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3612,
+      "exportedPath": "docs/草稿/后端/python/libs.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/opencv.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 421,
+      "exportedPath": "docs/草稿/后端/python/opencv.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/pyqt5.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 282,
+      "exportedPath": "docs/草稿/后端/python/pyqt5.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/python-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1004,
+      "exportedPath": "docs/草稿/后端/python/python-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/python/scrapy.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 867,
+      "exportedPath": "docs/草稿/后端/python/scrapy.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/ruby/ruby on rails.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1,
+      "exportedPath": "docs/草稿/后端/ruby/ruby-on-rails.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/ruby/ruby on rails 1.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1,
+      "exportedPath": "docs/草稿/后端/ruby/ruby-on-rails-1.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/rust/rust.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "docs/草稿/后端/rust/rust.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/后端——ref.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 358,
+      "exportedPath": "docs/草稿/后端/后端——ref.html",
+      "dependencies": []
+    },
+    "docs/草稿/后端/web后端-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5005,
+      "exportedPath": "docs/草稿/后端/web后端-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/代码审计/ESLint.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 59,
+      "exportedPath": "docs/草稿/前端/代码审计/eslint.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/移动/react native.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "docs/草稿/前端/移动/react-native.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/build tool/esbuild.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "docs/草稿/前端/build-tool/esbuild.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/build tool/parcel.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 47,
+      "exportedPath": "docs/草稿/前端/build-tool/parcel.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/build tool/rollup.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 48,
+      "exportedPath": "docs/草稿/前端/build-tool/rollup.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/build tool/vite.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4335,
+      "exportedPath": "docs/草稿/前端/build-tool/vite.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/build tool/vite-x.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 13403,
+      "exportedPath": "docs/草稿/前端/build-tool/vite-x.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/build tool/webpack.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 7775,
+      "exportedPath": "docs/草稿/前端/build-tool/webpack.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/css.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 22832,
+      "exportedPath": "docs/草稿/前端/core/css.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/html.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1650,
+      "exportedPath": "docs/草稿/前端/core/html.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/http.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2368,
+      "exportedPath": "docs/草稿/前端/core/http.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/javascript.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5947,
+      "exportedPath": "docs/草稿/前端/core/javascript.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/js-web-api.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 20110,
+      "exportedPath": "docs/草稿/前端/core/js-web-api.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/localforage.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3643,
+      "exportedPath": "docs/草稿/前端/core/localforage.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/node.js.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3002,
+      "exportedPath": "docs/草稿/前端/core/node.js.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/npm.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 51,
+      "exportedPath": "docs/草稿/前端/core/npm.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/php.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 484,
+      "exportedPath": "docs/草稿/前端/core/php.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/typescript.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3786,
+      "exportedPath": "docs/草稿/前端/core/typescript.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/web-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2210,
+      "exportedPath": "docs/草稿/前端/core/web-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/core/web安全.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4675,
+      "exportedPath": "docs/草稿/前端/core/web安全.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/CSR/react/jsx.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 61,
+      "exportedPath": "docs/草稿/前端/csr/react/jsx.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/CSR/react/react.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1702,
+      "exportedPath": "docs/草稿/前端/csr/react/react.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/CSR/vue/pinia.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5574,
+      "exportedPath": "docs/草稿/前端/csr/vue/pinia.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/CSR/vue/vue.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2849,
+      "exportedPath": "docs/草稿/前端/csr/vue/vue.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/CSR/vue/vue router.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 14262,
+      "exportedPath": "docs/草稿/前端/csr/vue/vue-router.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/CSR/vue/vue-plugins.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1617,
+      "exportedPath": "docs/草稿/前端/csr/vue/vue-plugins.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/CSR/vue/vue3.api.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 127,
+      "exportedPath": "docs/草稿/前端/csr/vue/vue3.api.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/CSR/vue/vue3.x.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 36128,
+      "exportedPath": "docs/草稿/前端/csr/vue/vue3.x.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/CSR/vue/vue3.xx.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 26374,
+      "exportedPath": "docs/草稿/前端/csr/vue/vue3.xx.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/CSR/vue/vuex.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 116,
+      "exportedPath": "docs/草稿/前端/csr/vue/vuex.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/css/css-api.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 15,
+      "exportedPath": "docs/草稿/前端/css/css-api.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/css/PostCSS.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 468,
+      "exportedPath": "docs/草稿/前端/css/postcss.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/css/Sass.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 6983,
+      "exportedPath": "docs/草稿/前端/css/sass.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/css/Tailwind-css.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 31099,
+      "exportedPath": "docs/草稿/前端/css/tailwind-css.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/effect/animate.style.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 334,
+      "exportedPath": "docs/草稿/前端/effect/animate.style.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/js-tools/axios.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 11163,
+      "exportedPath": "docs/草稿/前端/js-tools/axios.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/js-tools/jQuery.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 14458,
+      "exportedPath": "docs/草稿/前端/js-tools/jquery.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/js-tools/js-tools-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 11779,
+      "exportedPath": "docs/草稿/前端/js-tools/js-tools-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/js-tools/mermaid.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4652,
+      "exportedPath": "docs/草稿/前端/js-tools/mermaid.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/js-tools/moment.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2165,
+      "exportedPath": "docs/草稿/前端/js-tools/moment.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/js-tools/sql.js.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 471,
+      "exportedPath": "docs/草稿/前端/js-tools/sql.js.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/SSG/gridsome.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4874,
+      "exportedPath": "docs/草稿/前端/ssg/gridsome.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/SSG/jinja.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 126,
+      "exportedPath": "docs/草稿/前端/ssg/jinja.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/SSG/markdown.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 77,
+      "exportedPath": "docs/草稿/前端/ssg/markdown.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/SSG/mkdocs.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 10257,
+      "exportedPath": "docs/草稿/前端/ssg/mkdocs.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/SSG/vuepress.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1724,
+      "exportedPath": "docs/草稿/前端/ssg/vuepress.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/SSR/nitro.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 60,
+      "exportedPath": "docs/草稿/前端/ssr/nitro.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/SSR/nuxt.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 8238,
+      "exportedPath": "docs/草稿/前端/ssr/nuxt.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/SSR/nuxt-content.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 73,
+      "exportedPath": "docs/草稿/前端/ssr/nuxt-content.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/SSR/nuxt-devtools.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 124,
+      "exportedPath": "docs/草稿/前端/ssr/nuxt-devtools.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/SSR/nuxt-image.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 121,
+      "exportedPath": "docs/草稿/前端/ssr/nuxt-image.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/SSR/nuxt-ui.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 111,
+      "exportedPath": "docs/草稿/前端/ssr/nuxt-ui.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/test/vitest.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 602,
+      "exportedPath": "docs/草稿/前端/test/vitest.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/ui/daisyUI.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 91,
+      "exportedPath": "docs/草稿/前端/ui/daisyui.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/ui/easyui.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1041,
+      "exportedPath": "docs/草稿/前端/ui/easyui.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/ui/element.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 83217,
+      "exportedPath": "docs/草稿/前端/ui/element.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/ui/FormKit.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 81,
+      "exportedPath": "docs/草稿/前端/ui/formkit.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/ui/ikun-ui.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 484,
+      "exportedPath": "docs/草稿/前端/ui/ikun-ui.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/ui/naive.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1006,
+      "exportedPath": "docs/草稿/前端/ui/naive.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/ui/vuetify.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 85,
+      "exportedPath": "docs/草稿/前端/ui/vuetify.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/browser.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 552,
+      "exportedPath": "docs/草稿/前端/browser.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/js-cdn.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 590,
+      "exportedPath": "docs/草稿/前端/js-cdn.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/web——ref.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 275,
+      "exportedPath": "docs/草稿/前端/web——ref.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/web前端.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 701,
+      "exportedPath": "docs/草稿/前端/web前端.html",
+      "dependencies": []
+    },
+    "docs/草稿/前端/web前端-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 12162,
+      "exportedPath": "docs/草稿/前端/web前端-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/设计/设计系统.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 80,
+      "exportedPath": "docs/草稿/设计/设计系统.html",
+      "dependencies": []
+    },
+    "docs/草稿/设计/ux.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 80,
+      "exportedPath": "docs/草稿/设计/ux.html",
+      "dependencies": []
+    },
+    "docs/草稿/数据库/数据库-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 502,
+      "exportedPath": "docs/草稿/数据库/数据库-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/数据库/CodeQL.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 170,
+      "exportedPath": "docs/草稿/数据库/codeql.html",
+      "dependencies": []
+    },
+    "docs/草稿/数据库/mysql.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 823,
+      "exportedPath": "docs/草稿/数据库/mysql.html",
+      "dependencies": []
+    },
+    "docs/草稿/数据库/redis.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 152,
+      "exportedPath": "docs/草稿/数据库/redis.html",
+      "dependencies": []
+    },
+    "docs/草稿/数据库/SQLite.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 71,
+      "exportedPath": "docs/草稿/数据库/sqlite.html",
+      "dependencies": []
+    },
+    "docs/草稿/移动/android.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 148,
+      "exportedPath": "docs/草稿/移动/android.html",
+      "dependencies": []
+    },
+    "docs/草稿/移动/dart.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 13458,
+      "exportedPath": "docs/草稿/移动/dart.html",
+      "dependencies": []
+    },
+    "docs/草稿/移动/flutter.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 12972,
+      "exportedPath": "docs/草稿/移动/flutter.html",
+      "dependencies": []
+    },
+    "docs/草稿/移动/mobile-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 278,
+      "exportedPath": "docs/草稿/移动/mobile-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/移动/react native.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 79,
+      "exportedPath": "docs/草稿/移动/react-native.html",
+      "dependencies": []
+    },
+    "docs/草稿/游戏技术/game-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2221,
+      "exportedPath": "docs/草稿/游戏技术/game-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/游戏技术/godot4.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 185,
+      "exportedPath": "docs/草稿/游戏技术/godot4.html",
+      "dependencies": []
+    },
+    "docs/草稿/游戏技术/godot4.x.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 8689,
+      "exportedPath": "docs/草稿/游戏技术/godot4.x.html",
+      "dependencies": []
+    },
+    "docs/草稿/游戏技术/rpg maker.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 342,
+      "exportedPath": "docs/草稿/游戏技术/rpg-maker.html",
+      "dependencies": []
+    },
+    "docs/草稿/游戏技术/unity.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 231,
+      "exportedPath": "docs/草稿/游戏技术/unity.html",
+      "dependencies": []
+    },
+    "docs/草稿/游戏技术/unreal.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 103,
+      "exportedPath": "docs/草稿/游戏技术/unreal.html",
+      "dependencies": []
+    },
+    "docs/草稿/桌面/electron.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 845,
+      "exportedPath": "docs/草稿/桌面/electron.html",
+      "dependencies": []
+    },
+    "docs/草稿/api/GraphQL.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 7737,
+      "exportedPath": "docs/草稿/api/graphql.html",
+      "dependencies": []
+    },
+    "docs/草稿/api/RESTful.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "docs/草稿/api/restful.html",
+      "dependencies": []
+    },
+    "docs/草稿/api/web-api-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 996,
+      "exportedPath": "docs/草稿/api/web-api-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/DevOps/linux/debian.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 70,
+      "exportedPath": "docs/草稿/devops/linux/debian.html",
+      "dependencies": []
+    },
+    "docs/草稿/DevOps/linux/linux.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3656,
+      "exportedPath": "docs/草稿/devops/linux/linux.html",
+      "dependencies": []
+    },
+    "docs/草稿/DevOps/linux/ubuntu.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 300,
+      "exportedPath": "docs/草稿/devops/linux/ubuntu.html",
+      "dependencies": []
+    },
+    "docs/草稿/DevOps/DevOps-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 7270,
+      "exportedPath": "docs/草稿/devops/devops-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/DevOps/git.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 8376,
+      "exportedPath": "docs/草稿/devops/git.html",
+      "dependencies": []
+    },
+    "docs/草稿/DevOps/github.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 9065,
+      "exportedPath": "docs/草稿/devops/github.html",
+      "dependencies": []
+    },
+    "docs/草稿/DevOps/github.api.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 16179,
+      "exportedPath": "docs/草稿/devops/github.api.html",
+      "dependencies": []
+    },
+    "docs/草稿/DevOps/octokit.js.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1138,
+      "exportedPath": "docs/草稿/devops/octokit.js.html",
+      "dependencies": []
+    },
+    "docs/草稿/general/json.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 354,
+      "exportedPath": "docs/草稿/general/json.html",
+      "dependencies": []
+    },
+    "docs/草稿/general/xml.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 644,
+      "exportedPath": "docs/草稿/general/xml.html",
+      "dependencies": []
+    },
+    "docs/草稿/general/xslt.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 128,
+      "exportedPath": "docs/草稿/general/xslt.html",
+      "dependencies": []
+    },
+    "docs/草稿/general/yaml.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2629,
+      "exportedPath": "docs/草稿/general/yaml.html",
+      "dependencies": []
+    },
+    "docs/草稿/only-hand/wordpress.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 116,
+      "exportedPath": "docs/草稿/only-hand/wordpress.html",
+      "dependencies": []
+    },
+    "docs/草稿/编程哲学.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 581,
+      "exportedPath": "docs/草稿/编程哲学.html",
+      "dependencies": []
+    },
+    "docs/草稿/开发者-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 16218,
+      "exportedPath": "docs/草稿/开发者-main.html",
+      "dependencies": []
+    },
+    "docs/草稿/模板网站.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 282,
+      "exportedPath": "docs/草稿/模板网站.html",
+      "dependencies": []
+    },
+    "docs/草稿/排行榜.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 122,
+      "exportedPath": "docs/草稿/排行榜.html",
+      "dependencies": []
+    },
+    "docs/草稿/软件架构.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1449,
+      "exportedPath": "docs/草稿/软件架构.html",
+      "dependencies": []
+    },
+    "docs/草稿/项目思想.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 337,
+      "exportedPath": "docs/草稿/项目思想.html",
+      "dependencies": []
+    },
+    "docs/草稿/api.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 648,
+      "exportedPath": "docs/草稿/api.html",
+      "dependencies": []
+    },
+    "docs/草稿/heap.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 119,
+      "exportedPath": "docs/草稿/heap.html",
+      "dependencies": []
+    },
+    "docs/草稿/ssm_img.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 65145,
+      "exportedPath": "docs/草稿/ssm_img.html",
+      "dependencies": []
+    },
+    "docs/草稿/vercel.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 238,
+      "exportedPath": "docs/草稿/vercel.html",
+      "dependencies": []
+    },
+    "docs/浏览器/机场.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 662,
+      "exportedPath": "docs/浏览器/机场.html",
+      "dependencies": []
+    },
+    "docs/浏览器/chrome-plugin.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 24201,
+      "exportedPath": "docs/浏览器/chrome-plugin.html",
+      "dependencies": []
+    },
+    "docs/浏览器/tampermonkey.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 918,
+      "exportedPath": "docs/浏览器/tampermonkey.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/plugin-connector/obsidian--anki.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 13217,
+      "exportedPath": "docs/锐化思维/plugin-connector/obsidian-anki.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/quick-tools/PicGo.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 133,
+      "exportedPath": "docs/锐化思维/quick-tools/picgo.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/quick-tools/shareX.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2,
+      "exportedPath": "docs/锐化思维/quick-tools/sharex.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/tools/anki.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 11116,
+      "exportedPath": "docs/锐化思维/tools/anki.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/tools/learn-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 941,
+      "exportedPath": "docs/锐化思维/tools/learn-main.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/tools/obsidian.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 23553,
+      "exportedPath": "docs/锐化思维/tools/obsidian.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/tools/obsidian.api.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 46493,
+      "exportedPath": "docs/锐化思维/tools/obsidian.api.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/tools/obsidian.prac.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 7681,
+      "exportedPath": "docs/锐化思维/tools/obsidian.prac.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/tools/obsidian2.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 49226,
+      "exportedPath": "docs/锐化思维/tools/obsidian2.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/tools/SuperMemo.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 342,
+      "exportedPath": "docs/锐化思维/tools/supermemo.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/tools/vim.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 97,
+      "exportedPath": "docs/锐化思维/tools/vim.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/trash/notion.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 256,
+      "exportedPath": "docs/锐化思维/trash/notion.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/trash/onedrive.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 202,
+      "exportedPath": "docs/锐化思维/trash/onedrive.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/trash/theBrain.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 59,
+      "exportedPath": "docs/锐化思维/trash/thebrain.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/模式匹配.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1512,
+      "exportedPath": "docs/锐化思维/模式匹配.html",
+      "dependencies": []
+    },
+    "docs/锐化思维/锐化思维-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5411,
+      "exportedPath": "docs/锐化思维/锐化思维-main.html",
+      "dependencies": []
+    },
+    "docs/项目/思考.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 195,
+      "exportedPath": "docs/项目/思考.html",
+      "dependencies": []
+    },
+    "docs/项目/未命名.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 140,
+      "exportedPath": "docs/项目/未命名.html",
+      "dependencies": []
+    },
+    "docs/ai/ai--main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 141,
+      "exportedPath": "docs/ai/ai-main.html",
+      "dependencies": []
+    },
+    "docs/ai/chatgpt.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1188,
+      "exportedPath": "docs/ai/chatgpt.html",
+      "dependencies": []
+    },
+    "docs/general/after effect.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 102,
+      "exportedPath": "docs/general/after-effect.html",
+      "dependencies": []
+    },
+    "docs/general/live2d.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 546,
+      "exportedPath": "docs/general/live2d.html",
+      "dependencies": []
+    },
+    "docs/general/photoshop.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 92,
+      "exportedPath": "docs/general/photoshop.html",
+      "dependencies": []
+    },
+    "docs/正则表达式.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 367,
+      "exportedPath": "docs/正则表达式.html",
+      "dependencies": []
+    },
+    "docs/hacker.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 338,
+      "exportedPath": "docs/hacker.html",
+      "dependencies": []
+    },
+    "docs/idm cracker.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3,
+      "exportedPath": "docs/idm-cracker.html",
+      "dependencies": []
+    },
+    "docs/readme.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1067,
+      "exportedPath": "docs/readme.html",
+      "dependencies": []
+    },
+    "docs/refs.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 554,
+      "exportedPath": "docs/refs.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/草稿/集合论.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3574,
+      "exportedPath": "docs-hard/数学/草稿/集合论.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana/Algebraic Number Theory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 312,
+      "exportedPath": "docs-hard/数学/math/alge-ana/algebraic-number-theory.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana/Discrete Mathematics.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 280,
+      "exportedPath": "docs-hard/数学/math/alge-ana/discrete-mathematics.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana/Game Theory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 705,
+      "exportedPath": "docs-hard/数学/math/alge-ana/game-theory.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana/Number Theory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 288,
+      "exportedPath": "docs-hard/数学/math/alge-ana/number-theory.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/ana/Advanced Probability Theory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 808,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/ana/advanced-probability-theory.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/ana/calculus.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2672,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/ana/calculus.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/ana/precalculus.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 14190,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/ana/precalculus.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/ana/Probability Theory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2954,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/ana/probability-theory.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/ana-alge/Advanced Mathematical Analysis.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 335,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/ana-alge/advanced-mathematical-analysis.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/ana-alge/Advanced Mathematical Statistics.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 847,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/ana-alge/advanced-mathematical-statistics.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/ana-alge/Mathematical Analysis.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 578,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/ana-alge/mathematical-analysis.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/ana-alge/Mathematical Statistics.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 6539,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/ana-alge/mathematical-statistics.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/ana-alge/Numercial Analysis.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 475,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/ana-alge/numercial-analysis.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/Algebraic Topology.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 310,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/algebraic-topology.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/Algebraic Topology Motivation.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 494,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/algebraic-topology-motivation.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-ana-geo/General Topology.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 588,
+      "exportedPath": "docs-hard/数学/math/alge-ana-geo/general-topology.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-geo/Advanced Linear Algebra.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 581,
+      "exportedPath": "docs-hard/数学/math/alge-geo/advanced-linear-algebra.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-geo/Algebraic Geometry.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 390,
+      "exportedPath": "docs-hard/数学/math/alge-geo/algebraic-geometry.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-geo/Algebraic Geometry Motivation.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 272,
+      "exportedPath": "docs-hard/数学/math/alge-geo/algebraic-geometry-motivation.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-geo/Category Theory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 432,
+      "exportedPath": "docs-hard/数学/math/alge-geo/category-theory.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-geo/Combinatorics.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 541,
+      "exportedPath": "docs-hard/数学/math/alge-geo/combinatorics.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-geo/Lattice Theory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 162,
+      "exportedPath": "docs-hard/数学/math/alge-geo/lattice-theory.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-geo/Linear Algebra.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4355,
+      "exportedPath": "docs-hard/数学/math/alge-geo/linear-algebra.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/alge-geo/Motivation for Category Theory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 515,
+      "exportedPath": "docs-hard/数学/math/alge-geo/motivation-for-category-theory.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/algebra/Abstract Algebra.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 456,
+      "exportedPath": "docs-hard/数学/math/algebra/abstract-algebra.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/algebra/Advanced Abstract Algebra.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 830,
+      "exportedPath": "docs-hard/数学/math/algebra/advanced-abstract-algebra.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/algebra/Universal Algebra.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 757,
+      "exportedPath": "docs-hard/数学/math/algebra/universal-algebra.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/ana-geo/Advanced Differential Geometry.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 582,
+      "exportedPath": "docs-hard/数学/math/ana-geo/advanced-differential-geometry.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/ana-geo/Complex Analysis.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 497,
+      "exportedPath": "docs-hard/数学/math/ana-geo/complex-analysis.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/ana-geo/Convex Optimization.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 451,
+      "exportedPath": "docs-hard/数学/math/ana-geo/convex-optimization.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/ana-geo/Differential Equations.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 502,
+      "exportedPath": "docs-hard/数学/math/ana-geo/differential-equations.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/ana-geo/Differential Geometry.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 500,
+      "exportedPath": "docs-hard/数学/math/ana-geo/differential-geometry.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/ana-geo/Optimization Theory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 591,
+      "exportedPath": "docs-hard/数学/math/ana-geo/optimization-theory.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/ana-geo/Partial Differential Equations.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 490,
+      "exportedPath": "docs-hard/数学/math/ana-geo/partial-differential-equations.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/analysis/Functional Analysis.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 260,
+      "exportedPath": "docs-hard/数学/math/analysis/functional-analysis.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/analysis/Real Analysis.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 510,
+      "exportedPath": "docs-hard/数学/math/analysis/real-analysis.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/analysis/the Theory of Computation.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 359,
+      "exportedPath": "docs-hard/数学/math/analysis/the-theory-of-computation.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/basis/Axiomatic Set Theory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 664,
+      "exportedPath": "docs-hard/数学/math/basis/axiomatic-set-theory.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/basis/Mathematical Logic and Model Theory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 600,
+      "exportedPath": "docs-hard/数学/math/basis/mathematical-logic-and-model-theory.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/basis/Naive Set Theory, Mathematical Reasoning, Proofs, and Discrete Mathematics.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3031,
+      "exportedPath": "docs-hard/数学/math/basis/naive-set-theory,-mathematical-reasoning,-proofs,-and-discrete-mathematics.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/math/geo/Euclidean and Non-Euclidean Geometry.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1559,
+      "exportedPath": "docs-hard/数学/math/geo/euclidean-and-non-euclidean-geometry.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/optional/Physics.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4884,
+      "exportedPath": "docs-hard/数学/optional/physics.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/optional/Python.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 438,
+      "exportedPath": "docs-hard/数学/optional/python.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/philosophy/Logic.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1279,
+      "exportedPath": "docs-hard/数学/philosophy/logic.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/philosophy/Philosophy.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2101,
+      "exportedPath": "docs-hard/数学/philosophy/philosophy.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/philosophy/Philosophy of Probability and Statistics.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3672,
+      "exportedPath": "docs-hard/数学/philosophy/philosophy-of-probability-and-statistics.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/philosophy/Problem Solving.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 4631,
+      "exportedPath": "docs-hard/数学/philosophy/problem-solving.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/philosophy/Statistics.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3362,
+      "exportedPath": "docs-hard/数学/philosophy/statistics.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/philosophy/the Philosophy of Language.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3097,
+      "exportedPath": "docs-hard/数学/philosophy/the-philosophy-of-language.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/philosophy/the Philosophy of Mathematics and Logic.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 13038,
+      "exportedPath": "docs-hard/数学/philosophy/the-philosophy-of-mathematics-and-logic.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/数学-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 9912,
+      "exportedPath": "docs-hard/数学/数学-main.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/数学编程语言-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 13038,
+      "exportedPath": "docs-hard/数学/数学编程语言-main.html",
+      "dependencies": []
+    },
+    "docs-hard/数学/main-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2963,
+      "exportedPath": "docs-hard/数学/main-main.html",
+      "dependencies": []
+    },
+    "docs-hard/anki/题目.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 249,
+      "exportedPath": "docs-hard/anki/题目.html",
+      "dependencies": []
+    },
+    "docs-hard/anki/define.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3,
+      "exportedPath": "docs-hard/anki/define.html",
+      "dependencies": []
+    },
+    "docs-hard/anki/fuck math.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 814,
+      "exportedPath": "docs-hard/anki/fuck-math.html",
+      "dependencies": []
+    },
+    "docs-hwo/草稿/厨艺.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 258,
+      "exportedPath": "docs-hwo/草稿/厨艺.html",
+      "dependencies": []
+    },
+    "docs-hwo/搞钱/搞钱.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1033,
+      "exportedPath": "docs-hwo/搞钱/搞钱.html",
+      "dependencies": []
+    },
+    "docs-hwo/实习/词汇表.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 15,
+      "exportedPath": "docs-hwo/实习/词汇表.html",
+      "dependencies": []
+    },
+    "docs-hwo/实习/实习.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 139,
+      "exportedPath": "docs-hwo/实习/实习.html",
+      "dependencies": []
+    },
+    "docs-hwo/实习/芯享科技.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 419,
+      "exportedPath": "docs-hwo/实习/芯享科技.html",
+      "dependencies": []
+    },
+    "docs-hwo/杂/代理.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 79,
+      "exportedPath": "docs-hwo/杂/代理.html",
+      "dependencies": []
+    },
+    "docs-hwo/杂/健康管理.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 205,
+      "exportedPath": "docs-hwo/杂/健康管理.html",
+      "dependencies": []
+    },
+    "docs-hwo/杂/万华镜.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 360,
+      "exportedPath": "docs-hwo/杂/万华镜.html",
+      "dependencies": []
+    },
+    "docs-hwo/杂/无锡学院.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 200,
+      "exportedPath": "docs-hwo/杂/无锡学院.html",
+      "dependencies": []
+    },
+    "docs-hwo/杂/友链.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 218,
+      "exportedPath": "docs-hwo/杂/友链.html",
+      "dependencies": []
+    },
+    "docs-hwo/杂/mc.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1012,
+      "exportedPath": "docs-hwo/杂/mc.html",
+      "dependencies": []
+    },
+    "docs-hwo/杂/offer.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 531,
+      "exportedPath": "docs-hwo/杂/offer.html",
+      "dependencies": []
+    },
+    "docs-hwo/杂/ref.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1603,
+      "exportedPath": "docs-hwo/杂/ref.html",
+      "dependencies": []
+    },
+    "docs-hwo/computer/电脑.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3209,
+      "exportedPath": "docs-hwo/computer/电脑.html",
+      "dependencies": []
+    },
+    "docs-hwo/computer/装机.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 156,
+      "exportedPath": "docs-hwo/computer/装机.html",
+      "dependencies": []
+    },
+    "docs-hwo/computer/windows.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 6628,
+      "exportedPath": "docs-hwo/computer/windows.html",
+      "dependencies": []
+    },
+    "docs-hwo/me/家.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 730,
+      "exportedPath": "docs-hwo/me/家.html",
+      "dependencies": []
+    },
+    "docs-hwo/pwd/账号.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1,
+      "exportedPath": "docs-hwo/pwd/账号.html",
+      "dependencies": []
+    },
+    "docs-hwo/pwd/api-keys.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2322,
+      "exportedPath": "docs-hwo/pwd/api-keys.html",
+      "dependencies": []
+    },
+    "docs-hwo/pwd/keys.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 19182,
+      "exportedPath": "docs-hwo/pwd/keys.html",
+      "dependencies": []
+    },
+    "docs-hwo/templater/github-img.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 68,
+      "exportedPath": "docs-hwo/templater/github-img.html",
+      "dependencies": []
+    },
+    "docs-hwo/templater/readme.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 789,
+      "exportedPath": "docs-hwo/templater/readme.html",
+      "dependencies": []
+    },
+    "docs-hwo/templater/test.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 56,
+      "exportedPath": "docs-hwo/templater/test.html",
+      "dependencies": []
+    },
+    "docs-hwo/templater-func/hello.js": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 72,
+      "exportedPath": "docs-hwo/templater-func/hello.js",
+      "dependencies": []
+    },
+    "docs-hwo/程序员常识.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 372,
+      "exportedPath": "docs-hwo/程序员常识.html",
+      "dependencies": []
+    },
+    "docs-hwo/法律.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 285,
+      "exportedPath": "docs-hwo/法律.html",
+      "dependencies": []
+    },
+    "docs-hwo/话题.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 138,
+      "exportedPath": "docs-hwo/话题.html",
+      "dependencies": []
+    },
+    "docs-hwo/坤.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 201,
+      "exportedPath": "docs-hwo/坤.html",
+      "dependencies": []
+    },
+    "docs-hwo/通用工具.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 14,
+      "exportedPath": "docs-hwo/通用工具.html",
+      "dependencies": []
+    },
+    "docs-hwo/杂记.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 23,
+      "exportedPath": "docs-hwo/杂记.html",
+      "dependencies": []
+    },
+    "docs-hwo/url-collection.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 57,
+      "exportedPath": "docs-hwo/url-collection.html",
+      "dependencies": []
+    },
+    "docs-me/info/area.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2568,
+      "exportedPath": "docs-me/info/area.html",
+      "dependencies": []
+    },
+    "docs-me/info/saying.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 146,
+      "exportedPath": "docs-me/info/saying.html",
+      "dependencies": []
+    },
+    "docs-me/info/school.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 152,
+      "exportedPath": "docs-me/info/school.html",
+      "dependencies": []
+    },
+    "docs-me/intrest/鬼畜.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5845,
+      "exportedPath": "docs-me/intrest/鬼畜.html",
+      "dependencies": []
+    },
+    "docs-me/intrest/hehe.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 228,
+      "exportedPath": "docs-me/intrest/hehe.html",
+      "dependencies": []
+    },
+    "docs-me/school/memory.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 125,
+      "exportedPath": "docs-me/school/memory.html",
+      "dependencies": [
+        "lib/media/pasted-image-20240512223722.png"
+      ]
+    },
+    "docs-me/backup.bat": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 57,
+      "exportedPath": "docs-me/backup.bat",
+      "dependencies": []
+    },
+    "docs-me/issue.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 273,
+      "exportedPath": "docs-me/issue.html",
+      "dependencies": []
+    },
+    "docs-me/literal.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 323,
+      "exportedPath": "docs-me/literal.html",
+      "dependencies": []
+    },
+    "docs-me/readme.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 29,
+      "exportedPath": "docs-me/readme.html",
+      "dependencies": []
+    },
+    "docs-tmp/厨艺.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 159,
+      "exportedPath": "docs-tmp/厨艺.html",
+      "dependencies": []
+    },
+    "docs-tmp/地理.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1462,
+      "exportedPath": "docs-tmp/地理.html",
+      "dependencies": []
+    },
+    "docs-tmp/生物.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 117,
+      "exportedPath": "docs-tmp/生物.html",
+      "dependencies": []
+    },
+    "docs-tmp/思考.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 200,
+      "exportedPath": "docs-tmp/思考.html",
+      "dependencies": []
+    },
+    "docs-tmp/需求调查.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 208,
+      "exportedPath": "docs-tmp/需求调查.html",
+      "dependencies": []
+    },
+    "docs-tmp/backup.bat": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 57,
+      "exportedPath": "docs-tmp/backup.bat",
+      "dependencies": []
+    },
+    "docs-tmp/pull.bat": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 9,
+      "exportedPath": "docs-tmp/pull.bat",
+      "dependencies": []
+    },
+    "docs-tmp/push.bat": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 57,
+      "exportedPath": "docs-tmp/push.bat",
+      "dependencies": []
+    },
+    "docs-tmp/readme.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 48,
+      "exportedPath": "docs-tmp/readme.html",
+      "dependencies": []
+    },
+    "project/web/智慧校园管理系统.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 7735,
+      "exportedPath": "project/web/智慧校园管理系统.html",
+      "dependencies": []
+    },
+    "project/readme.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 120,
+      "exportedPath": "project/readme.html",
+      "dependencies": []
+    },
+    "quick/exe/analysis/readme.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 21,
+      "exportedPath": "quick/exe/analysis/readme.html",
+      "dependencies": []
+    },
+    "quick/exe/analysis/word.rb": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 462,
+      "exportedPath": "quick/exe/analysis/word.rb",
+      "dependencies": []
+    },
+    "quick/exe/analysis/word2.rb": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 677,
+      "exportedPath": "quick/exe/analysis/word2.rb",
+      "dependencies": []
+    },
+    "quick/exe/chomp/chomp.rb": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 266,
+      "exportedPath": "quick/exe/chomp/chomp.rb",
+      "dependencies": []
+    },
+    "quick/exe/chomp/readme.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 172,
+      "exportedPath": "quick/exe/chomp/readme.html",
+      "dependencies": []
+    },
+    "quick/exe/chomp/run.bat": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 13,
+      "exportedPath": "quick/exe/chomp/run.bat",
+      "dependencies": []
+    },
+    "quick/exe/gsub/gsub.rb": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 394,
+      "exportedPath": "quick/exe/gsub/gsub.rb",
+      "dependencies": []
+    },
+    "quick/exe/gsub/in.txt": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 13,
+      "exportedPath": "quick/exe/gsub/in.txt",
+      "dependencies": []
+    },
+    "quick/exe/gsub/run.bat": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 22,
+      "exportedPath": "quick/exe/gsub/run.bat",
+      "dependencies": []
+    },
+    "quick/exe/link to dict/dict.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 155,
+      "exportedPath": "quick/exe/link-to-dict/dict.html",
+      "dependencies": []
+    },
+    "quick/exe/link to dict/dict_.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 158,
+      "exportedPath": "quick/exe/link-to-dict/dict_.html",
+      "dependencies": []
+    },
+    "quick/exe/link to dict/link to dict.rb": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 482,
+      "exportedPath": "quick/exe/link-to-dict/link-to-dict.rb",
+      "dependencies": []
+    },
+    "quick/exe/link to dict/link to dict - 副本.rb": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 482,
+      "exportedPath": "quick/exe/link-to-dict/link-to-dict-副本.rb",
+      "dependencies": []
+    },
+    "quick/exe/link to dict/readme.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 194,
+      "exportedPath": "quick/exe/link-to-dict/readme.html",
+      "dependencies": []
+    },
+    "quick/exe/link to dict/run.bat": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 22,
+      "exportedPath": "quick/exe/link-to-dict/run.bat",
+      "dependencies": []
+    },
+    "quick/exe/link to dict/txt.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 6597,
+      "exportedPath": "quick/exe/link-to-dict/txt.html",
+      "dependencies": []
+    },
+    "quick/exe/link to dict/txt_.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 198,
+      "exportedPath": "quick/exe/link-to-dict/txt_.html",
+      "dependencies": []
+    },
+    "quick/exe/list to headers/list to headers.rb": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 747,
+      "exportedPath": "quick/exe/list-to-headers/list-to-headers.rb",
+      "dependencies": []
+    },
+    "quick/exe/list to headers/list to headers2.rb": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 466,
+      "exportedPath": "quick/exe/list-to-headers/list-to-headers2.rb",
+      "dependencies": []
+    },
+    "quick/exe/list to headers/list to headers2_plus.rb": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 487,
+      "exportedPath": "quick/exe/list-to-headers/list-to-headers2_plus.rb",
+      "dependencies": []
+    },
+    "quick/exe/list to headers/run.bat": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 25,
+      "exportedPath": "quick/exe/list-to-headers/run.bat",
+      "dependencies": []
+    },
+    "quick/exe/list to headers/sds.rb": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 497,
+      "exportedPath": "quick/exe/list-to-headers/sds.rb",
+      "dependencies": []
+    },
+    "quick/exe/readme.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 182,
+      "exportedPath": "quick/exe/readme.html",
+      "dependencies": []
+    },
+    "quick/plugins - 快捷方式.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1060,
+      "exportedPath": "quick/plugins-快捷方式.lnk",
+      "dependencies": []
+    },
+    "quick/plugins-backup.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1362,
+      "exportedPath": "quick/plugins-backup.lnk",
+      "dependencies": []
+    },
+    "quick/run-plugins.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1296,
+      "exportedPath": "quick/run-plugins.lnk",
+      "dependencies": []
+    },
+    "quick/run-snippets.lnk": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1320,
+      "exportedPath": "quick/run-snippets.lnk",
+      "dependencies": []
+    },
+    "trash/default_vault/待办/挑战.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 213,
+      "exportedPath": "trash/default_vault/待办/挑战.html",
+      "dependencies": []
+    },
+    "trash/default_vault/待办/重要.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2505,
+      "exportedPath": "trash/default_vault/待办/重要.html",
+      "dependencies": []
+    },
+    "trash/default_vault/周记/template.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5,
+      "exportedPath": "trash/default_vault/周记/template.html",
+      "dependencies": []
+    },
+    "trash/default_vault/canvas/未命名.canvas": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2000,
+      "exportedPath": "trash/default_vault/canvas/未命名.html",
+      "dependencies": []
+    },
+    "trash/default_vault/core/草稿.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 145,
+      "exportedPath": "trash/default_vault/core/草稿.html",
+      "dependencies": []
+    },
+    "trash/default_vault/core/短期重要待办.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 11659,
+      "exportedPath": "trash/default_vault/core/短期重要待办.html",
+      "dependencies": []
+    },
+    "trash/default_vault/core/复盘.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 979,
+      "exportedPath": "trash/default_vault/core/复盘.html",
+      "dependencies": []
+    },
+    "trash/default_vault/core/灵感.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5876,
+      "exportedPath": "trash/default_vault/core/灵感.html",
+      "dependencies": []
+    },
+    "trash/default_vault/core/前瞻.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1814,
+      "exportedPath": "trash/default_vault/core/前瞻.html",
+      "dependencies": []
+    },
+    "trash/default_vault/core/任务看板.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 101,
+      "exportedPath": "trash/default_vault/core/任务看板.html",
+      "dependencies": []
+    },
+    "trash/default_vault/core/信息和资源.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2252,
+      "exportedPath": "trash/default_vault/core/信息和资源.html",
+      "dependencies": []
+    },
+    "trash/default_vault/core/interest.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 954,
+      "exportedPath": "trash/default_vault/core/interest.html",
+      "dependencies": []
+    },
+    "trash/default_vault/dict/test.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 74,
+      "exportedPath": "trash/default_vault/dict/test.html",
+      "dependencies": []
+    },
+    "trash/default_vault/templates/admonition/ad-note.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 23,
+      "exportedPath": "trash/default_vault/templates/admonition/ad-note.html",
+      "dependencies": []
+    },
+    "trash/default_vault/templates/标题.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 154,
+      "exportedPath": "trash/default_vault/templates/标题.html",
+      "dependencies": []
+    },
+    "trash/default_vault/templates/audio.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 82,
+      "exportedPath": "trash/default_vault/templates/audio.html",
+      "dependencies": []
+    },
+    "trash/default_vault/templates/daily.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 736,
+      "exportedPath": "trash/default_vault/templates/daily.html",
+      "dependencies": []
+    },
+    "trash/default_vault/templates/iframe.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 108,
+      "exportedPath": "trash/default_vault/templates/iframe.html",
+      "dependencies": []
+    },
+    "trash/default_vault/templates/img.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 31,
+      "exportedPath": "trash/default_vault/templates/img.html",
+      "dependencies": []
+    },
+    "trash/default_vault/chatgpt.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2121,
+      "exportedPath": "trash/default_vault/chatgpt.html",
+      "dependencies": []
+    },
+    "trash/default_vault/q群.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1407,
+      "exportedPath": "trash/default_vault/q群.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-11/11.22.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 146,
+      "exportedPath": "trash/record/2023/2023-11/11.22.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-11/2023-11-22.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 146,
+      "exportedPath": "trash/record/2023/2023-11/2023-11-22.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-11/2023-11-23.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 317,
+      "exportedPath": "trash/record/2023/2023-11/2023-11-23.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-11/2023-11-26.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2144,
+      "exportedPath": "trash/record/2023/2023-11/2023-11-26.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-11/2023-11-26!.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2723,
+      "exportedPath": "trash/record/2023/2023-11/2023-11-26!.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-11/2023-11-29.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "trash/record/2023/2023-11/2023-11-29.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-11/2023-11-30.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 451,
+      "exportedPath": "trash/record/2023/2023-11/2023-11-30.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-11/反省框架.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 163,
+      "exportedPath": "trash/record/2023/2023-11/反省框架.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-01.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 667,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-01.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-02.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 436,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-02.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-03.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 436,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-03.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-09.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 437,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-09.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-15.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1283,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-15.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-16.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1177,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-16.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-17.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 763,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-17.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-18.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 902,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-18.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-20.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1005,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-20.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-21.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 737,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-21.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-27.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1022,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-27.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-28.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1136,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-28.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-30.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1071,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-30.html",
+      "dependencies": []
+    },
+    "trash/record/2023/2023-12/2023-12-31.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 116,
+      "exportedPath": "trash/record/2023/2023-12/2023-12-31.html",
+      "dependencies": []
+    },
+    "trash/record/2023/quarterly.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 70,
+      "exportedPath": "trash/record/2023/quarterly.html",
+      "dependencies": []
+    },
+    "trash/record/2024/2024-1/2024-01-01.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 149,
+      "exportedPath": "trash/record/2024/2024-1/2024-01-01.html",
+      "dependencies": []
+    },
+    "trash/record/2024/2024-1/2024-01-02.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 72,
+      "exportedPath": "trash/record/2024/2024-1/2024-01-02.html",
+      "dependencies": []
+    },
+    "trash/record/2024/2024-1/2024-01-03.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 151,
+      "exportedPath": "trash/record/2024/2024-1/2024-01-03.html",
+      "dependencies": []
+    },
+    "trash/record/2024/2024-2/2024-02-04.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 130,
+      "exportedPath": "trash/record/2024/2024-2/2024-02-04.html",
+      "dependencies": []
+    },
+    "trash/record/database/software.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 59,
+      "exportedPath": "trash/record/database/software.html",
+      "dependencies": []
+    },
+    "trash/record/templates/daily.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 76,
+      "exportedPath": "trash/record/templates/daily.html",
+      "dependencies": []
+    },
+    "trash/record/templates/daily-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 897,
+      "exportedPath": "trash/record/templates/daily-main.html",
+      "dependencies": []
+    },
+    "trash/record/tmp/2024-02-10.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 72,
+      "exportedPath": "trash/record/tmp/2024-02-10.html",
+      "dependencies": []
+    },
+    "trash/record/tmp/2024-02-11.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 72,
+      "exportedPath": "trash/record/tmp/2024-02-11.html",
+      "dependencies": []
+    },
+    "trash/record/tmp/2024-02-13.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 72,
+      "exportedPath": "trash/record/tmp/2024-02-13.html",
+      "dependencies": []
+    },
+    "trash/record/tmp/2024-W06.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 285,
+      "exportedPath": "trash/record/tmp/2024-w06.html",
+      "dependencies": []
+    },
+    "trash/record/死则.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 69,
+      "exportedPath": "trash/record/死则.html",
+      "dependencies": []
+    },
+    "trash/record/readme.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 506,
+      "exportedPath": "trash/record/readme.html",
+      "dependencies": []
+    },
+    "trash/草稿.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 283,
+      "exportedPath": "trash/草稿.html",
+      "dependencies": []
+    },
+    "trash/短期重要待办.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 11668,
+      "exportedPath": "trash/短期重要待办.html",
+      "dependencies": []
+    },
+    "trash/复盘.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 978,
+      "exportedPath": "trash/复盘.html",
+      "dependencies": []
+    },
+    "trash/寒假计划.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2009,
+      "exportedPath": "trash/寒假计划.html",
+      "dependencies": []
+    },
+    "trash/灵感.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5876,
+      "exportedPath": "trash/灵感.html",
+      "dependencies": []
+    },
+    "trash/前瞻.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1814,
+      "exportedPath": "trash/前瞻.html",
+      "dependencies": []
+    },
+    "trash/信息和资源.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2252,
+      "exportedPath": "trash/信息和资源.html",
+      "dependencies": []
+    },
+    "trash/周期性待办.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 434,
+      "exportedPath": "trash/周期性待办.html",
+      "dependencies": []
+    },
+    "trash/interest.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 954,
+      "exportedPath": "trash/interest.html",
+      "dependencies": []
+    },
+    "trash/scripts.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1852,
+      "exportedPath": "trash/scripts.html",
+      "dependencies": []
+    },
+    "冥想.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 639,
+      "exportedPath": "冥想.html",
+      "dependencies": []
+    },
+    "未命名.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 2825,
+      "exportedPath": "未命名.html",
+      "dependencies": []
+    },
+    "music.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 88,
+      "exportedPath": "music.html",
+      "dependencies": []
+    },
+    "readme.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 734,
+      "exportedPath": "readme.html",
+      "dependencies": []
+    },
+    "tasks-index.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1321,
+      "exportedPath": "tasks-index.html",
+      "dependencies": []
+    },
+    "tasks-workspace.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 0,
+      "exportedPath": "tasks-workspace.html",
+      "dependencies": []
+    },
+    "todo.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1153,
+      "exportedPath": "todo.html",
+      "dependencies": [
+        "assets/img/pasted-image-20240501113443.png"
+      ]
+    },
+    "vault-main.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 793,
+      "exportedPath": "vault-main.html",
+      "dependencies": []
+    },
+    "word.md": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 769,
+      "exportedPath": "word.html",
+      "dependencies": []
+    },
+    "lib/media/pasted-image-20240512223722.png": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 593615,
+      "exportedPath": "lib/media/pasted-image-20240512223722.png",
+      "dependencies": []
+    },
+    "assets/img/pasted-image-20240501113443.png": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 153264,
+      "exportedPath": "assets/img/pasted-image-20240501113443.png",
+      "dependencies": []
+    },
+    "lib/scripts/graph-wasm.wasm": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 23377,
+      "exportedPath": "lib/scripts/graph-wasm.wasm",
+      "dependencies": []
+    },
+    "lib/fonts/94f2f163d4b698242fef.otf": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 66800,
+      "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
+      "dependencies": []
+    },
+    "lib/fonts/72505e6a122c6acd5471.woff2": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 104232,
+      "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/2d5198822ab091ce4305.woff2": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 104332,
+      "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 98868,
+      "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/cb10ffd7684cd9836a05.woff2": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 106876,
+      "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/b5f0f109bc88052d4000.woff2": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 105804,
+      "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/cbe0ae49c52c920fd563.woff2": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 106108,
+      "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/535a6cf662596b3bd6a6.woff2": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 111708,
+      "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
+      "dependencies": []
+    },
+    "lib/fonts/70cc7ff27245e82ad414.ttf": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 192740,
+      "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/454577c22304619db035.ttf": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 161376,
+      "exportedPath": "lib/fonts/454577c22304619db035.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/52ac8f3034507f1d9e53.ttf": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 191568,
+      "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/05b618077343fbbd92b7.ttf": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 155288,
+      "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
+      "dependencies": []
+    },
+    "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 7876,
+      "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
+      "dependencies": []
+    },
+    "lib/media/874d8b8e340f75575caa.svg": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 317,
+      "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
+      "dependencies": []
+    },
+    "lib/media/3d6c1bdc4d87cde4de67.svg": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 279,
+      "exportedPath": "lib/media/3d6c1bdc4d87cde4de67.svg",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_zero.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1368,
+      "exportedPath": "lib/fonts/mathjax_zero.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_main-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 34160,
+      "exportedPath": "lib/fonts/mathjax_main-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_main-bold.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 34464,
+      "exportedPath": "lib/fonts/mathjax_main-bold.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_math-italic.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 19360,
+      "exportedPath": "lib/fonts/mathjax_math-italic.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_main-italic.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 20832,
+      "exportedPath": "lib/fonts/mathjax_main-italic.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_math-bolditalic.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 19776,
+      "exportedPath": "lib/fonts/mathjax_math-bolditalic.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_size1-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5792,
+      "exportedPath": "lib/fonts/mathjax_size1-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_size2-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5464,
+      "exportedPath": "lib/fonts/mathjax_size2-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_size3-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 3244,
+      "exportedPath": "lib/fonts/mathjax_size3-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_size4-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5148,
+      "exportedPath": "lib/fonts/mathjax_size4-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_ams-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 40808,
+      "exportedPath": "lib/fonts/mathjax_ams-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_calligraphic-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 9600,
+      "exportedPath": "lib/fonts/mathjax_calligraphic-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_calligraphic-bold.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 9908,
+      "exportedPath": "lib/fonts/mathjax_calligraphic-bold.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_fraktur-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 21480,
+      "exportedPath": "lib/fonts/mathjax_fraktur-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_fraktur-bold.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 22340,
+      "exportedPath": "lib/fonts/mathjax_fraktur-bold.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_sansserif-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 12660,
+      "exportedPath": "lib/fonts/mathjax_sansserif-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_sansserif-bold.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 15944,
+      "exportedPath": "lib/fonts/mathjax_sansserif-bold.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_sansserif-italic.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 14628,
+      "exportedPath": "lib/fonts/mathjax_sansserif-italic.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_script-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 11852,
+      "exportedPath": "lib/fonts/mathjax_script-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_typewriter-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 17604,
+      "exportedPath": "lib/fonts/mathjax_typewriter-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_vector-regular.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1136,
+      "exportedPath": "lib/fonts/mathjax_vector-regular.woff",
+      "dependencies": []
+    },
+    "lib/fonts/mathjax_vector-bold.woff": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1116,
+      "exportedPath": "lib/fonts/mathjax_vector-bold.woff",
+      "dependencies": []
+    },
+    "lib/html/file-tree.html": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 283380,
+      "exportedPath": "lib/html/file-tree.html",
+      "dependencies": []
+    },
+    "lib/scripts/webpage.js": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 47290,
+      "exportedPath": "lib/scripts/webpage.js",
+      "dependencies": []
+    },
+    "lib/scripts/graph-view.js": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 15519,
+      "exportedPath": "lib/scripts/graph-view.js",
+      "dependencies": []
+    },
+    "lib/scripts/graph-wasm.js": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 14021,
+      "exportedPath": "lib/scripts/graph-wasm.js",
+      "dependencies": []
+    },
+    "lib/scripts/graph-render-worker.js": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 5179,
+      "exportedPath": "lib/scripts/graph-render-worker.js",
+      "dependencies": []
+    },
+    "lib/scripts/tinycolor.js": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 29832,
+      "exportedPath": "lib/scripts/tinycolor.js",
+      "dependencies": []
+    },
+    "lib/scripts/pixi.js": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 449509,
+      "exportedPath": "lib/scripts/pixi.js",
+      "dependencies": []
+    },
+    "lib/scripts/minisearch.js": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 29422,
+      "exportedPath": "lib/scripts/minisearch.js",
+      "dependencies": []
+    },
+    "lib/media/favicon.png": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1105,
+      "exportedPath": "lib/media/favicon.png",
+      "dependencies": []
+    },
+    "lib/scripts/graph-data.js": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 28453,
+      "exportedPath": "lib/scripts/graph-data.js",
+      "dependencies": []
+    },
+    "lib/styles/obsidian.css": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 130183,
+      "exportedPath": "lib/styles/obsidian.css",
+      "dependencies": []
+    },
+    "lib/styles/global-variable-styles.css": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 210,
+      "exportedPath": "lib/styles/global-variable-styles.css",
+      "dependencies": []
+    },
+    "lib/styles/supported-plugins.css": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 1746,
+      "exportedPath": "lib/styles/supported-plugins.css",
+      "dependencies": []
+    },
+    "lib/styles/main-styles.css": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 23130,
+      "exportedPath": "lib/styles/main-styles.css",
+      "dependencies": []
+    },
+    "lib/styles/snippets.css": {
+      "modifiedTime": 1718529047410,
+      "sourceSize": 19626,
+      "exportedPath": "lib/styles/snippets.css",
+      "dependencies": []
+    }
+  }
+}

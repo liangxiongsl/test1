@@ -1,0 +1,688 @@
+<!DOCTYPE html> <html><head>
+		<title>毕业设计-main</title>
+		<base href="..\../">
+		<meta id="root-path" root-path="..\../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="obsidian-vault - 毕业设计-main">
+		<meta property="og:title" content="毕业设计-main">
+		<meta property="og:description" content="obsidian-vault - 毕业设计-main">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="待办项目/毕业论文/毕业设计-main.html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="obsidian-vault">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles">mjx-c.mjx-c222B.TEX-S2::before{padding:1.36em .944em .862em 0;content:"∫"}mjx-c.mjx-c7B.TEX-S2::before{padding:1.15em .667em .649em 0;content:"{"}mjx-c.mjx-c7D.TEX-S2::before{padding:1.15em .667em .649em 0;content:"}"}mjx-c.mjx-c20D7.TEX-V::before{padding:.714em .5em 0 0;content:"→"}mjx-c.mjx-c1D6FE.TEX-I::before{padding:.441em .543em .216em 0;content:"γ"}mjx-c.mjx-c1D417.TEX-B::before{padding:.686em .869em 0 0;content:"X"}mjx-c.mjx-c2D9.TEX-B::before{padding:.695em .575em 0 0;content:"˙"}mjx-c.mjx-c1D420.TEX-B::before{padding:.455em .575em .201em 0;content:"g"}mjx-c.mjx-c1D41D.TEX-B::before{padding:.694em .639em .006em 0;content:"d"}mjx-c.mjx-c211A.TEX-A::before{padding:.701em .778em .181em 0;content:"Q"}mjx-c.mjx-c1D402.TEX-B::before{padding:.697em .831em .011em 0;content:"C"}mjx-c.mjx-c1D410.TEX-B::before{padding:.696em .864em .193em 0;content:"Q"}mjx-c.mjx-c2119.TEX-A::before{padding:.683em .611em 0 0;content:"P"}mjx-c.mjx-c2223::before{padding:.75em .278em .249em 0;content:"∣"}mjx-c.mjx-cA8::before{padding:.669em .5em 0 0;content:"¨"}mjx-c.mjx-c1D713.TEX-I::before{padding:.694em .651em .205em 0;content:"ψ"}mjx-c.mjx-c2B.TEX-B::before{padding:.633em .894em .131em 0;content:"+"}mjx-c.mjx-c1D7D0.TEX-B::before{padding:.654em .575em 0 0;content:"2"}mjx-c.mjx-c2034::before{padding:.56em .825em 0 0;content:"′′′"}mjx-c.mjx-c221A.TEX-S4::before{padding:1.75em 1.02em 1.25em 0;content:"√"}mjx-mroot{display:inline-block;text-align:left}mjx-root{display:inline-block;white-space:nowrap}mjx-surd{display:inline-block;vertical-align:top}mjx-sqrt{display:inline-block;padding-top:.07em}mjx-sqrt>mjx-box{border-top:.07em solid}mjx-sqrt.mjx-tall>mjx-box{padding-left:.3em;margin-left:-.3em}mjx-c.mjx-c2DA::before{padding:.715em .5em 0 0;content:"˚"}mjx-c.mjx-c1D43E.TEX-I::before{padding:.683em .889em 0 0;content:"K"}mjx-c.mjx-c7B.TEX-S1::before{padding:.85em .583em .349em 0;content:"{"}mjx-c.mjx-c7D.TEX-S1::before{padding:.85em .583em .349em 0;content:"}"}mjx-c.mjx-c2D9::before{padding:.669em .5em 0 0;content:"˙"}mjx-c.mjx-cB0::before{padding:.715em .5em 0 0;content:"°"}mjx-c.mjx-c1D41F.TEX-B::before{padding:.7em .452em 0 0;content:"f"}mjx-c.mjx-c28.TEX-B::before{padding:.75em .447em .249em 0;content:"("}mjx-c.mjx-c2212.TEX-B::before{padding:.281em .894em 0 0;content:"−"}mjx-c.mjx-c50.TEX-C::before{padding:.683em .733em .057em 0;content:"P"}mjx-c.mjx-c3A3::before{padding:.683em .722em 0 0;content:"Σ"}mjx-c.mjx-c1D42A.TEX-B::before{padding:.45em .607em .194em 0;content:"q"}mjx-c.mjx-c1D411.TEX-B::before{padding:.686em .862em .011em 0;content:"R"}mjx-c.mjx-c29.TEX-B::before{padding:.75em .447em .249em 0;content:")"}mjx-c.mjx-cAC::before{padding:.356em .667em 0 0;content:"¬"}mjx-c.mjx-c21CC.TEX-A::before{padding:.514em 1em .014em 0;content:"⇌"}mjx-c.mjx-c27F6::before{padding:.511em 1.638em .011em 0;content:"⟶"}mjx-c.mjx-c45.TEX-C::before{padding:.705em .564em .022em 0;content:"E"}mjx-c.mjx-c1D432.TEX-B::before{padding:.444em .607em .2em 0;content:"y"}mjx-c.mjx-c4E::before{padding:.683em .75em 0 0;content:"N"}mjx-c.mjx-c75::before{padding:.442em .556em .011em 0;content:"u"}mjx-c.mjx-c1D42D.TEX-B::before{padding:.635em .447em .005em 0;content:"t"}mjx-c.mjx-c43::before{padding:.705em .722em .021em 0;content:"C"}mjx-c.mjx-c42.TEX-C::before{padding:.705em .657em .022em 0;content:"B"}mjx-c.mjx-c2C.TEX-B::before{padding:.171em .319em .194em 0;content:","}mjx-c.mjx-c6B::before{padding:.694em .528em 0 0;content:"k"}mjx-c.mjx-c22A5::before{padding:.668em .778em 0 0;content:"⊥"}mjx-c.mjx-c2212::before{padding:.583em .778em .082em 0;content:"−"}mjx-c.mjx-c5D.TEX-B::before{padding:.75em .319em .25em 0;content:"]"}mjx-c.mjx-c43.TEX-C::before{padding:.705em .527em .025em 0;content:"C"}mjx-c.mjx-c2C.TEX-MI::before{padding:.121em .307em .194em 0;content:","}mjx-c.mjx-c5B.TEX-S1::before{padding:.85em .417em .349em 0;content:"["}mjx-c.mjx-c5D.TEX-S1::before{padding:.85em .417em .349em 0;content:"]"}mjx-c.mjx-c1D41E.TEX-B::before{padding:.452em .527em .006em 0;content:"e"}mjx-c.mjx-c22F1::before{padding:1.52em 1.282em 0 0;content:"⋱"}mjx-c.mjx-c7D.TEX-S3::before{padding:1.45em .75em .949em 0;content:"}"}mjx-c.mjx-c1D43C.TEX-I::before{padding:.683em .504em 0 0;content:"I"}mjx-c.mjx-c1D408.TEX-B::before{padding:.686em .436em 0 0;content:"I"}mjx-c.mjx-c1D448.TEX-I::before{padding:.683em .767em .022em 0;content:"U"}mjx-c.mjx-c1D400.TEX-B::before{padding:.698em .869em 0 0;content:"A"}mjx-c.mjx-c1D431.TEX-B::before{padding:.444em .607em 0 0;content:"x"}mjx-c.mjx-c1D429.TEX-B::before{padding:.45em .639em .194em 0;content:"p"}mjx-c.mjx-c1D7CE.TEX-B::before{padding:.654em .575em .01em 0;content:"0"}mjx-c.mjx-c1D405.TEX-B::before{padding:.68em .724em 0 0;content:"F"}mjx-c.mjx-c1D403.TEX-B::before{padding:.686em .882em 0 0;content:"D"}mjx-c.mjx-c5B.TEX-S2::before{padding:1.15em .472em .649em 0;content:"["}mjx-c.mjx-c5D.TEX-S2::before{padding:1.15em .472em .649em 0;content:"]"}mjx-c.mjx-c1D427.TEX-B::before{padding:.45em .639em 0 0;content:"n"}mjx-c.mjx-c1D412.TEX-B::before{padding:.697em .639em .011em 0;content:"S"}mjx-c.mjx-c1D41C.TEX-B::before{padding:.453em .511em .006em 0;content:"c"}mjx-c.mjx-c1D425.TEX-B::before{padding:.694em .319em 0 0;content:"l"}mjx-c.mjx-c222C.TEX-S1::before{padding:.805em .957em .306em 0;content:"∬"}mjx-c.mjx-c1D41A.TEX-B::before{padding:.453em .559em .006em 0;content:"a"}mjx-c.mjx-c1D41B.TEX-B::before{padding:.694em .639em .006em 0;content:"b"}mjx-c.mjx-c1D422.TEX-B::before{padding:.695em .319em 0 0;content:"i"}mjx-c.mjx-c1D423.TEX-B::before{padding:.695em .351em .2em 0;content:"j"}mjx-c.mjx-c1D424.TEX-B::before{padding:.694em .607em 0 0;content:"k"}mjx-c.mjx-c1D70C.TEX-I::before{padding:.442em .517em .216em 0;content:"ρ"}mjx-c.mjx-c1D719.TEX-I::before{padding:.694em .596em .205em 0;content:"ϕ"}mjx-c.mjx-c2DC.TEX-S1::before{padding:.722em .556em 0 0;content:"˜"}mjx-c.mjx-c222D.TEX-S1::before{padding:.805em 1.304em .306em 0;content:"∭"}mjx-c.mjx-c2DC::before{padding:.668em .5em 0 0;content:"˜"}mjx-c.mjx-c7B.TEX-S4::before{padding:1.75em .806em 1.249em 0;content:"{"}mjx-c.mjx-c1D42E.TEX-B::before{padding:.45em .639em .006em 0;content:"u"}mjx-c.mjx-c2207::before{padding:.683em .833em .033em 0;content:"∇"}mjx-stretchy-v.mjx-c2016 mjx-ext mjx-c::before{content:"∥";width:.556em}mjx-c.mjx-c27E8::before{padding:.75em .389em .25em 0;content:"⟨"}mjx-c.mjx-c27E9::before{padding:.75em .389em .25em 0;content:"⟩"}mjx-c.mjx-c1D705.TEX-I::before{padding:.442em .576em .011em 0;content:"κ"}mjx-c.mjx-c1D42C.TEX-B::before{padding:.453em .454em .006em 0;content:"s"}mjx-c.mjx-c1D401.TEX-B::before{padding:.686em .818em 0 0;content:"B"}mjx-c.mjx-c1D40D.TEX-B::before{padding:.686em .9em 0 0;content:"N"}mjx-stretchy-h.mjx-c2192 mjx-ext mjx-c::before{content:"−";padding:.583em 0 .082em}mjx-stretchy-h.mjx-c2192 mjx-end mjx-c::before{content:"→";padding:.583em 0 .082em}mjx-c.mjx-c1D43D.TEX-I::before{padding:.683em .633em .022em 0;content:"J"}mjx-c.mjx-c2211.TEX-S2::before{padding:.95em 1.444em .45em 0;content:"∑"}mjx-c.mjx-c2033::before{padding:.56em .55em 0 0;content:"′′"}mjx-c.mjx-c22EE::before{padding:1.3em .278em .03em 0;content:"⋮"}mjx-c.mjx-c2033::before{padding:.56em .55em 0 0;content:"′′"}mjx-c.mjx-c2225::before{padding:.75em .5em .25em 0;content:"∥"}mjx-c.mjx-c221A.TEX-S3::before{padding:1.45em 1.02em .95em 0;content:"√"}mjx-c.mjx-c1D42B.TEX-B::before{padding:.45em .474em 0 0;content:"r"}mjx-c.mjx-c1D42F.TEX-B::before{padding:.444em .607em 0 0;content:"v"}mjx-c.mjx-cB1::before{padding:.666em .778em 0 0;content:"±"}mjx-c.mjx-c1D45E.TEX-I::before{padding:.442em .46em .194em 0;content:"q"}mjx-c.mjx-c221A.TEX-S2::before{padding:1.15em 1.02em .65em 0;content:"√"}mjx-c.mjx-c27F9::before{padding:.525em 1.638em .024em 0;content:"⟹"}mjx-c.mjx-c2224.TEX-A::before{padding:.75em .297em .252em 0;content:"∤"}.mjx-stretched mjx-c.mjx-c2013::before{content:"–"}mjx-stretchy-h.mjx-c2013 mjx-ext mjx-c::before{content:"–";padding:.285em 0 0}mjx-c.mjx-c2217::before{padding:.465em .5em 0 0;content:"∗"}mjx-c.mjx-c1D70B.TEX-I::before{padding:.431em .57em .011em 0;content:"π"}mjx-c.mjx-c2013::before{padding:.285em .5em 0 0;content:"–"}mjx-stretchy-v.mjx-c7C mjx-ext mjx-c::before{content:"∣";width:.333em}mjx-c.mjx-c394::before{padding:.716em .833em 0 0;content:"Δ"}mjx-c.mjx-c1D444.TEX-I::before{padding:.704em .791em .194em 0;content:"Q"}mjx-c.mjx-c2218::before{padding:.444em .5em 0 0;content:"∘"}mjx-stretchy-v.mjx-c5B mjx-beg mjx-c::before{content:"⎡";padding:1.154em .667em .645em 0}mjx-stretchy-v.mjx-c5B mjx-ext mjx-c::before{content:"⎢";width:.667em}mjx-stretchy-v.mjx-c5B mjx-end mjx-c::before{content:"⎣";padding:1.155em .667em .644em 0}mjx-stretchy-v.mjx-c5B>mjx-end{margin-top:-1.799em}mjx-stretchy-v.mjx-c5B>mjx-ext{border-top-width:1.769em;border-bottom-width:1.769em}mjx-stretchy-v.mjx-c5D mjx-beg mjx-c::before{content:"⎤";padding:1.154em .667em .645em 0}mjx-stretchy-v.mjx-c5D mjx-ext mjx-c::before{content:"⎥";width:.667em}mjx-stretchy-v.mjx-c5D mjx-end mjx-c::before{content:"⎦";padding:1.155em .667em .644em 0}mjx-stretchy-v.mjx-c5D>mjx-end{margin-top:-1.799em}mjx-stretchy-v.mjx-c5D>mjx-ext{border-top-width:1.769em;border-bottom-width:1.769em}mjx-c.mjx-c1D703.TEX-I::before{padding:.705em .469em .01em 0;content:"θ"}mjx-c.mjx-c5E::before{padding:.694em .5em 0 0;content:"^"}mjx-c.mjx-c1D708.TEX-I::before{padding:.442em .53em 0 0;content:"ν"}mjx-c.mjx-c1D715::before{padding:.715em .566em .022em 0;content:"∂"}mjx-c.mjx-c5B.TEX-S3::before{padding:1.45em .528em .949em 0;content:"["}mjx-c.mjx-c5D.TEX-S3::before{padding:1.45em .528em .949em 0;content:"]"}mjx-c.mjx-cAF::before{padding:.59em .5em 0 0;content:"¯"}mjx-c.mjx-c223C::before{padding:.367em .778em 0 0;content:"∼"}mjx-c.mjx-c5B.TEX-S4::before{padding:1.75em .583em 1.249em 0;content:"["}mjx-c.mjx-c5D.TEX-S4::before{padding:1.75em .583em 1.249em 0;content:"]"}mjx-c.mjx-c3B::before{padding:.43em .278em .194em 0;content:";"}mjx-c.mjx-c1D6FC.TEX-I::before{padding:.442em .64em .011em 0;content:"α"}mjx-c.mjx-c1D6FD.TEX-I::before{padding:.705em .566em .194em 0;content:"β"}mjx-c.mjx-c28.TEX-S1::before{padding:.85em .458em .349em 0;content:"("}mjx-c.mjx-c29.TEX-S1::before{padding:.85em .458em .349em 0;content:")"}mjx-c.mjx-c220F.TEX-S1::before{padding:.75em .944em .25em 0;content:"∏"}mjx-c.mjx-c1D70F.TEX-I::before{padding:.431em .517em .013em 0;content:"τ"}mjx-c.mjx-c1D6FF.TEX-I::before{padding:.717em .444em .01em 0;content:"δ"}mjx-c.mjx-c1D439.TEX-I::before{padding:.68em .749em 0 0;content:"F"}mjx-msqrt{display:inline-block;text-align:left}mjx-root{display:inline-block;white-space:nowrap}mjx-surd{display:inline-block;vertical-align:top}mjx-sqrt{display:inline-block;padding-top:.07em}mjx-sqrt>mjx-box{border-top:.07em solid}mjx-sqrt.mjx-tall>mjx-box{padding-left:.3em;margin-left:-.3em}mjx-mspace{display:inline-block;text-align:left}mjx-c.mjx-c1D707.TEX-I::before{padding:.442em .603em .216em 0;content:"μ"}mjx-c.mjx-c1D70E.TEX-I::before{padding:.431em .571em .011em 0;content:"σ"}mjx-c.mjx-c221A::before{padding:.8em .853em .2em 0;content:"√"}mjx-c.mjx-c221A.TEX-S1::before{padding:.85em 1.02em .35em 0;content:"√"}mjx-c.mjx-c1D716.TEX-I::before{padding:.431em .406em .011em 0;content:"ϵ"}mjx-c.mjx-c27FA::before{padding:.525em 1.858em .024em 0;content:"⟺"}mjx-c.mjx-c28.TEX-S2::before{padding:1.15em .597em .649em 0;content:"("}mjx-c.mjx-c29.TEX-S2::before{padding:1.15em .597em .649em 0;content:")"}mjx-c.mjx-c2248::before{padding:.483em .778em 0 0;content:"≈"}mjx-c.mjx-c3A6::before{padding:.683em .722em 0 0;content:"Φ"}mjx-c.mjx-c1D440.TEX-I::before{padding:.683em 1.051em 0 0;content:"M"}mjx-c.mjx-c222B.TEX-S1::before{padding:.805em .61em .306em 0;content:"∫"}mjx-c.mjx-c2026::before{padding:.12em 1.172em 0 0;content:"…"}mjx-mover{display:inline-block;text-align:left}mjx-mover:not([limits=false]){padding-top:.1em}mjx-mover:not([limits=false])>*{display:block;text-align:left}mjx-c.mjx-c1D44B.TEX-I::before{padding:.683em .852em 0 0;content:"X"}mjx-c.mjx-c1D44C.TEX-I::before{padding:.683em .763em 0 0;content:"Y"}mjx-c.mjx-c1D466.TEX-I::before{padding:.442em .49em .205em 0;content:"y"}mjx-c.mjx-c76::before{padding:.431em .528em .011em 0;content:"v"}mjx-c.mjx-c1D706.TEX-I::before{padding:.694em .583em .012em 0;content:"λ"}mjx-c.mjx-c1D44D.TEX-I::before{padding:.683em .723em 0 0;content:"Z"}mjx-c.mjx-c1D467.TEX-I::before{padding:.442em .465em .011em 0;content:"z"}mjx-c.mjx-c7E::before{padding:.318em .5em 0 0;content:"~"}mjx-c.mjx-c22C3.TEX-S1::before{padding:.75em .833em .249em 0;content:"⋃"}mjx-c.mjx-c3A9::before{padding:.704em .722em 0 0;content:"Ω"}mjx-c.mjx-c22C2.TEX-S1::before{padding:.75em .833em .249em 0;content:"⋂"}mjx-c.mjx-c25FC.TEX-A::before{padding:.689em .778em 0 0;content:"■"}mjx-c.mjx-c1D435.TEX-I::before{padding:.683em .759em 0 0;content:"B"}mjx-c.mjx-c222A::before{padding:.598em .667em .022em 0;content:"∪"}mjx-c.mjx-c28.TEX-S3::before{padding:1.45em .736em .949em 0;content:"("}mjx-c.mjx-c29.TEX-S3::before{padding:1.45em .736em .949em 0;content:")"}mjx-c.mjx-c28.TEX-S4::before{padding:1.75em .792em 1.249em 0;content:"("}mjx-c.mjx-c29.TEX-S4::before{padding:1.75em .792em 1.249em 0;content:")"}mjx-mfrac{display:inline-block;text-align:left}mjx-frac{display:inline-block;vertical-align:.17em;padding:0 .22em}mjx-frac[type="d"]{vertical-align:.04em}mjx-frac[delims]{padding:0 .1em}mjx-frac[atop]{padding:0 .12em}mjx-frac[atop][delims]{padding:0}mjx-dtable{display:inline-table;width:100%}mjx-dtable>*{font-size:2000%}mjx-dbox{display:block;font-size:5%}mjx-num{display:block;text-align:center}mjx-den{display:block;text-align:center}mjx-mfrac[bevelled]>mjx-num{display:inline-block}mjx-mfrac[bevelled]>mjx-den{display:inline-block}mjx-den[align=right],mjx-num[align=right]{text-align:right}mjx-den[align=left],mjx-num[align=left]{text-align:left}mjx-nstrut{display:inline-block;height:.054em;width:0;vertical-align:-.054em}mjx-nstrut[type="d"]{height:.217em;vertical-align:-.217em}mjx-dstrut{display:inline-block;height:.505em;width:0}mjx-dstrut[type="d"]{height:.726em}mjx-line{display:block;box-sizing:border-box;min-height:1px;height:.06em;border-top:.06em solid;margin:.06em -.1em;overflow:hidden}mjx-line[type="d"]{margin:.18em -.1em}mjx-c.mjx-c21::before{padding:.716em .278em 0 0;content:"!"}mjx-c.mjx-cA0::before{padding:0 .25em 0 0;content:" "}mjx-c.mjx-c2115.TEX-A::before{padding:.683em .722em .02em 0;content:"N"}mjx-c.mjx-c1D454.TEX-I::before{padding:.442em .477em .205em 0;content:"g"}mjx-c.mjx-c398::before{padding:.705em .778em .022em 0;content:"Θ"}mjx-mtext{display:inline-block;text-align:left}mjx-msub{display:inline-block;text-align:left}mjx-mrow{display:inline-block;text-align:left}mjx-mtable{display:inline-block;text-align:center;vertical-align:.25em;position:relative;box-sizing:border-box;border-spacing:0px;border-collapse:collapse}mjx-mstyle[size="s"] mjx-mtable{vertical-align:.354em}mjx-labels{position:absolute;left:0;top:0}mjx-table{display:inline-block;vertical-align:-.5ex;box-sizing:border-box}mjx-table>mjx-itable{vertical-align:middle;text-align:left;box-sizing:border-box}mjx-labels>mjx-itable{position:absolute;top:0}mjx-mtable[justify=left]{text-align:left}mjx-mtable[justify=right]{text-align:right}mjx-mtable[justify=left][side=left]{padding-right:0!important}mjx-mtable[justify=left][side=right]{padding-left:0!important}mjx-mtable[justify=right][side=left]{padding-right:0!important}mjx-mtable[justify=right][side=right]{padding-left:0!important}mjx-mtable[align]{vertical-align:baseline}mjx-mtable[align=top]>mjx-table{vertical-align:top}mjx-mtable[align=bottom]>mjx-table{vertical-align:bottom}mjx-mtable[side=right] mjx-labels{min-width:100%}mjx-mtr{display:table-row;text-align:left}mjx-mtr[rowalign=top]>mjx-mtd{vertical-align:top}mjx-mtr[rowalign=center]>mjx-mtd{vertical-align:middle}mjx-mtr[rowalign=bottom]>mjx-mtd{vertical-align:bottom}mjx-mtr[rowalign=baseline]>mjx-mtd{vertical-align:baseline}mjx-mtr[rowalign=axis]>mjx-mtd{vertical-align:.25em}mjx-mtd{display:table-cell;text-align:center;padding:.215em .4em}mjx-mtd:first-child{padding-left:0}mjx-mtd:last-child{padding-right:0}mjx-mtable>*>mjx-itable>:first-child>mjx-mtd{padding-top:0}mjx-mtable>*>mjx-itable>:last-child>mjx-mtd{padding-bottom:0}mjx-tstrut{display:inline-block;height:1em;vertical-align:-.25em}mjx-labels[align=left]>mjx-mtr>mjx-mtd{text-align:left}mjx-labels[align=right]>mjx-mtr>mjx-mtd{text-align:right}mjx-mtd[extra]{padding:0}mjx-mtd[rowalign=top]{vertical-align:top}mjx-mtd[rowalign=center]{vertical-align:middle}mjx-mtd[rowalign=bottom]{vertical-align:bottom}mjx-mtd[rowalign=baseline]{vertical-align:baseline}mjx-mtd[rowalign=axis]{vertical-align:.25em}mjx-munder{display:inline-block;text-align:left}mjx-over{text-align:left}mjx-munder:not([limits=false]){display:inline-table}mjx-munder>mjx-row{text-align:left}mjx-under{padding-bottom:.1em}mjx-munderover{display:inline-block;text-align:left}mjx-munderover:not([limits=false]){padding-top:.1em}mjx-munderover:not([limits=false])>*{display:block}mjx-msubsup{display:inline-block;text-align:left}mjx-script{display:inline-block;padding-right:.05em;padding-left:.033em}mjx-script>mjx-spacer{display:block}mjx-stretchy-v.mjx-c7B mjx-beg mjx-c::before{content:"⎧";padding:.899em .889em .01em 0}mjx-stretchy-v.mjx-c7B mjx-ext mjx-c::before{content:"⎪";width:.889em}mjx-stretchy-v.mjx-c7B mjx-end mjx-c::before{content:"⎩";padding:.01em .889em .899em 0}mjx-stretchy-v.mjx-c7B mjx-mid mjx-c::before{content:"⎨";padding:1.16em .889em .66em 0}mjx-stretchy-v.mjx-c7B>mjx-mid{margin-top:-.91em;margin-bottom:-.91em}mjx-stretchy-v.mjx-c7B>mjx-end{margin-top:-.909em}mjx-stretchy-v.mjx-c7B>mjx-ext{height:50%;border-top-width:.879em;border-bottom-width:.879em}mjx-c.mjx-c44::before{padding:.683em .764em 0 0;content:"D"}mjx-c.mjx-c52::before{padding:.683em .736em .022em 0;content:"R"}mjx-c.mjx-c3D::before{padding:.583em .778em .082em 0;content:"="}mjx-c.mjx-c50::before{padding:.683em .681em 0 0;content:"P"}mjx-c.mjx-c53::before{padding:.705em .556em .022em 0;content:"S"}mjx-c.mjx-c2200::before{padding:.694em .556em .022em 0;content:"∀"}mjx-c.mjx-c1D465.TEX-I::before{padding:.442em .572em .011em 0;content:"x"}mjx-c.mjx-c2208::before{padding:.54em .667em .04em 0;content:"∈"}mjx-c.mjx-c2C::before{padding:.121em .278em .194em 0;content:","}mjx-c.mjx-c2203::before{padding:.694em .556em 0 0;content:"∃"}mjx-c.mjx-c1D451.TEX-I::before{padding:.694em .52em .01em 0;content:"d"}mjx-c.mjx-c2282::before{padding:.54em .778em .04em 0;content:"⊂"}mjx-c.mjx-c1D45F.TEX-I::before{padding:.442em .451em .011em 0;content:"r"}mjx-c.mjx-c1D45D.TEX-I::before{padding:.442em .503em .194em 0;content:"p"}mjx-c.mjx-c7B::before{padding:.75em .5em .25em 0;content:"{"}mjx-c.mjx-c7D::before{padding:.75em .5em .25em 0;content:"}"}mjx-c.mjx-c1D437.TEX-I::before{padding:.683em .828em 0 0;content:"D"}mjx-c.mjx-c1D446.TEX-I::before{padding:.705em .645em .022em 0;content:"S"}mjx-c.mjx-c1D445.TEX-I::before{padding:.683em .759em .021em 0;content:"R"}mjx-c.mjx-c70::before{padding:.442em .556em .194em 0;content:"p"}mjx-c.mjx-c72::before{padding:.442em .392em 0 0;content:"r"}mjx-c.mjx-c69::before{padding:.669em .278em 0 0;content:"i"}mjx-c.mjx-c6F::before{padding:.448em .5em .01em 0;content:"o"}mjx-c.mjx-c1D462.TEX-I::before{padding:.442em .572em .011em 0;content:"u"}mjx-c.mjx-c6E::before{padding:.442em .556em 0 0;content:"n"}mjx-c.mjx-c65::before{padding:.448em .444em .011em 0;content:"e"}mjx-c.mjx-c78::before{padding:.431em .528em 0 0;content:"x"}mjx-c.mjx-c74::before{padding:.615em .389em .01em 0;content:"t"}mjx-c.mjx-c1D456.TEX-I::before{padding:.661em .345em .011em 0;content:"i"}mjx-c.mjx-c2E::before{padding:.12em .278em 0 0;content:"."}mjx-c.mjx-c1D45B.TEX-I::before{padding:.442em .6em .011em 0;content:"n"}mjx-c.mjx-c1D43F.TEX-I::before{padding:.683em .681em 0 0;content:"L"}mjx-c.mjx-c1D436.TEX-I::before{padding:.705em .76em .022em 0;content:"C"}mjx-c.mjx-c1D44E.TEX-I::before{padding:.441em .529em .01em 0;content:"a"}mjx-c.mjx-c2B::before{padding:.583em .778em .082em 0;content:"+"}mjx-c.mjx-c1D450.TEX-I::before{padding:.442em .433em .011em 0;content:"c"}mjx-c.mjx-c1D453.TEX-I::before{padding:.705em .55em .205em 0;content:"f"}mjx-c.mjx-c1D45C.TEX-I::before{padding:.441em .485em .011em 0;content:"o"}mjx-c.mjx-c1D441.TEX-I::before{padding:.683em .888em 0 0;content:"N"}mjx-c.mjx-c25::before{padding:.75em .833em .056em 0;content:"%"}mjx-c.mjx-c7B.TEX-S3::before{padding:1.45em .75em .949em 0;content:"{"}mjx-c.mjx-c221E::before{padding:.442em 1em .011em 0;content:"∞"}mjx-c.mjx-c1D44F.TEX-I::before{padding:.694em .429em .011em 0;content:"b"}mjx-c.mjx-c1D458.TEX-I::before{padding:.694em .521em .011em 0;content:"k"}mjx-c.mjx-c6D::before{padding:.442em .833em 0 0;content:"m"}mjx-c.mjx-c61::before{padding:.448em .5em .011em 0;content:"a"}mjx-c.mjx-c1D45A.TEX-I::before{padding:.442em .878em .011em 0;content:"m"}mjx-c.mjx-c3C::before{padding:.54em .778em .04em 0;content:"<"}mjx-c.mjx-c1D457.TEX-I::before{padding:.661em .412em .204em 0;content:"j"}mjx-c.mjx-c1D459.TEX-I::before{padding:.694em .298em .011em 0;content:"l"}mjx-c.mjx-c5B::before{padding:.75em .278em .25em 0;content:"["}mjx-c.mjx-c210E.TEX-I::before{padding:.694em .576em .011em 0;content:"h"}mjx-c.mjx-c5D::before{padding:.75em .278em .25em 0;content:"]"}mjx-c.mjx-cD7::before{padding:.491em .778em 0 0;content:"×"}mjx-c.mjx-c2265::before{padding:.636em .778em .138em 0;content:"≥"}mjx-c.mjx-c1D447.TEX-I::before{padding:.677em .704em 0 0;content:"T"}mjx-c.mjx-c22EF::before{padding:.31em 1.172em 0 0;content:"⋯"}mjx-c.mjx-c64::before{padding:.694em .556em .011em 0;content:"d"}mjx-c.mjx-c67::before{padding:.453em .5em .206em 0;content:"g"}mjx-c.mjx-c2061::before{padding:0;content:""}mjx-c.mjx-c1D463.TEX-I::before{padding:.443em .485em .011em 0;content:"v"}mjx-c.mjx-c77::before{padding:.431em .722em .011em 0;content:"w"}mjx-c.mjx-c6C::before{padding:.694em .278em 0 0;content:"l"}mjx-c.mjx-c66::before{padding:.705em .372em 0 0;content:"f"}mjx-c.mjx-c2209::before{padding:.716em .667em .215em 0;content:"∉"}mjx-c.mjx-c2260::before{padding:.716em .778em .215em 0;content:"≠"}mjx-c.mjx-c73::before{padding:.448em .394em .011em 0;content:"s"}mjx-c.mjx-c62::before{padding:.694em .556em .011em 0;content:"b"}mjx-c.mjx-c63::before{padding:.448em .444em .011em 0;content:"c"}mjx-c.mjx-c68::before{padding:.694em .556em 0 0;content:"h"}mjx-c.mjx-c2205::before{padding:.772em .5em .078em 0;content:"∅"}mjx-c.mjx-c7C::before{padding:.75em .278em .249em 0;content:"|"}mjx-c.mjx-c1D43A.TEX-I::before{padding:.705em .786em .022em 0;content:"G"}mjx-c.mjx-c1D449.TEX-I::before{padding:.683em .769em .022em 0;content:"V"}mjx-c.mjx-c1D438.TEX-I::before{padding:.68em .764em 0 0;content:"E"}mjx-c.mjx-c1D44A.TEX-I::before{padding:.683em 1.048em .022em 0;content:"W"}mjx-c.mjx-c1D443.TEX-I::before{padding:.683em .751em 0 0;content:"P"}mjx-c.mjx-c2211.TEX-S1::before{padding:.75em 1.056em .25em 0;content:"∑"}mjx-c.mjx-c2264::before{padding:.636em .778em .138em 0;content:"≤"}mjx-c.mjx-c2204::before{padding:.716em .556em .215em 0;content:"∄"}mjx-c.mjx-c4C::before{padding:.683em .625em 0 0;content:"L"}mjx-c.mjx-c2308::before{padding:.75em .444em .25em 0;content:"⌈"}mjx-c.mjx-c2309::before{padding:.75em .444em .25em 0;content:"⌉"}mjx-c.mjx-c230A::before{padding:.75em .444em .25em 0;content:"⌊"}mjx-c.mjx-c230B::before{padding:.75em .444em .25em 0;content:"⌋"}mjx-c.mjx-c1D430.TEX-B::before{padding:.444em .831em 0 0;content:"w"}mjx-c.mjx-c1D464.TEX-I::before{padding:.443em .716em .011em 0;content:"w"}mjx-c.mjx-c1D413.TEX-B::before{padding:.675em .8em 0 0;content:"T"}mjx-c.mjx-c3D.TEX-B::before{padding:.393em .894em 0 0;content:"="}mjx-c.mjx-c1D7CF.TEX-B::before{padding:.655em .575em 0 0;content:"1"}mjx-c.mjx-c2190::before{padding:.511em 1em .011em 0;content:"←"}mjx-c.mjx-c56::before{padding:.683em .75em .022em 0;content:"V"}mjx-c.mjx-c45::before{padding:.68em .681em 0 0;content:"E"}mjx-c.mjx-c6A::before{padding:.669em .306em .205em 0;content:"j"}mjx-c.mjx-c1D460.TEX-I::before{padding:.442em .469em .01em 0;content:"s"}mjx-c.mjx-c2192::before{padding:.511em 1em .011em 0;content:"→"}mjx-c.mjx-c2032::before{padding:.56em .275em 0 0;content:"′"}mjx-c.mjx-c2229::before{padding:.598em .667em .022em 0;content:"∩"}mjx-c.mjx-c49::before{padding:.683em .361em 0 0;content:"I"}mjx-c.mjx-c1D434.TEX-I::before{padding:.716em .75em 0 0;content:"A"}mjx-c.mjx-c3A::before{padding:.43em .278em 0 0;content:":"}mjx-c.mjx-c211D.TEX-A::before{padding:.683em .722em 0 0;content:"R"}mjx-c.mjx-c1D43B.TEX-I::before{padding:.683em .888em 0 0;content:"H"}mjx-c.mjx-c1D53D.TEX-A::before{padding:.683em .611em 0 0;content:"F"}mjx-c.mjx-c2124.TEX-A::before{padding:.683em .667em 0 0;content:"Z"}mjx-c.mjx-c21A6::before{padding:.511em 1em .011em 0;content:"↦"}mjx-c.mjx-c71::before{padding:.442em .528em .194em 0;content:"q"}mjx-c.mjx-c30::before{padding:.666em .5em .022em 0;content:"0"}mjx-c.mjx-c36::before{padding:.666em .5em .022em 0;content:"6"}mjx-container[jax=CHTML]{line-height:0}mjx-container [space="1"]{margin-left:.111em}mjx-container [space="2"]{margin-left:.167em}mjx-container [space="3"]{margin-left:.222em}mjx-container [space="4"]{margin-left:.278em}mjx-container [space="5"]{margin-left:.333em}mjx-container [rspace="1"]{margin-right:.111em}mjx-container [rspace="2"]{margin-right:.167em}mjx-container [rspace="3"]{margin-right:.222em}mjx-container [rspace="4"]{margin-right:.278em}mjx-container [rspace="5"]{margin-right:.333em}mjx-container [size="s"]{font-size:70.7%}mjx-container [size=ss]{font-size:50%}mjx-container [size=Tn]{font-size:60%}mjx-container [size=sm]{font-size:85%}mjx-container [size=lg]{font-size:120%}mjx-container [size=Lg]{font-size:144%}mjx-container [size=LG]{font-size:173%}mjx-container [size=hg]{font-size:207%}mjx-container [size=HG]{font-size:249%}mjx-container [width=full]{width:100%}mjx-box{display:inline-block}mjx-block{display:block}mjx-itable{display:inline-table}mjx-row{display:table-row}mjx-row>*{display:table-cell}mjx-mtext{display:inline-block}mjx-mstyle{display:inline-block}mjx-merror{display:inline-block;color:red;background-color:#ff0}mjx-mphantom{visibility:hidden}mjx-assistive-mml{top:0;left:0;clip:rect(1px,1px,1px,1px);user-select:none;position:absolute!important;padding:1px 0 0!important;border:0!important;display:block!important;width:auto!important;overflow:hidden!important}mjx-assistive-mml[display=block]{width:100%!important}mjx-math{display:inline-block;text-align:left;line-height:0;text-indent:0;font-style:normal;font-weight:400;font-size:100%;letter-spacing:normal;border-collapse:collapse;overflow-wrap:normal;word-spacing:normal;white-space:nowrap;direction:ltr;padding:1px 0}mjx-container[jax=CHTML][display=true]{display:block;text-align:center;margin:1em 0}mjx-container[jax=CHTML][display=true][width=full]{display:flex}mjx-container[jax=CHTML][display=true] mjx-math{padding:0}mjx-container[jax=CHTML][justify=left]{text-align:left}mjx-container[jax=CHTML][justify=right]{text-align:right}mjx-mo{display:inline-block;text-align:left}mjx-stretchy-h{display:inline-table;width:100%}mjx-stretchy-h>*{display:table-cell;width:0}mjx-stretchy-h>*>mjx-c{display:inline-block;transform:scaleX(1)}mjx-stretchy-h>*>mjx-c::before{display:inline-block;width:initial}mjx-stretchy-h>mjx-ext{overflow:clip visible;width:100%}mjx-stretchy-h>mjx-ext>mjx-c::before{transform:scaleX(500)}mjx-stretchy-h>mjx-ext>mjx-c{width:0}mjx-stretchy-h>mjx-beg>mjx-c{margin-right:-.1em}mjx-stretchy-h>mjx-end>mjx-c{margin-left:-.1em}mjx-stretchy-v{display:inline-block}mjx-stretchy-v>*{display:block}mjx-stretchy-v>mjx-beg{height:0}mjx-stretchy-v>mjx-end>mjx-c{display:block}mjx-stretchy-v>*>mjx-c{transform:scaleY(1);transform-origin:left center;overflow:hidden}mjx-stretchy-v>mjx-ext{display:block;height:100%;box-sizing:border-box;border:0 solid transparent;overflow:visible clip}mjx-stretchy-v>mjx-ext>mjx-c::before{width:initial;box-sizing:border-box}mjx-stretchy-v>mjx-ext>mjx-c{transform:scaleY(500) translateY(.075em);overflow:visible}mjx-mark{display:inline-block;height:0}mjx-c{display:inline-block}mjx-utext{display:inline-block;padding:.75em 0 .2em}mjx-mn{display:inline-block;text-align:left}mjx-texatom{display:inline-block;text-align:left}mjx-mi{display:inline-block;text-align:left}mjx-msup{display:inline-block;text-align:left}mjx-c::before{display:block;width:0}.MJX-TEX{font-family:MJXZERO,MJXTEX}.TEX-B{font-family:MJXZERO,MJXTEX-B}.TEX-I{font-family:MJXZERO,MJXTEX-I}.TEX-MI{font-family:MJXZERO,MJXTEX-MI}.TEX-BI{font-family:MJXZERO,MJXTEX-BI}.TEX-S1{font-family:MJXZERO,MJXTEX-S1}.TEX-S2{font-family:MJXZERO,MJXTEX-S2}.TEX-S3{font-family:MJXZERO,MJXTEX-S3}.TEX-S4{font-family:MJXZERO,MJXTEX-S4}.TEX-A{font-family:MJXZERO,MJXTEX-A}.TEX-C{font-family:MJXZERO,MJXTEX-C}.TEX-CB{font-family:MJXZERO,MJXTEX-CB}.TEX-FR{font-family:MJXZERO,MJXTEX-FR}.TEX-FRB{font-family:MJXZERO,MJXTEX-FRB}.TEX-SS{font-family:MJXZERO,MJXTEX-SS}.TEX-SSB{font-family:MJXZERO,MJXTEX-SSB}.TEX-SSI{font-family:MJXZERO,MJXTEX-SSI}.TEX-SC{font-family:MJXZERO,MJXTEX-SC}.TEX-T{font-family:MJXZERO,MJXTEX-T}.TEX-V{font-family:MJXZERO,MJXTEX-V}.TEX-VB{font-family:MJXZERO,MJXTEX-VB}mjx-stretchy-h mjx-c,mjx-stretchy-v mjx-c{font-family:MJXZERO,MJXTEX-S1,MJXTEX-S4,MJXTEX,MJXTEX-A!important}@font-face{font-family:MJXZERO;src:url("lib/fonts/mathjax_zero.woff") format("woff")}@font-face{font-family:MJXTEX;src:url("lib/fonts/mathjax_main-regular.woff") format("woff")}@font-face{font-family:MJXTEX-B;src:url("lib/fonts/mathjax_main-bold.woff") format("woff")}@font-face{font-family:MJXTEX-I;src:url("lib/fonts/mathjax_math-italic.woff") format("woff")}@font-face{font-family:MJXTEX-MI;src:url("lib/fonts/mathjax_main-italic.woff") format("woff")}@font-face{font-family:MJXTEX-BI;src:url("lib/fonts/mathjax_math-bolditalic.woff") format("woff")}@font-face{font-family:MJXTEX-S1;src:url("lib/fonts/mathjax_size1-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S2;src:url("lib/fonts/mathjax_size2-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S3;src:url("lib/fonts/mathjax_size3-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S4;src:url("lib/fonts/mathjax_size4-regular.woff") format("woff")}@font-face{font-family:MJXTEX-A;src:url("lib/fonts/mathjax_ams-regular.woff") format("woff")}@font-face{font-family:MJXTEX-C;src:url("lib/fonts/mathjax_calligraphic-regular.woff") format("woff")}@font-face{font-family:MJXTEX-CB;src:url("lib/fonts/mathjax_calligraphic-bold.woff") format("woff")}@font-face{font-family:MJXTEX-FR;src:url("lib/fonts/mathjax_fraktur-regular.woff") format("woff")}@font-face{font-family:MJXTEX-FRB;src:url("lib/fonts/mathjax_fraktur-bold.woff") format("woff")}@font-face{font-family:MJXTEX-SS;src:url("lib/fonts/mathjax_sansserif-regular.woff") format("woff")}@font-face{font-family:MJXTEX-SSB;src:url("lib/fonts/mathjax_sansserif-bold.woff") format("woff")}@font-face{font-family:MJXTEX-SSI;src:url("lib/fonts/mathjax_sansserif-italic.woff") format("woff")}@font-face{font-family:MJXTEX-SC;src:url("lib/fonts/mathjax_script-regular.woff") format("woff")}@font-face{font-family:MJXTEX-T;src:url("lib/fonts/mathjax_typewriter-regular.woff") format("woff")}@font-face{font-family:MJXTEX-V;src:url("lib/fonts/mathjax_vector-regular.woff") format("woff")}@font-face{font-family:MJXTEX-VB;src:url("lib/fonts/mathjax_vector-bold.woff") format("woff")}mjx-c.mjx-c28::before{padding:.75em .389em .25em 0;content:"("}mjx-c.mjx-c34::before{padding:.677em .5em 0 0;content:"4"}mjx-c.mjx-c31::before{padding:.666em .5em 0 0;content:"1"}mjx-c.mjx-c39::before{padding:.666em .5em .022em 0;content:"9"}mjx-c.mjx-c35::before{padding:.666em .5em .022em 0;content:"5"}mjx-c.mjx-c38::before{padding:.666em .5em .022em 0;content:"8"}mjx-c.mjx-c33::before{padding:.665em .5em .022em 0;content:"3"}mjx-c.mjx-c2F::before{padding:.75em .5em .25em 0;content:"/"}mjx-c.mjx-c37::before{padding:.676em .5em .022em 0;content:"7"}mjx-c.mjx-c32::before{padding:.666em .5em 0 0;content:"2"}mjx-c.mjx-c29::before{padding:.75em .389em .25em 0;content:")"}mjx-c.mjx-c22C5::before{padding:.31em .278em 0 0;content:"⋅"}mjx-c.mjx-c2212::before{padding:.583em .778em .082em 0;content:"−"}mjx-c.mjx-c3E::before{padding:.54em .778em .04em 0;content:">"}mjx-c.mjx-c1D442.TEX-I::before{padding:.704em .763em .022em 0;content:"O"}mjx-c.mjx-c1D452.TEX-I::before{padding:.442em .466em .011em 0;content:"e"}mjx-c.mjx-c1D461.TEX-I::before{padding:.626em .361em .011em 0;content:"t"}</style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="毕业设计-main"><p dir="auto">毕业设计-main</p></h1><div class="heading-wrapper"><h3 data-heading="参考" dir="auto" class="heading" id="参考"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>参考</h3><div class="heading-children"><div><p dir="auto">网站：<a data-tooltip-position="top" aria-label="https://lw.cwxu.edu.cn/" rel="noopener" class="external-link" href="https://lw.cwxu.edu.cn/" target="_blank">毕业论文（设计）管理系统</a><br>
+工作管理办法：<a data-href="滨江教发〔2018〕35号南京信息工程大学滨江学院本科生毕业论文（设计）工作管理办法.pdf" href="滨江教发〔2018〕35号南京信息工程大学滨江学院本科生毕业论文（设计）工作管理办法.pdf" class="internal-link" target="_self" rel="noopener">滨江教发〔2018〕35号南京信息工程大学滨江学院本科生毕业论文（设计）工作管理办法.pdf</a><br>
+工作实施细则：<a data-href="滨江教发〔2018〕36号南京信息工程大学滨江学院本科生毕业论文（设计）工作实施细则.pdf" href="assets/滨江教发〔2018〕36号南京信息工程大学滨江学院本科生毕业论文（设计）工作实施细则.pdf" class="internal-link" target="_self" rel="noopener">滨江教发〔2018〕36号南京信息工程大学滨江学院本科生毕业论文（设计）工作实施细则.pdf</a><br>
+排版：<a data-href="附件1：撰写排版规范.doc" href="附件1：撰写排版规范.doc" class="internal-link" target="_self" rel="noopener">附件1：撰写排版规范.doc</a><br>
+封面：<a data-href="附件6：封面.doc" href="附件6：封面.doc" class="internal-link" target="_self" rel="noopener">附件6：封面.doc</a></p></div><div><p dir="auto">其他：</p></div><div><ol dir="auto">
+<li data-line="0" dir="auto"><a data-href="附件7：指导教师评阅意见表.doc" href="附件7：指导教师评阅意见表.doc" class="internal-link" target="_self" rel="noopener">附件7：指导教师评阅意见表.doc</a></li>
+<li data-line="1" dir="auto"><a data-href="附件8：评阅教师意见表.doc" href="附件8：评阅教师意见表.doc" class="internal-link" target="_self" rel="noopener">附件8：评阅教师意见表.doc</a></li>
+<li data-line="2" dir="auto"><a data-href="附件9：答辩结果表.doc" href="附件9：答辩结果表.doc" class="internal-link" target="_self" rel="noopener">附件9：答辩结果表.doc</a></li>
+</ol></div><div><p dir="auto"><a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/614676863#:~:text=%EF%BC%881%EF%BC%89%E6%9C%9F%E5%88%8A%20%5BJ%5D%EF%BC%88journal%EF%BC%89%20%EF%BC%882%EF%BC%89%E4%B8%93%E8%91%97%20%5BM%5D%EF%BC%88monograph%EF%BC%89,%EF%BC%883%EF%BC%89%E8%AE%BA%E6%96%87%E9%9B%86%20%5BC%5D%EF%BC%88collected%20papers%EF%BC%89%20%EF%BC%884%EF%BC%89%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%20%5BD%5D%EF%BC%88dissertation%EF%BC%89" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/614676863#:~:text=%EF%BC%881%EF%BC%89%E6%9C%9F%E5%88%8A%20%5BJ%5D%EF%BC%88journal%EF%BC%89%20%EF%BC%882%EF%BC%89%E4%B8%93%E8%91%97%20%5BM%5D%EF%BC%88monograph%EF%BC%89,%EF%BC%883%EF%BC%89%E8%AE%BA%E6%96%87%E9%9B%86%20%5BC%5D%EF%BC%88collected%20papers%EF%BC%89%20%EF%BC%884%EF%BC%89%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%20%5BD%5D%EF%BC%88dissertation%EF%BC%89" target="_blank">学术论文的参考文献部分[J][M]到底怎样用？ - 知乎 (zhihu.com)</a></p></div><div><p dir="auto">vpn =&gt; <a data-tooltip-position="top" aria-label="https://webvpn.cwxu.edu.cn/https/77726476706e69737468656265737421e7e056d2243e635930068cb8/" rel="noopener" class="external-link" href="https://webvpn.cwxu.edu.cn/https/77726476706e69737468656265737421e7e056d2243e635930068cb8/" target="_blank">中国知网 (cwxu.edu.cn)</a></p></div></div></div><div class="heading-wrapper"><h3 data-heading="时间节点" dir="auto" class="heading" id="时间节点"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>时间节点</h3><div class="heading-children"><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>任务</th>
+<th>起止</th>
+<th>文件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>课题申报</td>
+<td>11.01-12.30</td>
+<td></td>
+</tr>
+<tr>
+<td>课题调整</td>
+<td>12.10-12.30</td>
+<td></td>
+</tr>
+<tr>
+<td>任务书申报</td>
+<td>12.7-12.31</td>
+<td><a data-href="附件3：任务书.doc" href="附件3：任务书.doc" class="internal-link" target="_self" rel="noopener">附件3：任务书.doc</a></td>
+</tr>
+<tr>
+<td>开题报告申报</td>
+<td>12.10-1.4</td>
+<td><a data-href="附件4：开题报告.doc" href="附件4：开题报告.doc" class="internal-link" target="_self" rel="noopener">附件4：开题报告.doc</a></td>
+</tr>
+<tr>
+<td>中期检查</td>
+<td>2.1-3.30</td>
+<td><a data-href="附件5：中期检查表.doc" href="附件5：中期检查表.doc" class="internal-link" target="_self" rel="noopener">附件5：中期检查表.doc</a></td>
+</tr>
+<tr>
+<td>定稿提交</td>
+<td>4.25-6.30</td>
+<td></td>
+</tr>
+</tbody>
+</table></div><div><p dir="auto">修改后的时间节点：</p></div><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>任务</th>
+<th>起止</th>
+<th>文件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>课题申报</td>
+<td>11.01-1.26</td>
+<td></td>
+</tr>
+<tr>
+<td>课题调整</td>
+<td>12.10-1.26</td>
+<td></td>
+</tr>
+<tr>
+<td>任务书申报</td>
+<td>12.7-1.31</td>
+<td><a data-href="附件3：任务书.doc" href="附件3：任务书.doc" class="internal-link" target="_self" rel="noopener">附件3：任务书.doc</a></td>
+</tr>
+<tr>
+<td>开题报告申报</td>
+<td>12.10-2.8</td>
+<td><a data-href="附件4：开题报告.doc" href="附件4：开题报告.doc" class="internal-link" target="_self" rel="noopener">附件4：开题报告.doc</a></td>
+</tr>
+<tr>
+<td>中期检查</td>
+<td>2.1-3.30</td>
+<td><a data-href="附件5：中期检查表.doc" href="附件5：中期检查表.doc" class="internal-link" target="_self" rel="noopener">附件5：中期检查表.doc</a></td>
+</tr>
+<tr>
+<td>定稿提交</td>
+<td>4.25-6.30</td>
+<td></td>
+</tr>
+</tbody>
+</table></div></div></div><div class="heading-wrapper"><h3 data-heading="编写规范" dir="auto" class="heading" id="编写规范"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>编写规范</h3><div class="heading-children"><div><p dir="auto">参考：<a data-href="附件1：撰写排版规范.doc" href="附件1：撰写排版规范.doc" class="internal-link" target="_self" rel="noopener">附件1：撰写排版规范.doc</a></p></div><div class="heading-wrapper"><h4 data-heading="内容布局及其格式要求" dir="auto" class="heading" id="内容布局及其格式要求"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>内容布局及其格式要求</h4><div class="heading-children"><div><p dir="auto">以下所列出大致的内容架构布局及其word格式</p></div><div class="heading-wrapper"><h5 data-heading="封面" dir="auto" class="heading" id="封面"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>封面</h5><div class="heading-children"><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>内容</th>
+<th>要求</th>
+<th>补充</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>封面</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div></div></div><div class="heading-wrapper"><h5 data-heading="中文摘要" dir="auto" class="heading" id="中文摘要"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>中文摘要</h5><div class="heading-children"><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>内容</th>
+<th>要求</th>
+<th>补充</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>题目</td>
+<td>黑体三号，居中</td>
+<td>中文摘要-begin</td>
+</tr>
+<tr>
+<td>空行</td>
+<td>五号</td>
+<td></td>
+</tr>
+<tr>
+<td>作者姓名</td>
+<td>宋体四号，居中</td>
+<td></td>
+</tr>
+<tr>
+<td><span>南京信息工程大学滨江学院，江苏 无锡 214000</span></td>
+<td>宋体小五号，居中</td>
+<td>作者单位</td>
+</tr>
+<tr>
+<td>空行</td>
+<td>五号</td>
+<td></td>
+</tr>
+<tr>
+<td><span>摘要：</span></td>
+<td>黑体五号</td>
+<td></td>
+</tr>
+<tr>
+<td>摘要</td>
+<td>楷体五号</td>
+<td></td>
+</tr>
+<tr>
+<td><span>关键词：</span></td>
+<td>黑体五号</td>
+<td></td>
+</tr>
+<tr>
+<td>关键词</td>
+<td>楷体五号</td>
+<td>3~5个</td>
+</tr>
+<tr>
+<td>[页尾]</td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table></div></div></div><div class="heading-wrapper"><h5 data-heading="英文摘要" dir="auto" class="heading" id="英文摘要"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>英文摘要</h5><div class="heading-children"><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>内容</th>
+<th>要求</th>
+<th>补充</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>英文题目</td>
+<td>Times New Roman三号加粗，居中</td>
+<td>英文摘要-begin</td>
+</tr>
+<tr>
+<td>空行</td>
+<td>五号</td>
+<td></td>
+</tr>
+<tr>
+<td>作者拼音或英文姓名</td>
+<td>Times New Roman四号，居中</td>
+<td></td>
+</tr>
+<tr>
+<td><span>Binjiang College of Nanjing University of Information Science and Technology, Jiangsu Wuxi 214000</span></td>
+<td>Times New Roman小五号，居中</td>
+<td>作者单位</td>
+</tr>
+<tr>
+<td>空行</td>
+<td>五号</td>
+<td></td>
+</tr>
+<tr>
+<td><span>Abstract：</span></td>
+<td>Times New Roman五号加粗</td>
+<td></td>
+</tr>
+<tr>
+<td>英文摘要</td>
+<td>Times New Roman五号</td>
+<td></td>
+</tr>
+<tr>
+<td><span>Key words：</span></td>
+<td>Times New Roman五号加粗</td>
+<td></td>
+</tr>
+<tr>
+<td>英文关键词</td>
+<td>Times New Roman五号</td>
+<td>3~5个</td>
+</tr>
+<tr>
+<td>[页尾]</td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table></div></div></div><div class="heading-wrapper"><h5 data-heading="目录" dir="auto" class="heading" id="目录"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>目录</h5><div class="heading-children"><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>内容</th>
+<th>要求</th>
+<th>补充</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>目 录</span></td>
+<td>黑体三号，居中</td>
+<td>目录-begin</td>
+</tr>
+<tr>
+<td>空行</td>
+<td>五号</td>
+<td></td>
+</tr>
+<tr>
+<td>目录一级标题...[页码]</td>
+<td>黑体四号，顶格</td>
+<td></td>
+</tr>
+<tr>
+<td>目录二级标题...[页码]</td>
+<td>宋体五号，右缩2个汉字空格</td>
+<td></td>
+</tr>
+<tr>
+<td>目录三级标题...[页码]</td>
+<td>宋体五号，右缩4个汉字空格</td>
+<td></td>
+</tr>
+<tr>
+<td><span>参考文献</span>...[页码]</td>
+<td>黑体四号，顶格</td>
+<td></td>
+</tr>
+<tr>
+<td><span>致谢</span>...[页码]</td>
+<td>黑体四号，顶格</td>
+<td></td>
+</tr>
+<tr>
+<td>[页尾]</td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody>
+</table></div></div></div><div class="heading-wrapper"><h5 data-heading="正文" dir="auto" class="heading" id="正文"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>正文</h5><div class="heading-children"><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>内容</th>
+<th>要求</th>
+<th>补充</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正文一级标题</td>
+<td>黑体四号，顶格</td>
+<td>正文-begin</td>
+</tr>
+<tr>
+<td>正文二级标题</td>
+<td>黑体五号，顶格</td>
+<td></td>
+</tr>
+<tr>
+<td>正文三级标题</td>
+<td>宋体五号，顶格</td>
+<td></td>
+</tr>
+<tr>
+<td>正文四级标题</td>
+<td>宋体五号，顶格</td>
+<td></td>
+</tr>
+<tr>
+<td>正文</td>
+<td>宋体五号（中文）<br>Times New Roman五号（英文）</td>
+<td></td>
+</tr>
+<tr>
+<td>[页尾]</td>
+<td>五号</td>
+<td></td>
+</tr>
+</tbody>
+</table></div></div></div><div class="heading-wrapper"><h5 data-heading="参考文献、致谢" dir="auto" class="heading" id="参考文献、致谢"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>参考文献、致谢</h5><div class="heading-children"><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>内容</th>
+<th>要求</th>
+<th>补充</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>参考文献：</span></td>
+<td>黑体四号，顶格</td>
+<td>参考文献-begin</td>
+</tr>
+<tr>
+<td>参考文献</td>
+<td>宋体小五号（中文）<br>Times New Roman小五号（英文）</td>
+<td></td>
+</tr>
+<tr>
+<td>[页尾]</td>
+<td>五号</td>
+<td></td>
+</tr>
+<tr>
+<td><span>致谢</span></td>
+<td>黑体四号，居中</td>
+<td>致谢-begin</td>
+</tr>
+<tr>
+<td>致谢</td>
+<td>楷体五号（中文）<br>Times New Roman五号（英文）</td>
+<td></td>
+</tr>
+</tbody>
+</table></div></div></div><div class="heading-wrapper"><h5 data-heading="其他" dir="auto" class="heading" id="其他"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>其他</h5><div class="heading-children"><div><ol dir="auto">
+<li data-line="0" dir="auto">A4纸打印，页边距上下设置2.5 cm，左右设置为3 cm</li>
+<li data-line="1" dir="auto">行距：论文正文和参考文献全部采用1.25倍行距排版（说明：在“格式”选项中的“段落”设置窗口，采用多倍行距，行距设置值为1.25）</li>
+<li data-line="2" dir="auto">注释（中文——宋体小五号，英文——Times New Roman小五号）列于当前页的脚注位置，注释号按顺序采用1〕、2〕、3〕、……</li>
+<li data-line="3" dir="auto">中文标点一律采用<strong>全角</strong></li>
+</ol></div></div></div></div></div><div class="heading-wrapper"><h4 data-heading="内容具体要求" dir="auto" class="heading" id="内容具体要求"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>内容具体要求</h4><div class="heading-children"><div class="heading-wrapper"><h5 data-heading="核心要求" dir="auto" class="heading" id="核心要求"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>核心要求</h5><div class="heading-children"><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>内容</th>
+<th>具体要求/解释</th>
+<th>规模</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>题目</td>
+<td>简洁明确，概括性强</td>
+<td>不超过25个字</td>
+</tr>
+<tr>
+<td>摘要</td>
+<td>简明确切地描述主要内容，着重反映创新点和作者特别强调的观点，包括目的、方法、结果和结论</td>
+<td>以150～300字为宜</td>
+</tr>
+<tr>
+<td>关键词</td>
+<td>反映主题概念的词或词组</td>
+<td>一般为3～5个</td>
+</tr>
+<tr>
+<td>正文</td>
+<td>作者对研究工作的详细表述，包括<strong>研究对象</strong>、<strong>研究方法</strong>、<strong>结果</strong>和<strong>讨论</strong>几部分</td>
+<td></td>
+</tr>
+<tr>
+<td>结论</td>
+<td>最后的总结，其内容应当完整、准确、精炼</td>
+<td></td>
+</tr>
+<tr>
+<td>讨论</td>
+<td>应是由结论推广而来的，其段落通常位于结论之后</td>
+<td></td>
+</tr>
+<tr>
+<td>参考文献</td>
+<td>“文后参考文献”，为撰写而引用的有关图书资料<br>其内容反映取材来源、材料的广博程度和材料的可靠程度，一份完整的参考文献也是向读者提供的一份有价值的信息资料<br></td>
+<td>1. 非外文专业的外文参考文献应不少于4篇，且原则上不少于总参考文献的1/5<br>2. 近五年文献原则上不少于总参考文献的1/4</td>
+</tr>
+<tr>
+<td>附录（可选）</td>
+<td>不宜放入正文但又不可缺少的组成部分，或有主要参考价值的内容</td>
+<td></td>
+</tr>
+<tr>
+<td>致谢</td>
+<td>- 以简短的文字，对课题研究与毕业论文（设计）撰写过程中曾直接给予帮助的人员(如指导教师、答疑教师等)表示谢意或说明<br>- 这不仅是一种礼貌，也是对他人劳动的尊重，是治学者应有的品德<br>- 还可包括资助毕业论文（设计）的基金项目</td>
+<td></td>
+</tr>
+</tbody>
+</table></div></div></div><div class="heading-wrapper"><h5 data-heading="标题" dir="auto" class="heading" id="标题"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>标题</h5><div class="heading-children"><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>标题</th>
+<th>格式1</th>
+<th>格式2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一级</td>
+<td>一、二……</td>
+<td>1、2……</td>
+</tr>
+<tr>
+<td>二级</td>
+<td>（一）、（二）……</td>
+<td>1.1、2.1……</td>
+</tr>
+<tr>
+<td>三级</td>
+<td>1、2……</td>
+<td>1.1.1、2.1.1……</td>
+</tr>
+<tr>
+<td>四级</td>
+<td>（1）、（2）……</td>
+<td>1.1.1.1、2.1.1.1……</td>
+</tr>
+<tr>
+<td>五级/六级</td>
+<td>不允许使用</td>
+<td></td>
+</tr>
+</tbody>
+</table></div></div></div><div class="heading-wrapper"><h5 data-heading="图表" dir="auto" class="heading" id="图表"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>图表</h5><div class="heading-children"><div><p dir="auto">应满足：先文后图，先文后表</p></div><div><p dir="auto">具体图表要求：</p></div><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>内容</th>
+<th>要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>图序/表序</td>
+<td>可统一编序，或者逐章编序；但必须保持连续性</td>
+</tr>
+<tr>
+<td>图题/表题</td>
+<td>宋体小五号</td>
+</tr>
+<tr>
+<td>表序，表题</td>
+<td>位于表格上方，居中，形如"表序 表题"</td>
+</tr>
+<tr>
+<td>图序，图题</td>
+<td>位于图的正下方，居中，形如"图序 图题"</td>
+</tr>
+<tr>
+<td>表</td>
+<td>允许下页接排，接排时表题省略，表头应重复给出，并在左上方写“续表××”</td>
+</tr>
+</tbody>
+</table></div></div></div><div class="heading-wrapper"><h5 data-heading="参考文献" dir="auto" class="heading" id="参考文献"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>参考文献</h5><div class="heading-children"><div><p dir="auto">参考：《GB/T 7714—2005 文后参考文献著录规则》</p></div><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>文献类型</th>
+<th>文献著录格式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期刊论文</td>
+<td>[序号] 作者．题名[J]．刊名，出版年，卷号（期号）：引文页码．</td>
+</tr>
+<tr>
+<td>图书</td>
+<td>[序号] 作者．书名[M]．翻译者，译．版次（首版免注）．出版地：出版社，出版年：引文页码．</td>
+</tr>
+<tr>
+<td>学位论文</td>
+<td>[序号] 作者．题名[D]．保存地或出版地：保存单位或出版者，出版年：引文页码．</td>
+</tr>
+<tr>
+<td>报纸</td>
+<td>[序号] 作者．题名[N]．报纸名，年-月-日（版）．</td>
+</tr>
+<tr>
+<td>论文集</td>
+<td>[序号] 作者．论文集名：其他论文集名信息[C]．出版地：出版者，出版年：引文页码．</td>
+</tr>
+<tr>
+<td>论文集或图书中的论文</td>
+<td>[序号] 作者．论文题名[C]或论文题名[M]//主编．论文集名：其他论文集名信息或书名：其他书名信息．出版地：出版者，出版年：析出文献页码．</td>
+</tr>
+<tr>
+<td>专利文献</td>
+<td>[序号] 专利申请者或所有者．专利题名：专利国别，专利号[P]．公告日期或公开日期．</td>
+</tr>
+<tr>
+<td>标准</td>
+<td>[序号] 起草责任者．标准代号 标准顺序号—发布年 标准名称[S]．出版地：出版者，出版年：引文页码．</td>
+</tr>
+<tr>
+<td>科技报告</td>
+<td>[序号] 主要责任者．报告名：其他报告名信息[R]．出版地：出版者，出版年：引文页码．</td>
+</tr>
+<tr>
+<td>电子公告</td>
+<td>[序号] 主要责任者．题名：其他题名信息[EB/OL]．出版地：出版者，出版年（更新或修改日期）[引用日期]．获取和访问路径．</td>
+</tr>
+</tbody>
+</table></div><div><p dir="auto">例子：</p></div><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th>文献类型</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期刊论文</td>
+<td>[1] 王海粟．浅议会计信息披露模式[J]．财政研究，2004，21(1)：56-58．<br>[2] Kanamori H．Shaking without quaking[J]．Science，1998，279(5359)：2063-2064．</td>
+</tr>
+<tr>
+<td>学位论文</td>
+<td>[1] 孙玉文．汉语变调构词研究[D]．北京：北京大学出版社，2000．<br>[2] 张筑生．微分半动力系统的不变集[D]．北京：北京大学，1983：1-7．</td>
+</tr>
+<tr>
+<td>报纸</td>
+<td>[1] 李大伦．经济全球化的重要性[N]．光明日报，1998-12-27（3）．<br>[2] French W．Between silences：A voice from China[N]．Atlantic Weekly，1987-08-15（33）．</td>
+</tr>
+<tr>
+<td>图书</td>
+<td>[1] 霍斯尼 R K．谷物科学与工艺学原理[M]．李庆龙，译．2版．北京：中国食品出版社，1989：15-20．<br>[2] Gill R．Mastering English literature [M]．London：Macmillan，1985：42-45．</td>
+</tr>
+<tr>
+<td>论文集</td>
+<td>[1] 辛希孟．信息技术与信息服务国际研讨会论文集：A集[C]．北京：中国社会科学出版社，1994．<br>[2] 伍蠡甫．西方文论选[C]．上海：上海译文出版社，1979：12-17．</td>
+</tr>
+<tr>
+<td>论文集或图书中的论文</td>
+<td>[1] 钟文发．非线性规划在可燃毒物配置中的应用[C]//赵玮．运筹学的理论与应用：中国运筹学会第五届大会论文集．西安：西安电子科技大学出版社，1996：468-471．<br>[2] Weinstein L，Swertz M N．Pathogenic properties of invading microorganism[M]//Sodeman W A Jr，Sodeman W A．Pathologic physiology：Mechanisms of disease．Philadephia：Saunders，1974：745-772．</td>
+</tr>
+<tr>
+<td>专利文献</td>
+<td>[1] 姜锡洲．一种温热外敷药制备方案：中国，88105607.3[P]．1989-07-26．</td>
+</tr>
+<tr>
+<td>标准</td>
+<td>[1] 全国文献工作标准化技术委员会第七分委员会．GB/T 5795—1986 中国标准书号[S]．北京：中国标准出版社，1986．</td>
+</tr>
+<tr>
+<td>科技报告</td>
+<td>[1] 冯西桥．核反应堆压力管道与压力容器的LBB分析[R]．北京：清华大学核能技术设计研究院，1997：9-10．<br>[2] World Health Organization．Fractors regulating the immune response：Report of WHO Scientific Group[R]．Geneva：WHO，1970．</td>
+</tr>
+<tr>
+<td>电子公告</td>
+<td>[1] 萧钰．出版业信息化迈入快车道[EB/OL]．(2001-12-19)[2002-04-15]．<a data-tooltip-position="top" aria-label="http://www.creader.com/news/20011219/200112190019.html%EF%BC%8E" rel="noopener" class="external-link" href="http://www.creader.com/news/20011219/200112190019.html%EF%BC%8E" target="_blank">http://www.creader.com/news/20011219/200112190019.html．</a><br>[2] PACS-L：the public-access computer systems forum[EB/OL]．Houston，Tex：University of Houston Libraries，1989[1995-05-17]．<a data-tooltip-position="top" aria-label="http://info.lib.uh.edu/pacsl.html%EF%BC%8E" rel="noopener" class="external-link" href="http://info.lib.uh.edu/pacsl.html%EF%BC%8E" target="_blank">http://info.lib.uh.edu/pacsl.html．</a></td>
+</tr>
+</tbody>
+</table></div><div><p dir="auto">相关概念：</p></div><div><p dir="auto">DOI =&gt; 数字对象唯一标识符</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto">格式 =&gt; <span>10.&lt;出版机构id&gt;/&lt;suffix&gt;</span>，如：<span>10.16844/j.cnki.cn10-1007/tk.2017.26.179</span></li>
+<li data-line="1" dir="auto">解析url =&gt; <span>https://www.chndoi.org/Resolution/Handler?doi=&lt;doi&gt;</span></li>
+</ul></div><div><p dir="auto">知网直链 =&gt; <span>https://link.cnki.net/doi/&lt;doi&gt;</span> 或 <span>https://link.oversea.cnki.net/doi/&lt;doi&gt;</span></p></div></div></div></div></div></div></div><div class="heading-wrapper"><h3 data-heading="工作流" dir="auto" class="heading" id="工作流"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>工作流</h3><div class="heading-children"><div><ol dir="auto">
+<li data-line="0" dir="auto"><a data-tooltip-position="top" aria-label="https://iopscience.iop.org/article/10.1088/1757-899X/844/1/012022" rel="noopener" class="external-link" href="https://iopscience.iop.org/article/10.1088/1757-899X/844/1/012022" target="_blank">Methodology to define an integration process between frameworks SCRUM, Django REST framework y Vue.js, implemented for software development, from quality management approach and agility - IOPscience</a></li>
+<li data-line="1" dir="auto"><a data-tooltip-position="top" aria-label="https://iopscience.iop.org/article/10.1088/1742-6596/2425/1/012018" rel="noopener" class="external-link" href="https://iopscience.iop.org/article/10.1088/1742-6596/2425/1/012018" target="_blank">Design and Deployment of Django-based Housing Information Management System - IOPscience</a></li>
+<li data-line="2" dir="auto"><a data-tooltip-position="top" aria-label="https://www.sciencedirect.com/science/article/abs/pii/S1568494621001368?via%3Dihub" rel="noopener" class="external-link" href="https://www.sciencedirect.com/science/article/abs/pii/S1568494621001368?via%3Dihub" target="_blank">Cross-platform dynamic goods recommendation system based on reinforcement learning and social networks - ScienceDirect</a></li>
+<li data-line="3" dir="auto"><a data-tooltip-position="top" aria-label="https://www.sciencedirect.com/science/article/abs/pii/S004579062200372X?via%3Dihub" rel="noopener" class="external-link" href="https://www.sciencedirect.com/science/article/abs/pii/S004579062200372X?via%3Dihub" target="_blank">Design of cross-cultural teaching management system for international students based on cloud service platform - ScienceDirect</a></li>
+<li data-line="4" dir="auto"><a data-tooltip-position="top" aria-label="https://link.springer.com/article/10.1007/s00530-024-01295-y" rel="noopener" class="external-link" href="https://link.springer.com/article/10.1007/s00530-024-01295-y" target="_blank">Design of integrated interactive system for pre-diagnosis of breast cancer pathological images based on CNN and PyQt5 | Multimedia Systems (springer.com)</a></li>
+<li data-line="5" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flw2Y9o_D7Djk5iG_iU9cwNmZ-5laJUr7WGu5Wm0ym5uAE_7GIoZRvgbxVWmk2RRw4B6rrvTZNIidjjMt2aBlM94bpIWxqGOd3-YnXV8j1QdIxbRepP8gRYU8T1E03-gPrK3j8yH352QEg==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flw2Y9o_D7Djk5iG_iU9cwNmZ-5laJUr7WGu5Wm0ym5uAE_7GIoZRvgbxVWmk2RRw4B6rrvTZNIidjjMt2aBlM94bpIWxqGOd3-YnXV8j1QdIxbRepP8gRYU8T1E03-gPrK3j8yH352QEg==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">基于Django开发文件管理系统的简易设计 - 中国知网 (cnki.net)</a></li>
+<li data-line="6" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flwIG0UTZOQwDZ6jX3vkwkcXAr4v8Q2dfXsTxxStDN7rGwNsTJLRtMRsVeeQcCvK825A7gfPnA-jSc0YOE7trHE0a6k397P5Xv1euBO0XoffWK2Hb8aXIG6GAEwXpmv4Q6Q3owQPdW0v0Q==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flwIG0UTZOQwDZ6jX3vkwkcXAr4v8Q2dfXsTxxStDN7rGwNsTJLRtMRsVeeQcCvK825A7gfPnA-jSc0YOE7trHE0a6k397P5Xv1euBO0XoffWK2Hb8aXIG6GAEwXpmv4Q6Q3owQPdW0v0Q==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">基于Django的用户信息管理系统 - 中国知网 (cnki.net)</a></li>
+<li data-line="7" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flzeqjkOx1EW0rp08sBmlp1iYYzxWONm0va5Xlo4eQ2l7ruUNS_EYv3VKYQWyT303EzAe2PIoGrzhuNEZwVEiUW-YS-bkvE71SXvLKPiIyofxODtNM76fXpIJ2BvCqk8BsToQtmpKTXwBw==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flzeqjkOx1EW0rp08sBmlp1iYYzxWONm0va5Xlo4eQ2l7ruUNS_EYv3VKYQWyT303EzAe2PIoGrzhuNEZwVEiUW-YS-bkvE71SXvLKPiIyofxODtNM76fXpIJ2BvCqk8BsToQtmpKTXwBw==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">基于Vue.js的Web前端应用研究 - 中国知网 (cnki.net)</a></li>
+<li data-line="8" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flxcSofwEq7pXTHMEdaYoZ_YHYTemPjqXXz3J7u9M2WzE1ajNLC0Iw8aMzLPzThnLlEYz7P6gRgRKeWDH9RIvxyWIxbFAmEB8IRJQkepa0p68l1R_qX4fPuOy0jjr2aZ2jsnX_VM1QyT3w==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flxcSofwEq7pXTHMEdaYoZ_YHYTemPjqXXz3J7u9M2WzE1ajNLC0Iw8aMzLPzThnLlEYz7P6gRgRKeWDH9RIvxyWIxbFAmEB8IRJQkepa0p68l1R_qX4fPuOy0jjr2aZ2jsnX_VM1QyT3w==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">基于SSM框架的运动会管理系统的设计与实现 - 中国知网 (cnki.net)</a></li>
+<li data-line="9" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flxwDr68mMoYGaqm1oeuzSkgFvff_iz5QlmJlu5GLT6L4SvPSRU0bkCncJ7b8bwKFSXTtZyhoBIiAeqgwxyw6tUsPZY58eTCe8sULNaX_IZ6bYHaFm3ayTlF3_tvzYrvD-_LatWkdTgpvQ==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flxwDr68mMoYGaqm1oeuzSkgFvff_iz5QlmJlu5GLT6L4SvPSRU0bkCncJ7b8bwKFSXTtZyhoBIiAeqgwxyw6tUsPZY58eTCe8sULNaX_IZ6bYHaFm3ayTlF3_tvzYrvD-_LatWkdTgpvQ==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">基于PyQt5的水深比对检测系统在水下地形测量检查中的应用 - 中国知网 (cnki.net)</a></li>
+<li data-line="10" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flzItAPJJ7aBnVRSLPuuJet1Yhkv4Flf-WdVJR85vzb1hgnQfUa34YvqC-gopCHOYcG8H5iCBcMQPc-AUNeMCUGMCLRqPMB50c2Uv-f8xgfKJ2MOaW1o1rxTVn7PGf6NDZnH8-3sU0waNw==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flzItAPJJ7aBnVRSLPuuJet1Yhkv4Flf-WdVJR85vzb1hgnQfUa34YvqC-gopCHOYcG8H5iCBcMQPc-AUNeMCUGMCLRqPMB50c2Uv-f8xgfKJ2MOaW1o1rxTVn7PGf6NDZnH8-3sU0waNw==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">PyQt5与Qt设计师在GUI开发中的应用 - 中国知网 (cnki.net)</a></li>
+<li data-line="11" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flxMzQDkVxK-dqhTQDqBAuzImMuD0qKl9-i924V7RnSWHSudhX6iY_1XQ3GzhZJX1Zv7gDJjdVsTVzt-lw0X7NphnLG46tpi4Gpylpe0HHV2eM4csbMRkdUfouP_x3UYmwuAuNIj1OsOrw==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flxMzQDkVxK-dqhTQDqBAuzImMuD0qKl9-i924V7RnSWHSudhX6iY_1XQ3GzhZJX1Zv7gDJjdVsTVzt-lw0X7NphnLG46tpi4Gpylpe0HHV2eM4csbMRkdUfouP_x3UYmwuAuNIj1OsOrw==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">基于高德地图API的路段车速预测研究 - 中国知网 (cnki.net)</a></li>
+<li data-line="12" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flw2nx2nMHaBDAa3aLp9W2Yj3BxuxNJoZV2zkmfS5P8TddbRFIgH6SfPS6r21PShP26ox-YCRMW-UVnJSzykooSnEgMUXOrJrCTDGxWvYuGMQcRzJmeJWhMSKIT1lKFdBWcVp9WpOtk8sA==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flw2nx2nMHaBDAa3aLp9W2Yj3BxuxNJoZV2zkmfS5P8TddbRFIgH6SfPS6r21PShP26ox-YCRMW-UVnJSzykooSnEgMUXOrJrCTDGxWvYuGMQcRzJmeJWhMSKIT1lKFdBWcVp9WpOtk8sA==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">基于PYQT5的线路工程纵断面内插程序设计 - 中国知网 (cnki.net)</a></li>
+<li data-line="13" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flz3tbrI1qQhSXLf-ipXxAB5qw_jEYnFt4hbG5gR41BqHb96s33bKqtRMJXL03NKUwhPr8eop9gTXRfY4A2rDQqyrtq9g7NirsxwRRKwXodi0F7mFgcKycH_6q-wRqH1O-_AdGxoqQ8lIA==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flz3tbrI1qQhSXLf-ipXxAB5qw_jEYnFt4hbG5gR41BqHb96s33bKqtRMJXL03NKUwhPr8eop9gTXRfY4A2rDQqyrtq9g7NirsxwRRKwXodi0F7mFgcKycH_6q-wRqH1O-_AdGxoqQ8lIA==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">基于PyQt5平台的木材在线品质监测及评等系统 - 中国知网 (cnki.net)</a></li>
+<li data-line="14" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flyx7TnqHW6rQEi6d-oxJ-pcX9cpFzxZxEevmU36z-JqKdHx2PZR4iUZvmCn0pR9NAkcUdv0rSO_2nwc3fzCSJgMM9PD0rYReVZv6cNKNWiiKsCOkOpIULjwuGbYW4mRnJcLm6uO95VvtQ==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flyx7TnqHW6rQEi6d-oxJ-pcX9cpFzxZxEevmU36z-JqKdHx2PZR4iUZvmCn0pR9NAkcUdv0rSO_2nwc3fzCSJgMM9PD0rYReVZv6cNKNWiiKsCOkOpIULjwuGbYW4mRnJcLm6uO95VvtQ==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">基于PyQt5的铸造过程数据管理软件开发 - 中国知网 (cnki.net)</a></li>
+<li data-line="15" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flyZf-A0GOAiFXHzriONMaGG94Uwm9zRX8NxuQDVrTmiWEzEoT07W9v38REG5tcOiAUUWQ2eVLa8TsYMaWN15Evdgj0HV2ja8ESfsFhGjIkYap4J5_d5LkKoIEVfFLgeIPG84CI-iuyB9g==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flyZf-A0GOAiFXHzriONMaGG94Uwm9zRX8NxuQDVrTmiWEzEoT07W9v38REG5tcOiAUUWQ2eVLa8TsYMaWN15Evdgj0HV2ja8ESfsFhGjIkYap4J5_d5LkKoIEVfFLgeIPG84CI-iuyB9g==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">基于PyQt5和百度AI开放平台的物体图像识别界面系统的设计与实现 - 中国知网 (cnki.net)</a></li>
+<li data-line="16" dir="auto"><a data-tooltip-position="top" aria-label="https://thinker.cnki.net/bookstore/book/bookdetail?bookcode=9787121287220000&amp;type=book" rel="noopener" class="external-link" href="https://thinker.cnki.net/bookstore/book/bookdetail?bookcode=9787121287220000&amp;type=book" target="_blank">Vue.js权威指南-知网星空·心可书馆 (cnki.net)</a></li>
+<li data-line="17" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flyO9VOhVkUCv77TZ7ch93eQMqxRnIKlGIDvRP7ZNRT0yIZLyJvr8RGhdUpTpvBzqPyNW6IruWJ7Pex5powkaylCbpI1NVK7RbLFhwYlPGFWH_LBfILwVJI0IQ3Ut1SAyjau5yv2SjvpYg==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flyO9VOhVkUCv77TZ7ch93eQMqxRnIKlGIDvRP7ZNRT0yIZLyJvr8RGhdUpTpvBzqPyNW6IruWJ7Pex5powkaylCbpI1NVK7RbLFhwYlPGFWH_LBfILwVJI0IQ3Ut1SAyjau5yv2SjvpYg==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">轻量级响应式框架Vue.js应用分析 - 中国知网 (cnki.net)</a></li>
+<li data-line="18" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flw6AJUXLmMIOMMRivpRkevtrTEbSg5Xskm6nVZvoRjJrBEqaPkamSLuaIQn2XzhDiXx4eNgwW8QHU7v8GCfmNdDlwBvE-KWJN9j6PyDqmPekwYWBipZFSF-MjeGT6GzrOciDjVMv0D3Uw==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flw6AJUXLmMIOMMRivpRkevtrTEbSg5Xskm6nVZvoRjJrBEqaPkamSLuaIQn2XzhDiXx4eNgwW8QHU7v8GCfmNdDlwBvE-KWJN9j6PyDqmPekwYWBipZFSF-MjeGT6GzrOciDjVMv0D3Uw==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">Vue+Elementui+Echarts在项目管理平台中的应用 - 中国知网 (cnki.net)</a></li>
+<li data-line="19" dir="auto"><a data-tooltip-position="top" aria-label="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flwpYTYJjFUF6tDTBZSaEPuHar5KEdi_ad5qerpoC3GAoPqwdNYdAD1P83dZ_liEalZxh-Ec7kIKsRldRMWIfJPw1hMDrX73jTwgVqBcmS43mYLltVJv19jTgVQi4leBZykndN2etRvwqQ==&amp;uniplatform=NZKPT&amp;language=CHS" rel="noopener" class="external-link" href="https://kns.cnki.net/kcms2/article/abstract?v=axnrJTP8flwpYTYJjFUF6tDTBZSaEPuHar5KEdi_ad5qerpoC3GAoPqwdNYdAD1P83dZ_liEalZxh-Ec7kIKsRldRMWIfJPw1hMDrX73jTwgVqBcmS43mYLltVJv19jTgVQi4leBZykndN2etRvwqQ==&amp;uniplatform=NZKPT&amp;language=CHS" target="_blank">基于Vue的数据管理平台实践与应用 - 中国知网 (cnki.net)</a></li>
+</ol></div><div class="heading-wrapper"><h4 data-heading="答辩" dir="auto" class="heading" id="答辩"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>答辩</h4><div class="heading-children"><div><blockquote dir="auto">
+<p dir="auto">参考：《工作实施细则》p10 、<a data-tooltip-position="top" aria-label="https://zhuanlan.zhihu.com/p/374955536" rel="noopener" class="external-link" href="https://zhuanlan.zhihu.com/p/374955536" target="_blank">毕业论文答辩看这一篇就够了！(附答辩PPT模板) - 知乎 (zhihu.com)</a></p>
+</blockquote></div><div><p dir="auto">基本要求 =&gt; 指导老师及格、论文查重合格<br>
+参与者 =&gt; 答辩小组（3-5人）、答辩小组组长、答辩秘书<br>
+流程<br>
+=&gt; 简要报告主要内容（10-15 min）</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto">选题的目的和意义</li>
+<li data-line="1" dir="auto">所采用的资料和主要方法</li>
+<li data-line="2" dir="auto">毕业论文（设计）的基本内容及主要结论</li>
+<li data-line="3" dir="auto">毕业论文（设计）的价值及不足之处<br>
+=&gt; 教师提问（5-10 min）</li>
+<li data-line="5" dir="auto">论文（设计）所涉及的基本理论、基本知识、方法和原理</li>
+<li data-line="6" dir="auto">学生独立分析问题和解决问题的能力</li>
+<li data-line="7" dir="auto">要求进一步说明的问题<br>
+=&gt; 答辩小组给出成绩</li>
+</ul></div><div class="heading-wrapper"><h5 data-heading="简要报告主要内容" dir="auto" class="heading" id="简要报告主要内容"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>简要报告主要内容</h5><div class="heading-children"></div></div><div class="heading-wrapper"><h5 data-heading="教师提问" dir="auto" class="heading" id="教师提问"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>教师提问</h5><div class="heading-children"><div><p dir="auto">提问方式</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto">即问即答</li>
+<li data-line="1" dir="auto">惰性问答 =&gt; 依次获取提问，然后整理思路并统一作答</li>
+</ul></div><div><ol dir="auto">
+<li data-line="0" dir="auto">
+<p dir="auto">你为什么选择这个课题？<br>
+=&gt; （模仿/借鉴的对象）主要是因为我经常用网易云音乐听歌，然后所以我就想着要尝试以网易云音乐作为一个借鉴的对象，自己设计并实现这个系统<br>
+=&gt; 其次呢，我也是希望能实现属于我自己的、方便使用的音乐系统，来满足我日常生活的需要，而且还能够培养和锻炼我的实践方面的能力</p>
+</li>
+<li data-line="3" dir="auto">
+<p dir="auto">研究这个课题的意义和目的是什么(学术价值与现实意义)？<br>
+=&gt; </p>
+</li>
+<li data-line="5" dir="auto">
+<p dir="auto">全文的基本框架、结构、行文逻辑是什么？<br>
+=&gt; </p>
+</li>
+<li data-line="7" dir="auto">
+<p dir="auto">在研究过程中，发现了哪些不同见解？<br>
+=&gt; </p>
+</li>
+<li data-line="9" dir="auto">
+<p dir="auto">还有哪些问题没搞清楚，在论文中论述得不够透彻？</p>
+</li>
+<li data-line="11" dir="auto">
+<p dir="auto">论文在选题、观点、方法等方面有什么创新之处？</p>
+</li>
+<li data-line="13" dir="auto">
+<p dir="auto">文章的基本观点和立论依据？</p>
+</li>
+<li data-line="15" dir="auto">
+<p dir="auto">本文的优点和不完善之处？</p>
+</li>
+<li data-line="17" dir="auto">
+<p dir="auto">适当记住重要引文的具体出处。</p>
+</li>
+<li data-line="19" dir="auto">
+<p dir="auto">毕业论文采用了哪些与本专业相关的研究方法？</p>
+</li>
+</ol></div></div></div><div class="heading-wrapper"><h5 data-heading="稿子" dir="auto" class="heading" id="稿子"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>稿子</h5><div class="heading-children"><div><p dir="auto">各位老师好，我的论文题目是《基于django及pyqt5的跨平台音乐管理系统》，</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto">首先来简单介绍一下选题的背景：音乐一直以来是一种重要的娱乐和文化形式，在这个数字化时代自然就需要以一种数字化的方式取管理我们的音乐。而我着手开发这个项目原本的初衷就是为了更好的管理这种娱乐形式，随时都能带上我们的耳机听上我们喜爱的歌曲</li>
+<li data-line="1" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>而我通过一番探索和学习呢，以及对《网易云音乐》的观察，就发现通过以下的一些技术栈就能很好的达成我们的潜在需求：我把技术栈划分为后端、桌面端、web前端、数据库四个部分
+<ul dir="auto">
+<li data-line="2" dir="auto">其中后端通过 django 实现的数据库接口直接与 sqlite 进行通信</li>
+<li data-line="3" dir="auto">然后这个后端又通过 DRF 来分别与桌面端的 requests 模块，以及 web 前端的 axios 模块进行交流通信</li>
+<li data-line="4" dir="auto">使得各个模块之间互相连通</li>
+</ul>
+</li>
+<li data-line="5" dir="auto">然后我们来逐一介绍各个技术的用途：</li>
+<li data-line="6" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>接着我们来分析这个系统模块的划分：本系统将操作者划分为用户、歌手、管理员三种类型，并且每个操作者对应一个子系统；然后再单独划分出一个通用功能子系统
+<ul dir="auto">
+<li data-line="7" dir="auto">其中 用户子系统 下的 认证权限管理模块 定义了用户 注册、登录、注销，访问前端页面等操作，以及增删改查数据库的权限</li>
+<li data-line="8" dir="auto">。。。</li>
+</ul>
+</li>
+</ul></div><div><p dir="auto">web 前端、桌面端、后端 的所有代码都是由我个人独立完成</p></div><div><p dir="auto">答辩记录</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto">你的工作量体现在哪里？</li>
+<li data-line="1" dir="auto"></li>
+</ul></div><div><p dir="auto">建议：</p></div><div><ul dir="auto">
+<li data-line="0" dir="auto">前两章对论文的引用</li>
+</ul></div><div class="mod-footer"></div></div></div></div></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#毕业设计-main"><div class="tree-item-contents heading-link" heading-name="毕业设计-main"><span class="tree-item-title">毕业设计-main</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#参考"><div class="tree-item-contents heading-link" heading-name="参考"><span class="tree-item-title">参考</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#时间节点"><div class="tree-item-contents heading-link" heading-name="时间节点"><span class="tree-item-title">时间节点</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#编写规范"><div class="tree-item-contents heading-link" heading-name="编写规范"><span class="tree-item-title">编写规范</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#内容布局及其格式要求"><div class="tree-item-contents heading-link" heading-name="内容布局及其格式要求"><span class="tree-item-title">内容布局及其格式要求</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#封面"><div class="tree-item-contents heading-link" heading-name="封面"><span class="tree-item-title">封面</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#中文摘要"><div class="tree-item-contents heading-link" heading-name="中文摘要"><span class="tree-item-title">中文摘要</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#英文摘要"><div class="tree-item-contents heading-link" heading-name="英文摘要"><span class="tree-item-title">英文摘要</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#目录"><div class="tree-item-contents heading-link" heading-name="目录"><span class="tree-item-title">目录</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#正文"><div class="tree-item-contents heading-link" heading-name="正文"><span class="tree-item-title">正文</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#参考文献、致谢"><div class="tree-item-contents heading-link" heading-name="参考文献、致谢"><span class="tree-item-title">参考文献、致谢</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#其他"><div class="tree-item-contents heading-link" heading-name="其他"><span class="tree-item-title">其他</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#内容具体要求"><div class="tree-item-contents heading-link" heading-name="内容具体要求"><span class="tree-item-title">内容具体要求</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#核心要求"><div class="tree-item-contents heading-link" heading-name="核心要求"><span class="tree-item-title">核心要求</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#标题"><div class="tree-item-contents heading-link" heading-name="标题"><span class="tree-item-title">标题</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#图表"><div class="tree-item-contents heading-link" heading-name="图表"><span class="tree-item-title">图表</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#参考文献"><div class="tree-item-contents heading-link" heading-name="参考文献"><span class="tree-item-title">参考文献</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="3"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#工作流"><div class="tree-item-contents heading-link" heading-name="工作流"><span class="tree-item-title">工作流</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#答辩"><div class="tree-item-contents heading-link" heading-name="答辩"><span class="tree-item-title">答辩</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#简要报告主要内容"><div class="tree-item-contents heading-link" heading-name="简要报告主要内容"><span class="tree-item-title">简要报告主要内容</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#教师提问"><div class="tree-item-contents heading-link" heading-name="教师提问"><span class="tree-item-title">教师提问</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="待办项目\毕业论文\毕业设计-main.html#稿子"><div class="tree-item-contents heading-link" heading-name="稿子"><span class="tree-item-title">稿子</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

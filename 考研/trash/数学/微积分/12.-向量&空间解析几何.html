@@ -1,0 +1,1091 @@
+<!DOCTYPE html> <html><head>
+		<title>12. 向量&amp;空间解析几何</title>
+		<base href="..\..\..\../">
+		<meta id="root-path" root-path="..\..\..\../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="obsidian-vault - 12. 向量&amp;空间解析几何">
+		<meta property="og:title" content="12. 向量&amp;空间解析几何">
+		<meta property="og:description" content="obsidian-vault - 12. 向量&amp;空间解析几何">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="考研/trash/数学/微积分/12.-向量&amp;空间解析几何.html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="obsidian-vault">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles">mjx-c.mjx-c222B.TEX-S2::before { padding: 1.36em 0.944em 0.862em 0px; content: "∫"; }
+mjx-c.mjx-c7B.TEX-S2::before { padding: 1.15em 0.667em 0.649em 0px; content: "{"; }
+mjx-c.mjx-c7D.TEX-S2::before { padding: 1.15em 0.667em 0.649em 0px; content: "}"; }
+mjx-c.mjx-c20D7.TEX-V::before { padding: 0.714em 0.5em 0px 0px; content: "→"; }
+mjx-c.mjx-c1D6FE.TEX-I::before { padding: 0.441em 0.543em 0.216em 0px; content: "γ"; }
+mjx-c.mjx-c1D417.TEX-B::before { padding: 0.686em 0.869em 0px 0px; content: "X"; }
+mjx-c.mjx-c2D9.TEX-B::before { padding: 0.695em 0.575em 0px 0px; content: "˙"; }
+mjx-c.mjx-c1D420.TEX-B::before { padding: 0.455em 0.575em 0.201em 0px; content: "g"; }
+mjx-c.mjx-c1D41D.TEX-B::before { padding: 0.694em 0.639em 0.006em 0px; content: "d"; }
+mjx-c.mjx-c211A.TEX-A::before { padding: 0.701em 0.778em 0.181em 0px; content: "Q"; }
+mjx-c.mjx-c1D402.TEX-B::before { padding: 0.697em 0.831em 0.011em 0px; content: "C"; }
+mjx-c.mjx-c1D410.TEX-B::before { padding: 0.696em 0.864em 0.193em 0px; content: "Q"; }
+mjx-c.mjx-c2119.TEX-A::before { padding: 0.683em 0.611em 0px 0px; content: "P"; }
+mjx-c.mjx-c2223::before { padding: 0.75em 0.278em 0.249em 0px; content: "∣"; }
+mjx-c.mjx-cA8::before { padding: 0.669em 0.5em 0px 0px; content: "¨"; }
+mjx-c.mjx-c1D713.TEX-I::before { padding: 0.694em 0.651em 0.205em 0px; content: "ψ"; }
+mjx-c.mjx-c2B.TEX-B::before { padding: 0.633em 0.894em 0.131em 0px; content: "+"; }
+mjx-c.mjx-c1D7D0.TEX-B::before { padding: 0.654em 0.575em 0px 0px; content: "2"; }
+mjx-c.mjx-c2034::before { padding: 0.56em 0.825em 0px 0px; content: "′′′"; }
+mjx-c.mjx-c221A.TEX-S4::before { padding: 1.75em 1.02em 1.25em 0px; content: "√"; }
+mjx-mroot { display: inline-block; text-align: left; }
+mjx-root { display: inline-block; white-space: nowrap; }
+mjx-surd { display: inline-block; vertical-align: top; }
+mjx-sqrt { display: inline-block; padding-top: 0.07em; }
+mjx-sqrt > mjx-box { border-top: 0.07em solid; }
+mjx-sqrt.mjx-tall > mjx-box { padding-left: 0.3em; margin-left: -0.3em; }
+mjx-c.mjx-c2DA::before { padding: 0.715em 0.5em 0px 0px; content: "˚"; }
+mjx-c.mjx-c1D43E.TEX-I::before { padding: 0.683em 0.889em 0px 0px; content: "K"; }
+mjx-c.mjx-c7B.TEX-S1::before { padding: 0.85em 0.583em 0.349em 0px; content: "{"; }
+mjx-c.mjx-c7D.TEX-S1::before { padding: 0.85em 0.583em 0.349em 0px; content: "}"; }
+mjx-c.mjx-c2D9::before { padding: 0.669em 0.5em 0px 0px; content: "˙"; }
+mjx-c.mjx-cB0::before { padding: 0.715em 0.5em 0px 0px; content: "°"; }
+mjx-c.mjx-c1D41F.TEX-B::before { padding: 0.7em 0.452em 0px 0px; content: "f"; }
+mjx-c.mjx-c28.TEX-B::before { padding: 0.75em 0.447em 0.249em 0px; content: "("; }
+mjx-c.mjx-c2212.TEX-B::before { padding: 0.281em 0.894em 0px 0px; content: "−"; }
+mjx-c.mjx-c50.TEX-C::before { padding: 0.683em 0.733em 0.057em 0px; content: "P"; }
+mjx-c.mjx-c3A3::before { padding: 0.683em 0.722em 0px 0px; content: "Σ"; }
+mjx-c.mjx-c1D42A.TEX-B::before { padding: 0.45em 0.607em 0.194em 0px; content: "q"; }
+mjx-c.mjx-c1D411.TEX-B::before { padding: 0.686em 0.862em 0.011em 0px; content: "R"; }
+mjx-c.mjx-c29.TEX-B::before { padding: 0.75em 0.447em 0.249em 0px; content: ")"; }
+mjx-c.mjx-cAC::before { padding: 0.356em 0.667em 0px 0px; content: "¬"; }
+mjx-c.mjx-c21CC.TEX-A::before { padding: 0.514em 1em 0.014em 0px; content: "⇌"; }
+mjx-c.mjx-c27F6::before { padding: 0.511em 1.638em 0.011em 0px; content: "⟶"; }
+mjx-c.mjx-c45.TEX-C::before { padding: 0.705em 0.564em 0.022em 0px; content: "E"; }
+mjx-c.mjx-c1D432.TEX-B::before { padding: 0.444em 0.607em 0.2em 0px; content: "y"; }
+mjx-c.mjx-c4E::before { padding: 0.683em 0.75em 0px 0px; content: "N"; }
+mjx-c.mjx-c75::before { padding: 0.442em 0.556em 0.011em 0px; content: "u"; }
+mjx-c.mjx-c1D42D.TEX-B::before { padding: 0.635em 0.447em 0.005em 0px; content: "t"; }
+mjx-c.mjx-c43::before { padding: 0.705em 0.722em 0.021em 0px; content: "C"; }
+mjx-c.mjx-c42.TEX-C::before { padding: 0.705em 0.657em 0.022em 0px; content: "B"; }
+mjx-c.mjx-c2C.TEX-B::before { padding: 0.171em 0.319em 0.194em 0px; content: ","; }
+mjx-c.mjx-c6B::before { padding: 0.694em 0.528em 0px 0px; content: "k"; }
+mjx-c.mjx-c22A5::before { padding: 0.668em 0.778em 0px 0px; content: "⊥"; }
+mjx-c.mjx-c2212::before { padding: 0.583em 0.778em 0.082em 0px; content: "−"; }
+mjx-c.mjx-c5D.TEX-B::before { padding: 0.75em 0.319em 0.25em 0px; content: "]"; }
+mjx-c.mjx-c43.TEX-C::before { padding: 0.705em 0.527em 0.025em 0px; content: "C"; }
+mjx-c.mjx-c2C.TEX-MI::before { padding: 0.121em 0.307em 0.194em 0px; content: ","; }
+mjx-c.mjx-c5B.TEX-S1::before { padding: 0.85em 0.417em 0.349em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S1::before { padding: 0.85em 0.417em 0.349em 0px; content: "]"; }
+mjx-c.mjx-c1D41E.TEX-B::before { padding: 0.452em 0.527em 0.006em 0px; content: "e"; }
+mjx-c.mjx-c22F1::before { padding: 1.52em 1.282em 0px 0px; content: "⋱"; }
+mjx-c.mjx-c7D.TEX-S3::before { padding: 1.45em 0.75em 0.949em 0px; content: "}"; }
+mjx-c.mjx-c1D43C.TEX-I::before { padding: 0.683em 0.504em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D408.TEX-B::before { padding: 0.686em 0.436em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D448.TEX-I::before { padding: 0.683em 0.767em 0.022em 0px; content: "U"; }
+mjx-c.mjx-c1D400.TEX-B::before { padding: 0.698em 0.869em 0px 0px; content: "A"; }
+mjx-c.mjx-c1D431.TEX-B::before { padding: 0.444em 0.607em 0px 0px; content: "x"; }
+mjx-c.mjx-c1D429.TEX-B::before { padding: 0.45em 0.639em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c1D7CE.TEX-B::before { padding: 0.654em 0.575em 0.01em 0px; content: "0"; }
+mjx-c.mjx-c1D405.TEX-B::before { padding: 0.68em 0.724em 0px 0px; content: "F"; }
+mjx-c.mjx-c1D403.TEX-B::before { padding: 0.686em 0.882em 0px 0px; content: "D"; }
+mjx-c.mjx-c5B.TEX-S2::before { padding: 1.15em 0.472em 0.649em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S2::before { padding: 1.15em 0.472em 0.649em 0px; content: "]"; }
+mjx-c.mjx-c1D427.TEX-B::before { padding: 0.45em 0.639em 0px 0px; content: "n"; }
+mjx-c.mjx-c1D412.TEX-B::before { padding: 0.697em 0.639em 0.011em 0px; content: "S"; }
+mjx-c.mjx-c1D41C.TEX-B::before { padding: 0.453em 0.511em 0.006em 0px; content: "c"; }
+mjx-c.mjx-c1D425.TEX-B::before { padding: 0.694em 0.319em 0px 0px; content: "l"; }
+mjx-c.mjx-c222C.TEX-S1::before { padding: 0.805em 0.957em 0.306em 0px; content: "∬"; }
+mjx-c.mjx-c1D41A.TEX-B::before { padding: 0.453em 0.559em 0.006em 0px; content: "a"; }
+mjx-c.mjx-c1D41B.TEX-B::before { padding: 0.694em 0.639em 0.006em 0px; content: "b"; }
+mjx-c.mjx-c1D422.TEX-B::before { padding: 0.695em 0.319em 0px 0px; content: "i"; }
+mjx-c.mjx-c1D423.TEX-B::before { padding: 0.695em 0.351em 0.2em 0px; content: "j"; }
+mjx-c.mjx-c1D424.TEX-B::before { padding: 0.694em 0.607em 0px 0px; content: "k"; }
+mjx-c.mjx-c1D70C.TEX-I::before { padding: 0.442em 0.517em 0.216em 0px; content: "ρ"; }
+mjx-c.mjx-c1D719.TEX-I::before { padding: 0.694em 0.596em 0.205em 0px; content: "ϕ"; }
+mjx-c.mjx-c2DC.TEX-S1::before { padding: 0.722em 0.556em 0px 0px; content: "˜"; }
+mjx-c.mjx-c222D.TEX-S1::before { padding: 0.805em 1.304em 0.306em 0px; content: "∭"; }
+mjx-c.mjx-c2DC::before { padding: 0.668em 0.5em 0px 0px; content: "˜"; }
+mjx-c.mjx-c7B.TEX-S4::before { padding: 1.75em 0.806em 1.249em 0px; content: "{"; }
+mjx-c.mjx-c1D42E.TEX-B::before { padding: 0.45em 0.639em 0.006em 0px; content: "u"; }
+mjx-c.mjx-c2207::before { padding: 0.683em 0.833em 0.033em 0px; content: "∇"; }
+mjx-stretchy-v.mjx-c2016 mjx-ext mjx-c::before { content: "∥"; width: 0.556em; }
+mjx-c.mjx-c27E8::before { padding: 0.75em 0.389em 0.25em 0px; content: "⟨"; }
+mjx-c.mjx-c27E9::before { padding: 0.75em 0.389em 0.25em 0px; content: "⟩"; }
+mjx-c.mjx-c1D705.TEX-I::before { padding: 0.442em 0.576em 0.011em 0px; content: "κ"; }
+mjx-c.mjx-c1D42C.TEX-B::before { padding: 0.453em 0.454em 0.006em 0px; content: "s"; }
+mjx-c.mjx-c1D401.TEX-B::before { padding: 0.686em 0.818em 0px 0px; content: "B"; }
+mjx-c.mjx-c1D40D.TEX-B::before { padding: 0.686em 0.9em 0px 0px; content: "N"; }
+mjx-stretchy-h.mjx-c2192 mjx-ext mjx-c::before { content: "−"; padding: 0.583em 0px 0.082em; }
+mjx-stretchy-h.mjx-c2192 mjx-end mjx-c::before { content: "→"; padding: 0.583em 0px 0.082em; }
+mjx-c.mjx-c1D43D.TEX-I::before { padding: 0.683em 0.633em 0.022em 0px; content: "J"; }
+mjx-c.mjx-c2211.TEX-S2::before { padding: 0.95em 1.444em 0.45em 0px; content: "∑"; }
+mjx-c.mjx-c2033::before { padding: 0.56em 0.55em 0px 0px; content: "′′"; }
+mjx-c.mjx-c22EE::before { padding: 1.3em 0.278em 0.03em 0px; content: "⋮"; }
+mjx-c.mjx-c2033::before { padding: 0.56em 0.55em 0px 0px; content: "′′"; }
+mjx-c.mjx-c2225::before { padding: 0.75em 0.5em 0.25em 0px; content: "∥"; }
+mjx-c.mjx-c221A.TEX-S3::before { padding: 1.45em 1.02em 0.95em 0px; content: "√"; }
+mjx-c.mjx-c1D42B.TEX-B::before { padding: 0.45em 0.474em 0px 0px; content: "r"; }
+mjx-c.mjx-c1D42F.TEX-B::before { padding: 0.444em 0.607em 0px 0px; content: "v"; }
+mjx-c.mjx-cB1::before { padding: 0.666em 0.778em 0px 0px; content: "±"; }
+mjx-c.mjx-c1D45E.TEX-I::before { padding: 0.442em 0.46em 0.194em 0px; content: "q"; }
+mjx-c.mjx-c221A.TEX-S2::before { padding: 1.15em 1.02em 0.65em 0px; content: "√"; }
+mjx-c.mjx-c27F9::before { padding: 0.525em 1.638em 0.024em 0px; content: "⟹"; }
+mjx-c.mjx-c2224.TEX-A::before { padding: 0.75em 0.297em 0.252em 0px; content: "∤"; }
+.mjx-stretched mjx-c.mjx-c2013::before { content: "–"; }
+mjx-stretchy-h.mjx-c2013 mjx-ext mjx-c::before { content: "–"; padding: 0.285em 0px 0px; }
+mjx-c.mjx-c2217::before { padding: 0.465em 0.5em 0px 0px; content: "∗"; }
+mjx-c.mjx-c1D70B.TEX-I::before { padding: 0.431em 0.57em 0.011em 0px; content: "π"; }
+mjx-c.mjx-c2013::before { padding: 0.285em 0.5em 0px 0px; content: "–"; }
+mjx-stretchy-v.mjx-c7C mjx-ext mjx-c::before { content: "∣"; width: 0.333em; }
+mjx-c.mjx-c394::before { padding: 0.716em 0.833em 0px 0px; content: "Δ"; }
+mjx-c.mjx-c1D444.TEX-I::before { padding: 0.704em 0.791em 0.194em 0px; content: "Q"; }
+mjx-c.mjx-c2218::before { padding: 0.444em 0.5em 0px 0px; content: "∘"; }
+mjx-stretchy-v.mjx-c5B mjx-beg mjx-c::before { content: "⎡"; padding: 1.154em 0.667em 0.645em 0px; }
+mjx-stretchy-v.mjx-c5B mjx-ext mjx-c::before { content: "⎢"; width: 0.667em; }
+mjx-stretchy-v.mjx-c5B mjx-end mjx-c::before { content: "⎣"; padding: 1.155em 0.667em 0.644em 0px; }
+mjx-stretchy-v.mjx-c5B > mjx-end { margin-top: -1.799em; }
+mjx-stretchy-v.mjx-c5B > mjx-ext { border-top-width: 1.769em; border-bottom-width: 1.769em; }
+mjx-stretchy-v.mjx-c5D mjx-beg mjx-c::before { content: "⎤"; padding: 1.154em 0.667em 0.645em 0px; }
+mjx-stretchy-v.mjx-c5D mjx-ext mjx-c::before { content: "⎥"; width: 0.667em; }
+mjx-stretchy-v.mjx-c5D mjx-end mjx-c::before { content: "⎦"; padding: 1.155em 0.667em 0.644em 0px; }
+mjx-stretchy-v.mjx-c5D > mjx-end { margin-top: -1.799em; }
+mjx-stretchy-v.mjx-c5D > mjx-ext { border-top-width: 1.769em; border-bottom-width: 1.769em; }
+mjx-c.mjx-c1D703.TEX-I::before { padding: 0.705em 0.469em 0.01em 0px; content: "θ"; }
+mjx-c.mjx-c5E::before { padding: 0.694em 0.5em 0px 0px; content: "^"; }
+mjx-c.mjx-c1D708.TEX-I::before { padding: 0.442em 0.53em 0px 0px; content: "ν"; }
+mjx-c.mjx-c1D715::before { padding: 0.715em 0.566em 0.022em 0px; content: "∂"; }
+mjx-c.mjx-c5B.TEX-S3::before { padding: 1.45em 0.528em 0.949em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S3::before { padding: 1.45em 0.528em 0.949em 0px; content: "]"; }
+mjx-c.mjx-cAF::before { padding: 0.59em 0.5em 0px 0px; content: "¯"; }
+mjx-c.mjx-c223C::before { padding: 0.367em 0.778em 0px 0px; content: "∼"; }
+mjx-c.mjx-c5B.TEX-S4::before { padding: 1.75em 0.583em 1.249em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S4::before { padding: 1.75em 0.583em 1.249em 0px; content: "]"; }
+mjx-c.mjx-c3B::before { padding: 0.43em 0.278em 0.194em 0px; content: ";"; }
+mjx-c.mjx-c1D6FC.TEX-I::before { padding: 0.442em 0.64em 0.011em 0px; content: "α"; }
+mjx-c.mjx-c1D6FD.TEX-I::before { padding: 0.705em 0.566em 0.194em 0px; content: "β"; }
+mjx-c.mjx-c28.TEX-S1::before { padding: 0.85em 0.458em 0.349em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S1::before { padding: 0.85em 0.458em 0.349em 0px; content: ")"; }
+mjx-c.mjx-c220F.TEX-S1::before { padding: 0.75em 0.944em 0.25em 0px; content: "∏"; }
+mjx-c.mjx-c1D70F.TEX-I::before { padding: 0.431em 0.517em 0.013em 0px; content: "τ"; }
+mjx-c.mjx-c1D6FF.TEX-I::before { padding: 0.717em 0.444em 0.01em 0px; content: "δ"; }
+mjx-c.mjx-c1D439.TEX-I::before { padding: 0.68em 0.749em 0px 0px; content: "F"; }
+mjx-msqrt { display: inline-block; text-align: left; }
+mjx-root { display: inline-block; white-space: nowrap; }
+mjx-surd { display: inline-block; vertical-align: top; }
+mjx-sqrt { display: inline-block; padding-top: 0.07em; }
+mjx-sqrt > mjx-box { border-top: 0.07em solid; }
+mjx-sqrt.mjx-tall > mjx-box { padding-left: 0.3em; margin-left: -0.3em; }
+mjx-mspace { display: inline-block; text-align: left; }
+mjx-c.mjx-c1D707.TEX-I::before { padding: 0.442em 0.603em 0.216em 0px; content: "μ"; }
+mjx-c.mjx-c1D70E.TEX-I::before { padding: 0.431em 0.571em 0.011em 0px; content: "σ"; }
+mjx-c.mjx-c221A::before { padding: 0.8em 0.853em 0.2em 0px; content: "√"; }
+mjx-c.mjx-c221A.TEX-S1::before { padding: 0.85em 1.02em 0.35em 0px; content: "√"; }
+mjx-c.mjx-c1D716.TEX-I::before { padding: 0.431em 0.406em 0.011em 0px; content: "ϵ"; }
+mjx-c.mjx-c27FA::before { padding: 0.525em 1.858em 0.024em 0px; content: "⟺"; }
+mjx-c.mjx-c28.TEX-S2::before { padding: 1.15em 0.597em 0.649em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S2::before { padding: 1.15em 0.597em 0.649em 0px; content: ")"; }
+mjx-c.mjx-c2248::before { padding: 0.483em 0.778em 0px 0px; content: "≈"; }
+mjx-c.mjx-c3A6::before { padding: 0.683em 0.722em 0px 0px; content: "Φ"; }
+mjx-c.mjx-c1D440.TEX-I::before { padding: 0.683em 1.051em 0px 0px; content: "M"; }
+mjx-c.mjx-c222B.TEX-S1::before { padding: 0.805em 0.61em 0.306em 0px; content: "∫"; }
+mjx-c.mjx-c2026::before { padding: 0.12em 1.172em 0px 0px; content: "…"; }
+mjx-mover { display: inline-block; text-align: left; }
+mjx-mover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-mover:not([limits="false"]) > * { display: block; text-align: left; }
+mjx-c.mjx-c1D44B.TEX-I::before { padding: 0.683em 0.852em 0px 0px; content: "X"; }
+mjx-c.mjx-c1D44C.TEX-I::before { padding: 0.683em 0.763em 0px 0px; content: "Y"; }
+mjx-c.mjx-c1D466.TEX-I::before { padding: 0.442em 0.49em 0.205em 0px; content: "y"; }
+mjx-c.mjx-c76::before { padding: 0.431em 0.528em 0.011em 0px; content: "v"; }
+mjx-c.mjx-c1D706.TEX-I::before { padding: 0.694em 0.583em 0.012em 0px; content: "λ"; }
+mjx-c.mjx-c1D44D.TEX-I::before { padding: 0.683em 0.723em 0px 0px; content: "Z"; }
+mjx-c.mjx-c1D467.TEX-I::before { padding: 0.442em 0.465em 0.011em 0px; content: "z"; }
+mjx-c.mjx-c7E::before { padding: 0.318em 0.5em 0px 0px; content: "~"; }
+mjx-c.mjx-c22C3.TEX-S1::before { padding: 0.75em 0.833em 0.249em 0px; content: "⋃"; }
+mjx-c.mjx-c3A9::before { padding: 0.704em 0.722em 0px 0px; content: "Ω"; }
+mjx-c.mjx-c22C2.TEX-S1::before { padding: 0.75em 0.833em 0.249em 0px; content: "⋂"; }
+mjx-c.mjx-c25FC.TEX-A::before { padding: 0.689em 0.778em 0px 0px; content: "■"; }
+mjx-c.mjx-c1D435.TEX-I::before { padding: 0.683em 0.759em 0px 0px; content: "B"; }
+mjx-c.mjx-c222A::before { padding: 0.598em 0.667em 0.022em 0px; content: "∪"; }
+mjx-c.mjx-c28.TEX-S3::before { padding: 1.45em 0.736em 0.949em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S3::before { padding: 1.45em 0.736em 0.949em 0px; content: ")"; }
+mjx-c.mjx-c28.TEX-S4::before { padding: 1.75em 0.792em 1.249em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S4::before { padding: 1.75em 0.792em 1.249em 0px; content: ")"; }
+mjx-mfrac { display: inline-block; text-align: left; }
+mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
+mjx-frac[type="d"] { vertical-align: 0.04em; }
+mjx-frac[delims] { padding: 0px 0.1em; }
+mjx-frac[atop] { padding: 0px 0.12em; }
+mjx-frac[atop][delims] { padding: 0px; }
+mjx-dtable { display: inline-table; width: 100%; }
+mjx-dtable > * { font-size: 2000%; }
+mjx-dbox { display: block; font-size: 5%; }
+mjx-num { display: block; text-align: center; }
+mjx-den { display: block; text-align: center; }
+mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
+mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
+mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
+mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
+mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
+mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
+mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
+mjx-dstrut[type="d"] { height: 0.726em; }
+mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.06em solid; margin: 0.06em -0.1em; overflow: hidden; }
+mjx-line[type="d"] { margin: 0.18em -0.1em; }
+mjx-c.mjx-c21::before { padding: 0.716em 0.278em 0px 0px; content: "!"; }
+mjx-c.mjx-cA0::before { padding: 0px 0.25em 0px 0px; content: " "; }
+mjx-c.mjx-c2115.TEX-A::before { padding: 0.683em 0.722em 0.02em 0px; content: "N"; }
+mjx-c.mjx-c1D454.TEX-I::before { padding: 0.442em 0.477em 0.205em 0px; content: "g"; }
+mjx-c.mjx-c398::before { padding: 0.705em 0.778em 0.022em 0px; content: "Θ"; }
+mjx-mtext { display: inline-block; text-align: left; }
+mjx-msub { display: inline-block; text-align: left; }
+mjx-mrow { display: inline-block; text-align: left; }
+mjx-mtable { display: inline-block; text-align: center; vertical-align: 0.25em; position: relative; box-sizing: border-box; border-spacing: 0px; border-collapse: collapse; }
+mjx-mstyle[size="s"] mjx-mtable { vertical-align: 0.354em; }
+mjx-labels { position: absolute; left: 0px; top: 0px; }
+mjx-table { display: inline-block; vertical-align: -0.5ex; box-sizing: border-box; }
+mjx-table > mjx-itable { vertical-align: middle; text-align: left; box-sizing: border-box; }
+mjx-labels > mjx-itable { position: absolute; top: 0px; }
+mjx-mtable[justify="left"] { text-align: left; }
+mjx-mtable[justify="right"] { text-align: right; }
+mjx-mtable[justify="left"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="left"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[justify="right"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="right"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[align] { vertical-align: baseline; }
+mjx-mtable[align="top"] > mjx-table { vertical-align: top; }
+mjx-mtable[align="bottom"] > mjx-table { vertical-align: bottom; }
+mjx-mtable[side="right"] mjx-labels { min-width: 100%; }
+mjx-mtr { display: table-row; text-align: left; }
+mjx-mtr[rowalign="top"] > mjx-mtd { vertical-align: top; }
+mjx-mtr[rowalign="center"] > mjx-mtd { vertical-align: middle; }
+mjx-mtr[rowalign="bottom"] > mjx-mtd { vertical-align: bottom; }
+mjx-mtr[rowalign="baseline"] > mjx-mtd { vertical-align: baseline; }
+mjx-mtr[rowalign="axis"] > mjx-mtd { vertical-align: 0.25em; }
+mjx-mtd { display: table-cell; text-align: center; padding: 0.215em 0.4em; }
+mjx-mtd:first-child { padding-left: 0px; }
+mjx-mtd:last-child { padding-right: 0px; }
+mjx-mtable > * > mjx-itable > :first-child > mjx-mtd { padding-top: 0px; }
+mjx-mtable > * > mjx-itable > :last-child > mjx-mtd { padding-bottom: 0px; }
+mjx-tstrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
+mjx-labels[align="left"] > mjx-mtr > mjx-mtd { text-align: left; }
+mjx-labels[align="right"] > mjx-mtr > mjx-mtd { text-align: right; }
+mjx-mtd[extra] { padding: 0px; }
+mjx-mtd[rowalign="top"] { vertical-align: top; }
+mjx-mtd[rowalign="center"] { vertical-align: middle; }
+mjx-mtd[rowalign="bottom"] { vertical-align: bottom; }
+mjx-mtd[rowalign="baseline"] { vertical-align: baseline; }
+mjx-mtd[rowalign="axis"] { vertical-align: 0.25em; }
+mjx-munder { display: inline-block; text-align: left; }
+mjx-over { text-align: left; }
+mjx-munder:not([limits="false"]) { display: inline-table; }
+mjx-munder > mjx-row { text-align: left; }
+mjx-under { padding-bottom: 0.1em; }
+mjx-munderover { display: inline-block; text-align: left; }
+mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-munderover:not([limits="false"]) > * { display: block; }
+mjx-msubsup { display: inline-block; text-align: left; }
+mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
+mjx-script > mjx-spacer { display: block; }
+mjx-stretchy-v.mjx-c7B mjx-beg mjx-c::before { content: "⎧"; padding: 0.899em 0.889em 0.01em 0px; }
+mjx-stretchy-v.mjx-c7B mjx-ext mjx-c::before { content: "⎪"; width: 0.889em; }
+mjx-stretchy-v.mjx-c7B mjx-end mjx-c::before { content: "⎩"; padding: 0.01em 0.889em 0.899em 0px; }
+mjx-stretchy-v.mjx-c7B mjx-mid mjx-c::before { content: "⎨"; padding: 1.16em 0.889em 0.66em 0px; }
+mjx-stretchy-v.mjx-c7B > mjx-mid { margin-top: -0.91em; margin-bottom: -0.91em; }
+mjx-stretchy-v.mjx-c7B > mjx-end { margin-top: -0.909em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext { height: 50%; border-top-width: 0.879em; border-bottom-width: 0.879em; }
+mjx-c.mjx-c44::before { padding: 0.683em 0.764em 0px 0px; content: "D"; }
+mjx-c.mjx-c52::before { padding: 0.683em 0.736em 0.022em 0px; content: "R"; }
+mjx-c.mjx-c3D::before { padding: 0.583em 0.778em 0.082em 0px; content: "="; }
+mjx-c.mjx-c50::before { padding: 0.683em 0.681em 0px 0px; content: "P"; }
+mjx-c.mjx-c53::before { padding: 0.705em 0.556em 0.022em 0px; content: "S"; }
+mjx-c.mjx-c2200::before { padding: 0.694em 0.556em 0.022em 0px; content: "∀"; }
+mjx-c.mjx-c1D465.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "x"; }
+mjx-c.mjx-c2208::before { padding: 0.54em 0.667em 0.04em 0px; content: "∈"; }
+mjx-c.mjx-c2C::before { padding: 0.121em 0.278em 0.194em 0px; content: ","; }
+mjx-c.mjx-c2203::before { padding: 0.694em 0.556em 0px 0px; content: "∃"; }
+mjx-c.mjx-c1D451.TEX-I::before { padding: 0.694em 0.52em 0.01em 0px; content: "d"; }
+mjx-c.mjx-c2282::before { padding: 0.54em 0.778em 0.04em 0px; content: "⊂"; }
+mjx-c.mjx-c1D45F.TEX-I::before { padding: 0.442em 0.451em 0.011em 0px; content: "r"; }
+mjx-c.mjx-c1D45D.TEX-I::before { padding: 0.442em 0.503em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c7B::before { padding: 0.75em 0.5em 0.25em 0px; content: "{"; }
+mjx-c.mjx-c7D::before { padding: 0.75em 0.5em 0.25em 0px; content: "}"; }
+mjx-c.mjx-c1D437.TEX-I::before { padding: 0.683em 0.828em 0px 0px; content: "D"; }
+mjx-c.mjx-c1D446.TEX-I::before { padding: 0.705em 0.645em 0.022em 0px; content: "S"; }
+mjx-c.mjx-c1D445.TEX-I::before { padding: 0.683em 0.759em 0.021em 0px; content: "R"; }
+mjx-c.mjx-c70::before { padding: 0.442em 0.556em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c72::before { padding: 0.442em 0.392em 0px 0px; content: "r"; }
+mjx-c.mjx-c69::before { padding: 0.669em 0.278em 0px 0px; content: "i"; }
+mjx-c.mjx-c6F::before { padding: 0.448em 0.5em 0.01em 0px; content: "o"; }
+mjx-c.mjx-c1D462.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "u"; }
+mjx-c.mjx-c6E::before { padding: 0.442em 0.556em 0px 0px; content: "n"; }
+mjx-c.mjx-c65::before { padding: 0.448em 0.444em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c78::before { padding: 0.431em 0.528em 0px 0px; content: "x"; }
+mjx-c.mjx-c74::before { padding: 0.615em 0.389em 0.01em 0px; content: "t"; }
+mjx-c.mjx-c1D456.TEX-I::before { padding: 0.661em 0.345em 0.011em 0px; content: "i"; }
+mjx-c.mjx-c2E::before { padding: 0.12em 0.278em 0px 0px; content: "."; }
+mjx-c.mjx-c1D45B.TEX-I::before { padding: 0.442em 0.6em 0.011em 0px; content: "n"; }
+mjx-c.mjx-c1D43F.TEX-I::before { padding: 0.683em 0.681em 0px 0px; content: "L"; }
+mjx-c.mjx-c1D436.TEX-I::before { padding: 0.705em 0.76em 0.022em 0px; content: "C"; }
+mjx-c.mjx-c1D44E.TEX-I::before { padding: 0.441em 0.529em 0.01em 0px; content: "a"; }
+mjx-c.mjx-c2B::before { padding: 0.583em 0.778em 0.082em 0px; content: "+"; }
+mjx-c.mjx-c1D450.TEX-I::before { padding: 0.442em 0.433em 0.011em 0px; content: "c"; }
+mjx-c.mjx-c1D453.TEX-I::before { padding: 0.705em 0.55em 0.205em 0px; content: "f"; }
+mjx-c.mjx-c1D45C.TEX-I::before { padding: 0.441em 0.485em 0.011em 0px; content: "o"; }
+mjx-c.mjx-c1D441.TEX-I::before { padding: 0.683em 0.888em 0px 0px; content: "N"; }
+mjx-c.mjx-c25::before { padding: 0.75em 0.833em 0.056em 0px; content: "%"; }
+mjx-c.mjx-c7B.TEX-S3::before { padding: 1.45em 0.75em 0.949em 0px; content: "{"; }
+mjx-c.mjx-c221E::before { padding: 0.442em 1em 0.011em 0px; content: "∞"; }
+mjx-c.mjx-c1D44F.TEX-I::before { padding: 0.694em 0.429em 0.011em 0px; content: "b"; }
+mjx-c.mjx-c1D458.TEX-I::before { padding: 0.694em 0.521em 0.011em 0px; content: "k"; }
+mjx-c.mjx-c6D::before { padding: 0.442em 0.833em 0px 0px; content: "m"; }
+mjx-c.mjx-c61::before { padding: 0.448em 0.5em 0.011em 0px; content: "a"; }
+mjx-c.mjx-c1D45A.TEX-I::before { padding: 0.442em 0.878em 0.011em 0px; content: "m"; }
+mjx-c.mjx-c3C::before { padding: 0.54em 0.778em 0.04em 0px; content: "<"; }
+mjx-c.mjx-c1D457.TEX-I::before { padding: 0.661em 0.412em 0.204em 0px; content: "j"; }
+mjx-c.mjx-c1D459.TEX-I::before { padding: 0.694em 0.298em 0.011em 0px; content: "l"; }
+mjx-c.mjx-c5B::before { padding: 0.75em 0.278em 0.25em 0px; content: "["; }
+mjx-c.mjx-c210E.TEX-I::before { padding: 0.694em 0.576em 0.011em 0px; content: "h"; }
+mjx-c.mjx-c5D::before { padding: 0.75em 0.278em 0.25em 0px; content: "]"; }
+mjx-c.mjx-cD7::before { padding: 0.491em 0.778em 0px 0px; content: "×"; }
+mjx-c.mjx-c2265::before { padding: 0.636em 0.778em 0.138em 0px; content: "≥"; }
+mjx-c.mjx-c1D447.TEX-I::before { padding: 0.677em 0.704em 0px 0px; content: "T"; }
+mjx-c.mjx-c22EF::before { padding: 0.31em 1.172em 0px 0px; content: "⋯"; }
+mjx-c.mjx-c64::before { padding: 0.694em 0.556em 0.011em 0px; content: "d"; }
+mjx-c.mjx-c67::before { padding: 0.453em 0.5em 0.206em 0px; content: "g"; }
+mjx-c.mjx-c2061::before { padding: 0px; content: ""; }
+mjx-c.mjx-c1D463.TEX-I::before { padding: 0.443em 0.485em 0.011em 0px; content: "v"; }
+mjx-c.mjx-c77::before { padding: 0.431em 0.722em 0.011em 0px; content: "w"; }
+mjx-c.mjx-c6C::before { padding: 0.694em 0.278em 0px 0px; content: "l"; }
+mjx-c.mjx-c66::before { padding: 0.705em 0.372em 0px 0px; content: "f"; }
+mjx-c.mjx-c2209::before { padding: 0.716em 0.667em 0.215em 0px; content: "∉"; }
+mjx-c.mjx-c2260::before { padding: 0.716em 0.778em 0.215em 0px; content: "≠"; }
+mjx-c.mjx-c73::before { padding: 0.448em 0.394em 0.011em 0px; content: "s"; }
+mjx-c.mjx-c62::before { padding: 0.694em 0.556em 0.011em 0px; content: "b"; }
+mjx-c.mjx-c63::before { padding: 0.448em 0.444em 0.011em 0px; content: "c"; }
+mjx-c.mjx-c68::before { padding: 0.694em 0.556em 0px 0px; content: "h"; }
+mjx-c.mjx-c2205::before { padding: 0.772em 0.5em 0.078em 0px; content: "∅"; }
+mjx-c.mjx-c7C::before { padding: 0.75em 0.278em 0.249em 0px; content: "|"; }
+mjx-c.mjx-c1D43A.TEX-I::before { padding: 0.705em 0.786em 0.022em 0px; content: "G"; }
+mjx-c.mjx-c1D449.TEX-I::before { padding: 0.683em 0.769em 0.022em 0px; content: "V"; }
+mjx-c.mjx-c1D438.TEX-I::before { padding: 0.68em 0.764em 0px 0px; content: "E"; }
+mjx-c.mjx-c1D44A.TEX-I::before { padding: 0.683em 1.048em 0.022em 0px; content: "W"; }
+mjx-c.mjx-c1D443.TEX-I::before { padding: 0.683em 0.751em 0px 0px; content: "P"; }
+mjx-c.mjx-c2211.TEX-S1::before { padding: 0.75em 1.056em 0.25em 0px; content: "∑"; }
+mjx-c.mjx-c2264::before { padding: 0.636em 0.778em 0.138em 0px; content: "≤"; }
+mjx-c.mjx-c2204::before { padding: 0.716em 0.556em 0.215em 0px; content: "∄"; }
+mjx-c.mjx-c4C::before { padding: 0.683em 0.625em 0px 0px; content: "L"; }
+mjx-c.mjx-c2308::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌈"; }
+mjx-c.mjx-c2309::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌉"; }
+mjx-c.mjx-c230A::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌊"; }
+mjx-c.mjx-c230B::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌋"; }
+mjx-c.mjx-c1D430.TEX-B::before { padding: 0.444em 0.831em 0px 0px; content: "w"; }
+mjx-c.mjx-c1D464.TEX-I::before { padding: 0.443em 0.716em 0.011em 0px; content: "w"; }
+mjx-c.mjx-c1D413.TEX-B::before { padding: 0.675em 0.8em 0px 0px; content: "T"; }
+mjx-c.mjx-c3D.TEX-B::before { padding: 0.393em 0.894em 0px 0px; content: "="; }
+mjx-c.mjx-c1D7CF.TEX-B::before { padding: 0.655em 0.575em 0px 0px; content: "1"; }
+mjx-c.mjx-c2190::before { padding: 0.511em 1em 0.011em 0px; content: "←"; }
+mjx-c.mjx-c56::before { padding: 0.683em 0.75em 0.022em 0px; content: "V"; }
+mjx-c.mjx-c45::before { padding: 0.68em 0.681em 0px 0px; content: "E"; }
+mjx-c.mjx-c6A::before { padding: 0.669em 0.306em 0.205em 0px; content: "j"; }
+mjx-c.mjx-c1D460.TEX-I::before { padding: 0.442em 0.469em 0.01em 0px; content: "s"; }
+mjx-c.mjx-c2192::before { padding: 0.511em 1em 0.011em 0px; content: "→"; }
+mjx-c.mjx-c2032::before { padding: 0.56em 0.275em 0px 0px; content: "′"; }
+mjx-c.mjx-c2229::before { padding: 0.598em 0.667em 0.022em 0px; content: "∩"; }
+mjx-c.mjx-c49::before { padding: 0.683em 0.361em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D434.TEX-I::before { padding: 0.716em 0.75em 0px 0px; content: "A"; }
+mjx-c.mjx-c3A::before { padding: 0.43em 0.278em 0px 0px; content: ":"; }
+mjx-c.mjx-c211D.TEX-A::before { padding: 0.683em 0.722em 0px 0px; content: "R"; }
+mjx-c.mjx-c1D43B.TEX-I::before { padding: 0.683em 0.888em 0px 0px; content: "H"; }
+mjx-c.mjx-c1D53D.TEX-A::before { padding: 0.683em 0.611em 0px 0px; content: "F"; }
+mjx-c.mjx-c2124.TEX-A::before { padding: 0.683em 0.667em 0px 0px; content: "Z"; }
+mjx-c.mjx-c21A6::before { padding: 0.511em 1em 0.011em 0px; content: "↦"; }
+mjx-c.mjx-c71::before { padding: 0.442em 0.528em 0.194em 0px; content: "q"; }
+mjx-c.mjx-c30::before { padding: 0.666em 0.5em 0.022em 0px; content: "0"; }
+mjx-c.mjx-c36::before { padding: 0.666em 0.5em 0.022em 0px; content: "6"; }
+mjx-container[jax="CHTML"] { line-height: 0; }
+mjx-container [space="1"] { margin-left: 0.111em; }
+mjx-container [space="2"] { margin-left: 0.167em; }
+mjx-container [space="3"] { margin-left: 0.222em; }
+mjx-container [space="4"] { margin-left: 0.278em; }
+mjx-container [space="5"] { margin-left: 0.333em; }
+mjx-container [rspace="1"] { margin-right: 0.111em; }
+mjx-container [rspace="2"] { margin-right: 0.167em; }
+mjx-container [rspace="3"] { margin-right: 0.222em; }
+mjx-container [rspace="4"] { margin-right: 0.278em; }
+mjx-container [rspace="5"] { margin-right: 0.333em; }
+mjx-container [size="s"] { font-size: 70.7%; }
+mjx-container [size="ss"] { font-size: 50%; }
+mjx-container [size="Tn"] { font-size: 60%; }
+mjx-container [size="sm"] { font-size: 85%; }
+mjx-container [size="lg"] { font-size: 120%; }
+mjx-container [size="Lg"] { font-size: 144%; }
+mjx-container [size="LG"] { font-size: 173%; }
+mjx-container [size="hg"] { font-size: 207%; }
+mjx-container [size="HG"] { font-size: 249%; }
+mjx-container [width="full"] { width: 100%; }
+mjx-box { display: inline-block; }
+mjx-block { display: block; }
+mjx-itable { display: inline-table; }
+mjx-row { display: table-row; }
+mjx-row > * { display: table-cell; }
+mjx-mtext { display: inline-block; }
+mjx-mstyle { display: inline-block; }
+mjx-merror { display: inline-block; color: red; background-color: yellow; }
+mjx-mphantom { visibility: hidden; }
+mjx-assistive-mml { top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); user-select: none; position: absolute !important; padding: 1px 0px 0px !important; border: 0px !important; display: block !important; width: auto !important; overflow: hidden !important; }
+mjx-assistive-mml[display="block"] { width: 100% !important; }
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
+mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
+mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h { display: inline-table; width: 100%; }
+mjx-stretchy-h > * { display: table-cell; width: 0px; }
+mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
+mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
+mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
+mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
+mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
+mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
+mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
+mjx-stretchy-v { display: inline-block; }
+mjx-stretchy-v > * { display: block; }
+mjx-stretchy-v > mjx-beg { height: 0px; }
+mjx-stretchy-v > mjx-end > mjx-c { display: block; }
+mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
+mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
+mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
+mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
+mjx-mark { display: inline-block; height: 0px; }
+mjx-c { display: inline-block; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-texatom { display: inline-block; text-align: left; }
+mjx-mi { display: inline-block; text-align: left; }
+mjx-msup { display: inline-block; text-align: left; }
+mjx-c::before { display: block; width: 0px; }
+.MJX-TEX { font-family: MJXZERO, MJXTEX; }
+.TEX-B { font-family: MJXZERO, MJXTEX-B; }
+.TEX-I { font-family: MJXZERO, MJXTEX-I; }
+.TEX-MI { font-family: MJXZERO, MJXTEX-MI; }
+.TEX-BI { font-family: MJXZERO, MJXTEX-BI; }
+.TEX-S1 { font-family: MJXZERO, MJXTEX-S1; }
+.TEX-S2 { font-family: MJXZERO, MJXTEX-S2; }
+.TEX-S3 { font-family: MJXZERO, MJXTEX-S3; }
+.TEX-S4 { font-family: MJXZERO, MJXTEX-S4; }
+.TEX-A { font-family: MJXZERO, MJXTEX-A; }
+.TEX-C { font-family: MJXZERO, MJXTEX-C; }
+.TEX-CB { font-family: MJXZERO, MJXTEX-CB; }
+.TEX-FR { font-family: MJXZERO, MJXTEX-FR; }
+.TEX-FRB { font-family: MJXZERO, MJXTEX-FRB; }
+.TEX-SS { font-family: MJXZERO, MJXTEX-SS; }
+.TEX-SSB { font-family: MJXZERO, MJXTEX-SSB; }
+.TEX-SSI { font-family: MJXZERO, MJXTEX-SSI; }
+.TEX-SC { font-family: MJXZERO, MJXTEX-SC; }
+.TEX-T { font-family: MJXZERO, MJXTEX-T; }
+.TEX-V { font-family: MJXZERO, MJXTEX-V; }
+.TEX-VB { font-family: MJXZERO, MJXTEX-VB; }
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important; }
+@font-face { font-family: MJXZERO; src: url("lib/fonts/mathjax_zero.woff") format("woff"); }
+@font-face { font-family: MJXTEX; src: url("lib/fonts/mathjax_main-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-B; src: url("lib/fonts/mathjax_main-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-I; src: url("lib/fonts/mathjax_math-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-MI; src: url("lib/fonts/mathjax_main-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-BI; src: url("lib/fonts/mathjax_math-bolditalic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S1; src: url("lib/fonts/mathjax_size1-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S2; src: url("lib/fonts/mathjax_size2-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S3; src: url("lib/fonts/mathjax_size3-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S4; src: url("lib/fonts/mathjax_size4-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-A; src: url("lib/fonts/mathjax_ams-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-C; src: url("lib/fonts/mathjax_calligraphic-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-CB; src: url("lib/fonts/mathjax_calligraphic-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FR; src: url("lib/fonts/mathjax_fraktur-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FRB; src: url("lib/fonts/mathjax_fraktur-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SS; src: url("lib/fonts/mathjax_sansserif-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSB; src: url("lib/fonts/mathjax_sansserif-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSI; src: url("lib/fonts/mathjax_sansserif-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SC; src: url("lib/fonts/mathjax_script-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-T; src: url("lib/fonts/mathjax_typewriter-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-V; src: url("lib/fonts/mathjax_vector-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-VB; src: url("lib/fonts/mathjax_vector-bold.woff") format("woff"); }
+mjx-c.mjx-c28::before { padding: 0.75em 0.389em 0.25em 0px; content: "("; }
+mjx-c.mjx-c34::before { padding: 0.677em 0.5em 0px 0px; content: "4"; }
+mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
+mjx-c.mjx-c39::before { padding: 0.666em 0.5em 0.022em 0px; content: "9"; }
+mjx-c.mjx-c35::before { padding: 0.666em 0.5em 0.022em 0px; content: "5"; }
+mjx-c.mjx-c38::before { padding: 0.666em 0.5em 0.022em 0px; content: "8"; }
+mjx-c.mjx-c33::before { padding: 0.665em 0.5em 0.022em 0px; content: "3"; }
+mjx-c.mjx-c2F::before { padding: 0.75em 0.5em 0.25em 0px; content: "/"; }
+mjx-c.mjx-c37::before { padding: 0.676em 0.5em 0.022em 0px; content: "7"; }
+mjx-c.mjx-c32::before { padding: 0.666em 0.5em 0px 0px; content: "2"; }
+mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }
+mjx-c.mjx-c22C5::before { padding: 0.31em 0.278em 0px 0px; content: "⋅"; }
+mjx-c.mjx-c2212::before { padding: 0.583em 0.778em 0.082em 0px; content: "−"; }
+mjx-c.mjx-c3E::before { padding: 0.54em 0.778em 0.04em 0px; content: ">"; }
+mjx-c.mjx-c1D442.TEX-I::before { padding: 0.704em 0.763em 0.022em 0px; content: "O"; }
+mjx-c.mjx-c1D452.TEX-I::before { padding: 0.442em 0.466em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c1D461.TEX-I::before { padding: 0.626em 0.361em 0.011em 0px; content: "t"; }
+</style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="12. 向量&amp;空间解析几何"><ol start="12" dir="auto">
+<li dir="auto">向量&amp;空间解析几何</li>
+</ol></h1><div class="heading-wrapper"><h3 data-heading="12. 向量&amp;空间解析几何" dir="auto" class="heading" id="12._向量&amp;空间解析几何"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>12. 向量&amp;空间解析几何</h3><div class="heading-children"><div><p dir="auto">本章将介绍 向量 和 三维坐标系</p></div><div><p dir="auto">由于 两个变量的函数 是空间的一片曲面，所以本章内容是 2 个变量微积分的基础</p></div><div><p dir="auto">另外，直线和平面可以用向量很简单的描述</p></div><div class="heading-wrapper"><h4 data-heading="1. 三维坐标系" dir="auto" class="heading" id="1._三维坐标系"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>1. 三维坐标系</h4><div class="heading-children"><div><p dir="auto">平面上任意一点，可以用有序实数对 (a, b) 表示；而空间上任意一点，可以用有序实数组 (a, b, c) 表示</p></div><div><p dir="auto">为了表示空间的点，我们选择一个固定点 O 和三条通过 O 并且相互垂直的有向直线，称之为坐标轴的 x 轴，y 轴，z 轴，我们一般认为 x 和 y  轴水平，z 轴是垂直的；z 轴方向满足右手法则：假如用右手从 x 轴到 y 轴逆时针方向握住 z 轴，则拇指所指方向为 z 轴的正方向</p></div><div><p dir="auto">卦限：3 维空间划分为八个卦限 和 x/y/z 轴，第一卦限位于前面，有正坐标轴确定（暗示每个卦限都不与坐标轴有交点）</p></div><div><p dir="auto">如果 P 是空间中任意一点(a, b, c)，a/b/c 为点 P 到 <span>yoz</span>/<span>xoz</span>/<span>zoy</span> 平面有向垂线距离，a/b/c 在平面 <span>yoz</span>/<span>xoz</span>/<span>zoy</span> 上的投影分别为 <span>(0, b, c)</span>/<span>(a, 0, c)</span>/<span>(a, b, 0)</span>，点 P 及其投影点 和 点 O 及其相对于 P 的投影点构成一个<strong>立方体</strong></p></div><div><p dir="auto">笛卡尔乘积 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-texatom space="3" texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-texatom space="3" texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-texatom space="4" texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo></mjx-math></mjx-container></span> 是定义在 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span> 中所有有序三元实数组，<strong>三维立方体坐标体系</strong>给出了空间中点 P 和  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span> 中有序三元组 (a,b,c) 的一一对应关系</p></div><div><p dir="auto">二维解析几何中，一个包含 x 和 y 的方程是 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span> 中的一条曲线；三维解析几何中，一个包含 x, y, z 的方程是 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math></mjx-container></span> 中的一条曲面</p></div><div><pre dir="auto"><span>title: note
+- `x=0`/`y=0`/`z=0` 分别代表坐标平面 `yoz`/`xoz`/`xoy`</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: warning
+- 对于给定的方程，应该根据上下文判断它代表的是 $\mathbb{R}^2$ 中的曲线 还是 $\mathbb{R}^3$ 中的曲面</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 两点距离公式(三维)
+- 三维空间上的两点 $P_1(x_1,y_1,z_1)$ 和 $P_2(x_2,y_2,z_2)$ 的距离 $|P_1 P_2| = \sqrt {(x_2-x_1)^2 + (y_2-y_1)^2 + (z_1-z_2)^2}$（通过 $P_1$ 和 $P_2$ 建立的正方体求得）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 球面方程
+- (h, k, l)，半径为 r 的球面方程为 $(x-h)^2 + (y-k)^2 + (z-l) = r^2$</span><button class="copy-code-button">复制</button></pre></div><div><hr dir="auto"></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 三维立方体坐标体系：假设选择一个固定点 O 作为**原点**，通过该点延伸三条相互正交的射线或有向直线（称为**坐标轴**），称其中两条轴 x 轴和 y 轴是水平的，而 z 轴是垂直的，并且 z 轴满足[右手法则]
+&gt; 		1. 右手法则：右手四指穿过 x 轴，然后往 y 轴方向弯曲，此时拇指的指向即为 z 轴正方向
+&gt; 		2. 三元实数组 $\mathbf u\in\mathbb R^3=\{(x,y,z)|~x,y,z\in\mathbb R\}$ 与三维立方体坐标体系中的点一一对应或满射
+&gt; 		3. 卦限：$x,y,z$ 轴将空间平分为 8 个**卦限**</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 一级结论
+&gt; 1. 点，向量：点和向量一般表示同一个概念，一般记为 $P(x,y,z)$ 或 $\mathbf u=(u_1,u_2,u_3)$
+&gt; 2. 两点距离：有两种定义：
+&gt; 		1. $P_1(x_1,y_1,z_1)$ 和 $P_2(x_2,y_2,z_2)$ 之间的距离为 $|P_1 P_2| = \sqrt {(x_2-x_1)^2 + (y_2-y_1)^2 + (z_1-z_2)^2}$
+&gt; 		2. $\bf u$ 和 $\bf v$ 之间的距离为 $\|\mathbf u-\mathbf v\|=\sqrt{\bf u\cdot v}=\sqrt{\sum\limits_{i=1}^n(u_i-v_i)^2}$
+&gt; 3. 球面方程：假设 $\mathbf x=(x,y,z)$ 是未知量，那么以 $P(a,b,c)=\bf u$ 为圆心，半径为 r（$r&gt;0$）的球面方程为 $(x-a)^2+(y-b)^2+(z-c)^2=r^2$ 或 $\|\mathbf x-\mathbf u\|=r$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 练习
+1. 描述下列等式或不等式在 $\mathbb R^3$ 的区域（尽管这种表示不严格）：(1) $0\le z\le 6$，(2) $x=3$，(3) $y=z$，(4) $x^2+y^2+z^2&gt;1$，(5) $3\le x^2+z^2\le9$，(6) $xyz=0$
+2. 证明：$P_1(x_1,y_1,z_1)=\bf u$ 到 $P_2(x_2,y_2,z_2)=\bf v$ 的线段的中点为 $\left(\frac{x_1+x_2}2,\frac{y_1+y_2}2,\frac{z_1+z_2}2\right)$ 或 $\frac12(\bf u+v)$
+3. 对于任意三角形，某条边中点到该边的对角顶点的线段称为**中线**（或者定义为：某个顶点到其对边中点的线段）
+4. 证明：假设某三角形以 $\bf u,v,w$ 为顶点，它们的对边分别为为 $a=\sqrt{\|\mathbf v-\mathbf w\|^2},b=\sqrt{\|\mathbf u-\mathbf v\|^2},c=\sqrt{\|\mathbf u-\mathbf w\|^2}$，这些对边对应的中线分别为 $m_a,m_b,m_c$，那么 $m_a=\frac12\sqrt{2(b^2+c^2)-a^2}$（提示：$m_a=\|\mathbf u-\frac12(\mathbf v+\mathbf w)\|$）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 提示
+&gt; (1.6) 坐标平面的并集
+&gt; 
+&gt; (4) $m_a^2=\|\mathbf u-\frac12(\mathbf v+\mathbf w)\|^2=\sum\limits_{i=1}^n(u_i-(v_i+w_i)/2)^2=\frac14\sum\limits_{i=1}^n(4u_i^2-4u_i(v_i+w_i)+(v_i+w_i)^2)$
+&gt; 
+&gt; $a^2=\|\mathbf v-\mathbf w\|^2=\sum\limits_{i=1}^n(v_i-w_i)^2$，$b^2=\|\mathbf u-\mathbf v\|^2=\sum\limits_{i=1}^n(u_i-v_i)^2$，$c^2=\|\mathbf u-\mathbf w\|^2=\sum\limits_{i=1}^n(u_i-w_i)^2$
+&gt; 
+&gt; 于是 $4m_a^2+a^2=\sum\limits_{i=1}^n(4u_i^2-4u_i(v_i+w_i)+(v_i+w_i)^2+(v_i-w_i)^2)=\sum\limits_{i=1}^n(4u_i^2+2v_i^2+2w_i^2-4u_iv_i-4u_iw_i))$ $=\sum\limits_{i=1}^n(2(u_i-v_i)^2+2(u_i-w_i)^2)=2(b^2+c^2)$
+&gt; 
+&gt; 即 $4m_a^2=2(b^2+c^2)-a^2$，所以 $m_a=\frac12\sqrt{2(b^2+c^2)-a^2}$</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="2. 向量" dir="auto" class="heading" id="2._向量"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>2. 向量</h4><div class="heading-children"><div><pre dir="auto"><span>title: 向量
+- 向量：具有 大小 和 方向 的量（如：位移，速度，力）
+- 几何表示：箭头 或 有向的线段；箭头的长度代表向量的相对大小
+- 记号：**v** 或 $\overrightarrow{v}$ 或 $\overrightarrow{AB}$（起点 A 称为 尾部，终点 B 称为头部）
+- 向量相等：$\overrightarrow{u} = \overrightarrow{v}$ $\iff$ **u** 和 **v** 长度 和 方向 均相等
+- 零向量：**0**，长度为 0，并且是唯一没有明确方向的向量</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 向量的组合
+- 向量加法(三角形法则)：若向量 **v** 的起点 和 向量 **u** 的终点相连，那么这两个向量的和 **v+u** 是一个从 **u** 的起点到 **v** 的终点的一个向量
+- 平行四边形法则(即 交换律)：**u+v = v+u**
+- 向量的数乘：若 c 为标量，**v** 为向量，那么数乘向量 c**v** 表示长度为 **v** 的 |c| 倍的向量
+    - 若 c &gt; 0，则它的方向与 **v** 相同；若 c &lt; 0，则它的方向与 **v** 相反
+    - 当 c = 0 或 **v** = 0，则 c**v**=**0**
+    - 负向量：-**v** = (-1)**v** 和 **v** 具有相同长度，但方向相反</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 向量的分量
+- 向量分量：将向量 **a** 的起点放在矩形坐标系的原点，那么根据我们所用的坐标系是二维或者三维的，**a** 的终点坐标为 $(a_1, a_2)$ 或者 $(a_1, a_2, a_3)$，这些坐标称为向量 **a** 的分量，记为 $\overrightarrow a = \langle a_{1}, a_{2}\rangle$ 或 $\overrightarrow a = \langle a_1, a_2, a_3\rangle$
+- 位置向量：如从原点到点 P(x, y) 的向量 $\langle x, y \rangle$
+- 给出点 $A(x_1, y_1, z_1)$ 和 $B(x_2, y_2, z_2)$，则表示 $\overrightarrow {AB}$ 的向量 **a** 为 $\overrightarrow a = \langle x_2-x_1, y_2-y_1, z_2-z_1 \rangle$
+- 向量长度
+    - 二维空间中的向量 $\overrightarrow a = \langle a_1, a_2 \rangle$ 的长度为 $|\overrightarrow a| = \parallel \overrightarrow a \parallel = \sqrt {a_1^2 + a_2^2}$
+    - 三维空间中的向量 $\overrightarrow a = \langle a_1, a_2, a_3 \rangle$ 的长度为 $|\overrightarrow a| = \parallel \overrightarrow a \parallel = \sqrt {a_1^2 + a_2^2 + a_3^2}$
+- 向量加法，数乘(代数定义 或 代数运算)：
+    - 二维空间中：$\overrightarrow a = \langle a_1, a_2 \rangle, \overrightarrow b = \langle b_1, b_2 \rangle$，那么 $\overrightarrow{a}+\overrightarrow{b} = \langle a_1+b_1,a_2+b_2 \rangle$，$\overrightarrow{a}-\overrightarrow{b} = \langle a_1-b_1,a_2-b_2 \rangle$，$c\overrightarrow{a} = \langle c\cdot a_1, c\cdot a_2 \rangle$
+    - 三维空间中：$\overrightarrow a = \langle a_1, a_2, a_3 \rangle, \overrightarrow b = \langle b_1, b_2, b_3 \rangle$，那么 $\overrightarrow{a}+\overrightarrow{b} = \langle a_1+b_1+b_3,a_2+b_2+b_3 \rangle$，$\overrightarrow{a}-\overrightarrow{b} = \langle a_1-b_1,a_2-b_2,a_3-b_3 \rangle$，$c\overrightarrow{a} = \langle c\cdot a_1, c\cdot a_2, c\cdot a_3 \rangle$
+- 向量“空间”：所有 n 维向量的集合为 $V_n$，一个 n 维向量是一个有序的 n 元数组：$\overrightarrow a = \langle a_1,a_2,\dots, a_n \rangle$；$a_i \in R$，称为 **a** 的分量；如同 n=2，n=3 时的情况一样，我们可以为其定义向量 加法 和 数乘
+- 向量的性质：假设**a, b, c** 是 $V_n$ 中的向量，c 和 d 是常数，那么
+    1.	**a + b = b + a**
+    2.	**a + (b + c) = (a + b) + c**
+    3.	**a + 0 = a**
+    4.	**a + (-a) = 0**
+    5.	c**(a + b) = ** c**a** + c**b**
+    6.	(c + d)**a** = c**a** + d**a**
+    7.	(cd)**a** = c(d**a**)
+    8.	1**a = a**
+- 标准向量基
+    - 二维空间中，**i, j** 为长度为 1，指向 x / y 轴正方向的向量 $\langle 1, 0 \rangle$，$\langle 0, 1 \rangle$
+        - $\overrightarrow a = \langle a_1, a_2 \rangle$ 可以表示为 $\overrightarrow a = a_1\overrightarrow i + a_2\overrightarrow j$
+    - 三维空间中，**i, j, k** 为长度为 1，指向 x / y / z 轴正方向的向量 $\langle 1, 0, 0 \rangle$，$\langle 0, 1, 0 \rangle$，$\langle 0, 0, 1 \rangle$
+        - $\overrightarrow a = \langle a_1, a_2, a_3 \rangle$ 可以表示为 $\overrightarrow a = a_1\overrightarrow i + a_2\overrightarrow j + a_3\overrightarrow k$
+- 单位向量：长度为 1 的向量
+    - 对于任意非零向量 **a**，都有与其方向相同的单位向量 $\overrightarrow u = \frac {\overrightarrow a}{|a|}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 向量的应用
+- 在物理和工程中应用广泛，如在物理中描述速度，加速度，力等量</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 向量，向量分量：具有大小和方向的量定义为**向量**，几何上为**箭头**或**有向线段**，记为 $\mathbf u=(u_1,\cdots,u_n)$ 或 $\vec u$ 或 $\overrightarrow{AB}=\bf v-u$（假设 $A=\mathbf u,B=\mathbf v$；起点 A 称为 尾部，终点 B 称为头部）；其中 $u_1,\cdots,u_n$ 称为向量 $\bf u$ 的**分量**（注：微积分中的向量一般指**实向量**）
+&gt; 2. 向量范数（长度）：向量 $\mathbf u\in\mathbb R^n$ 的**范数**或**长度**定义为 $\|\mathbf u\|=\sqrt{\sum\limits_{i=1}^nu_i^2}$
+&gt; 3. 零向量，单位向量：满足 $\|\mathbf u\|=0$ 的向量，称为**零向量**，记为 $\bf 0$（零向量是唯一没有明确方向的向量）；若 $\bf\ne0$，那么 $\bf u$ 的**单位向量**定义为 $\bf v=\frac{u}{\|u\|}$
+&gt; 4. 向量相等：若 $\|\mathbf u\|=\|\mathbf v\|$ 并且 $\bf u,v$ 方向相等，那么称 $\bf u$ 和 $\bf v$ 是相等的，记为 $\bf u=v$（另一种定义：$\forall i=1..n,u_i=v_i$）
+&gt; 5. 向量加法，向量标量乘法：假设 $\mathbf u,\mathbf v\in\mathbb R^n,c\in\mathbb R$，那么 $\bf u,v$ 之间的加法定义为 $\mathbf u+\mathbf v=(u_1+v_1,\cdots,u_n+v_n)$；c 与 $\bf u$ 的标量乘法定义为 $c\mathbf u=(cu_1,\cdots,cu_n)$
+&gt; 6. 向量公理：假设 $\mathbf u,\mathbf v,\mathbf w\in V$，$c,d\in\mathbb R$，那么：
+&gt; 		1. 加法/标量乘法/加法逆元/标量乘法逆元的封闭性：$\exists\mathbf u+\mathbf v,c\mathbf u,\mathbf 0,-\mathbf u\in\mathbb R^n$（其中 $\bf u+0=u$，$\bf u+(-u)=0$）
+&gt; 		2. 加法交换律 $\mathbf u+\mathbf v=\mathbf v+\mathbf u$，加法结合律 $(\mathbf u+\mathbf v)+\mathbf w=\mathbf u+(\mathbf v+\mathbf w)$
+&gt; 		3. 加法与标量乘法的相互分配律 (1) $c(\mathbf u+\mathbf v)=c\mathbf u+c\mathbf v$，(2) $(c+d)\mathbf u=c\mathbf u+d\mathbf u$
+&gt; 		4. 实数乘法与标量乘法的结合律 $c(d\mathbf u)=(cd)\mathbf u$
+&gt; 		5. 标量乘法单位元 $1\mathbf u=\mathbf u$
+&gt; 6. 标准向量，标准向量基：$\mathbb R^n$ 上的**标准向量**定义为只有第 i 个分量非零的单位向量，记为 $\mathbf e_i=(0,\cdots,1,\cdots,0)$；$\mathbb R^n$ 上的标准向量基定义为其所有标准向量构成的一个向量组，记为 $\{\mathbf e_1,\cdots,\mathbf e_n\}$
+&gt; 		1. 在 $\mathbb R^2$ 中，两个标准向量分别记为 $\mathbf i=(1,0),\mathbf j=(0,1)$
+&gt; 		2. 在 $\mathbb R^3$ 中，三个标准向量分别记为 $\mathbf i=(1,0,0),\mathbf j=(0,1,0),\mathbf k=(0,0,1)$
+&gt; 		3. 注：$\mathbb R^n$ 中任意一个向量可以唯一表示为标准向量基的线性组合，即 $\forall \mathbf u\in\mathbb R^n,\mathbf u=\sum\limits_{i=1}^nu_i\mathbf e_i$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 练习
+1. 计算向量的单位向量：(1) $(9,-5)$，(2) $8\mathbf i-\mathbf j+4\mathbf k$
+2. 向量 $\bf u$ 位于第一卦限，与 x 轴正方向夹角为 $\pi/3$，并且 $\|\mathbf u\|=4$，计算 $\bf u$
+3. 证明：若某三角形的顶点分别为 $\bf u,v,w$，那么任意两条边的中点的连线 $\bf r$ 平行于第三条边</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 提示
+&gt; (1) 
+&gt; 
+&gt; 1. $\frac1{\sqrt{9^2+(-5^2)}}(9,-5)=(9/\sqrt{106},-5/\sqrt{106})$
+&gt; 2. $\frac1{\sqrt{8^2+(-1)^2+4^2}}(8\mathbf i-\mathbf j+4\mathbf k)=(\frac89\mathbf i-\frac19\mathbf j+\frac49\mathbf k)$
+&gt; 
+&gt; (2) $\bf u$ 的方向向量为 $(\cos\frac\pi3,\sin\frac\pi3)=(1/2,\sqrt3/2)$，于是 $\mathbf u=\|\mathbf u\|(1/2,\sqrt3/2)=(2,2\sqrt3)$
+&gt; 
+&gt; (3) $\mathbf r=\frac12(\mathbf u+\mathbf v)-\frac12(\mathbf u+\mathbf w)=\frac12(\mathbf v-\mathbf w)$，得证
+&gt; 
+&gt; 其他情况类似</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="3.  向量的点积" dir="auto" class="heading" id="3.__向量的点积"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>3.  向量的点积</h4><div class="heading-children"><div><pre dir="auto"><span>title: 点积
+- 二维：$\overrightarrow a \cdot \overrightarrow b = a_1b_1 + a_2b_2$
+- 三维：$\overrightarrow a \cdot \overrightarrow b = a_1b_1 + a_2b_2 + a_3b_3$
+- 注：向量点积得到的是一个实数</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. $(2,4)\cdot(3,-1)=(2)(3)+(4)(-1)=2$
+2. $(\mathbf i+2\mathbf j-3\mathbf k)\cdot(2\mathbf j-\mathbf k)=(1)(0)+(2)(2)+(-3)(-1)=7$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 点积的定律，推论
+1.	$\overrightarrow a \cdot \overrightarrow a = |a|^2$
+2.	$\overrightarrow a \cdot \overrightarrow b = \overrightarrow b \cdot \overrightarrow a$
+3.	$\overrightarrow a \cdot (\overrightarrow b + \overrightarrow c) = \overrightarrow a \cdot \overrightarrow b + \overrightarrow a \cdot \overrightarrow c$
+4.	$(c\overrightarrow a) \cdot \overrightarrow b = c(\overrightarrow a \cdot \overrightarrow b) = \overrightarrow a \cdot (c\overrightarrow b)$
+5.	$\overrightarrow 0\cdot \overrightarrow a = 0$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 点积的几何推论
+- 向量 **a, b** 的夹角为 $\theta$，那么
+- $\overrightarrow a\cdot \overrightarrow b = |a||b|\cos \theta$
+- 注：可以通过 三角形法则 和 余弦定理 证明
+- 推论
+    - $\cos \theta = \frac {\overrightarrow a\cdot \overrightarrow b}{|\overrightarrow a||\overrightarrow b|}$
+    - $\overrightarrow a \cdot \overrightarrow b = 0$  $\iff$ 向量 **a, b** 正交
+    - $\overrightarrow a \cdot \overrightarrow b = |\overrightarrow a||\overrightarrow b|$  $\iff$  向量 **a, b** 完全同向
+    - $\overrightarrow a \cdot \overrightarrow b = -|\overrightarrow a||\overrightarrow b|$  $\iff$  向量 **a, b** 完全反向</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. $\bf u,v$ 的长度分别为 $4,6$，夹角为 $\pi/3$，那么 $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\frac{\pi}3=12$
+2. 假设 $\mathbf u=(2,2,-1),\mathbf v=(5,-3,2)$，那么它们之间的夹角为 $\theta=\cos^{-1}\frac{\bf u\cdot v}{\bf \|u\|\|v\|}=\cos^{-1}\frac{(2)(5)+(2)(-3)+(-1)(2)}{\sqrt{2^2+2^2+(-1)^2}\sqrt{5^2+(-3)^2+2^2}}=\cos^{-1}\frac2{3\sqrt{38}}\approx1.46=84°$
+3. $(2,2,-1)$ 与 $(5,-4,2)$ 正交，因为 $(2)(5)+(2)(-4)+(-1)(2)=0$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 向量的 方向角 &amp; 方向余弦
+- 假设 $\overrightarrow a = \langle a_1, a_2, a_3 \rangle$；非零向量 $\overrightarrow a$ 的**方向角** $\alpha, \beta, \gamma$； $\overrightarrow a$ 方向角的余弦 $\cos \alpha, \cos \beta, \cos \gamma$ 均称为 **方向余弦**
+- 性质：$\cos \alpha = \frac {a_1}{|\overrightarrow a|}$，$\cos \beta = \frac {a_2}{|\overrightarrow a|}$，$\cos \gamma = \frac {a_3}{|\overrightarrow a|}$
+    - 部分证明：$\cos \alpha = \frac  {\overrightarrow a \cdot \overrightarrow i}{|\overrightarrow a||\overrightarrow i|} = \frac  {|\overrightarrow a||\overrightarrow i|\cdot \cos \alpha}{|\overrightarrow a||\overrightarrow i|} = \frac  {|\overrightarrow a|\cdot \cos \alpha}{|\overrightarrow a|} = \frac {a_1}{|\overrightarrow a|}$
+- 推论：
+    - $(\cos\alpha)^2 + (\cos\beta)^2 + (\cos\gamma)^2 = 1$
+    - $\overrightarrow a = \langle a_1, a_2, a_3 \rangle = |\overrightarrow a|\langle \cos\alpha, \cos\beta, \cos\gamma \rangle$ $\iff$ $\frac {\overrightarrow a}{|\overrightarrow a|} = \langle \cos\alpha, \cos\beta, \cos\gamma \rangle$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: tip
+1. $(1,2,3)$ 的范数为 $\sqrt{1^2+2^2+3^2}=\sqrt{14}$，所以它的方向角分别为 $\cos^{-1}\frac1{\sqrt{14}}\approx74°,\cos^{-1}\frac2{\sqrt{14}}\approx58°,\cos^{-1}\frac3{\sqrt{14}}\approx37°$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 投影
+- 若 $\overrightarrow {PQ}$ 和 $\overrightarrow {PR}$ 表示由共同初始点的向量 $\overrightarrow a$ 和 $\overrightarrow b$，若 R 到 $\overrightarrow {PQ}$ 的垂足是 S，那么 $\overrightarrow {PS}$ 表示的向量称为 $\overrightarrow b$ 在 $\overrightarrow a$ 上向量的投影，记作 $\displaystyle proj_{\overrightarrow a} \overrightarrow b$
+- $\overrightarrow b$ 在 $\overrightarrow a$ 上的投影的大小（也称 $\overrightarrow b$ 沿着 $\overrightarrow a$ 的分解），记作 $\displaystyle comp_{\overrightarrow a} \overrightarrow b$ （可以是负数）
+- 性质：
+    - $\displaystyle comp_{\overrightarrow a} \overrightarrow b = \frac {\overrightarrow a\cdot \overrightarrow b}{|\overrightarrow a|}$
+    - $\displaystyle proj_{\overrightarrow a} \overrightarrow b = (\frac {\overrightarrow a\cdot \overrightarrow b}{|\overrightarrow a|}) \frac {\overrightarrow a}{|\overrightarrow a|} = \frac {\overrightarrow a\cdot \overrightarrow b}{|\overrightarrow a|^2}\overrightarrow a$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. $\mathbf u=(1,1,1)$ 在 $\mathbf v=(-2,3,1)$ 的投影为 $\text{proj}_{\bf v}\mathbf u=\left(\frac{\bf u\cdot v}{\|\mathbf v\|^2}\right)\mathbf v=\frac{3}{14}\mathbf v=(-3/7,9/14,3/14)$，投影范数为 $\text{comp}_{\bf v}\mathbf u=\|\text{proj}_{\bf v}\mathbf u\|=\frac3{14}\cdot\sqrt{14}=\frac3{\sqrt{14}}$
+2. 一个力向量 $\bf f$ 将物体从 $\bf u$ 移动到 $\bf v$ 所作的功为 $W=\mathbf f\cdot(\mathbf u-\mathbf v)$ 或 $W=\mathbf f\cdot\mathbf u-\mathbf f\cdot\mathbf v$</span><button class="copy-code-button">复制</button></pre></div><div><hr dir="auto"></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 点积：两实向量 $\bf u,v\in\mathbb R^n$ 的定义为 $\mathbf u\cdot\mathbf v=\sum\limits_{i=1}^nu_iv_i$
+&gt; 2. 点积定律：假设 $\bf u,v,w\in\mathbb R^n$，那么（**通常不满足结合律**！）
+&gt; 		1. 交换律 $\bf u\cdot v=v\cdot\bf u$
+&gt; 		2. 点积与加法的分配律 $\bf u\cdot(v+w)=u\cdot v+u\cdot w$
+&gt; 		3. 点积与标量乘法的结合律：$(c\mathbf u)\cdot\mathbf v=c(\mathbf u\cdot\mathbf v)=\mathbf u\cdot(c\mathbf v)$
+&gt; 3. 点积的推论：$\forall \bf u\in\mathbb R^n$，(1) $\mathbf u\cdot\mathbf u=\|\mathbf u\|^2$，(2) $\mathbf 0\cdot\mathbf u=0$
+&gt; 4. 点积的几何推论：假设 $\bf u,v\in\mathbb R^n$，$\theta$ 是 $\bf u,v$ 的夹角，那么
+&gt; 		1. $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\theta$，或 $\cos\theta=\frac{\mathbf u\cdot\mathbf v}{\|\mathbf u\|\|\mathbf v\|}$
+&gt; 		2. $\begin{cases}\mathbf u\cdot\mathbf v=0&amp;\mathbf u,\mathbf v正交\\\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|&amp;\mathbf u,\mathbf v方向相同\\\mathbf u\cdot\mathbf v=-\|\mathbf u\|\|\mathbf v\|&amp;\mathbf u,\mathbf v方向相反\end{cases}$
+&gt; 5. 方向余弦，方向角：假设 $\bf u\in\mathbb R^n,u\ne0$，那么非零向量 $\bf u$ 的**方向余弦**为其单位向量的分量，即 $\frac{u_1}{\|\mathbf u\|},\cdots,\frac{u_n}{\|\mathbf u\|}$；**方向角**分别为 $\cos^{-1}\frac{u_1}{\|\mathbf u\|},\cdots,\cos^{-1}\frac{u_n}{\|\mathbf u\|}$
+&gt; 		1. 若 $\mathbf u\in\mathbb R^2$，那么 $\bf u$ 的方向角分别为 $\alpha,\beta$，方向余弦分别为 $\cos\alpha,\cos\beta$，满足 (1) $\cos^2\alpha+\cos^2\beta=1$，(2) $\mathbf u=\|\mathbf u\|(\cos\alpha,\cos\beta)$，(3) $|\cos\alpha|=|\sin\beta|$，$|\cos\beta|=|\sin\alpha|$
+&gt; 		2. 若 $\mathbf u\in\mathbb R^3$，那么 $\bf u$ 的方向角分别为 $\alpha,\beta,\gamma$，方向余弦分别为 $\cos\alpha,\cos\beta,\cos\gamma$，满足 (1) $\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1$，(2) $\mathbf u=\|\mathbf u\|(\cos\alpha,\cos\beta,\cos\gamma)$
+&gt; 6. 投影，投影大小，投影范数：假设 $\mathbf u,\mathbf v\in\mathbb R^n$，那么 $\bf u$ 在 $\bf v$ 上的**投影**为 $\text{proj}_{\bf v}\mathbf u=\left(\frac{\bf u\cdot v}{\|\mathbf v\|^2}\right)\mathbf v$，对应的**投影大小**为 $\text{comp}_{\bf v}\mathbf u=\|\text{proj}_{\bf v}\mathbf u\|=\frac{\bf u\cdot v}{\|\mathbf v\|}$；**投影范数**为 $\|\text{proj}_{\bf v}\mathbf u\|=|\text{comp}_{\bf v}\mathbf u|$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 练习
+1. 定理证明：（假设 $\mathbf u,\mathbf v\in\mathbb R^n$）
+    1. $\|\mathbf u+\mathbf v\|^2=\|\mathbf u\|^2+\|\mathbf v\|^2+2\mathbf u\cdot\mathbf v$
+    2. 柯西-施瓦茨不等式：$|\bf u\cdot v|\le\|u\|\|v\|$
+    3. 三角不等式：$\bf\|u+v\|\le\|u\|+\|v\|$
+    4. 平行四边形法则：$\|\mathbf u+\mathbf v\|^2+\|\mathbf u-\mathbf v\|^2=2(\|\mathbf u\|^2+\|\mathbf v\|^2)$
+    5. 毕达哥拉斯定理：若 $\bf u$ 和 $\bf v$ 正交，那么 $\|\mathbf u+\mathbf v\|^2=\|\mathbf u\|^2+\|\mathbf v\|^2$
+2. 假设有 $\mathbb R^2$ 上的直线 $l:ax+by+c=0$
+    1. 证明：向量 $\mathbf n=(a,b)$ 与 l 垂直（正交）
+    2. 证明：$P=\mathbf u\in\mathbb R^2$ 到 l 的距离为 $\frac{au_1+bu_2+c}{\sqrt{a^2+b^2}}$
+3. 假设 $\bf u,v\in\mathbb R^n,u,v\ne0$
+    1. 若 $\text{comp}_{\bf v}\mathbf u=\text{comp}_{\bf u}\mathbf v$，那么 $\mathbf u\cdot\mathbf v=0$ 或 $\|\mathbf u\|=\|\mathbf v\|$
+    2. 若 $\text{proj}_{\bf v}\mathbf u=\text{proj}_{\bf u}\mathbf v$，那么 $\mathbf u\cdot\mathbf v=0$ 或 $\bf u=v$
+4. 证明：假设 $\mathbf r=(x,y,z)$ 是未知向量，若 $\mathbf u,\mathbf v\in\mathbb R^3$，那么 $(\mathbf r-\mathbf u)\cdot(\mathbf r-\mathbf v)=0$ 是以 $\frac12(\mathbf u+\mathbf v)$ 为圆心，半径为 $\frac12(\mathbf u-\mathbf v)$ 的圆（即该圆以 $\bf u-v$ 为直径）
+5. 定义 $\bf u$ 在 $\bf v$ 上的**正交投影**为 $\text{orth}_{\bf v}\mathbf u=\mathbf u-\text{proj}_{\bf v}\mathbf u$，证明 $\mathbf v\cdot\text{orth}_{\bf v}\mathbf u=0$
+6. 计算与 $\bf i+j,i+k$ 都正交的单位向量</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 提示
+&gt; (1.1) $\|\mathbf u+\mathbf v\|^2=\sum\limits_{i=1}^n(u_i+v_i)^2=\sum\limits_{i=1}^n(u_i^2+v_i^2+2u_iv_i)=\|\mathbf u\|^2+\|\mathbf v\|^2+2\mathbf u\cdot\mathbf v$
+&gt; 
+&gt; (1.2) 由 $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\theta$ 有 $|\mathbf u\cdot\mathbf v|=\|\mathbf u\|\|\mathbf v\||\cos\theta|\le\|\mathbf u\|\|\mathbf v\|$
+&gt; 
+&gt; (1.3) $\|\mathbf u+\mathbf v\|^2=\|\mathbf u\|^2+\|\mathbf v\|^2+2\mathbf u\cdot\mathbf v$ 和 $(\|\mathbf u\|+\|\mathbf v\|)^2=\|\mathbf u\|^2+\|\mathbf v\|^2+2\|\mathbf u\|\|\mathbf v\|$
+&gt; 
+&gt; 又由[柯西-施瓦茨不等式]，$\|\mathbf u\|\|\mathbf v\|\ge|\mathbf u\cdot\mathbf v|\ge\mathbf u\cdot\mathbf v$，于是 $(\|\mathbf u\|+\|\mathbf v\|)^2\ge\|\mathbf u+\mathbf v\|^2$
+&gt; 
+&gt; 而范数是非零的，所以上式蕴含 $\|\mathbf u\|+\|\mathbf v\|\ge\|\mathbf u+\mathbf v\|$
+&gt; 
+&gt; (1.4) $\|\mathbf u+\mathbf v\|^2=\|\mathbf u\|^2+\|\mathbf v\|^2+2\mathbf u\cdot\mathbf v$
+&gt; 
+&gt; $\|\mathbf u-\mathbf v\|^2=\|\mathbf u\|^2+\|-\mathbf v\|^2+2\mathbf u\cdot(-\mathbf v)=\|\mathbf u\|^2+\|\mathbf v\|^2-2\mathbf u\cdot\mathbf v$
+&gt; 
+&gt; 于是 $\|\mathbf u+\mathbf v\|^2+\|\mathbf u-\mathbf v\|^2=2(\|\mathbf u\|^2+\|\mathbf v\|^2)$
+&gt; 
+&gt; (1.5) 由 $\mathbf u\cdot\mathbf v=0$ 有：
+&gt; 
+&gt; $\|\mathbf u+\mathbf v\|^2=\|\mathbf u\|^2+\|\mathbf v\|^2+2\mathbf u\cdot\mathbf v=\|\mathbf u\|^2+\|\mathbf v\|^2$
+&gt; 
+&gt; $\|\mathbf u-\mathbf v\|^2=\|\mathbf u\|^2+\|\mathbf v\|^2-2\mathbf u\cdot\mathbf v=\|\mathbf u\|^2+\|\mathbf v\|^2$
+&gt; 
+&gt; 所以 $\|\mathbf u+\mathbf v\|^2=\|\mathbf u-\mathbf v\|^2$，又由[平行四边形法则]有 $2\|\mathbf u+\mathbf v\|^2=2(\|\mathbf u\|^2+\|\mathbf v\|^2)$，即 $\|\mathbf u+\mathbf v\|^2=\|\mathbf u\|^2+\|\mathbf v\|^2$
+&gt; 
+&gt; (2.1) 假设 $\mathbf u\ne\mathbf v\in l$，那么满足 $au_1+bu_2+c=0$ 和 $av_1+bv_2+c=0$，蕴含 $au_1+bu_2=av_1+bv_2=-c$，或者 $\mathbf n\cdot\mathbf u=\mathbf n\cdot\mathbf v$
+&gt; 
+&gt; $\mathbf n\cdot(\mathbf u-\mathbf v)=\mathbf n\cdot\mathbf u-\mathbf n\cdot\mathbf v=0$，于是 $\mathbf n=(a,b)$ 与 l 正交
+&gt; 
+&gt; (2.2) 设 $\mathbf n=(a,b),\mathbf v\in l$，那么 $\bf u$ 到 l 的距离等于 $\bf u-v$ 在 $\bf n$ 上的投影范数，即 $|\text{comp}_{\bf n}(\mathbf u-\mathbf v)|=\frac{|\bf n\cdot(u-v)|}{\|\bf n\|}=\frac{\mathbf n\cdot\mathbf u-\mathbf n\cdot\mathbf v}{\sqrt{a^2+b^2}}=\frac{|au_1+bu_2-(av_1+bv_2)|}{\sqrt{a^2+b^2}}=\frac{|au_1+bu_2+c|}{\sqrt{a^2+b^2}}$
+&gt; 
+&gt; (3.1) $\text{comp}_{\bf v}\mathbf u=\text{comp}_{\bf u}\mathbf v$ 蕴含 $\frac{\mathbf u\cdot\mathbf v}{\|\mathbf v\|}=\frac{\mathbf v\cdot\mathbf u}{\|\mathbf u\|}$，蕴含 $\mathbf u\cdot\mathbf v=0$ 或 $\frac1{\|\mathbf v\|}=\frac1{\|\mathbf u\|}$（即 $\|\mathbf v\|=\|\mathbf u\|$）
+&gt; 
+&gt; (3.2) $\text{proj}_{\bf v}\mathbf u=\text{proj}_{\bf u}\mathbf v$，蕴含 $\frac{\mathbf u\cdot\mathbf v}{\|\mathbf v\|^2}\mathbf v=\frac{\mathbf v\cdot\mathbf u}{\|\mathbf u\|^2}\mathbf u$，那么 $\mathbf u\cdot\mathbf v=0$
+&gt; 
+&gt; 或者 $\frac1{\|\mathbf v\|^2}\mathbf v=\frac1{\|\mathbf u\|^2}\mathbf u$，蕴含 $\frac1{\|\mathbf v\|^2}\|\mathbf v\|=\frac1{\|\mathbf u\|^2}\|\mathbf u\|$，即 $\|\mathbf u\|=\|\mathbf v\|$，于是 $\bf u=v$
+&gt; 
+&gt; (5) $\mathbf v\cdot\text{orth}_{\bf v}\mathbf u=\mathbf v\cdot(\mathbf u-\text{proj}_{\bf v}\mathbf u)=\mathbf v\cdot\mathbf u-\mathbf v\cdot\frac{\mathbf u\cdot\mathbf v}{\|\mathbf v\|^2}\mathbf v=\mathbf v\cdot\mathbf u-\frac{\mathbf u\cdot\mathbf v}{\|\mathbf v\|^2}\|\mathbf v\|^2=0$
+&gt; 
+&gt; (6) $\begin{bmatrix}1&amp;1&amp;0\\1&amp;0&amp;1\end{bmatrix}\mathbf x=\mathbf 0$，解得 $\mathbf x=(-t,t,t)$，而 $\|\mathbf x\|=1$，于是 $3t^2=1$，解得 $t=\pm\frac1{\sqrt3}$
+&gt; 
+&gt; 所以满足条件的向量为 $(-\frac1{\sqrt3},\frac1{\sqrt3},\frac1{\sqrt3})$ 或 $(\frac1{\sqrt3},-\frac1{\sqrt3},-\frac1{\sqrt3})$
+&gt;</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="4. 向量的叉积" dir="auto" class="heading" id="4._向量的叉积"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>4. 向量的叉积</h4><div class="heading-children"><div><pre dir="auto"><span>title: 叉积
+&gt; 如果 $\overrightarrow a = \langle a_1, a_2, a_3 \rangle, \overrightarrow b = \langle b_1, b_2, b_3 \rangle$，
+&gt; 
+&gt; 那么，向量 **a, b** 的叉积为 $\overrightarrow a \times \overrightarrow b = \langle a_2b_3 - a_3b_2, a_3b_1 - a_1b_3, a_1b_2 - a_2b_1 \rangle$
+&gt; 
+&gt; 或者 $\overrightarrow{a}\times\overrightarrow{b}=\left|\begin{array}{ccc}\overrightarrow{i}&amp;\overrightarrow{j}&amp;\overrightarrow{k}\\ \\ a_1&amp;a_2&amp;a_3\\ \\ b_1&amp;b_2&amp;b_3\end{array}\right| = \left|\begin{array}{c c c}{a_{2}}&amp;{a_{3}}\\ {b_{2}}&amp;{b_{3}}\\ \end{array}\right|\overrightarrow{i}-\left|\begin{array}{c c}{a_{1}}&amp;{a_{3}}\\ {b_{1}}&amp;{b_{3}}\\ \end{array}\right|\overrightarrow{j}+\left|\begin{array}{c c}{a_{1}}&amp;{a_{2}}\\ {b_{1}}&amp;{b_{2}}\\ \end{array}\right|\overrightarrow{k}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. $(1,3,4)\times(2,7,-5)=\begin{vmatrix}\bf i&amp;\bf j&amp;\bf k\\1&amp;3&amp;4\\2&amp;7&amp;-5\end{vmatrix}=(-43,13,1)$
+2. $\forall\mathbf u\in\mathbb R^3$，$\mathbf u\times\mathbf u=\begin{vmatrix}\bf i&amp;\bf j&amp;\bf k\\u_1&amp;u_2&amp;u_3\\u_1&amp;u_2&amp;u_3\end{vmatrix}=\mathbf 0$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 叉积的性质
+&gt; 向量 $\overrightarrow a\times \overrightarrow b$ 与 **a, b** 都正交
+&gt; 
+&gt; 方向：右手从 **a** 到 **b** 的方向握住 $\overrightarrow a \times \overrightarrow b$，拇指所指方向即为 $\overrightarrow a \times \overrightarrow b$ 的方向（右手法则）
+&gt; 
+&gt; 长度：$|\overrightarrow a \times \overrightarrow b| = |\overrightarrow a||\overrightarrow b|\sin \theta$（$\theta \in [0, \pi]$，证明详见 P126）
+&gt; 
+&gt; **a, b** 平行(同向 或 反向) $\iff$ $\overrightarrow a \times \overrightarrow b=\overrightarrow 0$
+&gt; 
+&gt; $|\overrightarrow a \times \overrightarrow b|$ 为 由**a, b** 所确定的平行四边形的面积
+&gt; 
+&gt; 叉积不满足交换律：$\overrightarrow a \times \overrightarrow b \ne \overrightarrow b \times \overrightarrow a$ （例如用标准向量基 **i, j, k** 叉积的特例来否定该命题的否命题）
+&gt; 
+&gt; 叉积不满足结合律：$(\overrightarrow a \times \overrightarrow b)\times \overrightarrow c \ne \overrightarrow a \times (\overrightarrow b \times \overrightarrow c)$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 叉积的性质(2)
+&gt; 如果 **a, b, c** 是向量，c 是常数，那么
+&gt; 
+&gt; 1.	$\overrightarrow a \times \overrightarrow b = -\overrightarrow b \times \overrightarrow a$
+&gt; 2.	$(c\overrightarrow a) \times \overrightarrow b = c(\overrightarrow a \times \overrightarrow b) = \overrightarrow a \times (c\overrightarrow b)$
+&gt; 3.	$\overrightarrow a \times (\overrightarrow b + \overrightarrow c) = \overrightarrow a \times \overrightarrow b + \overrightarrow a \times \overrightarrow c$
+&gt; 4.	$(\overrightarrow a + \overrightarrow b)\times \overrightarrow c = \overrightarrow a \times \overrightarrow c + \overrightarrow b \times \overrightarrow c$
+&gt; 5.	$\overrightarrow a \cdot (\overrightarrow b \times \overrightarrow c) = (\overrightarrow a \times b)\cdot \overrightarrow c = \left|\begin{array}{l l l}{a_{1}}&amp;{a_{2}}&amp;{a_{3}}\\ {b_{1}}&amp;{b_{2}}&amp;{b_{3}}\\ {c_{1}}&amp;{c_{2}}&amp;{c_{3}}\end{array}\right|$
+&gt; 6.	$\overrightarrow a \times (\overrightarrow b \times \overrightarrow c) = (\overrightarrow a \cdot \overrightarrow c)\overrightarrow b - (\overrightarrow a \cdot \overrightarrow b)\overrightarrow c$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 混合积的性质
+&gt; $\overrightarrow a \cdot (\overrightarrow b \times \overrightarrow c)$ 称为向量 **a, b, c** 的混合积
+&gt; 
+&gt; 1.	向量 **a, b, c** 确定的平行六面体的体积等于这些向量的混合积的绝对值：$V = |\overrightarrow a \cdot (\overrightarrow b \times \overrightarrow c)|$
+&gt; 2.	推论：$\overrightarrow a \cdot (\overrightarrow b \times \overrightarrow c) = 0$ $\iff$ **a, b, c** 共面</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. $\mathbf u=(1,4,6),\mathbf v=(-2,5,-1),\mathbf w=(1,-1,1)$ 确定一个三角形平面，垂直于该平面的向量为 ${\bf(v-u)\times(w-u)}=(-3,1,-7)\times(0,-5,-5)=(-40,-15,15)$
+2. 以 $\mathbf u=(1,4,6),\mathbf v=(-2,5,-1),\mathbf w=(1,-1,1)$ 生成的平行四边形的面积等于它们叉积的大小为 $\|{\bf(v-u)\times(w-u)}\|=\|(-40,-15,15)\|=5\sqrt{82}$
+3. 对于 $\mathbf u=(1,4,-7),\mathbf v=(2,-1,4),\mathbf w=(0,-9,18)$，而 ${\bf u\cdot(v\times w)}=(1,4,-7)\cdot(18,-36,-18)=0$，于是 $\bf u,v,w$ 共面</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 自由探索
+- 一个四面体有四个顶点 P, Q, R, S，4 个三角形面
+- 求证
+    1.	若 **v1, v2, v3, v4** 分别是长度为 P,Q,R,S 所对的平面的面积，方向垂直于相应平面，向外，证明：$\overrightarrow v_1 + \overrightarrow v_2 + \overrightarrow v_3 + \overrightarrow v_4 = \overrightarrow 0$
+    2.	这个四面体的体积 V 为一个顶点到它所对平面的距离 与 这个平面的面积 的乘积的三分之一
+        1.	用顶点 P，Q，R，S 的坐标形式给出求四面体的体积v的公式
+        2.	求顶点为P（1，1，I),Q（1，2，3),R〈1，1，2）和s（3，一1，2）的四面体的体积
+    3.	S 为四面体的三直角顶点（以 S 为顶点的三角形都是直角），令 A,B,C 为过 S 的三个面的面积，D 是 S 所对三角形 PQR 的面积，利用 (1) 证明 $D^2 = A^2 + B^2 + C^2$ （三维的勾股定理）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 叉积：$\mathbb R^3$ 上的向量 $\bf u,v$ 之间的**叉积**定义为 $\mathbf u\times\mathbf v=\begin{vmatrix}\bf i&amp;\bf j&amp;\bf k\\u_1&amp;u_2&amp;u_3\\v_1&amp;v_2&amp;v_3\end{vmatrix}=(u_2v_3-u_3v_2,u_3v_1-u_1v_3,u_1v_2-u_2v_1)$
+&gt; 		1. $\bf u\times v$ 的方向满足 $\bf u$ 和 $\bf v$ 的[右手法则]
+&gt; 		2. 假设 $\bf u,v$ 之间的夹角为 $\theta\in[0,\pi]$，那么 $\|\mathbf u\times\mathbf v\|=\|\mathbf u\|\|\mathbf v\|\sin\theta$
+&gt; 		3. $\mathbf u\times\mathbf v$ 同时与 $\bf u,v$ 正交：$\mathbf u\cdot(\mathbf u\times\mathbf v)=0$，$\mathbf v\cdot(\mathbf u\times\mathbf v)=0$
+&gt; 2. 叉积定律：假设 $\bf u,v,w\in\mathbb R^n,c\in\mathbb R$，那么（通常不满足**交换律**和**结合律**）
+&gt; 		1. 反交换律 $\mathbf u\times\mathbf v=-\mathbf v\times\mathbf u$
+&gt; 		2. 叉积与加法的分配律：$\mathbf u\times(\mathbf v+\mathbf w)=\mathbf u\times\mathbf v+\mathbf u\times\mathbf w$，$(\mathbf u+\mathbf v)\times\mathbf w=\mathbf u\times\mathbf w+\mathbf v\times\mathbf w$
+&gt; 		3. 叉积与标量乘法的结合律：$(c\mathbf u)\times\mathbf v=c(\mathbf u\times\mathbf v)=\mathbf u\times(c\mathbf v)$
+&gt; 3. 叉积推论：
+&gt; 		1. 混合积：$\bf u\cdot(v\times w)=(u\times v)\cdot w=\begin{bmatrix}u_1&amp;u_2&amp;u_3\\v_1&amp;v_2&amp;v_3\\w_1&amp;w_2&amp;w_3\end{bmatrix}$
+&gt; 		2. 连叉积：$\bf u\times(v\times w)=(u\cdot w)\mathbf v-(u\cdot v)w$
+&gt; 4. 叉积的几何推论：
+&gt; 		1. $\bf u,v$ 确定的平行四边形的面积为 $\|\bf u\times v\|$
+&gt; 		2. $\bf u,v,w$ 确定的六面体的体积为 $|\bf u\cdot(v\times w)|$
+&gt; 		3. 若 $\bf u\cdot(v\times w)=0$，那么 $\bf u,v,w$ 共面</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 练习
+1. 证明：假设 $\bf u,v,w\in\mathbb R^n$，若 $\bf u\cdot v=u\cdot w$ 并且 $\bf u\times v=u\times w$，那么 $\bf v=w$
+2. 假设 $\bf u,v,w,x\in\mathbb R^n$
+    1. 证明：${\bf(u-v)\times(u+v)=2(u\times v)}$
+    2. 证明：连叉积 ${\bf u\times(v\times w)=(u\cdot w)v-(u\cdot v)w}$
+    3. 证明：${\bf u\times(v\times w)+v\times(w\times u)+w\times(u\times v)=0}$
+    4. 证明：${\bf(u\times v)\cdot(w\times x)}=\begin{vmatrix}\bf u\cdot w&amp;\bf v\cdot w\\\bf u\cdot x&amp;\bf v\cdot x\end{vmatrix}$
+3. 证明：假设 L 是直线，若 $\mathbf a,\mathbf b\in L$，那么 $\mathbf u\in\mathbb R^n$ 到 L 的距离为 $\frac{\|(\bf b-a)\times(u-a)\|}{\|\bf b-a\|}$
+4. 证明：假设 S 是平面，若 $\mathbf a,\mathbf b,\mathbf c\in S$，那么 $\mathbf u\in\mathbb R^n$ 到 S 的距离为 $\frac{|[(\bf b-a)\times(c-a)]\cdot(u-a)|}{\|(\bf b-a)\times(c-a)\|}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 提示
+&gt; (1) $\bf u\cdot v=u\cdot w,u\times v=u\times w$ 蕴含 ${\bf u\cdot(v-w)}=0,{\bf u\times(v-w)=0}$
+&gt; 
+&gt; 即 $\bf u\ne0$ 同时与 $\bf v-w$ 正交并且平行，于是 $\bf v-w=0$，即 $\bf v=w$
+&gt; 
+&gt; (2.1) ${\bf(u-v)\times(u+v)=u\times u-v\times u+u\times v-v\times v=-v\times u+u\times v=}2(\mathbf u\times\mathbf v)$
+&gt; 
+&gt; (2/4) ${\bf(u\times v)\cdot(w\times x)=u\cdot(v\times(w\times x))=u\cdot((v\cdot x)w-(v\cdot w)x)=(v\cdot x)(u\cdot w)-(v\cdot w)(u\cdot x)}=\begin{vmatrix}\bf u\cdot w&amp;\bf v\cdot w\\\bf u\cdot x&amp;\bf v\cdot x\end{vmatrix}$</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="5. 直线与平面方程" dir="auto" class="heading" id="5._直线与平面方程"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>5. 直线与平面方程</h4><div class="heading-children"><div><p dir="auto">（根据线性代数的思想）一般意义上的<strong>直线</strong>是指 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> 上的一维子空间通过平移所得的图形</p></div><div><p dir="auto">而<strong>平面</strong>是指 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> 上的二维子空间通过平移得到的图形</p></div><div><hr dir="auto"></div><div><p dir="auto">三维空间中的直线 L，可以通过直线上的一个点 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.109em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> 和 这条直线的方向 确定这条直线，</p></div><div><p dir="auto">令 <strong>v</strong> 为平行于 L 的向量，<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> 为 L 上的任意一点，<strong>r0, r</strong> 分别为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.109em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 的 位置向量（即 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mover><mjx-over style="padding-bottom: 0.105em;"><mjx-mo class="mjx-n"><mjx-stretchy-h class="mjx-c2192" style="width: 1.842em;"><mjx-ext><mjx-c></mjx-c></mjx-ext><mjx-end><mjx-c></mjx-c></mjx-end></mjx-stretchy-h></mjx-mo></mjx-over><mjx-base><mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.109em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-mrow></mjx-base></mjx-mover><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mover space="2"><mjx-over style="padding-bottom: 0.105em;"><mjx-mo class="mjx-n"><mjx-stretchy-h class="mjx-c2192" style="width: 1.514em;"><mjx-ext><mjx-c></mjx-c></mjx-ext><mjx-end><mjx-c></mjx-c></mjx-end></mjx-stretchy-h></mjx-mo></mjx-over><mjx-base><mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-base></mjx-mover></mjx-math></mjx-container></span>），</p></div><div><p dir="auto">如果 <strong>a</strong> 为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mover><mjx-over style="padding-bottom: 0.105em;"><mjx-mo class="mjx-n"><mjx-stretchy-h class="mjx-c2192" style="width: 1.83em;"><mjx-ext><mjx-c></mjx-c></mjx-ext><mjx-end><mjx-c></mjx-c></mjx-end></mjx-stretchy-h></mjx-mo></mjx-over><mjx-base><mjx-mrow><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.109em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-base></mjx-mover></mjx-math></mjx-container></span> 的表示向量，根据三角形法则 和 平行向量的特性：<strong>r = r0 + a = r0 + </strong>t <strong>v</strong></p></div><div><pre dir="auto"><span>title: 三维直线方程
+&gt; 直线的向量方程：$\overrightarrow r = \overrightarrow r_0 + t \overrightarrow v$，$t\in R$
+&gt; 
+&gt; 设 $\overrightarrow r = \langle x, y, z \rangle$，$\overrightarrow r_0 = \langle x_0, y_0, z_0 \rangle$，$\overrightarrow v = \langle a, b, c \rangle$ （a，b，c 不全为 0，否则表示整个三维空间？），
+&gt; 
+&gt; 直线的参数表示：$x = x_0+at, y = y_0+bt, z = z_0+ct$
+&gt; 
+&gt; 直线的对称方程：$\frac {x-x_0}a = \frac {y-y_0}b = \frac {z-z_0}c, a, b, c \ne 0$ 或 $x=x_0, \frac {y-y_0}b = \frac {z-z_0}c, b,c\ne 0$ 或 $y=y_0, \frac {x-x_0}a = \frac {z-z_0}c, a,c\ne 0$，$\dots$ （总共 $2^3-1=8-1$ 种表示对称方程；**v = 0** 时仅表示空间上的点 $P_0$）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 提示
+1. 通过 $(5,1,3)$，平行于 $\mathbf i+4\mathbf j-2\mathbf k$ 的直线的向量方程为 $\mathbf r=(5+t)\mathbf i+(1+4t)\mathbf j+(3-2t)\mathbf k$，参数方程为 $x=5+t,y=1+4t,z=3-2t$
+2. 通过 $(2,4,-3),(3,-1,1)$ 的直线的参数方程为 $\mathbf r=(2+t)\mathbf i+(4-5t)\mathbf j+(-3+4t)\mathbf k$，对称方程为 $\frac{x-2}1=\frac{y-4}{-5}=\frac{z+3}4$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 线段方程
+&gt; 假设空间上的两点 P, Q, 的位置向量分别为 $\overrightarrow r_0, \overrightarrow r_1$ (即 $\overrightarrow {OP}, \overrightarrow {OQ}$)，
+&gt; 
+&gt; 那么，该线段方程为：$\overrightarrow r(t) = \overrightarrow {r_0} + t(\overrightarrow {r_1}-\overrightarrow {r_0}) = (1-t)\overrightarrow {r_0} + t \overrightarrow {r_1}$，$t\in[0, 1]$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 相错直线
+&gt; 两个直线既 不相交 也 不平行（因而它们不在同一个平面），称这两条直线相错 $\iff$  $\overrightarrow {v_1}\ne k\overrightarrow {v_2}, k\in R$  &amp;  存在 $(x_1, y_1, z_1) = (x_2, y_2, z_2)$</span><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">三维空间中的一个平面可以由 一个点 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.109em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> 和 一个垂直于平面的向量 <strong>n</strong> （称为 法向量）来确定</p></div><div><p dir="auto">令 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> 为平面上的任意一点，<strong>r0, r</strong> 为 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.109em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> 的位置向量，那么 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mover><mjx-over style="padding-bottom: 0.105em;"><mjx-mo class="mjx-n"><mjx-stretchy-h class="mjx-c2192" style="width: 1.83em;"><mjx-ext><mjx-c></mjx-c></mjx-ext><mjx-end><mjx-c></mjx-c></mjx-end></mjx-stretchy-h></mjx-mo></mjx-over><mjx-base><mjx-mrow><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.109em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-base></mjx-mover><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mover space="4"><mjx-over style="padding-bottom: 0.105em; padding-left: 0.281em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.5em;"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-msub space="3"><mjx-mover><mjx-over style="padding-bottom: 0.105em; padding-left: 0.281em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.5em;"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span>，</p></div><div><p dir="auto">由 <strong>n</strong> 垂直于 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mover><mjx-over style="padding-bottom: 0.105em;"><mjx-mo class="mjx-n"><mjx-stretchy-h class="mjx-c2192" style="width: 1.83em;"><mjx-ext><mjx-c></mjx-c></mjx-ext><mjx-end><mjx-c></mjx-c></mjx-end></mjx-stretchy-h></mjx-mo></mjx-over><mjx-base><mjx-mrow><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.109em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-base></mjx-mover></mjx-math></mjx-container></span> 有：<span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mover><mjx-over style="padding-bottom: 0.105em; padding-left: 0.3em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.5em;"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mover><mjx-over style="padding-bottom: 0.105em; padding-left: 0.281em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.5em;"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-msub space="3"><mjx-mover><mjx-over style="padding-bottom: 0.105em; padding-left: 0.281em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.5em;"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math></mjx-container></span>  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle><mjx-mo class="mjx-n"><mjx-c class="mjx-c27FA"></mjx-c></mjx-mo><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle></mjx-math></mjx-container></span>  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mover><mjx-over style="padding-bottom: 0.105em; padding-left: 0.3em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.5em;"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mover space="3"><mjx-over style="padding-bottom: 0.105em; padding-left: 0.281em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.5em;"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mover space="4"><mjx-over style="padding-bottom: 0.105em; padding-left: 0.3em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.5em;"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-msub space="3"><mjx-mover><mjx-over style="padding-bottom: 0.105em; padding-left: 0.281em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.5em;"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span></p></div><div><pre dir="auto"><span>title: 三维平面方程
+&gt; $\overrightarrow n \cdot (\overrightarrow r - \overrightarrow r_0) = 0$
+&gt; 
+&gt; $\overrightarrow n \cdot \overrightarrow r = \overrightarrow n \cdot \overrightarrow r_0$
+&gt; 
+&gt; 令 $\overrightarrow n = \langle a, b, c \rangle, \overrightarrow r - \overrightarrow r_0 = \langle x-x_0, y-y_0, z-z_0 \rangle$ （a，b，c 不全为 0？）
+&gt; 
+&gt; 有：$a(x-x_0) + b(y-y_0) + c(z-z_0) = 0$ 或 $ax + by + cz = ax_0 + by_0 + cy_0$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. 通过点 $(2,4,-1)$，法向量为 $(2,3,4)$ 的平面的一般方程为 $2(x-2)+3(y-4)+4(z+1)=0$ 或 $2x+3y+4z=12$
+2. 通过点 $\mathbf u=(1,3,2),\mathbf v=(3,-1,6),\mathbf w=(5,2,0)$ 的平面的法向量为 ${\bf n=(v-u)\times(w-u)}=12\mathbf i+20\mathbf j+14\mathbf k$，其点法式方程为 $12(x-1)+20(y-3)+13(z-2)=0$ 或 $6x+10y+7z=50$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 三维平面的截距
+&gt; x，y，z 轴的截距分别通过令 y=z=0, x=z=0, x=y=0 得到
+&gt; 
+&gt; 三个轴的截距分别为：$\frac {ax_0+by_0+cz_0}{a}, \frac {ax_0+by_0+cz_0}{b}, \frac {ax_0+by_0+cz_0}{c}$ （$a, b, c \ne 0$，否则对应轴上的截距不存在？）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 三维平面方程的应用
+- 已知三个互不相同的点 P, Q, R 的位置向量 **r1, r2, r3**，三个点确定的平面为 $[(\overrightarrow r_1-\overrightarrow r_2)\times (\overrightarrow r_1-\overrightarrow r_3)]\cdot (\overrightarrow r_1-\overrightarrow r_2)=0$ 或 $[(\overrightarrow r_1-\overrightarrow r_2)\times (\overrightarrow r_1-\overrightarrow r_3)]\cdot (\overrightarrow r_1-\overrightarrow r_3)=0$ 或 $[(\overrightarrow r_1-\overrightarrow r_2)\times (\overrightarrow r_1-\overrightarrow r_3)]\cdot (\overrightarrow r_2-\overrightarrow r_3)=0$ $\dots$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 定理
+&gt; 1.	两个平面的法向量平行 $\iff$ 这两个平面平行
+&gt; 
+&gt; 2.	两个平面**不平行** $\iff$ 这两个平面**相交于一条直线**，两平面的夹角为两法向量之间所成的锐角 $\theta$ ($0 &lt; \theta &lt; 90°$)（夹角可以通过两法向量的 点积 或 叉积 得到）
+&gt; 
+&gt; 3.	求两平面交线
+&gt; 
+&gt;    1.	令 x 或 y 或 z = k 求得直线上的一个点，再通过 $\overrightarrow v = \overrightarrow n_1 \times \overrightarrow n_2$ 得到直线的方向向量
+&gt;    2.	令 x 或 y 或 z = $d\cdot t + e$（通常 t=1, e=0） 可以解得关于直线 t 的参数方程
+&gt; 	
+&gt; 部分证明： $\frac {x-x_0}{a}=\frac {y-y_0}{b}=\frac {z-z_0}{c}$  $\iff$  $\frac {x-x_0}{ad/c}=\frac {y-y_0}{bd/c}=\frac {z-z_0}{d}$  $\iff$  $\frac {x-x_0}{ad/c}+\frac{z_0-e}{d}=\frac {y-y_0}{bd/c}+\frac{z_0-e}{d}=\frac {z-e}{d} = t$
+&gt; 
+&gt; 4.	两个不平行的平面的交线的表示方法：两个平面的方程组（形如：$a_1x+b_1y+c_1z+d_1=0, a_2x+b_2y+c_2z+d_2=0$） 或 该方程组消去任意两个变量得到的新的方程组（形如 $\frac {x-x_0}{a}=\frac {y-y_0}{b}, \frac {y-y_0}{b}=\frac {z-z_0}{c}$）
+&gt; 
+&gt; 5.	$Q(x_1, y_1, z_1)$ 到平面 $ax+by+cz+d=0$ 的距离为 $D = \frac {ax_1+by_1+cz_1+d}{\sqrt {a^2+b^2+c^2}}$
+&gt; 
+&gt;    - 证明：从几何角度发现 D 为 $\displaystyle \overrightarrow {P_0Q}$ 在 $\overrightarrow n = \langle a, b, c \rangle$ 上的投影的绝对值，则：
+&gt;    - $\displaystyle D = |comp_{\overrightarrow n} {\overrightarrow P_0Q}| = |\frac {\overrightarrow n\cdot \overrightarrow {P_0Q}}{|\overrightarrow n|}| = \frac {a(x_1-x_0) + b(y_1-y_0) + c(z_1-z_0)}{\sqrt {a^2+b^2+c^2}} = \frac {ax_1 + by_1 + cz_1 - (ax_0 + by_0 + cz_0)}{\sqrt {a^2+b^2+c^2}} = \frac {ax_1 + by_1 + cz_1 + d}{\sqrt {a^2+b^2+c^2}}$
+&gt; 
+&gt; 6.	两个相互平行的平面之间的距离 等价于 任一平面中任取一点 Q，该点 Q 到另一个平面的距离
+&gt; 
+&gt; 7.	两个相错的直线之间的距离 $\iff$ 对两个直线构造一个与 $\overrightarrow v_1 \times \overrightarrow v_2$ 垂直的均包含对应直线的平面，这两个构造平面之间的距离
+&gt; 
+&gt; 8.	6 种距离：点-点，点-线，点-面，线-线，线-面，面-面</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. 直线参数方程 $x=2+3t,y=-4t,z=5+t$ 与平面 $4x+5y-2z=18$ 的交点：
+    1. 法1：将直线方程化为两行的方程组，再联立平面方程，求解 $3\times3$ 的线性方程组即可
+    2. 法2：将参数方程代入平面方程，求解 t，从而得到交点
+2. 有平面 $x+y+z=1$ 和 $x-2y+3z=1$，两平面夹角为 $\theta=\cos^{-1}\frac{(1,1,1)\cdot(1,-2,3)}{\|(1,1,1)\|\|(1,-2,3)\|}=\cos^{-1}\frac2{\sqrt{42}}$，两平面交线为 $(-5/3,2/3,1)t+(1,0,0)$（求解线性方程组即可）
+3. $\mathbf u$ 到平面 $ax+by+cz+d=0$ 的距离为 $\frac{|au_1+bu_2+cu_3+d|}{\sqrt{a^2+b^2+c^2}}$
+4. 平面 $10x+2y-2z=5$ 到平面 $5x+y-z=1$ 之间的距离为平面 1 的特殊点 $(1/2,0,0)$ 到平面 2 的距离，即 $\frac{|5(1/2)+0-0-1|}{\sqrt{5^2+1^2+(-1)^2}}=\frac{3/2}{\sqrt{27}}=\frac{\sqrt3}6$
+5. 求两相错直线 $\mathbf r=(1,-2,4)+(1,3,-1)t$ 和 $\mathbf r=(0,3,-3)+(2,1,4)s$ 之间的距离为 $\frac{|(\mathbf v_1\times\mathbf v_2)\cdot(\mathbf r_1-\mathbf r_2)|}{\|\mathbf v_1\times\mathbf v_2\|}=\frac{\|(13,-6,-5)\cdot(1,-5,7)\|}{\|(13,-6,-5)\|}=\frac8{\sqrt{230}}$</span><button class="copy-code-button">复制</button></pre></div><div><hr dir="auto"></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 直线方程：假设 $\mathbf r=(x,y,z)$，经过初始点 $\mathbf r_0=(x_0,y_0,z_0)$，方向向量为 $\mathbf v=(a,b,c)$ 的直线方程如下：
+&gt; 		1. 参数向量方程：$\mathbf r=\mathbf r_0+t\mathbf v$
+&gt; 		2. 参数方程：$\begin{cases}x=x_0+at\\y=y_0+bt\\z=z_0+ct\end{cases}$
+&gt; 		3. 对称方程，如：$\frac{x-x_0}a=\frac{y-y_0}b=\frac{z-z_0}c$ 或 $\begin{cases}\frac{x-x_0}a=\frac{y-y_0}b\\\frac{y-y_0}b=\frac{z-z_0}c\end{cases}$
+&gt; 2. 线段方程：假设 $\mathbf r=(x,y,z)$，以 $\mathbf r_0,\mathbf r_1$ 为始末向量的线段方程为 $\mathbf r=\mathbf r_0+t(\mathbf r_1-\mathbf r_0)=(1-t)\mathbf r_0+t\mathbf r_1$（$t\in[0,1]$）
+&gt; 3. 相错直线：既不相交也不平行的两条直线，称它们是**相错的**
+&gt; 4. 平面方程：假设 $\mathbf r=(x,y,z)$ 为未知向量，经过初始点 $\mathbf r_0=(x_0,y_0,z_0)$，法向量为 $\mathbf n=(a,b,c)$ 的平面方程为：
+&gt; 		1. 参数向量方程：$\mathbf r=\mathbf r_0+s\mathbf v_1+t\mathbf v_2$（其中 $\mathbf v_1\times\mathbf v_2=\mathbf n$）
+&gt; 		2. 向量方程：$\mathbf n\cdot(\mathbf r-\mathbf r_0)=0$ 或 $\mathbf n\cdot\mathbf r=\mathbf n\cdot\mathbf r_0$
+&gt; 		3. 一般方程：$a(x-x_0) + b(y-y_0) + c(z-z_0) = 0$ 或 $ax+by+cz+d=0$，其中 $d=-\mathbf n\cdot\mathbf r_0=-(ax_0 + by_0 + cy_0)$
+&gt; 		4. 任意点 $\mathbf u$ 到该平面的距离为 $|\text{comp}_{\bf n}(\mathbf u-\mathbf r)|$ 或 $\frac{au_1+bu_2+cu_3+d}{\sqrt{a^2+b^2+c^2}}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 一级结论
+&gt; 1. $\mathbb R^n$ 中的一个方程表示 $n-1$ 维子空间的平移/旋转/扭曲？
+&gt; 2. 在 $\mathbb R^2$ 中
+&gt; 		1. 直线 $ax+by+c=0$ 的法向量为 $(a,b)$
+&gt; 		2. 点到直线的距离为 $\frac{|au_1+bu_2+c|}{\sqrt{a^2+b^2}}$
+&gt; 3. 在 $\mathbb R^3$ 中，$\forall i=0..2$，假设有直线 $l_i:\mathbf r=\mathbf r_i+t\mathbf v_i$ 和平面 $S_i:\mathbf n_i\cdot(\mathbf r-\mathbf r_i)=0$，那么：
+&gt; 		1. 平面 $S_0$ 的法向量为 $\mathbf n_0=(a,b,c)$
+&gt; 		2. 若 $a\ne0,b\ne0,c\ne0$，那么平面 $S_0$ 到 $x,y,z$ 轴的截距分别为 $A=\frac{\mathbf n_0\cdot\mathbf r_0}a,B=\frac{\mathbf n_0\cdot\mathbf r_0}b,C=\frac{\mathbf n_0\cdot\mathbf r_0}c$（满足 $aA=bB=cC=\mathbf n_0\cdot\mathbf r_0=-d$）
+&gt; 		3. 点 $\bf u$ 到直线 $l_0$ 的距离为 $\frac{\|\mathbf v_0\times(\mathbf r_0-\mathbf u)\|}{\|\mathbf v_0\|}$
+&gt; 		4. 点 $\bf u$ 到平面 $S_0$ 的距离为 $|\text{comp}_{\bf n_0}(\mathbf r_0-\mathbf u)|$ 或 $\frac{|au_1+bu_2+cu_3+d|}{\sqrt{a^2+b^2+c^2}}$
+&gt; 		5. 两平行平面 $S_1,S_2$ 之间的距离为 $|\text{comp}_{\bf n_2}(\mathbf r_1-\mathbf r_2)|$；若 $\mathbf n_1=\mathbf n_2$ 并且 $\mathbf n_1\cdot\mathbf r_1=-d_1,\mathbf n_2\cdot\mathbf r_2=-d_2$，那么 $\frac{|d_2-d_1|}{\|\sqrt{a^2+b^2+c^2}\|}$
+&gt; 		6. 两交错直线 $l_1,l_2$ 之间的距离为 $|\text{comp}_{\mathbf v_1\times\mathbf v_2}(\mathbf r_1-\mathbf r_2)|$
+&gt; 		7. $l_1,l_2$ 的交点：若线性方程组 $\begin{bmatrix}\mathbf v_1&amp;-\mathbf v_2\end{bmatrix}\begin{bmatrix}s\\t\end{bmatrix}=\mathbf r_2-\mathbf r_1$ 的解为 $(s,t)$，那么交点为 $\mathbf r_1+s\mathbf v_1$ 或 $\mathbf r_2+t\mathbf v_2$
+&gt; 		8. 两不重合直线 $l_1,l_2$ 的生成平面为 $\begin{cases}(\mathbf v_1\times\mathbf v_2)\cdot(\mathbf r-\mathbf r_1)=0&amp;l_1,l_2相交\\(\mathbf v_1\times(\mathbf r_1-\mathbf r_2))\cdot(\mathbf r-\mathbf r_1)=0&amp;l_1,l_2平行\end{cases}$
+&gt; 4. 若 $l_1$ 与 $l_2$ 相交，那么 $\exists s,t$ 使得 $\mathbf r_1+s\mathbf v_1=\mathbf r_2+t\mathbf v_2$
+&gt; 5. 直线 $l_0:\mathbf r=\mathbf r_0+t_1\mathbf v_0$ 与平面 $s_1:\mathbf r=\mathbf r_1+t_2\mathbf u_1+t_3\mathbf v_1$ 的交点：解方程 $\begin{bmatrix}\mathbf u_0&amp;-\mathbf u_1&amp;-\mathbf v_1\end{bmatrix}\mathbf t=\mathbf r_1-\mathbf r_0$，然后将 $t_1$ 代入 $l_0$ 即可</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 练习
+1. 证明：向量 $\mathbf u$ 到初始点为 $\mathbf r_0=(x_0,y_0,z_0)$，法向量为 $\mathbf n=(a,b,c)$ 的平面的距离为 $\frac{|au_1+bu_2+cu_3+d|}{\sqrt{a^2+b^2+c^2}}$
+2. 相错直线之间的距离
+    1. 证明 $x=y=z$ 和 $x+1=y/2=z/3$ 相错
+    2. 计算 (1) 中两直线的距离
+    3. 计算 $x=1+t,y=1+6t,z=2t$ 和 $x=1+2s,y=5+15s,z=-2+6s$ 之间的距离
+3. 某平面 $S_1$ 与 $S_2:x+2y-2z=1$ 平行，且它们距离为 2，计算 $S_1$
+4. 计算 $\mathbf u=(1,2,3)$ 到 $x=2+t,y=2-3t,z=5t$ 的距离
+5. 计算 $\mathbf u=(2,8,5)$ 到 $x-2y-2z=1$ 的距离
+6. 证明：若平面 S 到 $x,y,z$ 轴的截距分别为 $A,B,C\ne0$（即 S 不经过原点），那么 S 的方程为 $\frac xA+\frac yB+\frac zC=1$
+7. 假设有两直线 $l_1:\mathbf r=\mathbf r_1+t\mathbf v_1,l_2:\mathbf r=\mathbf r_2+t\mathbf v_2$，计算 (1) $l_1,l_2$ 的交点，(2) 相交直线 $l_1,l_2$ 的生成平面
+8. 证明：若 $\bf u$ 与 $\bf a,b$ 都垂直（即 $\mathbf u\cdot\mathbf a=0,\mathbf u\cdot\mathbf b=0$），那么 $\bf u$ 与 $\bf a\times b$ 平行（即 $\exists k\ne0,\mathbf u=k(\bf a\times b)$）
+9. 若 $l_0$ 通过点 $(0,1,2)$，并且与 $S_1:x+y=z=2$ 平行，与 $l_1:x=1+t,y=1-t,z=2t$ 垂直，计算 $l_0$ 的方程
+10. 若 $l_0$ 通过点 $(0,1,2)$，并且与 $l_1:x=1+t,y=1-t,z=2t$ 垂直，且 $l_0$ 与 $l_1$ 相交，计算 $l_0$ 的方程
+11. 待续...</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 提示
+&gt; (1) $|\text{comp}_{\bf n}(\mathbf u-\mathbf r)|=\frac{|\mathbf n\cdot(\mathbf u-\mathbf r)|}{\|\mathbf n\|}=\frac{|\mathbf n\cdot\mathbf u-\mathbf n\cdot\mathbf r|}{\|\mathbf n\|}=\frac{|\mathbf n\cdot\mathbf u-\mathbf n\cdot\mathbf r_0|}{\|\mathbf n\|}=\frac{au_1+bu_2+cu_3+d}{\sqrt{a^2+b^2+c^2}}$
+&gt; 
+&gt; (2.1) 线性方程组 $\begin{cases}x=y\\y=z\\x+1=y/2\\y/2=z/3\end{cases}$ 无解，所以两直线无交点
+&gt; 
+&gt; 其他做法：计算同时具有两个相同分量的点（如 $x,y$ 坐标相同），若这些点的另一个坐标都不相同，那么两直线无交点
+&gt; 
+&gt; 又因它们的方向向量不成比例，即 $\forall k,(1,1,1)\ne k(1,2,3)$，那么两直线不共线
+&gt; 
+&gt; 于是这两条直线相错
+&gt; 
+&gt; (2.2) 两相错直线的距离为 $\frac{|(\mathbf v_1\times\mathbf v_2)\cdot(\mathbf r_1-\mathbf r_2)|}{\|\mathbf v_1\times\mathbf v_2\|}=\frac{|(1,-2,1)\cdot(1,0,0)|}{\|(1,-2,1)\|}=\frac1{\sqrt6}$，
+&gt; 
+&gt; 其中 $\mathbf r_1=(0,0,0),\mathbf v_1=(1,1,1)$，$\mathbf r_2=(-1,0,0),\mathbf v_2=(1,2,3)$
+&gt; 
+&gt; (2.3) $\frac{|(\mathbf v_1\times\mathbf v_2)\cdot(\mathbf r_1-\mathbf r_2)|}{\|\mathbf v_1\times\mathbf v_2\|}=\frac{|(6,-2,3)\cdot(0,-4,2)|}{\|(6,-2,3)\|}=\frac{14}{\sqrt{49}}=2$
+&gt; 
+&gt; 其中 $\mathbf v_1\times\mathbf v_2=(1,6,2)\times(2,15,6)=(6,-2,3)$，$\mathbf r_1-\mathbf r_2=(1,1,0)-(1,5,-2)=(0,-4,2)$
+&gt; 
+&gt; (3) 设平面 $S_1$ 为 $x+2y-2z+d=0$，于是 $S_1$ 和 $S_2$ 之间的距离为 $2=\frac{|d-(-1)|}{\sqrt{1^2+2^2+(-2)^2}}$，解得 $d=5$ 或 $d=-7$
+&gt; 
+&gt; (4) $\frac{\|\mathbf v_0\times(\mathbf r_0-\mathbf u)\|}{\|\mathbf v_0\|}=\frac{\|(1,-3,5)\times(1,0,-3)\|}{\|(1,-3,5)\|}=\frac{\|(9,8,3)\|}{\sqrt{35}}=\sqrt{154/35}=\sqrt{22/5}$
+&gt; 
+&gt; (5) 设 $\mathbf n_0=(1,-2,-2),\mathbf r_0=(1,0,0)$，于是距离为 $\frac{|\mathbf n_0\cdot(\mathbf r_0-\mathbf u)|}{\|\mathbf n_0\|}=\frac{|(1,-2,-2)\cdot(-1,-8,-5)|}{\|(1,-2,-2)\|}=\frac{25}{\sqrt{1^2+(-2)^2+(-2)^2}}=25/3$
+&gt; 
+&gt; 或者，距离为 $\frac{|(1)(2)+(-2)(8)+(-2)(5)-1|}{\sqrt{1^2+(-2)^2+(-2)^2}}=\frac{|-25|}{\sqrt{9}}=25/3$
+&gt; 
+&gt; (6) 设 S 的方程为 $ax+by+cz=\mathbf n_0\cdot\mathbf r_0$（其中 $\mathbf n_0\cdot\mathbf r_0\ne0$）
+&gt; 
+&gt; 蕴含 S 的方程为 $\frac a{\mathbf n_0\cdot\mathbf r_0}x+\frac b{\mathbf n_0\cdot\mathbf r_0}y+\frac c{\mathbf n_0\cdot\mathbf r_0}z=1$，即 $\frac xA+\frac yB+\frac zC=1$
+&gt; 
+&gt; (7)
+&gt; 
+&gt; 1. 有线性方程组 $\begin{bmatrix}1&amp;1\\-1&amp;-1\\2&amp;0\end{bmatrix}\begin{bmatrix}s\\t\end{bmatrix}=\begin{bmatrix}2\\0\\2\end{bmatrix}-\begin{bmatrix}1\\1\\0\end{bmatrix}$，解得 $s=1,t=0$，于是交点为 $(2,0,2)$
+&gt; 2. 两平面的生成平面为 $((1,-1,2)\times(-1,1,0))\cdot(x-1,y-1,z)=0$，即 $(-2,-2,0)\cdot(x-1,y-1,z)=0$，即 $x+y=2$
+&gt; 
+&gt; (8) $\mathbf u\times(\mathbf a\times\mathbf b)=(\mathbf u\cdot\mathbf b)\mathbf a-(\mathbf u\cdot\mathbf a)\mathbf b=\mathbf 0$，所以 $\bf u$ 与 $\bf a\times b$ 平行
+&gt; 
+&gt; (9) $\mathbf r_0=(0,1,2)$，
+&gt; 
+&gt; $l_0$ 与 $S_1$ 平行，蕴含 $\mathbf v_0\cdot\mathbf n_1=0$，
+&gt; 
+&gt; $l_0$ 与 $l_1$ 垂直，蕴含 $\mathbf v_0\cdot\mathbf v_1=0$
+&gt; 
+&gt; 法1：于是 $\bf v_0$ 与 $\mathbf n_1\times v_1=(1,1,1)\times(1,-1,2)=(3,-1,-2)$ 平行，于是 $l_0$ 的方程为 $\mathbf r=(0,1,2)+t(3,-1,-2)$
+&gt; 
+&gt; 法2：设 $\mathbf v_0=(a,b,c)$，求解欠定方程组 $\begin{bmatrix}1&amp;1&amp;1\\1&amp;-1&amp;2\end{bmatrix}\begin{bmatrix}a\\b\\c\end{bmatrix}=\mathbf 0$ 得 $\begin{bmatrix}a\\b\\c\end{bmatrix}=k\begin{bmatrix}-3/2\\1/2\\1\end{bmatrix}$，于是 $k=2$ 时，有 $l_0$ 的方程：$\mathbf r=(0,1,2)+t(-3,1,2)$
+&gt; 
+&gt; (10) $\mathbf r_0=(0,1,2)$，$l_0$ 与 $l_1$ 垂直，蕴含 $\mathbf v_0\cdot\mathbf v_1=0$
+&gt; 
+&gt; $l_0$ 与 $l_1$ 相交，蕴含 $\exists s,t$ 使得 $\mathbf r_0+s\mathbf v_0=\mathbf r_1+t\mathbf v_1$，
+&gt; 
+&gt; 于是 $\mathbf r_0\cdot\mathbf v_1+s\mathbf v_0\cdot\mathbf v_1=\mathbf r_1\cdot\mathbf v_1+t\mathbf v_1\cdot\mathbf v_1$，蕴含 $\mathbf r_0\cdot\mathbf v_1=\mathbf r_1\cdot\mathbf v_1+t\|\mathbf v_1\|^2$，蕴含 $t=\frac{(\mathbf r_0-\mathbf r_1)\cdot\mathbf v_1}{\|\mathbf v_1\|^2}=(-1,0,2)\cdot(1,-1,2)/6=1/2$
+&gt; 
+&gt; 令 $l_0,l_1$ 的交点为 $\mathbf u=\mathbf r_1+t\mathbf v_1=(3/2,1/2,1)$
+&gt; 
+&gt; 令 $l_0$ 的方向向量为 $\mathbf v_0=2(\mathbf u-\mathbf r_0)=(-3,1,2)$
+&gt; 
+&gt; 于是 $l_0$ 的方程为 $\mathbf r=(0,1,2)+t(-3,1,2)$</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="6. 柱面 &amp; 二次曲面" dir="auto" class="heading" id="6._柱面_&amp;_二次曲面"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>6. 柱面 &amp; 二次曲面</h4><div class="heading-children"><div><p dir="auto">我们已经研究了两种特殊曲面——平面（12.5），球面（12.1），下面将研究 柱面 和 二次曲面</p></div><div><pre dir="auto"><span>title: 柱面
+&gt; 直线沿着定曲线平移所得到的曲面称为 柱面，该直线称为 母线（通常是 垂直于某个坐标面 或 平行于某个坐标轴 的直线）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. $z=x^2$ 不含 y，可以看作 $xz$ 坐标平面上的抛物线 $z=x^2$ 沿着 $\mathbf r=t(0,1,0)$ 移动所得的**抛物柱面**
+2. 若某个方程不含 $x,y,z$ 其中之一，那么该方程是柱面方程
+3. $x^2+y^2=1$ 是 $xy$ 平面上的单位圆生成的**圆柱面**
+4. $y^2+z^2=1$ 是 $yz$ 平面上的单位圆生成的圆柱面</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 二次曲面
+&gt; 一个关于变量 x, y, z 的二次方程的图形称为 二次曲面，
+&gt; 
+&gt; 一般形式为：$Ax^2+By^2+Cz^2+Dxy+Eyz+Fxz+Gx+Hy+Iz+J=0$，
+&gt; 
+&gt; 通过 变换 和 旋转，可以变为两种标准形式之一：$Ax^2+By^2+Cz^2+J=0$ 或 $Ax^2+By^2+Iz=0$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 二次曲面分类
+1.	$Ax^2+By^2+Cz^2+J=0, A,B,C,J\ne 0$：
+    - A, B, C, J 同号：无解（仅当 J=0 时表示零点）
+    - J &lt; 0
+        - A, B, C &gt; 0：椭球
+        - A, B, C 只有一个为负：单叶双曲面
+        - A, B, C 只有两个为负：双叶双曲面
+2.	$Ax^2+By^2+Cz^2+J=0, A,B,C\ne 0, J=0$ 即 $Ax^2+By^2+Cz^2=0$
+    - A, B, C 同号：零点
+    - A, B, C 并非同号：锥面
+3.	$Ax^2+By^2+Iz=0, A,B,I\ne 0$：
+    - A, B, I 同号：无解
+    - I &lt; 0
+        - A, B &gt; 0：椭圆抛物面
+        - A, B 只有一个为负：双曲抛物面
+4.	$Ax^2+By^2+Iz=0, A,B\ne 0, I=0$ $\implies$ 坐标轴 或 平面</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. $z=4x^2+y^2$ 是“开口向上的”椭圆抛物面
+2. $z=y^2-x^2$ 是双曲抛物面
+3. $x^2+y^2/9+z^2/4=1$ 是椭球面
+4. $x^2+y^2-z^2=1$ 是单叶双曲面
+5. $x^2+y^2-z^2=-1$ 是双叶双曲面
+6. $x^2+y^2-z^2=0$ 是锥面
+7. 曲面方程 $x^2+2z^2-6x-y+10=0$ 等价于 $(x-3)^2+2z^2-(y-1)=0$，于是该曲面为顶点在 $(3,1,0)$ 上，开口朝 y 轴正方向的椭圆抛物面</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: question
+- 如何画出二次曲面的图形？分别设 x, y, z = k ($k\in R$) 得到各个平行于坐标轴的截面来画出图形</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 柱面，母线：某直线沿着一条与之垂直的曲线平移所经过的区域或曲面称为**柱面**，这条直线称为**母线**
+&gt; 2. 二次曲面</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 一级结论
+&gt; 1. 标准柱面的大致分类：$\begin{cases}抛物柱面&amp;Ax^2+Cy=0\\椭圆柱面&amp;Ax^2+By^2+D=0,AB&gt;0,D&lt;0\\双曲柱面&amp;Ax^2+By^2+D=0,AB&lt;0\end{cases}$
+&gt; 2. 标准二次曲面的大致分类：$\begin{cases}椭圆抛物面&amp;Ax^2+By^2+Dz=0,AB&gt;0\\双曲抛物面&amp;Ax^2+By^2+Dz=0,AB&lt;0\\椭圆椭圆面&amp;Ax^2+By^2+Cz^2+E=0,ABC&gt;0,E&lt;0\\锥面&amp;Ax^2+By^2+Cz^2+E=0,AB&gt;0,C&lt;0,E=0\\单叶双曲面&amp;Ax^2+By^2+Cz^2+E=0,AB&gt;0,C&lt;0,E&lt;0\\双叶双曲面&amp;Ax^2+By^2+Cz^2+E=0,AB&gt;0,C&lt;0,E&gt;0\end{cases}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 练习
+1. 判断题
+    1. 给定 $\mathbb R^3$ 上的一个标准的二次方程 $Ax^a+By^b+Cz^c+D=0$，若 $a+b+c$ 为 3 或 4，那么该曲面为柱面；若 $a+b+c$ 为 5 或 6，那么该曲面为二次曲面(Y)
+    2. 若三元的最高次为二次的方程具有交叉乘积项，如 $xy,yz,zx$，那么该方程表示旋转的二次曲面(Y)
+    3. 完整的二次曲面方程具有 10 个项，如 $\begin{bmatrix}x&amp;y&amp;z&amp;1\end{bmatrix}M\begin{bmatrix}x\\y\\z\\1\end{bmatrix}=0$(Y)</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="7. 柱面坐标系 &amp; 球坐标系" dir="auto" class="heading" id="7._柱面坐标系_&amp;_球坐标系"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>7. 柱面坐标系 &amp; 球坐标系</h4><div class="heading-children"><div><p dir="auto">在平面几何中，我们为了方便描述曲线或者区域的时候，给出了 <strong>极坐标系</strong>，</p></div><div><p dir="auto">而三维坐标徐中，类似于 极坐标系，我们给出 <strong>柱面坐标系</strong> 和 <strong>球坐标系</strong> 两种坐标系</p></div><div><pre dir="auto"><span>title: 柱面坐标系
+&gt; 三维空间中的点 P 用有序三元组 $(r, \theta, z)$ 来表示，
+&gt; 
+&gt; r 和 $\theta$ 是 P 在 xOy 平面上投影的极坐标参数，z 是从点 P 到 xOy 平面的距离
+&gt; 
+&gt; 柱面坐标 =&gt; 直角坐标：$x = r\cos \theta, y = r\sin \theta, z = z$
+&gt; 
+&gt; 直角坐标 =&gt; 柱面坐标：$r^2 = x^2 + y^2, \tan \theta = \frac yx, z = z$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. 假设 $(r,\theta,z)$ 是柱面坐标系中的坐标，$[x,y,z]$ 是对应的直角坐标，那么 $(2,2\pi/3,1)=[-1,\sqrt3,1]$，$[3,-3,-7]=(3\sqrt2,-\pi/4,-7)$
+2. 柱面坐标方程 $z=r$ 等价于直角坐标方程 $z^2=x^2+y^2$，是一个锥面
+3. 直角坐标方程 $4x^2+4y^2+z^2=1$ 等价于柱面坐标方程 $z^2=1-4r^2$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 球坐标系
+&gt; 三维空间中的点 P 用有序三元组 $(\rho, \theta, \phi)$ （$\rho \ge 0, 0\le \phi \le \pi$）来表示，
+&gt; 
+&gt; $\rho=|OP|$ 为点 P 到原点的距离，$\theta$ 和柱面坐标表示同样的角度，$\phi$ 是线段和 z 轴正方向的夹角
+&gt; 
+&gt; 方程 r=c 表示半径为 r 的球面，方程 $\theta=c$ 表示一个竖直的半平面，方程 $\phi=c$ 表示一个以 z 轴为对称轴的半圆锥
+&gt; 
+&gt; 球坐标 =&gt; 直角坐标：$x=\rho\sin\phi\cos\theta, y=\rho\sin\phi\sin\theta, z=\rho\cos\phi$
+&gt; 
+&gt; 直角坐标 =&gt; 球坐标：需要借助距离公式：$\rho^2=x^2+y^2+z^2$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: tip
+- 若所求问题中的曲面关于一个坐标轴对称，则使用 柱面坐标系 比较方便
+- 若所求问题中的曲面关于一个点对称，则使用 球坐标系 比较方便</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 坐标系之间的切换
+- 设 $P_1(x, y, z), P_2(r, \theta, z), P_3(\rho, \theta, \phi)$ 分别为点 P 在 直角坐标，柱面坐标，球坐标 中的表示方法
+- $P_1(x, y, z) =&gt; P_2(\sqrt {x^2 + y^2}, \tan^{-1}\frac yx, z)$
+- $P_1(x, y, z) =&gt; P_3(\sqrt {x^2 + y^2 + z^2}, \sin^{-1} \frac y{\rho\sin\phi}, \cos^{-1}\frac z\rho)$ （注意这里的计算顺序应该是：$\rho =&gt; \phi =&gt; \theta$）
+    - 又因为 $\rho\sin\phi = \rho\sqrt{1-\frac {z^2}{\rho^2}} = \sqrt{\rho^2-z^2} = \sqrt{x^2+y^2}$
+    - 故 $P_1(x, y, z) =&gt; P_3(\sqrt {x^2 + y^2 + z^2}, \sin^{-1} \frac y{\sqrt{x^2+y^2}}, \cos^{-1}\frac z\rho)$
+- $P_1(x, y, z) =&gt; P_3(\sqrt {x^2 + y^2 + z^2}, \cos^{-1} \frac x{\rho\sin\phi}, \cos^{-1}\frac z\rho) = P_3(\sqrt {x^2 + y^2 + z^2}, \cos^{-1} \frac x{\sqrt{x^2+y^2}}, \cos^{-1}\frac z\rho)$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+1. 假设 $(\rho,\theta,\phi)$ 是球面坐标系中的坐标，$[x,y,z]$ 是对应的直角坐标，那么 $(2,\pi/4,\pi/3)=[\sqrt6/2,\sqrt6/2,1],[0,2\sqrt3,-2]=(4,\pi/2,2\pi/3)$
+2. 双叶双曲面 $x^2-y^2-z^2=1$ 的球面方程为 $\rho^2(\sin^2\phi\cos^2\theta-\sin^2\phi\sin^2\theta-\cos^2\phi)=1$，即 $\rho^2(2\sin^2\phi\cos^2\theta-\sin^2\phi-\cos^2\phi)=1$，即 $\rho^2(2\sin^2\phi\cos^2\theta-1)=1$
+3. 球面坐标方程 $\rho=\sin\theta\sin\phi$ 的直角坐标方程为 $x^2+y^2+z^2=y$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 总结
+&gt; 1. 柱面坐标系：在极坐标系的基础上添加一维 z，$\mathbb R^3$ 上任意一点 P 可以用三元组 $(r,\theta,z)$ 表示
+&gt; 		1. 其中 r 是 P 到 z 轴的距离，$\theta$ 是 $OP$ 在 $xy$ 平面上的投影从极轴出发逆时针旋转扫过的夹角
+&gt; 		2. $\forall\theta,r,z$ 有 (1) $(0,\theta,0)$ 表示原点 O，(2) $(r,\theta+2\pi,z)=(r,\theta,z)$，(3) $(-r,\theta,z)=(r,\theta+\pi,z)$
+&gt; 		3. 坐标变换：(1) $\begin{cases}r=\sqrt{x^2+y^2}\\\theta=\tan^{-1}\frac yx\\z=z\end{cases}$，(2) $\begin{cases}x=r\cos\theta=f(\theta)\cos\theta\\y=r\sin\theta=f(\theta)\sin\theta\\z=z\end{cases}$
+&gt; 2. 球坐标系：假设 $\rho\ge0,\phi\in[0,\pi]$，那么 $\mathbb R^3$ 上任意一点 P 可以用三元组 $(\rho,\theta,\phi)$ 表示
+&gt; 		1. 其中 $\rho=\|OP\|$，$\theta$ 是 $OP$ 在 $xy$ 平面上的投影从极轴出发逆时针旋转扫过的夹角，$\phi$ 是 $OP$ 与 z 轴正方向的夹角
+&gt; 		2. 坐标变换：(1) $\begin{cases}\rho=\sqrt{x^2+y^2+z^2}\\\theta=\tan^{-1}\frac yx\\\phi=\cos^{-1}\frac z\rho\end{cases}$，(2) $\begin{cases}x=\rho\sin\phi\cos\theta\\y=\rho\sin\phi\sin\theta\\ z=\rho\cos\phi\end{cases}$
+&gt; 3. 柱面坐标系与求坐标系的坐标变换：(1) $\begin{cases}\rho=\sqrt{x^2+y^2+z^2}\\\theta=\tan^{-1}\frac yx\\\phi=\cos^{-1}\frac z\rho\end{cases}$，(2) $\begin{cases}r=\sqrt{\rho^2-z^2}\\\theta=\theta\\z=\rho\cos\theta\end{cases}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 练习
+1. 直角坐标转柱面坐标：(1) $(1,-1,4)$，(2) $(3,4,5)$
+2. 直角坐标转球坐标：(1) $(1,\sqrt3,2\sqrt3)$，(2) $(0,\sqrt3,1)$
+3. 柱面坐标转直角坐标：(1) $(2,\pi/4,1)$，(3) $(1,\pi,e)$
+4. 柱面坐标转球坐标：(1) $(1,\pi/6,\sqrt3)$，(2) $(\sqrt3,\pi/2,-1)$
+5. 球坐标转直角坐标：(1) $(1,0,0)$，(2) $(1,\pi/6,\pi/6)$
+6. 球坐标转柱面坐标：(1) $(2,0,0)$，(2) $(8,\pi/6,\pi/2)$
+7. 描述如下曲面：(1) $r=3$，(2) $\theta=\pi/3$，(3) $\rho=3$，(4) $\phi=\pi/3$
+8. 描述 $z=\sqrt{x^2+y^2}$ 之上，$x^2+y^2+z^2=z$ 的上球面之下的实心部分
+9. 给出如下直角方程的 (a) 柱面坐标，(b) 球坐标
+    1. $x^2-y^2-2z^2=4$
+    2. $z=x^2+y^2$
+    3. $x^2+y^2+z^2+2z=0$
+    4. $x^2+y^2=2y$
+    5. $z=x^2-y^2$
+10. 描述不等式区域：(1) $r^2\le z\le2-r^2$，(2) $\theta\in[0,\pi/2],z\in[r,2]$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 提示
+&gt; (7)
+&gt; 
+&gt; 1. 半径为 3 的圆柱面 $x^2+y^2=3^2$
+&gt; 2. 半平面 $|y|=\sqrt3|x|$
+&gt; 3. 半径为 3 的球面 $x^2+y^2+z^2=3^2$
+&gt; 4. 锥面：$1/2=\cos\phi=z/\sqrt{x^2+y^2+z^2}$
+&gt; 
+&gt; (8) $z\ge\sqrt{x^2+y^2}$ 蕴含 $z^2\ge x^2+y^2$，蕴含 $2z^2\ge\rho^2$，蕴含 $2\cos^2\phi\ge1$，蕴含 $\phi\in[0,\pi/4]$
+&gt; 
+&gt; $x^2+y^2+z^2=z$ 蕴含 $\rho^2=\rho\cos\phi$，蕴含 $\rho=\cos\phi$，于是 $0\le\rho\le\cos\phi$
+&gt; 
+&gt; 所以区域可以描述为 $\{\phi\in[0,\pi/4],\rho\in[0,\cos\phi]\}$
+&gt; 
+&gt; (9)
+&gt; 
+&gt; 1. $2z^2=r^2\cos2\theta-4$，$\rho^2(\sin^2\phi\cos2\theta-2\cos^2\phi)=4$
+&gt; 2. $z=r^2$，$\rho=\cot\phi\csc\phi$
+&gt; 3. $r^2+(z+1)^2=1$，$\rho=-2\cos\phi$
+&gt; 4. $r=2\sin\theta$，$\rho\sin\phi=2\sin\theta$
+&gt; 5. $z=r^2\cos2\theta$，$\cos\phi=\rho\sin^2\phi\cos2\theta$
+&gt; 
+&gt; (10)
+&gt; 
+&gt; 1. $r^2\le z\le2-r^2$ 表示开口向上的椭圆抛物面 $x^2+y^2=z$ 的上方，开口向下的椭圆抛物面 $x^2+y^2+z=2$ 的下方所包围的区域
+&gt; 2. $\theta\in[0,\pi/2],z\in[r,2]$ 表示 $x&gt;0,y&gt;0$ 的区域内，$z=2$ 之下，锥面 $\sqrt{x^2+y^2}=z$ 之上的部分</span><button class="copy-code-button">复制</button></pre></div><div class="mod-footer"></div></div></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="考研\trash\数学\微积分\12.-向量&amp;空间解析几何.html#12. 向量&amp;空间解析几何"><div class="tree-item-contents heading-link" heading-name="
+向量&amp;空间解析几何
+"><span class="tree-item-title">向量&amp;空间解析几何</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="考研\trash\数学\微积分\12.-向量&amp;空间解析几何.html#12._向量&amp;空间解析几何"><div class="tree-item-contents heading-link" heading-name="12. 向量&amp;空间解析几何"><span class="tree-item-title">12. 
+向量&amp;空间解析几何
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\12.-向量&amp;空间解析几何.html#1._三维坐标系"><div class="tree-item-contents heading-link" heading-name="1. 三维坐标系"><span class="tree-item-title">1. 
+三维坐标系
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\12.-向量&amp;空间解析几何.html#2._向量"><div class="tree-item-contents heading-link" heading-name="2. 向量"><span class="tree-item-title">2. 
+向量
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\12.-向量&amp;空间解析几何.html#3.__向量的点积"><div class="tree-item-contents heading-link" heading-name="3.  向量的点积"><span class="tree-item-title">3. 
+向量的点积
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\12.-向量&amp;空间解析几何.html#4._向量的叉积"><div class="tree-item-contents heading-link" heading-name="4. 向量的叉积"><span class="tree-item-title">4. 
+向量的叉积
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\12.-向量&amp;空间解析几何.html#5._直线与平面方程"><div class="tree-item-contents heading-link" heading-name="5. 直线与平面方程"><span class="tree-item-title">5. 
+直线与平面方程
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\12.-向量&amp;空间解析几何.html#6._柱面_&amp;_二次曲面"><div class="tree-item-contents heading-link" heading-name="6. 柱面 &amp; 二次曲面"><span class="tree-item-title">6. 
+柱面 &amp; 二次曲面
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\12.-向量&amp;空间解析几何.html#7._柱面坐标系_&amp;_球坐标系"><div class="tree-item-contents heading-link" heading-name="7. 柱面坐标系 &amp; 球坐标系"><span class="tree-item-title">7. 
+柱面坐标系 &amp; 球坐标系
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

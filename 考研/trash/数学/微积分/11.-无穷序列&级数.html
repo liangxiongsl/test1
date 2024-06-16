@@ -1,0 +1,886 @@
+<!DOCTYPE html> <html><head>
+		<title>11. 无穷序列&amp;级数</title>
+		<base href="..\..\..\../">
+		<meta id="root-path" root-path="..\..\..\../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="obsidian-vault - 11. 无穷序列&amp;级数">
+		<meta property="og:title" content="11. 无穷序列&amp;级数">
+		<meta property="og:description" content="obsidian-vault - 11. 无穷序列&amp;级数">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="考研/trash/数学/微积分/11.-无穷序列&amp;级数.html">
+		<meta property="og:image" content="undefined">
+		<meta property="og:site_name" content="obsidian-vault">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/supported-plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/supported-plugins.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript><link rel="preload" href="lib/styles/snippets.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/snippets.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles">mjx-c.mjx-c222B.TEX-S2::before { padding: 1.36em 0.944em 0.862em 0px; content: "∫"; }
+mjx-c.mjx-c7B.TEX-S2::before { padding: 1.15em 0.667em 0.649em 0px; content: "{"; }
+mjx-c.mjx-c7D.TEX-S2::before { padding: 1.15em 0.667em 0.649em 0px; content: "}"; }
+mjx-c.mjx-c20D7.TEX-V::before { padding: 0.714em 0.5em 0px 0px; content: "→"; }
+mjx-c.mjx-c1D6FE.TEX-I::before { padding: 0.441em 0.543em 0.216em 0px; content: "γ"; }
+mjx-c.mjx-c1D417.TEX-B::before { padding: 0.686em 0.869em 0px 0px; content: "X"; }
+mjx-c.mjx-c2D9.TEX-B::before { padding: 0.695em 0.575em 0px 0px; content: "˙"; }
+mjx-c.mjx-c1D420.TEX-B::before { padding: 0.455em 0.575em 0.201em 0px; content: "g"; }
+mjx-c.mjx-c1D41D.TEX-B::before { padding: 0.694em 0.639em 0.006em 0px; content: "d"; }
+mjx-c.mjx-c211A.TEX-A::before { padding: 0.701em 0.778em 0.181em 0px; content: "Q"; }
+mjx-c.mjx-c1D402.TEX-B::before { padding: 0.697em 0.831em 0.011em 0px; content: "C"; }
+mjx-c.mjx-c1D410.TEX-B::before { padding: 0.696em 0.864em 0.193em 0px; content: "Q"; }
+mjx-c.mjx-c2119.TEX-A::before { padding: 0.683em 0.611em 0px 0px; content: "P"; }
+mjx-c.mjx-c2223::before { padding: 0.75em 0.278em 0.249em 0px; content: "∣"; }
+mjx-c.mjx-cA8::before { padding: 0.669em 0.5em 0px 0px; content: "¨"; }
+mjx-c.mjx-c1D713.TEX-I::before { padding: 0.694em 0.651em 0.205em 0px; content: "ψ"; }
+mjx-c.mjx-c2B.TEX-B::before { padding: 0.633em 0.894em 0.131em 0px; content: "+"; }
+mjx-c.mjx-c1D7D0.TEX-B::before { padding: 0.654em 0.575em 0px 0px; content: "2"; }
+mjx-c.mjx-c2034::before { padding: 0.56em 0.825em 0px 0px; content: "′′′"; }
+mjx-c.mjx-c221A.TEX-S4::before { padding: 1.75em 1.02em 1.25em 0px; content: "√"; }
+mjx-mroot { display: inline-block; text-align: left; }
+mjx-root { display: inline-block; white-space: nowrap; }
+mjx-surd { display: inline-block; vertical-align: top; }
+mjx-sqrt { display: inline-block; padding-top: 0.07em; }
+mjx-sqrt > mjx-box { border-top: 0.07em solid; }
+mjx-sqrt.mjx-tall > mjx-box { padding-left: 0.3em; margin-left: -0.3em; }
+mjx-c.mjx-c2DA::before { padding: 0.715em 0.5em 0px 0px; content: "˚"; }
+mjx-c.mjx-c1D43E.TEX-I::before { padding: 0.683em 0.889em 0px 0px; content: "K"; }
+mjx-c.mjx-c7B.TEX-S1::before { padding: 0.85em 0.583em 0.349em 0px; content: "{"; }
+mjx-c.mjx-c7D.TEX-S1::before { padding: 0.85em 0.583em 0.349em 0px; content: "}"; }
+mjx-c.mjx-c2D9::before { padding: 0.669em 0.5em 0px 0px; content: "˙"; }
+mjx-c.mjx-cB0::before { padding: 0.715em 0.5em 0px 0px; content: "°"; }
+mjx-c.mjx-c1D41F.TEX-B::before { padding: 0.7em 0.452em 0px 0px; content: "f"; }
+mjx-c.mjx-c28.TEX-B::before { padding: 0.75em 0.447em 0.249em 0px; content: "("; }
+mjx-c.mjx-c2212.TEX-B::before { padding: 0.281em 0.894em 0px 0px; content: "−"; }
+mjx-c.mjx-c50.TEX-C::before { padding: 0.683em 0.733em 0.057em 0px; content: "P"; }
+mjx-c.mjx-c3A3::before { padding: 0.683em 0.722em 0px 0px; content: "Σ"; }
+mjx-c.mjx-c1D42A.TEX-B::before { padding: 0.45em 0.607em 0.194em 0px; content: "q"; }
+mjx-c.mjx-c1D411.TEX-B::before { padding: 0.686em 0.862em 0.011em 0px; content: "R"; }
+mjx-c.mjx-c29.TEX-B::before { padding: 0.75em 0.447em 0.249em 0px; content: ")"; }
+mjx-c.mjx-cAC::before { padding: 0.356em 0.667em 0px 0px; content: "¬"; }
+mjx-c.mjx-c21CC.TEX-A::before { padding: 0.514em 1em 0.014em 0px; content: "⇌"; }
+mjx-c.mjx-c27F6::before { padding: 0.511em 1.638em 0.011em 0px; content: "⟶"; }
+mjx-c.mjx-c45.TEX-C::before { padding: 0.705em 0.564em 0.022em 0px; content: "E"; }
+mjx-c.mjx-c1D432.TEX-B::before { padding: 0.444em 0.607em 0.2em 0px; content: "y"; }
+mjx-c.mjx-c4E::before { padding: 0.683em 0.75em 0px 0px; content: "N"; }
+mjx-c.mjx-c75::before { padding: 0.442em 0.556em 0.011em 0px; content: "u"; }
+mjx-c.mjx-c1D42D.TEX-B::before { padding: 0.635em 0.447em 0.005em 0px; content: "t"; }
+mjx-c.mjx-c43::before { padding: 0.705em 0.722em 0.021em 0px; content: "C"; }
+mjx-c.mjx-c42.TEX-C::before { padding: 0.705em 0.657em 0.022em 0px; content: "B"; }
+mjx-c.mjx-c2C.TEX-B::before { padding: 0.171em 0.319em 0.194em 0px; content: ","; }
+mjx-c.mjx-c6B::before { padding: 0.694em 0.528em 0px 0px; content: "k"; }
+mjx-c.mjx-c22A5::before { padding: 0.668em 0.778em 0px 0px; content: "⊥"; }
+mjx-c.mjx-c2212::before { padding: 0.583em 0.778em 0.082em 0px; content: "−"; }
+mjx-c.mjx-c5D.TEX-B::before { padding: 0.75em 0.319em 0.25em 0px; content: "]"; }
+mjx-c.mjx-c43.TEX-C::before { padding: 0.705em 0.527em 0.025em 0px; content: "C"; }
+mjx-c.mjx-c2C.TEX-MI::before { padding: 0.121em 0.307em 0.194em 0px; content: ","; }
+mjx-c.mjx-c5B.TEX-S1::before { padding: 0.85em 0.417em 0.349em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S1::before { padding: 0.85em 0.417em 0.349em 0px; content: "]"; }
+mjx-c.mjx-c1D41E.TEX-B::before { padding: 0.452em 0.527em 0.006em 0px; content: "e"; }
+mjx-c.mjx-c22F1::before { padding: 1.52em 1.282em 0px 0px; content: "⋱"; }
+mjx-c.mjx-c7D.TEX-S3::before { padding: 1.45em 0.75em 0.949em 0px; content: "}"; }
+mjx-c.mjx-c1D43C.TEX-I::before { padding: 0.683em 0.504em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D408.TEX-B::before { padding: 0.686em 0.436em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D448.TEX-I::before { padding: 0.683em 0.767em 0.022em 0px; content: "U"; }
+mjx-c.mjx-c1D400.TEX-B::before { padding: 0.698em 0.869em 0px 0px; content: "A"; }
+mjx-c.mjx-c1D431.TEX-B::before { padding: 0.444em 0.607em 0px 0px; content: "x"; }
+mjx-c.mjx-c1D429.TEX-B::before { padding: 0.45em 0.639em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c1D7CE.TEX-B::before { padding: 0.654em 0.575em 0.01em 0px; content: "0"; }
+mjx-c.mjx-c1D405.TEX-B::before { padding: 0.68em 0.724em 0px 0px; content: "F"; }
+mjx-c.mjx-c1D403.TEX-B::before { padding: 0.686em 0.882em 0px 0px; content: "D"; }
+mjx-c.mjx-c5B.TEX-S2::before { padding: 1.15em 0.472em 0.649em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S2::before { padding: 1.15em 0.472em 0.649em 0px; content: "]"; }
+mjx-c.mjx-c1D427.TEX-B::before { padding: 0.45em 0.639em 0px 0px; content: "n"; }
+mjx-c.mjx-c1D412.TEX-B::before { padding: 0.697em 0.639em 0.011em 0px; content: "S"; }
+mjx-c.mjx-c1D41C.TEX-B::before { padding: 0.453em 0.511em 0.006em 0px; content: "c"; }
+mjx-c.mjx-c1D425.TEX-B::before { padding: 0.694em 0.319em 0px 0px; content: "l"; }
+mjx-c.mjx-c222C.TEX-S1::before { padding: 0.805em 0.957em 0.306em 0px; content: "∬"; }
+mjx-c.mjx-c1D41A.TEX-B::before { padding: 0.453em 0.559em 0.006em 0px; content: "a"; }
+mjx-c.mjx-c1D41B.TEX-B::before { padding: 0.694em 0.639em 0.006em 0px; content: "b"; }
+mjx-c.mjx-c1D422.TEX-B::before { padding: 0.695em 0.319em 0px 0px; content: "i"; }
+mjx-c.mjx-c1D423.TEX-B::before { padding: 0.695em 0.351em 0.2em 0px; content: "j"; }
+mjx-c.mjx-c1D424.TEX-B::before { padding: 0.694em 0.607em 0px 0px; content: "k"; }
+mjx-c.mjx-c1D70C.TEX-I::before { padding: 0.442em 0.517em 0.216em 0px; content: "ρ"; }
+mjx-c.mjx-c1D719.TEX-I::before { padding: 0.694em 0.596em 0.205em 0px; content: "ϕ"; }
+mjx-c.mjx-c2DC.TEX-S1::before { padding: 0.722em 0.556em 0px 0px; content: "˜"; }
+mjx-c.mjx-c222D.TEX-S1::before { padding: 0.805em 1.304em 0.306em 0px; content: "∭"; }
+mjx-c.mjx-c2DC::before { padding: 0.668em 0.5em 0px 0px; content: "˜"; }
+mjx-c.mjx-c7B.TEX-S4::before { padding: 1.75em 0.806em 1.249em 0px; content: "{"; }
+mjx-c.mjx-c1D42E.TEX-B::before { padding: 0.45em 0.639em 0.006em 0px; content: "u"; }
+mjx-c.mjx-c2207::before { padding: 0.683em 0.833em 0.033em 0px; content: "∇"; }
+mjx-stretchy-v.mjx-c2016 mjx-ext mjx-c::before { content: "∥"; width: 0.556em; }
+mjx-c.mjx-c27E8::before { padding: 0.75em 0.389em 0.25em 0px; content: "⟨"; }
+mjx-c.mjx-c27E9::before { padding: 0.75em 0.389em 0.25em 0px; content: "⟩"; }
+mjx-c.mjx-c1D705.TEX-I::before { padding: 0.442em 0.576em 0.011em 0px; content: "κ"; }
+mjx-c.mjx-c1D42C.TEX-B::before { padding: 0.453em 0.454em 0.006em 0px; content: "s"; }
+mjx-c.mjx-c1D401.TEX-B::before { padding: 0.686em 0.818em 0px 0px; content: "B"; }
+mjx-c.mjx-c1D40D.TEX-B::before { padding: 0.686em 0.9em 0px 0px; content: "N"; }
+mjx-stretchy-h.mjx-c2192 mjx-ext mjx-c::before { content: "−"; padding: 0.583em 0px 0.082em; }
+mjx-stretchy-h.mjx-c2192 mjx-end mjx-c::before { content: "→"; padding: 0.583em 0px 0.082em; }
+mjx-c.mjx-c1D43D.TEX-I::before { padding: 0.683em 0.633em 0.022em 0px; content: "J"; }
+mjx-c.mjx-c2211.TEX-S2::before { padding: 0.95em 1.444em 0.45em 0px; content: "∑"; }
+mjx-c.mjx-c2033::before { padding: 0.56em 0.55em 0px 0px; content: "′′"; }
+mjx-c.mjx-c22EE::before { padding: 1.3em 0.278em 0.03em 0px; content: "⋮"; }
+mjx-c.mjx-c2033::before { padding: 0.56em 0.55em 0px 0px; content: "′′"; }
+mjx-c.mjx-c2225::before { padding: 0.75em 0.5em 0.25em 0px; content: "∥"; }
+mjx-c.mjx-c221A.TEX-S3::before { padding: 1.45em 1.02em 0.95em 0px; content: "√"; }
+mjx-c.mjx-c1D42B.TEX-B::before { padding: 0.45em 0.474em 0px 0px; content: "r"; }
+mjx-c.mjx-c1D42F.TEX-B::before { padding: 0.444em 0.607em 0px 0px; content: "v"; }
+mjx-c.mjx-cB1::before { padding: 0.666em 0.778em 0px 0px; content: "±"; }
+mjx-c.mjx-c1D45E.TEX-I::before { padding: 0.442em 0.46em 0.194em 0px; content: "q"; }
+mjx-c.mjx-c221A.TEX-S2::before { padding: 1.15em 1.02em 0.65em 0px; content: "√"; }
+mjx-c.mjx-c27F9::before { padding: 0.525em 1.638em 0.024em 0px; content: "⟹"; }
+mjx-c.mjx-c2224.TEX-A::before { padding: 0.75em 0.297em 0.252em 0px; content: "∤"; }
+.mjx-stretched mjx-c.mjx-c2013::before { content: "–"; }
+mjx-stretchy-h.mjx-c2013 mjx-ext mjx-c::before { content: "–"; padding: 0.285em 0px 0px; }
+mjx-c.mjx-c2217::before { padding: 0.465em 0.5em 0px 0px; content: "∗"; }
+mjx-c.mjx-c1D70B.TEX-I::before { padding: 0.431em 0.57em 0.011em 0px; content: "π"; }
+mjx-c.mjx-c2013::before { padding: 0.285em 0.5em 0px 0px; content: "–"; }
+mjx-stretchy-v.mjx-c7C mjx-ext mjx-c::before { content: "∣"; width: 0.333em; }
+mjx-c.mjx-c394::before { padding: 0.716em 0.833em 0px 0px; content: "Δ"; }
+mjx-c.mjx-c1D444.TEX-I::before { padding: 0.704em 0.791em 0.194em 0px; content: "Q"; }
+mjx-c.mjx-c2218::before { padding: 0.444em 0.5em 0px 0px; content: "∘"; }
+mjx-stretchy-v.mjx-c5B mjx-beg mjx-c::before { content: "⎡"; padding: 1.154em 0.667em 0.645em 0px; }
+mjx-stretchy-v.mjx-c5B mjx-ext mjx-c::before { content: "⎢"; width: 0.667em; }
+mjx-stretchy-v.mjx-c5B mjx-end mjx-c::before { content: "⎣"; padding: 1.155em 0.667em 0.644em 0px; }
+mjx-stretchy-v.mjx-c5B > mjx-end { margin-top: -1.799em; }
+mjx-stretchy-v.mjx-c5B > mjx-ext { border-top-width: 1.769em; border-bottom-width: 1.769em; }
+mjx-stretchy-v.mjx-c5D mjx-beg mjx-c::before { content: "⎤"; padding: 1.154em 0.667em 0.645em 0px; }
+mjx-stretchy-v.mjx-c5D mjx-ext mjx-c::before { content: "⎥"; width: 0.667em; }
+mjx-stretchy-v.mjx-c5D mjx-end mjx-c::before { content: "⎦"; padding: 1.155em 0.667em 0.644em 0px; }
+mjx-stretchy-v.mjx-c5D > mjx-end { margin-top: -1.799em; }
+mjx-stretchy-v.mjx-c5D > mjx-ext { border-top-width: 1.769em; border-bottom-width: 1.769em; }
+mjx-c.mjx-c1D703.TEX-I::before { padding: 0.705em 0.469em 0.01em 0px; content: "θ"; }
+mjx-c.mjx-c5E::before { padding: 0.694em 0.5em 0px 0px; content: "^"; }
+mjx-c.mjx-c1D708.TEX-I::before { padding: 0.442em 0.53em 0px 0px; content: "ν"; }
+mjx-c.mjx-c1D715::before { padding: 0.715em 0.566em 0.022em 0px; content: "∂"; }
+mjx-c.mjx-c5B.TEX-S3::before { padding: 1.45em 0.528em 0.949em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S3::before { padding: 1.45em 0.528em 0.949em 0px; content: "]"; }
+mjx-c.mjx-cAF::before { padding: 0.59em 0.5em 0px 0px; content: "¯"; }
+mjx-c.mjx-c223C::before { padding: 0.367em 0.778em 0px 0px; content: "∼"; }
+mjx-c.mjx-c5B.TEX-S4::before { padding: 1.75em 0.583em 1.249em 0px; content: "["; }
+mjx-c.mjx-c5D.TEX-S4::before { padding: 1.75em 0.583em 1.249em 0px; content: "]"; }
+mjx-c.mjx-c3B::before { padding: 0.43em 0.278em 0.194em 0px; content: ";"; }
+mjx-c.mjx-c1D6FC.TEX-I::before { padding: 0.442em 0.64em 0.011em 0px; content: "α"; }
+mjx-c.mjx-c1D6FD.TEX-I::before { padding: 0.705em 0.566em 0.194em 0px; content: "β"; }
+mjx-c.mjx-c28.TEX-S1::before { padding: 0.85em 0.458em 0.349em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S1::before { padding: 0.85em 0.458em 0.349em 0px; content: ")"; }
+mjx-c.mjx-c220F.TEX-S1::before { padding: 0.75em 0.944em 0.25em 0px; content: "∏"; }
+mjx-c.mjx-c1D70F.TEX-I::before { padding: 0.431em 0.517em 0.013em 0px; content: "τ"; }
+mjx-c.mjx-c1D6FF.TEX-I::before { padding: 0.717em 0.444em 0.01em 0px; content: "δ"; }
+mjx-c.mjx-c1D439.TEX-I::before { padding: 0.68em 0.749em 0px 0px; content: "F"; }
+mjx-msqrt { display: inline-block; text-align: left; }
+mjx-root { display: inline-block; white-space: nowrap; }
+mjx-surd { display: inline-block; vertical-align: top; }
+mjx-sqrt { display: inline-block; padding-top: 0.07em; }
+mjx-sqrt > mjx-box { border-top: 0.07em solid; }
+mjx-sqrt.mjx-tall > mjx-box { padding-left: 0.3em; margin-left: -0.3em; }
+mjx-mspace { display: inline-block; text-align: left; }
+mjx-c.mjx-c1D707.TEX-I::before { padding: 0.442em 0.603em 0.216em 0px; content: "μ"; }
+mjx-c.mjx-c1D70E.TEX-I::before { padding: 0.431em 0.571em 0.011em 0px; content: "σ"; }
+mjx-c.mjx-c221A::before { padding: 0.8em 0.853em 0.2em 0px; content: "√"; }
+mjx-c.mjx-c221A.TEX-S1::before { padding: 0.85em 1.02em 0.35em 0px; content: "√"; }
+mjx-c.mjx-c1D716.TEX-I::before { padding: 0.431em 0.406em 0.011em 0px; content: "ϵ"; }
+mjx-c.mjx-c27FA::before { padding: 0.525em 1.858em 0.024em 0px; content: "⟺"; }
+mjx-c.mjx-c28.TEX-S2::before { padding: 1.15em 0.597em 0.649em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S2::before { padding: 1.15em 0.597em 0.649em 0px; content: ")"; }
+mjx-c.mjx-c2248::before { padding: 0.483em 0.778em 0px 0px; content: "≈"; }
+mjx-c.mjx-c3A6::before { padding: 0.683em 0.722em 0px 0px; content: "Φ"; }
+mjx-c.mjx-c1D440.TEX-I::before { padding: 0.683em 1.051em 0px 0px; content: "M"; }
+mjx-c.mjx-c222B.TEX-S1::before { padding: 0.805em 0.61em 0.306em 0px; content: "∫"; }
+mjx-c.mjx-c2026::before { padding: 0.12em 1.172em 0px 0px; content: "…"; }
+mjx-mover { display: inline-block; text-align: left; }
+mjx-mover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-mover:not([limits="false"]) > * { display: block; text-align: left; }
+mjx-c.mjx-c1D44B.TEX-I::before { padding: 0.683em 0.852em 0px 0px; content: "X"; }
+mjx-c.mjx-c1D44C.TEX-I::before { padding: 0.683em 0.763em 0px 0px; content: "Y"; }
+mjx-c.mjx-c1D466.TEX-I::before { padding: 0.442em 0.49em 0.205em 0px; content: "y"; }
+mjx-c.mjx-c76::before { padding: 0.431em 0.528em 0.011em 0px; content: "v"; }
+mjx-c.mjx-c1D706.TEX-I::before { padding: 0.694em 0.583em 0.012em 0px; content: "λ"; }
+mjx-c.mjx-c1D44D.TEX-I::before { padding: 0.683em 0.723em 0px 0px; content: "Z"; }
+mjx-c.mjx-c1D467.TEX-I::before { padding: 0.442em 0.465em 0.011em 0px; content: "z"; }
+mjx-c.mjx-c7E::before { padding: 0.318em 0.5em 0px 0px; content: "~"; }
+mjx-c.mjx-c22C3.TEX-S1::before { padding: 0.75em 0.833em 0.249em 0px; content: "⋃"; }
+mjx-c.mjx-c3A9::before { padding: 0.704em 0.722em 0px 0px; content: "Ω"; }
+mjx-c.mjx-c22C2.TEX-S1::before { padding: 0.75em 0.833em 0.249em 0px; content: "⋂"; }
+mjx-c.mjx-c25FC.TEX-A::before { padding: 0.689em 0.778em 0px 0px; content: "■"; }
+mjx-c.mjx-c1D435.TEX-I::before { padding: 0.683em 0.759em 0px 0px; content: "B"; }
+mjx-c.mjx-c222A::before { padding: 0.598em 0.667em 0.022em 0px; content: "∪"; }
+mjx-c.mjx-c28.TEX-S3::before { padding: 1.45em 0.736em 0.949em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S3::before { padding: 1.45em 0.736em 0.949em 0px; content: ")"; }
+mjx-c.mjx-c28.TEX-S4::before { padding: 1.75em 0.792em 1.249em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S4::before { padding: 1.75em 0.792em 1.249em 0px; content: ")"; }
+mjx-mfrac { display: inline-block; text-align: left; }
+mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
+mjx-frac[type="d"] { vertical-align: 0.04em; }
+mjx-frac[delims] { padding: 0px 0.1em; }
+mjx-frac[atop] { padding: 0px 0.12em; }
+mjx-frac[atop][delims] { padding: 0px; }
+mjx-dtable { display: inline-table; width: 100%; }
+mjx-dtable > * { font-size: 2000%; }
+mjx-dbox { display: block; font-size: 5%; }
+mjx-num { display: block; text-align: center; }
+mjx-den { display: block; text-align: center; }
+mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
+mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
+mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
+mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
+mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
+mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
+mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
+mjx-dstrut[type="d"] { height: 0.726em; }
+mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.06em solid; margin: 0.06em -0.1em; overflow: hidden; }
+mjx-line[type="d"] { margin: 0.18em -0.1em; }
+mjx-c.mjx-c21::before { padding: 0.716em 0.278em 0px 0px; content: "!"; }
+mjx-c.mjx-cA0::before { padding: 0px 0.25em 0px 0px; content: " "; }
+mjx-c.mjx-c2115.TEX-A::before { padding: 0.683em 0.722em 0.02em 0px; content: "N"; }
+mjx-c.mjx-c1D454.TEX-I::before { padding: 0.442em 0.477em 0.205em 0px; content: "g"; }
+mjx-c.mjx-c398::before { padding: 0.705em 0.778em 0.022em 0px; content: "Θ"; }
+mjx-mtext { display: inline-block; text-align: left; }
+mjx-msub { display: inline-block; text-align: left; }
+mjx-mrow { display: inline-block; text-align: left; }
+mjx-mtable { display: inline-block; text-align: center; vertical-align: 0.25em; position: relative; box-sizing: border-box; border-spacing: 0px; border-collapse: collapse; }
+mjx-mstyle[size="s"] mjx-mtable { vertical-align: 0.354em; }
+mjx-labels { position: absolute; left: 0px; top: 0px; }
+mjx-table { display: inline-block; vertical-align: -0.5ex; box-sizing: border-box; }
+mjx-table > mjx-itable { vertical-align: middle; text-align: left; box-sizing: border-box; }
+mjx-labels > mjx-itable { position: absolute; top: 0px; }
+mjx-mtable[justify="left"] { text-align: left; }
+mjx-mtable[justify="right"] { text-align: right; }
+mjx-mtable[justify="left"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="left"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[justify="right"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="right"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[align] { vertical-align: baseline; }
+mjx-mtable[align="top"] > mjx-table { vertical-align: top; }
+mjx-mtable[align="bottom"] > mjx-table { vertical-align: bottom; }
+mjx-mtable[side="right"] mjx-labels { min-width: 100%; }
+mjx-mtr { display: table-row; text-align: left; }
+mjx-mtr[rowalign="top"] > mjx-mtd { vertical-align: top; }
+mjx-mtr[rowalign="center"] > mjx-mtd { vertical-align: middle; }
+mjx-mtr[rowalign="bottom"] > mjx-mtd { vertical-align: bottom; }
+mjx-mtr[rowalign="baseline"] > mjx-mtd { vertical-align: baseline; }
+mjx-mtr[rowalign="axis"] > mjx-mtd { vertical-align: 0.25em; }
+mjx-mtd { display: table-cell; text-align: center; padding: 0.215em 0.4em; }
+mjx-mtd:first-child { padding-left: 0px; }
+mjx-mtd:last-child { padding-right: 0px; }
+mjx-mtable > * > mjx-itable > :first-child > mjx-mtd { padding-top: 0px; }
+mjx-mtable > * > mjx-itable > :last-child > mjx-mtd { padding-bottom: 0px; }
+mjx-tstrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
+mjx-labels[align="left"] > mjx-mtr > mjx-mtd { text-align: left; }
+mjx-labels[align="right"] > mjx-mtr > mjx-mtd { text-align: right; }
+mjx-mtd[extra] { padding: 0px; }
+mjx-mtd[rowalign="top"] { vertical-align: top; }
+mjx-mtd[rowalign="center"] { vertical-align: middle; }
+mjx-mtd[rowalign="bottom"] { vertical-align: bottom; }
+mjx-mtd[rowalign="baseline"] { vertical-align: baseline; }
+mjx-mtd[rowalign="axis"] { vertical-align: 0.25em; }
+mjx-munder { display: inline-block; text-align: left; }
+mjx-over { text-align: left; }
+mjx-munder:not([limits="false"]) { display: inline-table; }
+mjx-munder > mjx-row { text-align: left; }
+mjx-under { padding-bottom: 0.1em; }
+mjx-munderover { display: inline-block; text-align: left; }
+mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-munderover:not([limits="false"]) > * { display: block; }
+mjx-msubsup { display: inline-block; text-align: left; }
+mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
+mjx-script > mjx-spacer { display: block; }
+mjx-stretchy-v.mjx-c7B mjx-beg mjx-c::before { content: "⎧"; padding: 0.899em 0.889em 0.01em 0px; }
+mjx-stretchy-v.mjx-c7B mjx-ext mjx-c::before { content: "⎪"; width: 0.889em; }
+mjx-stretchy-v.mjx-c7B mjx-end mjx-c::before { content: "⎩"; padding: 0.01em 0.889em 0.899em 0px; }
+mjx-stretchy-v.mjx-c7B mjx-mid mjx-c::before { content: "⎨"; padding: 1.16em 0.889em 0.66em 0px; }
+mjx-stretchy-v.mjx-c7B > mjx-mid { margin-top: -0.91em; margin-bottom: -0.91em; }
+mjx-stretchy-v.mjx-c7B > mjx-end { margin-top: -0.909em; }
+mjx-stretchy-v.mjx-c7B > mjx-ext { height: 50%; border-top-width: 0.879em; border-bottom-width: 0.879em; }
+mjx-c.mjx-c44::before { padding: 0.683em 0.764em 0px 0px; content: "D"; }
+mjx-c.mjx-c52::before { padding: 0.683em 0.736em 0.022em 0px; content: "R"; }
+mjx-c.mjx-c3D::before { padding: 0.583em 0.778em 0.082em 0px; content: "="; }
+mjx-c.mjx-c50::before { padding: 0.683em 0.681em 0px 0px; content: "P"; }
+mjx-c.mjx-c53::before { padding: 0.705em 0.556em 0.022em 0px; content: "S"; }
+mjx-c.mjx-c2200::before { padding: 0.694em 0.556em 0.022em 0px; content: "∀"; }
+mjx-c.mjx-c1D465.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "x"; }
+mjx-c.mjx-c2208::before { padding: 0.54em 0.667em 0.04em 0px; content: "∈"; }
+mjx-c.mjx-c2C::before { padding: 0.121em 0.278em 0.194em 0px; content: ","; }
+mjx-c.mjx-c2203::before { padding: 0.694em 0.556em 0px 0px; content: "∃"; }
+mjx-c.mjx-c1D451.TEX-I::before { padding: 0.694em 0.52em 0.01em 0px; content: "d"; }
+mjx-c.mjx-c2282::before { padding: 0.54em 0.778em 0.04em 0px; content: "⊂"; }
+mjx-c.mjx-c1D45F.TEX-I::before { padding: 0.442em 0.451em 0.011em 0px; content: "r"; }
+mjx-c.mjx-c1D45D.TEX-I::before { padding: 0.442em 0.503em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c7B::before { padding: 0.75em 0.5em 0.25em 0px; content: "{"; }
+mjx-c.mjx-c7D::before { padding: 0.75em 0.5em 0.25em 0px; content: "}"; }
+mjx-c.mjx-c1D437.TEX-I::before { padding: 0.683em 0.828em 0px 0px; content: "D"; }
+mjx-c.mjx-c1D446.TEX-I::before { padding: 0.705em 0.645em 0.022em 0px; content: "S"; }
+mjx-c.mjx-c1D445.TEX-I::before { padding: 0.683em 0.759em 0.021em 0px; content: "R"; }
+mjx-c.mjx-c70::before { padding: 0.442em 0.556em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c72::before { padding: 0.442em 0.392em 0px 0px; content: "r"; }
+mjx-c.mjx-c69::before { padding: 0.669em 0.278em 0px 0px; content: "i"; }
+mjx-c.mjx-c6F::before { padding: 0.448em 0.5em 0.01em 0px; content: "o"; }
+mjx-c.mjx-c1D462.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "u"; }
+mjx-c.mjx-c6E::before { padding: 0.442em 0.556em 0px 0px; content: "n"; }
+mjx-c.mjx-c65::before { padding: 0.448em 0.444em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c78::before { padding: 0.431em 0.528em 0px 0px; content: "x"; }
+mjx-c.mjx-c74::before { padding: 0.615em 0.389em 0.01em 0px; content: "t"; }
+mjx-c.mjx-c1D456.TEX-I::before { padding: 0.661em 0.345em 0.011em 0px; content: "i"; }
+mjx-c.mjx-c2E::before { padding: 0.12em 0.278em 0px 0px; content: "."; }
+mjx-c.mjx-c1D45B.TEX-I::before { padding: 0.442em 0.6em 0.011em 0px; content: "n"; }
+mjx-c.mjx-c1D43F.TEX-I::before { padding: 0.683em 0.681em 0px 0px; content: "L"; }
+mjx-c.mjx-c1D436.TEX-I::before { padding: 0.705em 0.76em 0.022em 0px; content: "C"; }
+mjx-c.mjx-c1D44E.TEX-I::before { padding: 0.441em 0.529em 0.01em 0px; content: "a"; }
+mjx-c.mjx-c2B::before { padding: 0.583em 0.778em 0.082em 0px; content: "+"; }
+mjx-c.mjx-c1D450.TEX-I::before { padding: 0.442em 0.433em 0.011em 0px; content: "c"; }
+mjx-c.mjx-c1D453.TEX-I::before { padding: 0.705em 0.55em 0.205em 0px; content: "f"; }
+mjx-c.mjx-c1D45C.TEX-I::before { padding: 0.441em 0.485em 0.011em 0px; content: "o"; }
+mjx-c.mjx-c1D441.TEX-I::before { padding: 0.683em 0.888em 0px 0px; content: "N"; }
+mjx-c.mjx-c25::before { padding: 0.75em 0.833em 0.056em 0px; content: "%"; }
+mjx-c.mjx-c7B.TEX-S3::before { padding: 1.45em 0.75em 0.949em 0px; content: "{"; }
+mjx-c.mjx-c221E::before { padding: 0.442em 1em 0.011em 0px; content: "∞"; }
+mjx-c.mjx-c1D44F.TEX-I::before { padding: 0.694em 0.429em 0.011em 0px; content: "b"; }
+mjx-c.mjx-c1D458.TEX-I::before { padding: 0.694em 0.521em 0.011em 0px; content: "k"; }
+mjx-c.mjx-c6D::before { padding: 0.442em 0.833em 0px 0px; content: "m"; }
+mjx-c.mjx-c61::before { padding: 0.448em 0.5em 0.011em 0px; content: "a"; }
+mjx-c.mjx-c1D45A.TEX-I::before { padding: 0.442em 0.878em 0.011em 0px; content: "m"; }
+mjx-c.mjx-c3C::before { padding: 0.54em 0.778em 0.04em 0px; content: "<"; }
+mjx-c.mjx-c1D457.TEX-I::before { padding: 0.661em 0.412em 0.204em 0px; content: "j"; }
+mjx-c.mjx-c1D459.TEX-I::before { padding: 0.694em 0.298em 0.011em 0px; content: "l"; }
+mjx-c.mjx-c5B::before { padding: 0.75em 0.278em 0.25em 0px; content: "["; }
+mjx-c.mjx-c210E.TEX-I::before { padding: 0.694em 0.576em 0.011em 0px; content: "h"; }
+mjx-c.mjx-c5D::before { padding: 0.75em 0.278em 0.25em 0px; content: "]"; }
+mjx-c.mjx-cD7::before { padding: 0.491em 0.778em 0px 0px; content: "×"; }
+mjx-c.mjx-c2265::before { padding: 0.636em 0.778em 0.138em 0px; content: "≥"; }
+mjx-c.mjx-c1D447.TEX-I::before { padding: 0.677em 0.704em 0px 0px; content: "T"; }
+mjx-c.mjx-c22EF::before { padding: 0.31em 1.172em 0px 0px; content: "⋯"; }
+mjx-c.mjx-c64::before { padding: 0.694em 0.556em 0.011em 0px; content: "d"; }
+mjx-c.mjx-c67::before { padding: 0.453em 0.5em 0.206em 0px; content: "g"; }
+mjx-c.mjx-c2061::before { padding: 0px; content: ""; }
+mjx-c.mjx-c1D463.TEX-I::before { padding: 0.443em 0.485em 0.011em 0px; content: "v"; }
+mjx-c.mjx-c77::before { padding: 0.431em 0.722em 0.011em 0px; content: "w"; }
+mjx-c.mjx-c6C::before { padding: 0.694em 0.278em 0px 0px; content: "l"; }
+mjx-c.mjx-c66::before { padding: 0.705em 0.372em 0px 0px; content: "f"; }
+mjx-c.mjx-c2209::before { padding: 0.716em 0.667em 0.215em 0px; content: "∉"; }
+mjx-c.mjx-c2260::before { padding: 0.716em 0.778em 0.215em 0px; content: "≠"; }
+mjx-c.mjx-c73::before { padding: 0.448em 0.394em 0.011em 0px; content: "s"; }
+mjx-c.mjx-c62::before { padding: 0.694em 0.556em 0.011em 0px; content: "b"; }
+mjx-c.mjx-c63::before { padding: 0.448em 0.444em 0.011em 0px; content: "c"; }
+mjx-c.mjx-c68::before { padding: 0.694em 0.556em 0px 0px; content: "h"; }
+mjx-c.mjx-c2205::before { padding: 0.772em 0.5em 0.078em 0px; content: "∅"; }
+mjx-c.mjx-c7C::before { padding: 0.75em 0.278em 0.249em 0px; content: "|"; }
+mjx-c.mjx-c1D43A.TEX-I::before { padding: 0.705em 0.786em 0.022em 0px; content: "G"; }
+mjx-c.mjx-c1D449.TEX-I::before { padding: 0.683em 0.769em 0.022em 0px; content: "V"; }
+mjx-c.mjx-c1D438.TEX-I::before { padding: 0.68em 0.764em 0px 0px; content: "E"; }
+mjx-c.mjx-c1D44A.TEX-I::before { padding: 0.683em 1.048em 0.022em 0px; content: "W"; }
+mjx-c.mjx-c1D443.TEX-I::before { padding: 0.683em 0.751em 0px 0px; content: "P"; }
+mjx-c.mjx-c2211.TEX-S1::before { padding: 0.75em 1.056em 0.25em 0px; content: "∑"; }
+mjx-c.mjx-c2264::before { padding: 0.636em 0.778em 0.138em 0px; content: "≤"; }
+mjx-c.mjx-c2204::before { padding: 0.716em 0.556em 0.215em 0px; content: "∄"; }
+mjx-c.mjx-c4C::before { padding: 0.683em 0.625em 0px 0px; content: "L"; }
+mjx-c.mjx-c2308::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌈"; }
+mjx-c.mjx-c2309::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌉"; }
+mjx-c.mjx-c230A::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌊"; }
+mjx-c.mjx-c230B::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌋"; }
+mjx-c.mjx-c1D430.TEX-B::before { padding: 0.444em 0.831em 0px 0px; content: "w"; }
+mjx-c.mjx-c1D464.TEX-I::before { padding: 0.443em 0.716em 0.011em 0px; content: "w"; }
+mjx-c.mjx-c1D413.TEX-B::before { padding: 0.675em 0.8em 0px 0px; content: "T"; }
+mjx-c.mjx-c3D.TEX-B::before { padding: 0.393em 0.894em 0px 0px; content: "="; }
+mjx-c.mjx-c1D7CF.TEX-B::before { padding: 0.655em 0.575em 0px 0px; content: "1"; }
+mjx-c.mjx-c2190::before { padding: 0.511em 1em 0.011em 0px; content: "←"; }
+mjx-c.mjx-c56::before { padding: 0.683em 0.75em 0.022em 0px; content: "V"; }
+mjx-c.mjx-c45::before { padding: 0.68em 0.681em 0px 0px; content: "E"; }
+mjx-c.mjx-c6A::before { padding: 0.669em 0.306em 0.205em 0px; content: "j"; }
+mjx-c.mjx-c1D460.TEX-I::before { padding: 0.442em 0.469em 0.01em 0px; content: "s"; }
+mjx-c.mjx-c2192::before { padding: 0.511em 1em 0.011em 0px; content: "→"; }
+mjx-c.mjx-c2032::before { padding: 0.56em 0.275em 0px 0px; content: "′"; }
+mjx-c.mjx-c2229::before { padding: 0.598em 0.667em 0.022em 0px; content: "∩"; }
+mjx-c.mjx-c49::before { padding: 0.683em 0.361em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D434.TEX-I::before { padding: 0.716em 0.75em 0px 0px; content: "A"; }
+mjx-c.mjx-c3A::before { padding: 0.43em 0.278em 0px 0px; content: ":"; }
+mjx-c.mjx-c211D.TEX-A::before { padding: 0.683em 0.722em 0px 0px; content: "R"; }
+mjx-c.mjx-c1D43B.TEX-I::before { padding: 0.683em 0.888em 0px 0px; content: "H"; }
+mjx-c.mjx-c1D53D.TEX-A::before { padding: 0.683em 0.611em 0px 0px; content: "F"; }
+mjx-c.mjx-c2124.TEX-A::before { padding: 0.683em 0.667em 0px 0px; content: "Z"; }
+mjx-c.mjx-c21A6::before { padding: 0.511em 1em 0.011em 0px; content: "↦"; }
+mjx-c.mjx-c71::before { padding: 0.442em 0.528em 0.194em 0px; content: "q"; }
+mjx-c.mjx-c30::before { padding: 0.666em 0.5em 0.022em 0px; content: "0"; }
+mjx-c.mjx-c36::before { padding: 0.666em 0.5em 0.022em 0px; content: "6"; }
+mjx-container[jax="CHTML"] { line-height: 0; }
+mjx-container [space="1"] { margin-left: 0.111em; }
+mjx-container [space="2"] { margin-left: 0.167em; }
+mjx-container [space="3"] { margin-left: 0.222em; }
+mjx-container [space="4"] { margin-left: 0.278em; }
+mjx-container [space="5"] { margin-left: 0.333em; }
+mjx-container [rspace="1"] { margin-right: 0.111em; }
+mjx-container [rspace="2"] { margin-right: 0.167em; }
+mjx-container [rspace="3"] { margin-right: 0.222em; }
+mjx-container [rspace="4"] { margin-right: 0.278em; }
+mjx-container [rspace="5"] { margin-right: 0.333em; }
+mjx-container [size="s"] { font-size: 70.7%; }
+mjx-container [size="ss"] { font-size: 50%; }
+mjx-container [size="Tn"] { font-size: 60%; }
+mjx-container [size="sm"] { font-size: 85%; }
+mjx-container [size="lg"] { font-size: 120%; }
+mjx-container [size="Lg"] { font-size: 144%; }
+mjx-container [size="LG"] { font-size: 173%; }
+mjx-container [size="hg"] { font-size: 207%; }
+mjx-container [size="HG"] { font-size: 249%; }
+mjx-container [width="full"] { width: 100%; }
+mjx-box { display: inline-block; }
+mjx-block { display: block; }
+mjx-itable { display: inline-table; }
+mjx-row { display: table-row; }
+mjx-row > * { display: table-cell; }
+mjx-mtext { display: inline-block; }
+mjx-mstyle { display: inline-block; }
+mjx-merror { display: inline-block; color: red; background-color: yellow; }
+mjx-mphantom { visibility: hidden; }
+mjx-assistive-mml { top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); user-select: none; position: absolute !important; padding: 1px 0px 0px !important; border: 0px !important; display: block !important; width: auto !important; overflow: hidden !important; }
+mjx-assistive-mml[display="block"] { width: 100% !important; }
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
+mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
+mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h { display: inline-table; width: 100%; }
+mjx-stretchy-h > * { display: table-cell; width: 0px; }
+mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
+mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
+mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
+mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
+mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
+mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
+mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
+mjx-stretchy-v { display: inline-block; }
+mjx-stretchy-v > * { display: block; }
+mjx-stretchy-v > mjx-beg { height: 0px; }
+mjx-stretchy-v > mjx-end > mjx-c { display: block; }
+mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
+mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
+mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
+mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
+mjx-mark { display: inline-block; height: 0px; }
+mjx-c { display: inline-block; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-texatom { display: inline-block; text-align: left; }
+mjx-mi { display: inline-block; text-align: left; }
+mjx-msup { display: inline-block; text-align: left; }
+mjx-c::before { display: block; width: 0px; }
+.MJX-TEX { font-family: MJXZERO, MJXTEX; }
+.TEX-B { font-family: MJXZERO, MJXTEX-B; }
+.TEX-I { font-family: MJXZERO, MJXTEX-I; }
+.TEX-MI { font-family: MJXZERO, MJXTEX-MI; }
+.TEX-BI { font-family: MJXZERO, MJXTEX-BI; }
+.TEX-S1 { font-family: MJXZERO, MJXTEX-S1; }
+.TEX-S2 { font-family: MJXZERO, MJXTEX-S2; }
+.TEX-S3 { font-family: MJXZERO, MJXTEX-S3; }
+.TEX-S4 { font-family: MJXZERO, MJXTEX-S4; }
+.TEX-A { font-family: MJXZERO, MJXTEX-A; }
+.TEX-C { font-family: MJXZERO, MJXTEX-C; }
+.TEX-CB { font-family: MJXZERO, MJXTEX-CB; }
+.TEX-FR { font-family: MJXZERO, MJXTEX-FR; }
+.TEX-FRB { font-family: MJXZERO, MJXTEX-FRB; }
+.TEX-SS { font-family: MJXZERO, MJXTEX-SS; }
+.TEX-SSB { font-family: MJXZERO, MJXTEX-SSB; }
+.TEX-SSI { font-family: MJXZERO, MJXTEX-SSI; }
+.TEX-SC { font-family: MJXZERO, MJXTEX-SC; }
+.TEX-T { font-family: MJXZERO, MJXTEX-T; }
+.TEX-V { font-family: MJXZERO, MJXTEX-V; }
+.TEX-VB { font-family: MJXZERO, MJXTEX-VB; }
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important; }
+@font-face { font-family: MJXZERO; src: url("lib/fonts/mathjax_zero.woff") format("woff"); }
+@font-face { font-family: MJXTEX; src: url("lib/fonts/mathjax_main-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-B; src: url("lib/fonts/mathjax_main-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-I; src: url("lib/fonts/mathjax_math-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-MI; src: url("lib/fonts/mathjax_main-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-BI; src: url("lib/fonts/mathjax_math-bolditalic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S1; src: url("lib/fonts/mathjax_size1-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S2; src: url("lib/fonts/mathjax_size2-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S3; src: url("lib/fonts/mathjax_size3-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S4; src: url("lib/fonts/mathjax_size4-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-A; src: url("lib/fonts/mathjax_ams-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-C; src: url("lib/fonts/mathjax_calligraphic-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-CB; src: url("lib/fonts/mathjax_calligraphic-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FR; src: url("lib/fonts/mathjax_fraktur-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FRB; src: url("lib/fonts/mathjax_fraktur-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SS; src: url("lib/fonts/mathjax_sansserif-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSB; src: url("lib/fonts/mathjax_sansserif-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSI; src: url("lib/fonts/mathjax_sansserif-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SC; src: url("lib/fonts/mathjax_script-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-T; src: url("lib/fonts/mathjax_typewriter-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-V; src: url("lib/fonts/mathjax_vector-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-VB; src: url("lib/fonts/mathjax_vector-bold.woff") format("woff"); }
+mjx-c.mjx-c28::before { padding: 0.75em 0.389em 0.25em 0px; content: "("; }
+mjx-c.mjx-c34::before { padding: 0.677em 0.5em 0px 0px; content: "4"; }
+mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
+mjx-c.mjx-c39::before { padding: 0.666em 0.5em 0.022em 0px; content: "9"; }
+mjx-c.mjx-c35::before { padding: 0.666em 0.5em 0.022em 0px; content: "5"; }
+mjx-c.mjx-c38::before { padding: 0.666em 0.5em 0.022em 0px; content: "8"; }
+mjx-c.mjx-c33::before { padding: 0.665em 0.5em 0.022em 0px; content: "3"; }
+mjx-c.mjx-c2F::before { padding: 0.75em 0.5em 0.25em 0px; content: "/"; }
+mjx-c.mjx-c37::before { padding: 0.676em 0.5em 0.022em 0px; content: "7"; }
+mjx-c.mjx-c32::before { padding: 0.666em 0.5em 0px 0px; content: "2"; }
+mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }
+mjx-c.mjx-c22C5::before { padding: 0.31em 0.278em 0px 0px; content: "⋅"; }
+mjx-c.mjx-c2212::before { padding: 0.583em 0.778em 0.082em 0px; content: "−"; }
+mjx-c.mjx-c3E::before { padding: 0.54em 0.778em 0.04em 0px; content: ">"; }
+mjx-c.mjx-c1D442.TEX-I::before { padding: 0.704em 0.763em 0.022em 0px; content: "O"; }
+mjx-c.mjx-c1D452.TEX-I::before { padding: 0.442em 0.466em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c1D461.TEX-I::before { padding: 0.626em 0.361em 0.011em 0px; content: "t"; }
+</style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="11. 无穷序列&amp;级数"><ol start="11" dir="auto">
+<li dir="auto">无穷序列&amp;级数</li>
+</ol></h1><div class="heading-wrapper"><h3 data-heading="11. 无穷序列&amp;级数" dir="auto" class="heading" id="11._无穷序列&amp;级数"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>11. 无穷序列&amp;级数</h3><div class="heading-children"><div class="heading-wrapper"><h4 data-heading="1. 序列" dir="auto" class="heading" id="1._序列"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>1. 序列</h4><div class="heading-children"><div><pre dir="auto"><span>title: 序列
+- 序列是有一定顺序的一列数，并且是定义在 正整数集 上的函数，写作 $a_n$
+- 序列 $\{ a_1, a_2, a_3, ... \}$ 也记作 $\{ a_n \}$ 或 $\{ a_n \}_{n=1}^∞$
+- 如： $a_n \iff \{ a_n = \frac {n}{n+1} \} \iff \{ \frac 12, \frac 23, \cdots, \frac n{n+1}, \cdots \}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: “隐式序列”
+- 这些序列往往不能以简单的等式定义
+- 如：Fibonacci序列 ($f_1 = f_2 = 1, f_n = f_{n-1} + f_{n-2}, n\ge 3$)
+- 又如：$\{ a_n \}$ 为常数 e 在第 n 位小数上的数字，即 $\{ 7, 1, 8, 2, 8, \cdots \}$
+- 再如：$\{ P_n \}$ 表示年份 n 的一月世界人口数</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 几何表示
+- 一维数轴上的离散的点：$(1, a_1), (2, a_2), (3, a_3), \cdots$
+- 二维笛卡尔坐标系中的离散点</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 序列极限
+&gt; 序列 $\{ a_n \}$ 具有极限 L 且记作 $\lim\limits_{n\to \infty} = L$
+&gt; 
+&gt; 或 $a_n \to L$ 当 $n\to \infty$
+&gt; 
+&gt; 若通过取充分大的 n 我们可以使项 $a_n$ 任意接近 L，
+&gt; 
+&gt; 若 $\lim\limits_{n\to ∞} a_n$ 存在，我们称此序列 收敛 (或 是收敛的)，否则称此发散 (或 是发散的)</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 序列极限的精确描述
+&gt; 序列 $\{ a_n \}$ 具有极限 L 且记作 $\lim\limits_{n\to ∞} a_n = L$ 或 $a_n \to L$ 当 $n\to \infty$
+&gt; 
+&gt; 若对任意小的 $\epsilon &gt; 0$ 存在相应的整数 N，只要 $n &gt; N$，就有 $|a_n - L| &lt; \epsilon$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 如何理解？
+1.	$\{ a_n \}$ 在一维数轴上，无论区间 $(L -\epsilon, L + \epsilon)$ 取得多小，都存在一个 N，使得序列中 $a_{N+1}$ 往后的所有项都落在这个区间里
+    ![](https://pic.peo.pw/a/2023/03/23/641c532ddee29.png)
+2.	$\{ a_n \}$ 在二维笛卡尔坐标系上，当 n &gt; N 时 $\{ a_n \}$ 的图像必然位于水平线 $y = L + \epsilon$ 和 $y = L - \epsilon$ 之间，无论对多小的 $\epsilon$，这个图像都是对的，但越小的 $\epsilon$ 就对应越大的 N
+    ![](https://pic.peo.pw/a/2023/03/23/641c5368d147f.png)</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 定理(连续函数极限 $\to$ 序列极限)
+&gt; 若 $\lim\limits_{x\to ∞}f(x) = L$ 且 当 n 为整数时有 $f(n) = a_n$，则 $\lim\limits_{n\to ∞}a_n = L$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 无穷大极限
+&gt; $\lim\limits_{n\to ∞} a_n = ∞$ 意味着对任意正数 M，存在整数 N，对任意的 n &gt; N 使得 $a_n &gt; M$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 序列的极限定律
+&gt; $\{ a_n \}$ 和 $\{ b_n \}$ 为收敛序列，c 为常数，则：
+&gt; 
+&gt; $\lim\limits_{n\to ∞}(a_n + b_n) = \lim\limits_{n\to ∞}a_n + \lim\limits_{n\to ∞}b_n$，$\lim\limits_{n\to ∞}(a_n - b_n) = \lim\limits_{n\to ∞}a_n - \lim\limits_{n\to ∞}b_n$
+&gt; 
+&gt; $\lim\limits_{n\to ∞}c\cdot a_n = c\cdot \lim\limits_{n\to ∞} a_n$，$\lim\limits_{n\to ∞}c = c$
+&gt; 
+&gt; $\lim\limits_{n\to ∞}a_n\cdot b_n = \lim\limits_{n\to ∞} a_n \cdot \lim\limits_{n\to ∞} b_n$，$\lim\limits_{n\to ∞}\frac {a_n}{b_n} = \frac {\lim\limits_{n\to ∞} a_n}{\lim\limits_{n\to ∞} b_n}$  &amp;  $\lim\limits_{n\to ∞} b_n\ne 0$
+&gt; 
+&gt; $\lim\limits_{n\to ∞} a_n^p = (\lim\limits_{n\to ∞} a_n)^p$  &amp; $p &gt; 0, a_n &gt; 0$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 夹逼定理
+&gt; 若对 $n\ge n_0$ 有 $a_n\le b_n \le c_n$ 且 $\lim\limits_{n\to ∞} a_n = \lim\limits_{n\to ∞} c_n = L$，则 $\lim\limits_{n\to ∞} b_n = L$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: $\lim\limits_{n\to ∞} \frac {n!}{n^n}$
+- n! 在非整数域上没有定义，所以不能用 洛必达法则 或 泰勒展开
+- 可以考虑 夹逼定理</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 定理
+&gt; 若 $\lim\limits_{n\to ∞} |a_n| = 0$，则 $\lim\limits_{n\to ∞} a_n = 0$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: question
+- 周期函数 或 周期序列 在无穷远处都是 振荡的？（发散）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: $\{ r^n \}$ 的敛散性
+- $\lim\limits_{n\to ∞} r^n = \begin{cases} 0 &amp; |r|&lt;1 \\ 1 &amp; r=1 \\ ∞ &amp; |r|&gt;1 \\ -1\to 1振荡 &amp; r=-1 \end{cases}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 单调性
+&gt; 若对所有 $n\ge 1$ 都有 $a_n &lt; a_{n+1}$，则 $\{ a_n \}$ 称为递增的
+&gt; 
+&gt; 若对所有 $n\ge 1$ 都有 $a_n &gt; a_{n+1}$，则 $\{ a_n \}$ 称为递减的
+&gt; 
+&gt; 递增 或 递减 都被称为单调
+&gt; 
+&gt; tip：还可以利用连续函数的导函数判断 序列单调性</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 有界性
+&gt; 序列 $\{ a_n \}$ 有上界，若存在数 M 使得 $a_n \le M$ 对所有 $n\ge 1$
+&gt; 
+&gt; 序列 $\{ a_n \}$ 有下界，若存在数 m 使得 $a_n \ge m$ 对所有 $n\ge 1$
+&gt; 
+&gt; 若它既有 上界 又有 下界，则 $\{ a_n \}$ 是有界序列</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 单调序列定理(证明：p15)
+&gt; 任何 {==有界==}，{==单调==} 的序列都是收敛的（递增，有上界 或 递减，有下界）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: tip
+此定理基于 完备性定理：若 S 为非空实数集并由上界 M（对所有 x 属于 S 有 $x\le M$），则 S 有一个最小上界 b</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: tip
+- 研究递归序列时经常用到数学归纳法，如证明 单调性 或 有界性
+- 在数学归纳之前往往要打表找规律
+- 证明序列 单调 并 有界 后，此时就能通过方程 $\lim\limits_{n\to ∞} a_{n+1} = f(L), \lim\limits_{n\to ∞} a_n = L$ 求解极限了</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="2. 级数" dir="auto" class="heading" id="2._级数"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>2. 级数</h4><div class="heading-children"><div><pre dir="auto"><span>title: 无穷级数
+- 我们尝试将无穷序列 $\{ a_n \}_{n=1}^∞$ 的各项加起来，得到 $\sum\limits_{n=1}^∞ a_n$ 或 $\sum a_n$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 无穷级数
+&gt; 已知级数 $\sum\limits_{n=1}^∞a_n$，令 $s_n$ 为其第 n 个部分和(前缀和)： $s_n = \sum\limits_{i=1}^n a_i$
+&gt; 
+&gt; 若序列 $\{ s_n \}$ 收敛且 $\lim\limits_{n\to ∞} s_n = s$ 作为实数存在，则级数 $\sum a_n$ 称为收敛的，
+&gt; 
+&gt; 且我们记 $a_1 + a_2 + \cdots + a_n + \cdots = s$ 或 $\sum\limits_{n=1}^∞ a_n = s$数 s 称为级数的和；否则，级数被称为发散的
+&gt; 
+&gt; 注意： $\sum\limits_{n=1}^∞ a_n = \lim\limits_{n\to ∞}\sum\limits_{i=1}^n a_i$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: tip
+- 无穷级数 类似于 函数在无穷处的反常积分，如 $\int_a^∞ f(x)~d_x = \lim\limits_{t\to ∞}\int_a^t f(x)~d_x$
+- 为了求无穷级数，我们先从 1..n 求和，再令 $n\to ∞$；为了求反常积分，我们先从 a 积到 t，然后令 $t\to ∞$
+- 无穷级数的三种表示：$\lim\limits_{n\to ∞} \sum\limits_{i=1}^n a_i$，$\sum\limits_{i=1}^∞ a_i$，$\lim\limits_{n\to ∞} s_n$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 几何级数
+![](https://pic.peo.pw/a/2023/03/24/641d2989cc150.png){align=right}
+
+- $\sum\limits_{n=1}^∞ a\cdot r^{n-1}, a\ne 0$
+- 若 r=1，则 $s_n = \sum\limits_{i=1}^n a = n\cdot a \to ±∞$，因为 $\lim\limits_{n\to ∞} s_n$ 不存在，这种情况下几何级数发散
+- 若 $r\ne 1$，由 $s_n = \sum\limits_{i=0}^{n-1}a\cdot r^i$，$r\cdot s_n = \sum\limits_{i=1}^{n}a\cdot r^i$，可得 $s_n = a\cdot \frac {1-r^n}{1-r}$
+    - 若 $|r| &lt; 1$，则 $\lim\limits_{n\to∞} s_n = \lim\limits_{n\to ∞} s_n = a\cdot \frac {1-r^n}{1-r} = \frac {a}{1-r}$，此时几何级数收敛 且和为 $\frac a{1-r}$
+    - 若 $r \le -1$ 或 $r &gt; 1$，此时几何级数发散</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 几何级数
+&gt; $\sum\limits_{n=1}^∞ a r^{n-1}$ 是收敛的，若 |r| &lt; 1，它的和为 $\sum\limits_{n=1}^∞ ar^{n-1} = \frac a{1-r}, |r| &lt; 1$
+&gt; 
+&gt; 若 $|r| \ge 1$，几何级数发散
+&gt; 
+&gt; 即： $\sum\limits_{n=1}^∞ a r^{n-1} = \begin{cases} \frac {a}{1-r} &amp; |r|&lt;1 \\ ∞ &amp; r=1 或 |r|&gt;1 \\ -a \to 0 振荡 &amp; r=-1 \end{cases}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: question
+- $\lim\limits_{n\to ∞} a_n$ 发散 $\to$ $\lim\limits_{n\to ∞} \sum\limits_{i=1}^n a_i$ 发散？</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: note
+- $\sum\limits_{i=1}^∞ 2^{2i}3^{1-i}$，$2.3\overline{17}=2.3171717\cdots$ 均可转化为几何级数
+- $\sum\limits_{i=1}^∞ (f_{i+1} - f_{i})$ 收敛，仅当 $\lim\limits_{n\to ∞}f_{n+1}-f_1$ 存在</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 调和级数
+- 证明调和级数 $\sum\limits_{i=1}^∞ \frac 1i$ 发散：
+- 令 $s_n = \sum\limits_{i=1}^n \frac 1i$，有 $s_{2^n} = \sum\limits_{i=1}^{2^n} \frac 1i$
+- 其中 $\displaystyle s_{\displaystyle 2^n} = \sum\limits_{i=1}^{2^n} \frac 1i = 1 + \sum\limits_{i=1}^n \sum\limits_{j=2^{i-1}+1}^{2^i} \frac 1j \ge 1 + \sum\limits_{i=1}^n(2^i-(2^{i-1}+1)+1) \frac {1}{2^i} = 1  + \sum\limits_{i=1}^n\frac {2^{i-1}}{2^i} = 1 + \frac n2$
+- $\lim\limits_{n\to ∞} 1+\frac n2$ 发散 $\implies$ $\lim\limits_{n\to ∞} s_{\displaystyle 2^n}$ 发散 $\implies$ $\lim\limits_{n\to ∞} s_n$ 发散</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 定理(收敛推论)
+&gt; 若 $\sum\limits_{n=1}^∞ a_n$ 收敛，则 $\lim\limits_{n\to ∞} a_n = 0$
+&gt; 
+&gt; 逆命题不成立</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 发散的判别法
+&gt; 若 $\lim\limits_{n\to ∞} a_n$ 不存在 或 $\lim\limits_{n\to ∞} a_n \ne 0$，则级数 $\lim\limits_{n\to ∞} \sum\limits_{i=1}^n a_i$ 发散</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: note
+- $\lim\limits_{n\to ∞} a_n$ 不存在 或 不为0 $\implies$ 级数发散
+- $\lim\limits_{n\to ∞} a_n = 0$，级数可能 发散 或 收敛</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 定理
+&gt; 若 $\sum a_n$ 和 $\sum b_n$ 为收敛级数，则级数 $\sum c\cdot a_n$ (c 为常数)，$\sum (a_n + b_n)$，$\sum (a_n - b_n)$ 也收敛，且
+&gt; 
+&gt; - $\sum\limits_{n=1}^∞ c\cdot a_n = c\sum\limits_{n=1}^∞ a_n$
+&gt; - $\sum\limits_{n=1}^∞ (a_n + b_n) = \sum\limits_{n=1}^∞ a_n + \sum\limits_{n=1}^∞ b_n$
+&gt; - $\sum\limits_{n=1}^∞ (a_n - b_n) = \sum\limits_{n=1}^∞ a_n - \sum\limits_{n=1}^∞ b_n$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: note
+- 级数的有限项不影响它的 收敛性 或 发散性：假设 $\sum\limits_{n=N+1}^∞ a_n$ 是收敛的 ($N \ge 0$)，那么 $\sum\limits_{n=1}^∞ a_n$ 也是收敛的</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="3. 和式的积分判别法 &amp; 估计" dir="auto" class="heading" id="3._和式的积分判别法_&amp;_估计"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>3. 和式的积分判别法 &amp; 估计</h4><div class="heading-children"><div><p dir="auto">接下来介绍的判别法使得我们 {<mark>不用求出级数具体的和</mark>} 就能确定其是否收敛</p></div><div><pre dir="auto"><span>title: idea
+- 设 $a_i$ 是 $f(x)$ 的生成数列，并且 $f(x)$ 为 $[0, ∞)$ 上的 {==连续递减的正值函数==}
+- 那么 $\int_{i}^{i+1} f(x)~d_x \le a_i \le \int_{i-1}^{i} f(x)~d_x$
+- 同样的有： $\sum\limits_{i=n}^∞\int_{i}^{i+1} f(x)~d_x \le \sum\limits_{i=n}^∞a_i \le \sum\limits_{i=n}^∞\int_{i-1}^{i} f(x)~d_x \iff \int_{n}^∞ f(x)~d_x \le \sum\limits_{i=n}^∞a_i \le \int_{n-1}^{∞} f(x)~d_x$
+- 注意：上式中 n 应该取适当的值，以使不等式左右两边的积分都是有限值（否则意义不大，如： $\int_0^∞ f_x d_x$ 和 $\int_1^∞ f_x d_x$ 后者是有限值并且极限为 1）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: note
+- $\sum\limits_{n=1}^∞ \frac 1{n^2} \approx \frac {\pi^2}{6}$ （由 Euler 证明）
+- 上述证明相当困难，但是可以用积分证明 $\frac32\le \sum\limits_{n=1}^∞ \frac 1{n^2} \le 2$
+- $\sum\limits_{n=1}^∞ \frac 1{\sqrt n}$ 的敛散性也用类似的方法证明</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 积分判别法
+&gt; 设 f 为 [0, +∞) 上的{==连续==}、取{==正值==}的{==(基本)递减==}函数
+&gt; 
+&gt; 令 $a_n = f(n)$，则级数 $\sum\limits_{n=1}^∞ a_n$ 收敛 $\iff$ 反常积分 $\int_1^∞ f(x)~d_x$ 收敛
+&gt; 
+&gt; 换句话说：
+&gt; 
+&gt; - $\int_1^∞ f(x)~d_x$ 收敛，则 $\sum\limits_{n=1}^∞ a_n$ 收敛
+&gt; - $\int_1^∞ f(x)~d_x$ 发散，则 $\sum\limits_{n=1}^∞ a_n$ 发散</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: tip
+- 基本递减：指的是 x &gt; N 时 f 递减
+- 积分判别法 {==未必要在1处开始积分==}
+- 更通用的说法：
+    - $\int_{h-1}^∞ f(x)~d_x$ 收敛，则 $\sum\limits_{n=h}^∞ a_n$ 收敛
+    - $\int_h^∞ f(x)~d_x$ 发散，则 $\sum\limits_{n=h}^∞ a_n$ 发散</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: {==p级数==}
+- $\displaystyle \lim\limits_{n\to∞} \frac 1{n^p} = \begin{cases} +∞ &amp; p &lt; 0 \\ 1 &amp; p = 0 \\ 0 &amp; p&gt;0 \end{cases}$
+- 但是 $\displaystyle \sum\limits_{i=1}^∞ \frac 1{n^p} = \begin{cases} 收敛 &amp; p &gt; 1 \\ 发散 &amp; p \le 1 ​\end{cases}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 估计级数的和</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 积分判别法的余项估计
+&gt; 假设 $f(k) = a_k$，其中 f 是在 $x\ge n$ 上连续，取正值的递减函数，$\sum a_n$ 收敛
+&gt; 
+&gt; 若 $R_n = s - s_n = \sum\limits_{i=n+1}^{∞} a_i$，则 $\int_{n+1}^{+∞}~d_x \le R_n \le \int_{n}^{+∞} f(x)~d_x$
+&gt; 
+&gt; 因而：$s_n + \int_{n+1}^{+∞}~d_x \le s_n + R_n = s \le s_n + \int_{n}^{+∞} f(x)~d_x$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 积分判别法的证明</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="4. 比较判别法" dir="auto" class="heading" id="4._比较判别法"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>4. 比较判别法</h4><div class="heading-children"><div><p dir="auto">将所给的级数 与 一个已知收敛或发散的计数进行比较</p></div><div><pre dir="auto"><span>title: 比较判别法
+&gt; 假设 $\sum a_n$，$\sum l_n$，$\sum r_n$ 是各项都为正的级数
+&gt; 
+&gt; 1.	若 $\sum r_n$ 收敛且对所有的 n 都有 $a_n \le r_n$，则 $\sum a_n$ 也收敛
+&gt; 2.	若 $\sum l_n$ 发散且对所有的 n 都有 $a_n \ge l_n$，则 $\sum a_n$ 也发散
+&gt; 
+&gt; 证明详见 p38
+&gt; 
+&gt;  细节：仅需 $n\ge \lceil N\rceil$ 也能使结论成立（级数的收敛性不受有限项的影响）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 例子
+- 有理函数
+- $\sum\limits_{n=1}^∞ \frac {\ln x}{x}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 极限的比较判别法
+&gt; 假设 $\sum a_n$ 和 $\sum b_n$ 是各项都为正的级数，
+&gt; 
+&gt; 若 $\lim\limits_{n\to ∞}\frac {a_n}{b_n} = c$ （c为有限数，且 $c &gt; 0$），则两边都 收敛 或 发散</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 估计和
+&gt; 若对于所有的 n，$a_n \le b_n$，我们有 $R_n \le T_n$</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="5. 交错级数" dir="auto" class="heading" id="5._交错级数"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>5. 交错级数</h4><div class="heading-children"><div><p dir="auto">目前位置我们讨论的级数都是为正数的，接下来介绍重要的技术：交错级数</p></div><div><pre dir="auto"><span>title: 交错级数收敛性的判别
+&gt; $\sum\limits_{i=1}^∞ (-1)^{i-1}a_i$ ($a_i &gt; 0$)
+&gt; 
+&gt; 满足：
+&gt; 
+&gt; 1.	对所有 n，$a_{n} \ge a_{n+1}$
+&gt; 2.	$\lim\limits_{n\to ∞}a_n = 0$
+&gt; 
+&gt; 则，此级数收敛</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 估计和(交错级数估计定理)
+&gt; 若 $s = \sum (-1)^{n-1}b_n$ 为交错级数，满足：
+&gt; 
+&gt; 1.	$b_n\ge b_{n+1} \ge 0$
+&gt; 2.	$\lim\limits_{n\to ∞}b_n = 0$
+&gt; 
+&gt; 则 $|R_n| = |s - s_n| \le b_{n+1}$ （即 s 在 $s_n$ 两侧“波动”，误差为 $b_{n+1}$）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: tip
+- 任何收敛级数的 部分和$s_n$ 都可以用作 总和$s$ 的一个近似，但如果不能估计其精确值就没有多少意义了
+- 当问及 “精确到 m 位小数” 时，选取合适的 n，使得 $[(s_n + b_{n+1}) \cdot 10^m] = [(s_n - b_{n+1}) \cdot 10^m]$</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="6. 绝对收敛 &amp; 比值 / 根值 判别法" dir="auto" class="heading" id="6._绝对收敛_&amp;_比值_/_根值_判别法"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>6. 绝对收敛 &amp; 比值 / 根值 判别法</h4><div class="heading-children"><div><pre dir="auto"><span>title: 绝对收敛
+&gt; 级数 $\sum a_n$ 称为绝对收敛的，若其绝对值级数 $\sum |a_n|$ 收敛</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 条件收敛
+&gt; 级数 $\sum a_n$ 称为条件收敛的，若它收敛但非绝对收敛的</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 定理
+&gt; 若级数 $\sum a_n$ 是绝对收敛的，则它一定是收敛的</span><button class="copy-code-button">复制</button></pre></div><div><div class="mermaid"><svg aria-roledescription="flowchart-v2" role="graphics-document document" viewBox="-8 -8 95 137.60000610351562" height="137.60000610351562" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="95" id="m3607ab2ec5e323e1"><style>#m3607ab2ec5e323e1{font-family:var(--font-mermaid);font-size:16px;fill:var(--text-normal);}#m3607ab2ec5e323e1 .error-icon{fill:var(--background-primary);}#m3607ab2ec5e323e1 .error-text{fill:var(--text-error);stroke:var(--text-error);}#m3607ab2ec5e323e1 .edge-thickness-normal{stroke-width:2px;}#m3607ab2ec5e323e1 .edge-thickness-thick{stroke-width:3.5px;}#m3607ab2ec5e323e1 .edge-pattern-solid{stroke-dasharray:0;}#m3607ab2ec5e323e1 .edge-pattern-dashed{stroke-dasharray:3;}#m3607ab2ec5e323e1 .edge-pattern-dotted{stroke-dasharray:2;}#m3607ab2ec5e323e1 .marker{fill:var(--text-normal);stroke:var(--text-normal);}#m3607ab2ec5e323e1 .marker.cross{stroke:var(--text-normal);}#m3607ab2ec5e323e1 svg{font-family:var(--font-mermaid);font-size:16px;}#m3607ab2ec5e323e1 .label{font-family:var(--font-mermaid);color:var(--text-normal);}#m3607ab2ec5e323e1 .cluster-label text{fill:var(--text-normal);}#m3607ab2ec5e323e1 .cluster-label span,#m3607ab2ec5e323e1 p{color:var(--text-normal);}#m3607ab2ec5e323e1 .label text,#m3607ab2ec5e323e1 span,#m3607ab2ec5e323e1 p{fill:var(--text-normal);color:var(--text-normal);}#m3607ab2ec5e323e1 .node rect,#m3607ab2ec5e323e1 .node circle,#m3607ab2ec5e323e1 .node ellipse,#m3607ab2ec5e323e1 .node polygon,#m3607ab2ec5e323e1 .node path{fill:var(--background-primary);stroke:var(--text-muted);stroke-width:1px;}#m3607ab2ec5e323e1 .flowchart-label text{text-anchor:middle;}#m3607ab2ec5e323e1 .node .label{text-align:center;}#m3607ab2ec5e323e1 .node.clickable{cursor:pointer;}#m3607ab2ec5e323e1 .arrowheadPath{fill:#0b0b0b;}#m3607ab2ec5e323e1 .edgePath .path{stroke:var(--text-normal);stroke-width:2.0px;}#m3607ab2ec5e323e1 .flowchart-link{stroke:var(--text-normal);fill:none;}#m3607ab2ec5e323e1 .edgeLabel{background-color:var(--background-secondary);text-align:center;}#m3607ab2ec5e323e1 .edgeLabel rect{opacity:0.5;background-color:var(--background-secondary);fill:var(--background-secondary);}#m3607ab2ec5e323e1 .labelBkg{background-color:var(--background-secondary);}#m3607ab2ec5e323e1 .cluster rect{fill:hsl(220.5882352941, 100%, 98.3333333333%);stroke:hsl(220.5882352941, 60%, 88.3333333333%);stroke-width:1px;}#m3607ab2ec5e323e1 .cluster text{fill:var(--text-normal);}#m3607ab2ec5e323e1 .cluster span,#m3607ab2ec5e323e1 p{color:var(--text-normal);}#m3607ab2ec5e323e1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:var(--font-mermaid);font-size:12px;background:var(--background-secondary-alt);border:1px solid hsl(220.5882352941, 60%, 88.3333333333%);border-radius:2px;pointer-events:none;z-index:100;}#m3607ab2ec5e323e1 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:var(--text-normal);}#m3607ab2ec5e323e1 foreignObject{overflow:visible;}#m3607ab2ec5e323e1 #arrowhead,#m3607ab2ec5e323e1 #sequencenumber,#m3607ab2ec5e323e1 .cluster text,#m3607ab2ec5e323e1 .label text,#m3607ab2ec5e323e1 text,#m3607ab2ec5e323e1 text.actor{fill:var(--text-normal);}#m3607ab2ec5e323e1 line{stroke:var(--text-normal);}#m3607ab2ec5e323e1 g&gt;g&gt;circle,#m3607ab2ec5e323e1 g&gt;g&gt;path{stroke:var(--background-accent);color:var(--text-normal);}#m3607ab2ec5e323e1 .label rect{display:none;}#m3607ab2ec5e323e1 .cluster rect{stroke-width:1px;}#m3607ab2ec5e323e1 .node circle,#m3607ab2ec5e323e1 .node ellipse,#m3607ab2ec5e323e1 .node path,#m3607ab2ec5e323e1 .node polygon,#m3607ab2ec5e323e1 .node rect{fill:var(--background-secondary-alt);stroke:var(--background-modifier-border);stroke-width:1px;}#m3607ab2ec5e323e1 .node .label{text-align:center;}#m3607ab2ec5e323e1 .node.clickable{cursor:pointer;}#m3607ab2ec5e323e1 .arrowheadPath{fill:var(--text-muted);}#m3607ab2ec5e323e1 .edgePath .path{stroke:var(--text-muted);stroke-width:1.5px;}#m3607ab2ec5e323e1 .edgeLabel{background-color:var(--background-primary);text-align:center;}#m3607ab2ec5e323e1 .cluster rect{fill:var(--background-primary-alt);stroke:var(--background-modifier-border);}#m3607ab2ec5e323e1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-size:12px;background:var(--background-secondary);border:1px solid var(--interactive-accent);border-radius:2px;pointer-events:none;z-index:100;}#m3607ab2ec5e323e1 .actor{stroke:var(--background-modifier-border);fill:var(--background-secondary-alt);font-family:inherit!important;}#m3607ab2ec5e323e1 text.actor{stroke:none;}#m3607ab2ec5e323e1 .actor-line{stroke:var(--text-muted);}#m3607ab2ec5e323e1 .messageLine0,#m3607ab2ec5e323e1 .messageLine1{stroke-width:1.5;stroke-dasharray:'2 2';stroke:var(--text-normal);}#m3607ab2ec5e323e1 #crosshead path{fill:var(--text-normal)!important;stroke:var(--text-normal)!important;}#m3607ab2ec5e323e1 .messageText{fill:var(--text-normal);stroke:none;font-family:inherit!important;}#m3607ab2ec5e323e1 .labelBox{stroke:var(--background-modifier-border);fill:var(--background-secondary-alt);}#m3607ab2ec5e323e1 .labelText,#m3607ab2ec5e323e1 .loopText{fill:var(--text-normal);stroke:none;}#m3607ab2ec5e323e1 .loopLine{stroke-width:2;stroke-dasharray:'2 2';stroke:var(--background-modifier-border);}#m3607ab2ec5e323e1 .activation0,#m3607ab2ec5e323e1 .activation1,#m3607ab2ec5e323e1 .activation2{fill:var(--background-secondary) stroke:var(--text-muted);}#m3607ab2ec5e323e1 .section{stroke:none;opacity:.2;}#m3607ab2ec5e323e1 .section0,#m3607ab2ec5e323e1 .section2{fill:var(--text-accent);}#m3607ab2ec5e323e1 .section1,#m3607ab2ec5e323e1 .section3{fill:#fff;opacity:.2;}#m3607ab2ec5e323e1 .sectionTitle0,#m3607ab2ec5e323e1 .sectionTitle1,#m3607ab2ec5e323e1 .sectionTitle2,#m3607ab2ec5e323e1 .sectionTitle3{fill:var(--text-normal);}#m3607ab2ec5e323e1 .sectionTitle{text-anchor:start;font-size:11px;text-height:14px;}#m3607ab2ec5e323e1 .grid .tick{stroke:var(--background-primary-alt);opacity:.8;shape-rendering:crispEdges;}#m3607ab2ec5e323e1 .grid path{stroke-width:0;}#m3607ab2ec5e323e1 .today{fill:none;stroke:#d42;stroke-width:2px;}#m3607ab2ec5e323e1 .task{stroke-width:2;}#m3607ab2ec5e323e1 .taskText{text-anchor:middle;}#m3607ab2ec5e323e1 .taskText:not([font-size]){font-size:11px;}#m3607ab2ec5e323e1 .taskTextOutsideRight{fill:var(--text-normal);text-anchor:start;font-size:11px;}#m3607ab2ec5e323e1 .taskTextOutsideLeft{fill:var(--text-normal);text-anchor:end;font-size:11px;}#m3607ab2ec5e323e1 .task.clickable,#m3607ab2ec5e323e1 g.clickable{cursor:pointer;}#m3607ab2ec5e323e1 .taskText.clickable,#m3607ab2ec5e323e1 .taskTextOutsideLeft.clickable,#m3607ab2ec5e323e1 .taskTextOutsideRight.clickable{cursor:pointer;fill:#003163!important;font-weight:700;}#m3607ab2ec5e323e1 .taskText0,#m3607ab2ec5e323e1 .taskText1,#m3607ab2ec5e323e1 .taskText2,#m3607ab2ec5e323e1 .taskText3{fill:#fff;}#m3607ab2ec5e323e1 .task0,#m3607ab2ec5e323e1 .task1,#m3607ab2ec5e323e1 .task2,#m3607ab2ec5e323e1 .task3{fill:var(--interactive-accent);stroke:var(--interactive-accent);}#m3607ab2ec5e323e1 .taskTextOutside0,#m3607ab2ec5e323e1 .taskTextOutside1,#m3607ab2ec5e323e1 .taskTextOutside2,#m3607ab2ec5e323e1 .taskTextOutside3{fill:var(--text-normal);}#m3607ab2ec5e323e1 .active0,#m3607ab2ec5e323e1 .active1,#m3607ab2ec5e323e1 .active2,#m3607ab2ec5e323e1 .active3,#m3607ab2ec5e323e1 g.classGroup rect,#m3607ab2ec5e323e1 g.stateGroup rect{fill:var(--background-primary-alt);stroke:var(--background-modifier-border);}#m3607ab2ec5e323e1 g.classGroup rect,#m3607ab2ec5e323e1 g.stateGroup rect{stroke:var(--background-modifier-border);}#m3607ab2ec5e323e1 .activeText0,#m3607ab2ec5e323e1 .activeText1,#m3607ab2ec5e323e1 .activeText2,#m3607ab2ec5e323e1 .activeText3{fill:var(--text-normal)!important;}#m3607ab2ec5e323e1 .done0,#m3607ab2ec5e323e1 .done1,#m3607ab2ec5e323e1 .done2,#m3607ab2ec5e323e1 .done3{stroke:var(--text-muted);fill:#bbb;stroke-width:2;}#m3607ab2ec5e323e1 .doneText0,#m3607ab2ec5e323e1 .doneText1,#m3607ab2ec5e323e1 .doneText2,#m3607ab2ec5e323e1 .doneText3{fill:var(--text-normal)!important;}#m3607ab2ec5e323e1 .crit0,#m3607ab2ec5e323e1 .crit1,#m3607ab2ec5e323e1 .crit2,#m3607ab2ec5e323e1 .crit3{stroke:#b1361b;fill:#d42;stroke-width:2;}#m3607ab2ec5e323e1 .activeCrit0,#m3607ab2ec5e323e1 .activeCrit1,#m3607ab2ec5e323e1 .activeCrit2,#m3607ab2ec5e323e1 .activeCrit3,#m3607ab2ec5e323e1 .classLabel .box{stroke:#b1361b;fill:var(--background-secondary-alt);stroke-width:2;}#m3607ab2ec5e323e1 .classLabel .box{stroke:none;stroke-width:0;opacity:.5;}#m3607ab2ec5e323e1 .doneCrit0,#m3607ab2ec5e323e1 .doneCrit1,#m3607ab2ec5e323e1 .doneCrit2,#m3607ab2ec5e323e1 .doneCrit3{stroke:#b1361b;fill:#bbb;stroke-width:2;cursor:pointer;shape-rendering:crispEdges;}#m3607ab2ec5e323e1 .milestone{transform:rotate(45deg) scale(.8,.8);}#m3607ab2ec5e323e1 .milestoneText{font-style:italic;}#m3607ab2ec5e323e1 .activeCritText0,#m3607ab2ec5e323e1 .activeCritText1,#m3607ab2ec5e323e1 .activeCritText2,#m3607ab2ec5e323e1 .activeCritText3,#m3607ab2ec5e323e1 .doneCritText0,#m3607ab2ec5e323e1 .doneCritText1,#m3607ab2ec5e323e1 .doneCritText2,#m3607ab2ec5e323e1 .doneCritText3{fill:var(--text-normal)!important;}#m3607ab2ec5e323e1 .titleText{text-anchor:middle;font-size:18px;fill:var(--text-normal);}#m3607ab2ec5e323e1 g.classGroup text{fill:var(--text-normal);stroke:none;font-size:11px;}#m3607ab2ec5e323e1 g.classGroup text .title{font-weight:bolder;}#m3607ab2ec5e323e1 #aggregationEnd,#m3607ab2ec5e323e1 #aggregationStart,#m3607ab2ec5e323e1 #compositionEnd,#m3607ab2ec5e323e1 #compositionStart,#m3607ab2ec5e323e1 g.classGroup line,#m3607ab2ec5e323e1 g.stateGroup line{stroke:var(--background-modifier-border);stroke-width:1;}#m3607ab2ec5e323e1 .classLabel .label{font-size:11px;}#m3607ab2ec5e323e1 .relation{fill:none;}#m3607ab2ec5e323e1 .dashed-line{stroke-dasharray:3;}#m3607ab2ec5e323e1 #compositionEnd,#m3607ab2ec5e323e1 #compositionStart{fill:var(--background-modifier-border);}#m3607ab2ec5e323e1 #aggregationEnd,#m3607ab2ec5e323e1 #aggregationStart{fill:var(--background-secondary-alt);}#m3607ab2ec5e323e1 #dependencyEnd,#m3607ab2ec5e323e1 #dependencyStart,#m3607ab2ec5e323e1 #extensionEnd,#m3607ab2ec5e323e1 #extensionStart{fill:var(--background-modifier-border);stroke:var(--background-modifier-border);stroke-width:1;}#m3607ab2ec5e323e1 .branch-label,#m3607ab2ec5e323e1 .commit-id,#m3607ab2ec5e323e1 .commit-msg{fill:#d3d3d3;color:#d3d3d3;}#m3607ab2ec5e323e1 .pieTitleText{text-anchor:middle;font-size:25px;fill:var(--text-normal);}#m3607ab2ec5e323e1 .state-note text,#m3607ab2ec5e323e1 g.stateGroup text{stroke:none;font-size:10px;}#m3607ab2ec5e323e1 g.stateGroup .state-title{font-weight:bolder;fill:var(--text-normal);}#m3607ab2ec5e323e1 .stateGroup .composit{fill:#fff;border-bottom:1px;}#m3607ab2ec5e323e1 .stateGroup .alt-composit{fill:#e0e0e0;border-bottom:1px;}#m3607ab2ec5e323e1 .state-note{stroke:#645c10;fill:#f3edb3;}#m3607ab2ec5e323e1 .state-note text{fill:#000;}#m3607ab2ec5e323e1 .stateLabel .box{stroke:none;stroke-width:0;fill:var(--background-secondary-alt);opacity:.5;}#m3607ab2ec5e323e1 .stateLabel text{fill:var(--text-normal);font-size:10px;font-weight:700;}#m3607ab2ec5e323e1 .node circle.state-start{fill:var(--text-normal);stroke:var(--text-normal);}#m3607ab2ec5e323e1 .node circle.state-end{stroke:var(--background-primary);stroke-width:2;}#m3607ab2ec5e323e1 #statediagram-barbEnd,#m3607ab2ec5e323e1 g.stateGroup text{fill:var(--background-modifier-border);}#m3607ab2ec5e323e1 .statediagram-cluster rect{stroke-width:1px;}#m3607ab2ec5e323e1 .statediagram-cluster rect,#m3607ab2ec5e323e1 .statediagram-state .divider{stroke:var(--background-modifier-border);}#m3607ab2ec5e323e1 .statediagram-cluster rect .inner{fill:var(--background-secondary-alt);}#m3607ab2ec5e323e1 .statediagram-cluster.statediagram-cluster-alt .inner{fill:var(--background-secondary);}#m3607ab2ec5e323e1 .cluster-label text,#m3607ab2ec5e323e1 .node circle.state-end{fill:var(--text-normal);}#m3607ab2ec5e323e1 .statediagram-state rect.divider{stroke-dasharray:10,10;fill:var(--background-secondary);}#m3607ab2ec5e323e1 .note-edge{stroke-dasharray:5;}#m3607ab2ec5e323e1 .statediagram-note rect{fill:#f3edb3;stroke:#645c10;stroke-width:1px;}#m3607ab2ec5e323e1 .error-icon{fill:var(--background-modifier-error);}#m3607ab2ec5e323e1 .error-text{fill:var(--text-error);stroke:var(--text-error);}#m3607ab2ec5e323e1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><marker orient="auto" markerHeight="12" markerWidth="12" markerUnits="userSpaceOnUse" refY="5" refX="6" viewBox="0 0 10 10" class="marker flowchart" id="m3607ab2ec5e323e1-m3607ab2ec5e323e1_flowchart-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"></path></marker><marker orient="auto" markerHeight="12" markerWidth="12" markerUnits="userSpaceOnUse" refY="5" refX="4.5" viewBox="0 0 10 10" class="marker flowchart" id="m3607ab2ec5e323e1-m3607ab2ec5e323e1_flowchart-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"></path></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="11" viewBox="0 0 10 10" class="marker flowchart" id="m3607ab2ec5e323e1-m3607ab2ec5e323e1_flowchart-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="-1" viewBox="0 0 10 10" class="marker flowchart" id="m3607ab2ec5e323e1-m3607ab2ec5e323e1_flowchart-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"></circle></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="12" viewBox="0 0 11 11" class="marker cross flowchart" id="m3607ab2ec5e323e1-m3607ab2ec5e323e1_flowchart-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="-1" viewBox="0 0 11 11" class="marker cross flowchart" id="m3607ab2ec5e323e1-m3607ab2ec5e323e1_flowchart-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#m3607ab2ec5e323e1-m3607ab2ec5e323e1_flowchart-pointEnd)" style="fill:none;" class="edge-thickness-normal edge-pattern-solid flowchart-link LS-收敛 LE-绝对收敛" id="L-收敛-绝对收敛-0" d="M39.5,35.8L39.5,39.967C39.5,44.133,39.5,52.467,39.5,59.917C39.5,67.367,39.5,73.933,39.5,77.217L39.5,80.5"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignObject height="0" width="0"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g transform="translate(39.5, 17.899999618530273)" id="flowchart-收敛-1386" class="node default default flowchart-label"><rect height="35.80000114440918" width="47" y="-17.90000057220459" x="-23.5" ry="0" rx="0" style="" class="basic label-container"></rect><g transform="translate(-16, -10.40000057220459)" style="" class="label"><rect></rect><foreignObject height="20.80000114440918" width="32"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">收敛</span></div></foreignObject></g></g><g transform="translate(39.5, 103.69999885559082)" id="flowchart-绝对收敛-1387" class="node default default flowchart-label"><rect height="35.80000114440918" width="79" y="-17.90000057220459" x="-39.5" ry="0" rx="0" style="" class="basic label-container"></rect><g transform="translate(-32, -10.40000057220459)" style="" class="label"><rect></rect><foreignObject height="20.80000114440918" width="64"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">绝对收敛</span></div></foreignObject></g></g></g></g></g></svg></div></div><div><pre dir="auto"><span>title: warning
+- $\sum\limits_{i=1}^∞ \frac {\cos i}{i^2}$ 不能直接用 比较判别法，因为不能保证对于所有 n 有 $\cos n \ge 0$，应当间接地取绝对值证明其收敛性，再推出原级数收敛</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 比值判别法
+&gt; 1.	若 $\lim\limits_{n\to ∞}|\frac {a_{n+1}}{a_n}| = L &lt; 1$，则级数 $\sum\limits_{n=1}^∞ a_n$ 绝对收敛（从而收敛）
+&gt; 2.	若 $\lim\limits_{n\to ∞}|\frac {a_{n+1}}{a_n}| = L &gt; 1$ 或 $\lim\limits_{n\to ∞}|\frac {a_{n+1}}{a_n}| = +∞$ ，则级数 $\sum\limits_{n=1}^∞ a_n$ 发散
+&gt; 3.	若 $\lim\limits_{n\to ∞}|\frac {a_{n+1}}{a_n}| = 1$，比值判别法{==无法确定==}收敛性（即得不到有关 $\sum a_n$ 的收敛性 或 发散性的结论）
+&gt; 
+&gt; 相关证明：p48</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 根值判别法
+&gt; 1.	若 $\lim\limits_{n\to ∞}\sqrt[n] {|a_n|} = L &lt; 1$，则级数 $\sum\limits_{n=1}^∞ a_n$ 绝对收敛（从而收敛）
+&gt; 2.	若 $\lim\limits_{n\to ∞}\sqrt[n] {|a_n|} = L &gt; 1$ 或 $\lim\limits_{n\to ∞}\sqrt[n] {|a_n|} = L = ∞$，则级数 $\sum\limits_{n=1}^∞ a_n$ 发散
+&gt; 3.	若 $\lim\limits_{n\to ∞} \sqrt[n]{|a_n|} = 1$，根值判别法{==失效==}</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 重排
+&gt; 一个已知 收敛级数 “是 绝对收敛 还是 条件收敛” 与 “无限项和 是否与 有限项和 行为相同” 的两个命题之间有一种联系
+&gt;
+&gt; 结论：
+&gt; 
+&gt; 1.	若 $\sum a_n$ 绝对收敛 且和为 s，则 $\sum a_n$ 的任意重排的和 $\sum a_{p_n}$ 为 s
+&gt; 2.	若 $\sum a_n$ 为条件收敛级数，r 为任意实数，则总存在 $\sum a_n$ 的一个重排使得重排后级数的和为 r （由黎曼证明）
+&gt; 
+&gt; 详见p51</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="7. 判别级数收敛的策略" dir="auto" class="heading" id="7._判别级数收敛的策略"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>7. 判别级数收敛的策略</h4><div class="heading-children"><div><p dir="auto">判别级数的收敛性 与 函数的积分 类似，并没有确定的，快速的准则来确定已知级数用什么方法判别，但仍然可以优化判别收敛性的效率</p></div><div><pre dir="auto"><span>title: 级数判别策略
+&gt; 1.	若级数形如 {==$\sum \frac {1}{n^p}$==} (p—级数)，则 {==p &gt; 1 时收敛==}， $p\le 1$ 时发散
+&gt; 2.	若级数形如 {==$\sum a\cdot r^{n-1}$ 或 $\sum a\cdot r^{n}$==} (几何级数)，则 {==|r| &lt; 1 时收敛==}， $|r|\ge 1$ 时发散，将级数转化成这种形式可能需要一些初等代数的方法
+&gt; 3.	若级数具有 p—级数 或 几何级数 类似的形式，应考虑 {==比较判别法==}
+&gt;    - 特别地，若 $a_n$ 是 n 的 有理函数 或 代数函数（包含多项式根），则应该与 p—级数 比较（只保留分子和分母中 n 的最高次）
+&gt;    - 比较判别法 适用于正项级数，若 $\sum a_n$ 含有负项，我们可以对 $\sum |a_n|$ 使用 比较判别法，判别绝对收敛性 (见 11.4 练习)
+&gt;
+&gt; 4.	若发现 $\lim\limits_{n\to ∞} a_n\ne 0$，那么就应该用 {==发散判别==}
+&gt; 5.	若级数有如 $\sum (-1)^{n-1} a_n$ 或 $\sum (-1)^n b_n$ 的形式，那显然 {==交错级数收敛性判别法==} 有用
+&gt; 6.	包含 阶乘 或 其他乘积（包含一个到第 n 次幂的不变的增长）用 {==比值判别法==} 经常比较方便
+&gt;		-	注意：对所有 p—级数 都有：$n\to ∞$ 时 $|\frac {a_{n+1}}{a_{n}}| \to 1$，因此所有是 n 的 有理函数 或 代数函数 的级数都是这样；也就是说，比值判别法 对此类函数都不适用
+&gt; 	
+&gt; 7.	若 $a_n$ 是 $(b_n)^n$ 的形式，则 {==根值判别法==} 可能有用
+&gt; 8.	若 $a_n = f(n)$，其中 $\int_1^{+∞} f(x)~d_x$ 易于计算，则 {==积分判别法==} 会有效</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: tip
+- 注意 比值判别法 和 根值判别法 有时无法确定收敛性</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="8. 幂级数" dir="auto" class="heading" id="8._幂级数"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>8. 幂级数</h4><div class="heading-children"><div><pre dir="auto"><span>title: 幂级数
+&gt; 幂级数形如：$\sum\limits_{n=0}^∞ c_n\cdot x^n = c_0 + c_1\cdot x + c_2\cdot x^2 + \cdots$
+&gt; 
+&gt; 该级数的和是一个函数 $f(x) = c_0 + c_1\cdot x + \cdots + c_n\cdot x^n + \cdots$，定义域为 使级数收敛的 x 的集合（类似于一个多项式，唯一的区别就是 f 有无穷多项）
+&gt; 
+&gt; $c_n = 常数$ 时，幂级数 就变成了 几何级数，仅当 $|x| &lt; 1$ 时收敛
+&gt; 
+&gt; 幂级数一般形式：$\sum\limits_{n=0}^∞ c_n(x-a)^n = c_0 + c_1(x-a) + c_2(x-a)^2 + \cdots$ （此形式是书写惯例，即使 x = a；x = a 时，对所有 $n\ge 1$ 的各项都是 0，即 x=a 时该级数总收敛；该形式称为 (x-a) 处的幂级数 或 以 a 为中心的幂级数 或 关于 a 的幂级数）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: note
+- 经常会讨论幂级数与其他级数组合时，x 的取值范围（特别注意 比值判别法 或 根值判别法 有时不能确定敛散性，这时需要代入特殊点再判断）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: note
+- 幂级数主要用于表示 数学、物理、化学 中出现的一些最重要的函数
+- 比如 Bessel 贝塞尔函数</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 定理
+&gt; 对已知幂级数 $\sum\limits_{n=0}^∞ c_n(x-a)^n$ 只有三种可能性：
+&gt; 
+&gt; 1.	级数只有当 x=a 时收敛
+&gt; 2.	级数对所有的 x 收敛
+&gt; 3.	存在一个正数 R 使得级数当 |x-a| &lt; R 时收敛，当 |x-a| &gt; R 时发散 （端点处也可能 收敛！）
+&gt; 
+&gt; 其中 R 称为收敛半径（1, 2 情况分别对应 R=0 和 R=+∞）</span><button class="copy-code-button">复制</button></pre></div><div dir="auto" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th align="center">级数</th>
+<th align="center">收敛半径</th>
+<th align="center">收敛区间</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.31em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mo></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.136em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+<td align="center">R=1</td>
+<td align="center">(-1, 1)</td>
+<td align="center">几何级数</td>
+</tr>
+<tr>
+<td align="center"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.31em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mo></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.136em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c21"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span></td>
+<td align="center">R=0</td>
+<td align="center">{0}</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.31em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mo></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.136em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mfrac space="2"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math></mjx-container></span></td>
+<td align="center">R=1</td>
+<td align="center">[2, 4)</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mstyle><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43D TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.078em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.368em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mo></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base><mjx-mo class="mjx-lop"><mjx-c class="mjx-c2211 TEX-S2"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em; padding-left: 0.058em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mfrac space="2"><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mrow><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-mrow><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.289em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c21"></mjx-c></mjx-mo><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.289em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-mstyle></mjx-math></mjx-container></span></td>
+<td align="center">R=∞</td>
+<td align="center">(-∞, +∞)</td>
+<td align="center">0次贝塞尔级数</td>
+</tr>
+</tbody>
+</table></div><div><pre dir="auto"><span>title: note
+- 一般地，比值判别法 或 根值判别法 一个被用来确定收敛半径 R
+- 当 x 是收敛区间的端点时，比值判别法 和 根值判别法 总是会失效，此时就必须用其他判别法来判断</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="9. 函数的幂级数展开" dir="auto" class="heading" id="9._函数的幂级数展开"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>9. 函数的幂级数展开</h4><div class="heading-children"><div><p dir="auto">将已知函数表示成无穷项的和，对 不是初等函数的不定积分，求解微分方程，用多项式近似函数 都很有用</p></div><div><pre dir="auto"><span>title: note
+- $\frac {1}{1-x}$，$\frac {1}{x+2}$，$\frac {x^3}{x+2}$ 均能通过代换得到幂级数收敛的模式，从而得到幂级数展开式
+- 幂级数展开的模式指：$\frac {a}{1-f_x}g_x$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 幂级数的 微分 &amp; 积分
+&gt; 若幂级数 $\sum c_n(x-a)^n$ 具有收敛半径 R &gt; 0，则若下定义的函数 f
+&gt; 
+&gt; $f(x) = c_0 + c_1(x-a) + c_2(x-a)^2 + \cdots = \sum\limits_{n=0}^∞ c_n(x-a)^n$
+&gt; 
+&gt; 在区间 (a-R, a+R) 上是可微的(从而连续)，且
+&gt; 
+&gt; 1.	$f'(x) = \sum\limits_{n=1}^∞ nc_n(x-a)^{n-1}$
+&gt; 2.	$\int f(x)~d_x = C + c_0(x-a) + c_1\frac {(x-a)^2}{2} + \cdots = C + \sum\limits_{n=0}^∞ c_n\frac {(x-a)^{n+1}}{n+1}$  ($C = C_1 + ac_0$)
+&gt; 
+&gt; 收敛半径均是 R
+&gt; 
+&gt; 上述两式可以写成如下形式：
+&gt; 
+&gt; 3.	$\frac {d}{d_x}[\sum\limits_{n=0}^∞ c_n(x-a)^n] = \sum\limits_{n=0}^∞ \frac {d}{d_x}[c_n(x-a)^n]$
+&gt; 4.	$\int[\sum\limits_{n=0}^∞ c_n(x-a)^n]~d_x = \sum\limits_{n=0}^∞\int c_n(x-a)^n~d_x$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: warning
+1.	对于有限项和，和的导数就是导数的和，和的积分就是积分的和；而对于幂级数（有无限项），和的导数就是导数的和，和的积分就是积分的和，仍然成立
+2.	幂级数被微分或积分后 收敛半径 不变，并不意味着收敛区间不变
+3.	幂级数逐项积分的思想是解微分方程的一个有力基础</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: note
+- 求一个函数 f(x) 的幂级数表示，可以使用两种方法，先假设 f(x) = g(x)
+    - 对两边积分，将积分后的 f(x) 变换为幂级数形式，再微分：$g(x) = \frac {d}{d_x} [\int f(x)~d_x]$
+    - 对两边微分，将微分后的 f(x) 变换为幂级数形式，再积分：$g(x) = \int [\frac {d}{d_x} f(x)]~d_x$ （注意讨论常数 C 的值）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: note
+- $\tan^{-1} x = \int \frac 1{1+x^2}~d_x = \int \sum\limits_{n=0}^∞ (-x^2)^n ~d_x = C + \sum\limits_{n=0}^∞ (-1)^n\frac {x^{2n+1}}{2n+1} = \sum\limits_{n=0}^∞ (-1)^n\frac {x^{2n+1}}{2n+1}$ （著名的 Gregory 格里高力级数，收敛区间为 [-1, 1]）
+- x = 1时有 $\frac {\pi}{4} = \sum\limits_{n=0}^∞ (-1)^n\frac {1}{2n+1}$ $\implies$ $\pi = 4\sum\limits_{n=0}^∞ (-1)^n\frac {1}{2n+1}$</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="10. 泰勒级数 &amp; 麦克劳林级数" dir="auto" class="heading" id="10._泰勒级数_&amp;_麦克劳林级数"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>10. 泰勒级数 &amp; 麦克劳林级数</h4><div class="heading-children"><div><p dir="auto">我们假设 f 为任意可以用幂级数表示的函数 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.31em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mo></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.136em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span>，|x-a| &lt; R</p></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.045em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-munderover space="3"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.22em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mo></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.046em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F9"></mjx-c></mjx-mo><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle></mjx-math></mjx-container></span> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span></p></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.053em;"><mjx-mo class="mjx-var" size="s"><mjx-c class="mjx-c2032"></mjx-c></mjx-mo></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.045em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-munderover space="3"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.22em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mo></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.046em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F9"></mjx-c></mjx-mo><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle></mjx-math></mjx-container></span> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.053em;"><mjx-mo class="mjx-var" size="s"><mjx-c class="mjx-c2032"></mjx-c></mjx-mo></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math></mjx-container></span></p></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.053em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2033"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.045em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-munderover space="3"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.22em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mo></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.046em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F9"></mjx-c></mjx-mo><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle></mjx-math></mjx-container></span> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.053em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2033"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math></mjx-container></span></p></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c22EE"></mjx-c></mjx-mo></mjx-texatom></mjx-math></mjx-container></span></p></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.053em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c21"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-munderover space="3"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.707em;"><mjx-texatom size="s" texclass="ORD"><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mo></mjx-texatom></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.533em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msub space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c21"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c21"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-math></mjx-container></span> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F9"></mjx-c></mjx-mo><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle></mjx-math></mjx-container></span> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.053em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c21"></mjx-c></mjx-mo></mjx-math></mjx-container></span></p></div><div><p dir="auto">因此，我们得到系数 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.053em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c21"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math></mjx-container></span></p></div><div><pre dir="auto"><span>title: Taylor 级数
+&gt; 若 f 在 a 点有幂级数表示(展开)，即，若 $f(x) = \sum\limits_{n=0}^∞ c_n(x-a)^n$，|x-a| &lt; R
+&gt; 
+&gt; 则其系数由下面的公式给出：$c_n = \frac {f^{(n)}(a)}{n!}$
+&gt; 
+&gt; 即 $f(x) = \sum\limits_{n=0}^∞ \frac {f^{(n)}(a)}{n!} (x-a)^n$
+&gt; 
+&gt; f 在点 a 的第 n 次 Taylor 多项式：$T_n(x) = \sum\limits_{i=0}^n \frac {f^{(i)}(a)}{i!} (x-a)^i$
+&gt; 
+&gt; f 在点 a 的第 n 次 Taylor 余项：$R_n(x) = f(x) - T_n = f(x) - \sum\limits_{i=0}^n \frac {f^{(i)}(a)}{i!} (x-a)^i$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: tip
+- （如果存在）$f_x$ 在 x=a 处的一阶泰勒多项式为 $f_x$ 在 x=a 处的切线方程
+- 那么二阶多项式有什么含义？</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: Maclaurin 级数
+&gt; 对 a = 0 的 Taylor级数，有： $f(x) = \sum\limits_{n=0}^∞ \frac {f^{(n)}(0)}{n!} x^n$
+&gt; 
+&gt; 注：由于这种情形出现得多，所以给它一个单独的名字</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: question
+- 什么时候 $f_x$ 可以用泰勒级数表示？（或 $f_x$ 何时能表示成幂级数的形式？）
+    - 设 $R_n(x)$ 为泰勒级数 $\lim\limits_{n\to ∞} T_n(x)$ 的余项，其中 $T_n(x)$ 为泰勒多项式
+    - 若可以证明 $\lim\limits_{n\to ∞}R_n = 0$，则 $\lim\limits_{n\to ∞} T_n(x) = \lim\limits_{n\to ∞} [f(x)-R_n(x)] = f(x) - \lim\limits_{n\to ∞} R_n(x) = f(x)$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 定理
+&gt; 若 $f(x) = T_n(x) + R_n(x)$，其中 $T_n(x)$ 是 f 在 a 点的第 n 次泰勒多项式，且 $\lim\limits_{n\to ∞} R_n(x)=0$
+&gt; 
+&gt; 对 $|x-a|&lt;R$，则 f 在区间 $|x-a|&lt;R$ 上等于它的泰勒级数的和</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: Taylor 不等式
+&gt; 为了证明 $\lim\limits_{n\to ∞} R_n(x)=0$，有如下结论：
+&gt; 
+&gt; 若 $|f^{(n+1)}(x)| \le M$，对 $|x-a|\le d$，
+&gt; 
+&gt; 则泰勒级数的余项 $R_n(x)$ 满足不等式 $|R_n(x)| \le \frac {M}{(n+1)!}|x-a|^{n+1}$，对 $|x-a|\le d$
+&gt; 
+&gt; 证明：详见 p70</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: tip
+- 应用 Taylor 不等式证明 $\lim\limits_{n\to ∞} R_n(x)=0$ 时，该结论很有帮助：$\lim\limits_{n\to ∞}\frac {x^n}{n!}=0,\forall x\in R$
+- Taylor 不等式中的 M 也可以是“半径” d 的函数
+- Taylor 不等式是通过“夹逼”来证明 $f_x$ 能用幂级数表示的
+- Taylor 不等式 也可以用于{==计算函数的近似误差==}，误差为 $|R_n(x)| \le \frac {M}{(n+1)!}|x-a|^{n+1} \le M\frac {d^{n+1}}{(n+1)!}$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 常见 maclaurin 级数
+- $\frac 1{1-x} = \sum\limits_{i=0}^∞ x^i, |x|&lt;1$
+- $e^x = \sum\limits_{i=0}^∞ \frac {x^n}{n!}, |x|&lt;+∞$
+- $\sin x = \sum\limits_{i=0}^∞ (-1)^n \frac {x^{2i+1}}{(2i+1)!}, |x|&lt;+∞$
+- $\cos x = \sum\limits_{i=0}^∞ (-1)^n \frac {x^{2i}}{(2i)!}, |x|&lt;+∞$
+- $\tan x = \sum\limits_{i=0}^∞ (-1)^n \frac {x^{2i+1}}{2i+1}, |x|\le 1$</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: Taylor 级数的应用
+1.	近似计算函数积分
+2.	求函数极限
+3.	解微分方程</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 幂级数的乘法和除法
+- 类似于 多项式的乘法和除法，通常用来计算幂级数的前 n 个非零项
+- $\frac {\sin x}{\cos x}$ 的幂级数除法似乎与公式表中的形式不太一样？</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="11. 二项级数" dir="auto" class="heading" id="11._二项级数"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>11. 二项级数</h4><div class="heading-children"><div><pre dir="auto"><span>title: 二项式定理
+- $(a+b)^n = \sum\limits_{i=0}^n \left( \begin{matrix} n\\i \end{matrix} \right) a^{n-i}b^i$
+    - 其中 $\left( \begin{matrix} n\\i \end{matrix} \right) = \frac {\prod\limits_{j=0}^{i-1} (n-j) }{i!}, i\in[1,n], i\in N^+$，$\left( \begin{matrix} n\\0 \end{matrix} \right) = 1$
+- 令 a=1, b=x 有 $(1+x)^n = \sum\limits_{i=0}^n \left( \begin{matrix} n\\i \end{matrix} \right) x^i$
+- 而牛顿将 二项式定理 扩展到了 n 不再是正整数的情况！！！</span><button class="copy-code-button">复制</button></pre></div><div><p dir="auto">计算 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span> 的 maclaurin 级数，得到 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.22em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mo></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.046em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mfrac space="2"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-munderover><mjx-over style="padding-bottom: 0.142em; padding-left: 0.024em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.126em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c220F TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c21"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math></mjx-container></span></p></div><div><p dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-msub size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-msub size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-munderover><mjx-over style="padding-bottom: 0.192em; padding-left: 0.476em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.126em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c220F TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-munderover space="2"><mjx-over style="padding-bottom: 0.142em; padding-left: 0.024em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.126em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c220F TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c21"></mjx-c></mjx-mo><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c21"></mjx-c></mjx-mo></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo></mjx-math></mjx-container></span>，当 <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-texatom space="4" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mo></mjx-texatom></mjx-math></mjx-container></span></p></div><div><p dir="auto">由比值判别法，|x|&lt;1 时收敛，|x|&gt;1 时发散</p></div><div><pre dir="auto"><span>title: 二项级数
+&gt; 若 k 为实数，且 |x| &lt; 1，则 $(1+x)^k = \sum\limits_{i=0}^∞ \left( \begin{matrix} k\\i \end{matrix} \right) x^i$
+&gt; 
+&gt; 其中 $\left( \begin{matrix} k\\i \end{matrix} \right) = \frac {\prod\limits_{j=0}^{i-1} (k-j) }{i!}, i\in[1,n], i\in N^+$，且 $\left( \begin{matrix} k\\0 \end{matrix} \right) = 1$
+&gt; 
+&gt; 收敛性：
+&gt; 
+&gt; - |x| &lt; 1 处永远收敛
+&gt; - 若 $-1 &lt; k \le 0$， x = 1 处也收敛
+&gt; 
+&gt; 另外，$k\in N^+$ 时，若 $i &gt; k$，则 $\left( \begin{matrix} k\\i \end{matrix} \right) = 0$，这意味着 $k\in N^+$ 时二项式级数将退化为普通的二项级数（项数有限）</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 二项级数的应用
+- $\displaystyle \frac {1}{(1+x)^2} = \sum\limits_{i=0}^∞ \left( \begin{matrix} -2\\i \end{matrix} \right) x^i = \sum\limits_{i=0}^∞ (-1)^i(i+1)x^i$，$|x|&lt;1$
+- $\displaystyle \frac {1}{\sqrt {4-x}} = \frac {1}{2\sqrt {1+(-\frac 14x)}} = \frac 12\sum\limits_{i=0}^∞ \left( \begin{matrix} -\frac 12\\i \end{matrix} \right) (-\frac 14x)^i$，$|-\frac 14x|&lt;1 \implies |x|&lt;4$ （注意：二项级数是以 x=0 为中心的，不能将原函数中 x+l 的形式直接替换为二项级数中的 x）</span><button class="copy-code-button">复制</button></pre></div></div></div><div class="heading-wrapper"><h4 data-heading="12. 泰勒级数的应用" dir="auto" class="heading" id="12._泰勒级数的应用"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>12. 泰勒级数的应用</h4><div class="heading-children"><div><pre dir="auto"><span>title: 使用多项式近似函数
+&gt; 详见 p83</span><button class="copy-code-button">复制</button></pre></div><div><pre dir="auto"><span>title: 应用于物理</span><button class="copy-code-button">复制</button></pre></div><div class="mod-footer"></div></div></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#11. 无穷序列&amp;级数"><div class="tree-item-contents heading-link" heading-name="
+无穷序列&amp;级数
+"><span class="tree-item-title">无穷序列&amp;级数</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#11._无穷序列&amp;级数"><div class="tree-item-contents heading-link" heading-name="11. 无穷序列&amp;级数"><span class="tree-item-title">11. 
+无穷序列&amp;级数
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#1._序列"><div class="tree-item-contents heading-link" heading-name="1. 序列"><span class="tree-item-title">1. 
+序列
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#2._级数"><div class="tree-item-contents heading-link" heading-name="2. 级数"><span class="tree-item-title">2. 
+级数
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#3._和式的积分判别法_&amp;_估计"><div class="tree-item-contents heading-link" heading-name="3. 和式的积分判别法 &amp; 估计"><span class="tree-item-title">3. 
+和式的积分判别法 &amp; 估计
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#4._比较判别法"><div class="tree-item-contents heading-link" heading-name="4. 比较判别法"><span class="tree-item-title">4. 
+比较判别法
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#5._交错级数"><div class="tree-item-contents heading-link" heading-name="5. 交错级数"><span class="tree-item-title">5. 
+交错级数
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#6._绝对收敛_&amp;_比值_/_根值_判别法"><div class="tree-item-contents heading-link" heading-name="6. 绝对收敛 &amp; 比值 / 根值 判别法"><span class="tree-item-title">6. 
+绝对收敛 &amp; 比值 / 根值 判别法
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#7._判别级数收敛的策略"><div class="tree-item-contents heading-link" heading-name="7. 判别级数收敛的策略"><span class="tree-item-title">7. 
+判别级数收敛的策略
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#8._幂级数"><div class="tree-item-contents heading-link" heading-name="8. 幂级数"><span class="tree-item-title">8. 
+幂级数
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#9._函数的幂级数展开"><div class="tree-item-contents heading-link" heading-name="9. 函数的幂级数展开"><span class="tree-item-title">9. 
+函数的幂级数展开
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#10._泰勒级数_&amp;_麦克劳林级数"><div class="tree-item-contents heading-link" heading-name="10. 泰勒级数 &amp; 麦克劳林级数"><span class="tree-item-title">10. 
+泰勒级数 &amp; 麦克劳林级数
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#11._二项级数"><div class="tree-item-contents heading-link" heading-name="11. 二项级数"><span class="tree-item-title">11. 
+二项级数
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="4"><a class="tree-link" href="考研\trash\数学\微积分\11.-无穷序列&amp;级数.html#12._泰勒级数的应用"><div class="tree-item-contents heading-link" heading-name="12. 泰勒级数的应用"><span class="tree-item-title">12. 
+泰勒级数的应用
+</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>
