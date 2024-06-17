@@ -1,2 +1,0 @@
-ruby replace.rb
-pause

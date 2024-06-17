@@ -1,1 +1,0 @@
-ruby "link to dict.rb"
